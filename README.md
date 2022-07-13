@@ -1,2 +1,4 @@
-# Born2beroot-Tutorial
-Tutorial to install Debian virtual machine.
+# Born2beroot-Tutorial 💻
+
+## 1- 
+## 
