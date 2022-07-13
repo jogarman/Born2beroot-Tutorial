@@ -193,8 +193,6 @@ Para realizar la instalación se requiere de un software de virtualización. En 
 
 ➤ Lo primero que debemos hacer es seleccionar ```Debian GNU/Linux```.
 
-<img width="794" alt="Captura de pantalla 2022-07-13 a las 20 39 30" src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
-
 ➤ Debemos introducir la contraseña de encriptación que utilizamos previamente. En mi caso es ```Hello42bcn```.
 
 <img width="714" alt="Captura de pantalla 2022-07-13 a las 20 47 26" src="https://user-images.githubusercontent.com/66915274/178808699-f1024129-5f90-41d0-a9a8-4806f5bc114b.png">
