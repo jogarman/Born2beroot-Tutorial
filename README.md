@@ -104,7 +104,7 @@ Para realizar la instalación se requiere de un software de virtualización. En 
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 19 24 53" src="https://user-images.githubusercontent.com/66915274/178793903-2ea7c623-7175-4c27-98bf-85c8c1b359db.png">
 
-12 ◦ Elegimos el nombre de nuestro nuevo usuario. Yo he decidido poner mi login en la intra para que se diferencie del hostname.
+12 ◦ Elegimos el nombre de nuestro nuevo usuario. Como indica el subject hay que crear un usuario adicional que no sea el root con nuestro login, por ese motivo llamaré ```gemartin``` a mi nuevo usuario.
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 19 26 20" src="https://user-images.githubusercontent.com/66915274/178794178-901f7951-a978-458d-a925-4586026784f7.png">
 
@@ -202,4 +202,44 @@ Para realizar la instalación se requiere de un software de virtualización. En 
 <img width="798" alt="Captura de pantalla 2022-07-13 a las 20 48 38" src="https://user-images.githubusercontent.com/66915274/178808994-664025ac-36df-4332-8e44-505ecd2ca305.png">
 
 ### Ya tenemos todo listo para empezar a configurar nuestra máquina virtual Debian❗️
+
+### 4.1 - Instalación de sudo y configuración de usuarios y grupos 👤
+
+1 ◦ Para la instalación de sudo primero debemos estar en el usuario root, para ello pondremos ```Su``` en el terminal y introduciremos la contraseña, en mi caso es ```Hola42bcn```. Una vez hemos accedido al usuario root debemos poner el comando ```sudo apt install``` para instalar los paquetes necesarios.
+
+<img width="796" alt="Captura de pantalla 2022-07-14 a las 1 36 46" src="https://user-images.githubusercontent.com/66915274/178855273-fc76689c-224b-4368-b7b1-5d1954427aff.png">
+
+2 ◦ Debemos reiniciar la máquina para que se apliquen los cambios. Para ello haremos uso del comando ```sudo reboot``` y esperaremos a que se reinicie. 
+
+<img width="514" alt="Captura de pantalla 2022-07-14 a las 2 02 24" src="https://user-images.githubusercontent.com/66915274/178857108-a51988e1-084c-498c-86c6-98ab5a3b1305.png">
+
+3 ◦ Una vez reiniciado debemos volver a introducir las contraseñas de cifrado y del usuario. Para verificar que hayamos instalado ```sudo``` correctamente entraremos de nuevo en el usuario root y pondremos el comando ```sudo -V```, este comando además de mostrarnos la versión de sudo también mostrará los argumentos pasados para configurar cuando se creó sudo y los plugins que  pueden mostrar información más detallada. (Opcional) ➤ Puesto que el output del comando es muy largo si deseamos verlo completamente debemos redireccionar la salida del mismo a un fichero ```sudo -V > file.txt``` y luego editar el fichero ```nano file.txt```.
+
+<img width="799" alt="Captura de pantalla 2022-07-14 a las 2 09 59" src="https://user-images.githubusercontent.com/66915274/178857742-96356272-abd6-44c4-a3e6-5e8b9f471146.png">
+
+4 ◦ Siguiendo en el usuario root crearemos un usuario con nuestro login con el comando ```sudo adduser login``` como nostros ya hemos creado el usuario en la instalación nos debe aparecer que el usuario ya existe.
+
+<img width="509" alt="Captura de pantalla 2022-07-14 a las 2 15 11" src="https://user-images.githubusercontent.com/66915274/178858240-95ce2a2b-004a-4bcb-981a-7990c1cc4fdd.png">
+
+5 ◦ Ahora deberemos crear un nuevo grupo llamado ```login42```. Para crearlo debemos hacer ```sudo addgroup login42```. 
+
+<img width="372" alt="Captura de pantalla 2022-07-14 a las 2 16 09" src="https://user-images.githubusercontent.com/66915274/178858323-bd9cbe8e-b4cb-4cd5-817d-fd4c44f85725.png">
+
+🧠 Que es GID❓ Es el identificador de grupo, es una abreviatura de Group 🆔.
+
+🤔 Se ha creado correctamente el grupo? Lo cierto es que si ya que no ha habido ningún mensaje de error, aún así podemos comprobar si se ha creado con el comando ```getent group nombre_grupo``` o también podemos hacer ```cat /etc/group``` y podremos ver todos los grupos y los usuarios que hay dentro de ellos.
+
+6 ◦ Con el comando ```sudo adduser user group``` incluiremos al usuario en el grupo. Debemos incluir al usuario en los grupos ```root``` y ```login42```.
+
+<img width="487" alt="Captura de pantalla 2022-07-14 a las 2 24 49" src="https://user-images.githubusercontent.com/66915274/178859065-a3b0126c-339a-4962-a4ac-14e5c26784bd.png">
+<img width="373" alt="Captura de pantalla 2022-07-14 a las 2 25 53" src="https://user-images.githubusercontent.com/66915274/178859421-ba9f5d99-7350-4d0e-b6ee-620b4792a093.png">
+
+7 ◦ Una vez los hayamos introducido para checkear que todo se haya hecho correctamente podemos ejecutar el comando ```getent group nombre_grupo``` o tambien podemos editar el fichero /etc/group ```nano /etc/group``` y en los grupos ```root``` y ```login42``` debera aparecer nuestro usuario.
+
+<img width="346" alt="Captura de pantalla 2022-07-14 a las 2 35 20" src="https://user-images.githubusercontent.com/66915274/178859927-9dc9b784-2873-41c7-968a-ad6f5fb8dcc4.png">
+<img width="305" alt="Captura de pantalla 2022-07-14 a las 2 35 35" src="https://user-images.githubusercontent.com/66915274/178859955-ff6afb7b-3339-4a11-bdd6-8198fbfa729f.png">
+<img width="495" alt="Captura de pantalla 2022-07-14 a las 2 31 13" src="https://user-images.githubusercontent.com/66915274/178859585-cbe031a4-99fb-4cf2-975e-275a6147a866.png">
+<img width="222" alt="Captura de pantalla 2022-07-14 a las 2 31 30" src="https://user-images.githubusercontent.com/66915274/178859602-3ef48daf-f485-4b37-af53-6664046358cb.png">
+
+
 
