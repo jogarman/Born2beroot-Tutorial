@@ -241,7 +241,7 @@ Para realizar la instalación se requiere de un software de virtualización. En 
 <img width="495" alt="Captura de pantalla 2022-07-14 a las 2 31 13" src="https://user-images.githubusercontent.com/66915274/178859585-cbe031a4-99fb-4cf2-975e-275a6147a866.png">
 <img width="222" alt="Captura de pantalla 2022-07-14 a las 2 31 30" src="https://user-images.githubusercontent.com/66915274/178859602-3ef48daf-f485-4b37-af53-6664046358cb.png">
 
-### 4.2 - Instalación y configuración SSH 🔐
+### 4.2 - Instalación y configuración SSH 📶
 
 🧠 Que es SSH❓ Es el nombre de un protocolo y del programa que lo implementa cuya principal función es el acceso remoto a un servidor por medio de un canal seguro en el que toda la información está cifrada.
 
@@ -309,3 +309,21 @@ Editaremos la siguiente línea:
 4 ◦ Por último comprobaremos que esta todo correctamente configurado mirando el estado de nuestro cortafuegos , en donde ya debe aparecer como permitidas las conexiones mediante el puerto 4242. Para ver el estado daremos uso del comando ```sudo ufw status```.
 
 <img width="575" alt="Captura de pantalla 2022-07-14 a las 19 38 37" src="https://user-images.githubusercontent.com/66915274/179047574-8073045c-6e78-4b6f-8487-cb0f490a2cd0.png">
+
+### 4-4 Configurar contraseña fuerte para sudo 🔒
+
+1 ◦ Crearemos un fichero en la ruta /etc/sudoers.d/ a mi fichero yo le he decidido llamar sudo_config ya que en ese fichero se almacenará la configuración de la contraseña. El comando exacto para crear el fichero es ```touch /etc/sudoers.d/sudo_config```.
+
+<img width="511" alt="Captura de pantalla 2022-07-14 a las 22 00 40" src="https://user-images.githubusercontent.com/66915274/179072822-2f86bd8b-216e-45e4-a15b-8fe3a49149ff.png">
+
+2 ◦ Debemos crear el directorio sudo en la ruta /var/log porque cada comando que ejecutemos con sudo , tanto el input como el output debe quedar almacenado en ese directorio. Para crearlo utilizaremos el comando ```mkdir /var/log/sudo```.
+
+<img width="502" alt="Captura de pantalla 2022-07-14 a las 21 56 53" src="https://user-images.githubusercontent.com/66915274/179072210-ad99e50d-fa57-494b-999d-3a80dd0f7849.png">
+
+3 ◦ Debemos editar el fichero creado en el paso 1. Como he comentado anteriormente puedes utilizar el editor que mas te guste , pero yo dare uso de nano. Comando para editar el fichero:  ```nano /etc/sudoers.d/sudo_config```.
+
+<img width="502" alt="Captura de pantalla 2022-07-14 a las 22 04 10" src="https://user-images.githubusercontent.com/66915274/179073389-5b2a9c16-811c-4133-87c6-479e770c880b.png">
+
+
+
+
