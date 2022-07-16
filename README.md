@@ -344,6 +344,29 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 <img width="802" alt="Captura de pantalla 2022-07-16 a las 2 04 56" src="https://user-images.githubusercontent.com/66915274/179326915-b374f679-fa2e-4e02-8b38-cdb53c6354a6.png">
 
-### Configuración de política de contraseñas fuerte 🔑
+### 4-5 Configuración de política de contraseñas fuerte 🔑
+
+1 ◦ El primer paso será editar el fichero login.defs.
+
+<img width="493" alt="Captura de pantalla 2022-07-16 a las 2 54 06" src="https://user-images.githubusercontent.com/66915274/179327943-67432d4a-7042-44ea-96f4-5975556ce4dc.png">
+
+2 ◦ Una vez estemos editando el fichero modificaremos los siguientes parametros: 
+
+➤ PASS_MAX_DAYS 99999 -> PASS_MAX_DAYS 30
+
+➤ PASS_MIN_DAYS 0 -> PASS_MIN_DAYS 2
 
 
+<img width="802" alt="Captura de pantalla 2022-07-16 a las 3 05 49" src="https://user-images.githubusercontent.com/66915274/179328449-32a40f67-a18d-4f29-993b-94d013cd7670.png">
+
+PASS_MAX_DAYS: Es el tiempo de expiración de la contraseña. El numero corresponde a días.
+
+PASS_MIN_DAYS: El número mínimo de días permitido antes de modificar una contraseña.
+
+PASS_WARN_AGE: El usuario recibira un mensaje de aviso indicando que faltan los dias especificados para que expire su contraseña.
+
+3 ◦ Para poder seguir con la configuración debemos instalar los siguientes paquetes con este comando ```sudo apt install libpam-pwquality``` , acto seguido pondremos ```Y``` para confirmar la instalación y esperaremos a que termine. 
+
+<img width="770" alt="Captura de pantalla 2022-07-16 a las 3 13 52" src="https://user-images.githubusercontent.com/66915274/179328708-c5054703-bdb0-4cca-82a8-6ab25ce42b40.png">
+
+4 ◦ 
