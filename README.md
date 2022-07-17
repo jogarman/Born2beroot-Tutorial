@@ -402,7 +402,7 @@ reject_username ➤ No puede contener el nombre del usuario.
 difok=7 ➤  Debe tener al menos 7 caracteres que no sean parte de la antigua contraseña. 
 enforce_for_root ➤ Implementaremos esta política para el usuario root.
 
-### Conectarse via SSH 🗣
+### 4-6 Conectarse via SSH 🗣
 
 
 
