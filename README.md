@@ -426,3 +426,6 @@ enforce_for_root ➤ Implementaremos esta política para el usuario root.
 
 <img width="588" alt="Captura de pantalla 2022-07-18 a las 10 22 29" src="https://user-images.githubusercontent.com/66915274/179472105-5942b3ec-5c29-4d49-a00e-67f9cde289e8.png">
 
+<img width="499" alt="Captura de pantalla 2022-07-19 a las 0 20 22" src="https://user-images.githubusercontent.com/66915274/179626962-bfdf1794-42d6-46bc-bcea-2d138a407a30.png">
+
+<img width="568" alt="Captura de pantalla 2022-07-19 a las 0 20 54" src="https://user-images.githubusercontent.com/66915274/179627034-660f284d-650a-4e9e-933b-c83b6e6773d6.png">
