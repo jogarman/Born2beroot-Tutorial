@@ -395,11 +395,17 @@ enforce_for_root
 🤔 Que hace cada comando❓
 
 minlen=10 ➤ La cantidad minima de caracteres que debe contener la contraseña.
+
 ucredit=-1 ➤ Como mínimo debe contener un caracter ```Mayus```. Ponemos el - ya que debe contener como mínimo un caracter, si ponemos + nos referimos a como maximo esos caracteres.
+
 dcredit=-1 ➤Como mínimo debe contener un digito.
+
 maxrepeat=3 ➤ No puede tener más de 3 veces seguidas el mismo caracter.
+
 reject_username ➤ No puede contener el nombre del usuario.
+
 difok=7 ➤  Debe tener al menos 7 caracteres que no sean parte de la antigua contraseña. 
+
 enforce_for_root ➤ Implementaremos esta política para el usuario root.
 
 ### 4-6 Conectarse via SSH 🗣
