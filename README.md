@@ -431,3 +431,7 @@ enforce_for_root ➤ Implementaremos esta política para el usuario root.
 <img width="499" alt="Captura de pantalla 2022-07-19 a las 0 20 22" src="https://user-images.githubusercontent.com/66915274/179626962-bfdf1794-42d6-46bc-bcea-2d138a407a30.png">
 
 <img width="568" alt="Captura de pantalla 2022-07-19 a las 0 20 54" src="https://user-images.githubusercontent.com/66915274/179627034-660f284d-650a-4e9e-933b-c83b6e6773d6.png">
+
+### Última parte - Signature.txt 📝
+
+Para obtener la firma lo primero que debemos hacer es apagar la máquina virtual ya que una vez la enciendas o modifiques algo la firma cambiará. Una vez apagada la máquina la clonarás ya que deberás realizar 3 evaluaciones.
