@@ -625,11 +625,51 @@ Para obtener la firma lo primero que debemos hacer es apagar la máquina virtual
 
 <img width="834" alt="Captura de pantalla 2022-08-03 a las 4 47 32" src="https://user-images.githubusercontent.com/66915274/182513283-1cfc319f-982d-47cf-a596-8475d4c96616.png">
 
+El siguiente paso será ubicarnos en la ruta donde tengamos el .vdi de nuestra maquina virtual. 
 
+<img width="465" alt="Screen Shot 2022-08-03 at 4 57 37 AM" src="https://user-images.githubusercontent.com/66915274/182514499-f0ad5ba7-c0c2-493e-b0ae-9b79c970816e.png">
 
+Por último haremos shasum nombremaquina.vdi y esto nos dara la firma. El resultado de esta firma es lo que tendremos que subir al repositorio de la intra. Muy importante no volver a abrir la maquina ya que se modificara la firma. Para las correcciones recuerda clonar la maquina ya que asi podras encenderla sin miedo a que cambie la firma.
 
+<img width="416" alt="Screen Shot 2022-08-03 at 4 58 48 AM" src="https://user-images.githubusercontent.com/66915274/182514627-f11026d0-de0d-447d-a2e4-31a3c1af0f35.png">
 
-### Hoja de corrección ✅
+# Hoja de corrección ✅
+
+### ▪️ Que es una maquina virtual?
+
+Es un software que simula un sistema de computación y puede ejecutar programas como si fuese una computadora real. Permite crear múltiples entornos simulados o recursos dedicados desde un solo sistema de hardware físico. 
+
+### ▪️ Porque has escogido Debian?
+
+Esto es algo personal para cada uno, mi opinion: El propio subject explica que es mas sencillo hacerlo en Debian y si buscas documentacion/tutoriales hay muchos y todos se han hecho en debian.
+
+### ▪️ Diferencias basicas entre CentOS y Debian:
+
+![182516961-c3e4da77-2db8-4737-a68f-27b033908705 (1) (1)](https://user-images.githubusercontent.com/66915274/182517306-edb92eac-cba4-444a-83f8-9692bac69231.png)
+
+### ▪️ Cual es el proposito de las maquinas virtuales?
+
+Su objetivo es el de proporcionar un entorno de ejecución independiente de la plataforma de hardware y del sistema operativo, que oculte los detalles de la plataforma subyacente y permita que un programa se ejecute siempre de la misma forma sobre cualquier plataforma.
+
+### ▪️ Diferencias entre apt y aptitude:
+
+Aptitude es una version mejorada de apt. APT es un administrador de paquetes de nivel inferior y aptitude es un administrador de paquetes de alto nivel. Otra gran diferencia es la funcionalidad que ofrecen ambas herramientas. Aptitude ofrece una mejor funcionalidad en comparación con apt-get. Ambos son capaces de de proporcionar los medios necesarios para realizar la gestión de paquetes. Sin embargo, si se busca un enfoque con mas caracteristicas, debería ser, Aptitude. 
+
+### ▪️ Que es APPArmor?
+
+Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
+
+### Todas las capturas han sido sacadas de la guia de pasqualerossi (muy recomendable) 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
+
+![image](https://user-images.githubusercontent.com/66915274/182514998-71de2c26-c072-4769-b16b-7706b96bcbe5.png)
+
+![image](https://user-images.githubusercontent.com/66915274/182515024-5725b2f1-e687-4dea-a9a2-ef2e7fec7b78.png)
+
+![image](https://user-images.githubusercontent.com/66915274/182515037-6e267905-ae52-4d21-9959-54b4fd7c3db7.png)
+
+![image](https://user-images.githubusercontent.com/66915274/182515074-dfcf5f81-1c14-484d-a0e0-4e57acac7802.png)
+
+![image](https://user-images.githubusercontent.com/66915274/182515110-f766c351-24fd-44ef-a747-e706fd50382c.png)
 
 # Este tutorial ha llevado mucho trabajo, si crees que te ha sido útil agradeceria mucho starred 🌟 para que así se comparta y pueda ayudar a más estudiantes 👨🏻‍🎓❤️
 
