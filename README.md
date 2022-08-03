@@ -2,30 +2,30 @@
 
 # Índice
 
-1. [Descargar imagen de la maquina virtual 💿](https://github.com/gemartin99/Born2beroot-Tutorial/main/README.md#1--descargar-imagen-de-la-maquina-virtual-)
-2. [Instalación de la maquina 🛠](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#2--instalacion-de-la-maquina-)
-3. [Instalación Debian 🌀](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#3--instalaci%C3%B3n-debian-)
-4. [Configuración de la máquina virtual ⚙️](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#4-configuraci%C3%B3n-de-la-m%C3%A1quina-virtual-%EF%B8%8F)
+1. [Descargar imagen de la maquina virtual 💿](#1--descargar-imagen-de-la-maquina-virtual-)
+2. [Instalación de la maquina 🛠](#2--instalacion-de-la-maquina-)
+3. [Instalación Debian 🌀](#3--instalación-debian-)
+4. [Configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
-	4.1 [Instalación de sudo y configuración de usuarios y grupos 👤](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#41---instalaci%C3%B3n-de-sudo-y-configuraci%C3%B3n-de-usuarios-y-grupos-)
+	4.1 [Instalación de sudo y configuración de usuarios y grupos 👤](#41---instalación-de-sudo-y-configuración-de-usuarios-y-grupos-)
 	
-	4.2 [Instalación y configuración de SSH 📶](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#42---instalaci%C3%B3n-y-configuraci%C3%B3n-ssh-)
+	4.2 [Instalación y configuración de SSH 📶](#42---instalación-y-configuración-ssh-)
 	
-	4.3 [Instalación y configuración de UFW 🔥🧱](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#4-3-instalaci%C3%B3-y-configuraci%C3%B3n-de-ufw-)
+	4.3 [Instalación y configuración de UFW 🔥🧱](#4-3-instalació-y-configuración-de-ufw-)
 	
-	4.4 [Configurar contraseña fuerte para sudo 🔒](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#4-4-configurar-contrase%C3%B1a-fuerte-para-sudo-)
+	4.4 [Configurar contraseña fuerte para sudo 🔒](#4-4-configurar-contraseña-fuerte-para-sudo-)
 	
-	4.5 [Configuración de política de contraseñas fuerte 🔑](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#4-5-configuraci%C3%B3n-de-pol%C3%ADtica-de-contrase%C3%B1as-fuerte-)
+	4.5 [Configuración de política de contraseñas fuerte 🔑](#4-5-configuración-de-política-de-contraseñas-fuerte-)
 	
-	4.6 [Conectarse via SSH 🗣](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#4-6-conectarse-via-ssh-)
+	4.6 [Conectarse via SSH 🗣](#4-6-conectarse-via-ssh-)
 	
-5. [Script 🚨](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#5--script-)
+5. [Script 🚨](#5--script-)
 
-	5.1 [Resultado total del script 🆗](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#5-13-resultado-total-del-script)
+	5.1 [Resultado total del script 🆗](#5-13-resultado-total-del-script)
 	
-6. [Crontab ⏰](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#6--crontab-)
-7. [Signature.txt 📝](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#7--signaturetxt-)
-8. [Hoja de corrección ✅](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#8--hoja-de-correcci%C3%B3n-)
+6. [Crontab ⏰](#6--crontab-)
+7. [Signature.txt 📝](#7--signaturetxt-)
+8. [Hoja de corrección ✅](#8--hoja-de-corrección-)
 ## 1- _Descargar imagen de la maquina virtual_ 💿
 
 [Click aqui](https://www.debian.org/distrib/index.es.html) para redireccionarte a la URL donde puedes descargar la ISO de manera segura.
