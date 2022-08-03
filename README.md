@@ -432,8 +432,6 @@ enforce_for_root ➤ Implementaremos esta política para el usuario root.
 
 <img width="568" alt="Captura de pantalla 2022-07-19 a las 0 20 54" src="https://user-images.githubusercontent.com/66915274/179627034-660f284d-650a-4e9e-933b-c83b6e6773d6.png">
 
-# Próximamente 🛠
-
 ## 5- Script 🚨
 
 Esta es una parte muy importante del proyecto. Debes prestar atención en todo, muy importante no copiar y pegar directamente el fichero sin saber que hace cada cosa. En la evaluación debes explicar cada comando si el evaluador lo pide.
@@ -527,10 +525,102 @@ incrementar el número de ejecucciones de sudo.
 
 <img width="632" alt="Captura de pantalla 2022-08-02 a las 23 50 39" src="https://user-images.githubusercontent.com/66915274/182479668-949b8eee-81f6-4593-83f4-99053d199f1b.png">
 
-### Crontab ⏰
+### 5-13 Resultado total del script
+
+⚠️ Recuerda no hacer copia y pega si no sabes el funcionamiento de cada comando ⚠️
+
+```
+#!/bin/bash
+
+# ARCH
+arch=$(uname -a)
+
+# CPU PHYSICAL
+cpuf=$(grep "physical id" /proc/cpuinfo | wc -l)
+
+# CPU VIRTUAL
+cpuv=$(grep "processor" /proc/cpuinfo | wc -l)
+
+# RAM
+ram_total=$(free --mega | awk '$1 == "Mem:" {print $2}')
+ram_use=$(free --mega | awk '$1 == "Mem:" {print $3}')
+ram_percent=$(free --mega | awk '$1 == "Mem:" {printf("%.2f"), $3/$2*100}')
+
+# DISK
+disk_total=$(df -m | grep "/dev/" | grep -v "/boot" | awk '{disk_t += $2} END {printf ("%.1fGb\n"), disk_t/1024}')
+disk_use=$(df -m | grep "/dev/" | grep -v "/boot" | awk '{disk_u += $3} END {print disk_u}')
+disk_percent=$(df -m | grep "/dev/" | grep -v "/boot" | awk '{disk_u += $3} {disk_t+= $2} END {printf("%d"), disk_u/disk_t*100}')
+
+# CPU LOAD
+cpul=$(vmstat 1 2 | tail -1 | awk '{printf $15}')
+cpu_op=$(expr 100 - $cpul)
+cpu_fin=$(printf "%.1f" $cpu_op)
+
+# LAST BOOT
+lb=$(who -b | awk '$1 == "system" {print $3 " " $4}')
+
+# LVM USE
+lvmu=$(if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi)
+
+# TCP CONNEXIONS
+tcpc=$(ss -ta | grep ESTAB | wc -l)
+
+# USER LOG
+ulog=$(users | wc -w)
+
+# NETWORK
+ip=$(hostname -I)
+mac=$(ip link | grep "link/ether" | awk '{print $2}')
+
+# SUDO
+cmnd=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
+
+wall "	Architecture: $arch
+	CPU physical: $cpuf
+	vCPU: $cpuv
+	Memory Usage: $ram_use/${ram_total}MB ($ram_percent%)
+	Disk Usage: $disk_use/${disk_total} ($disk_percent%)
+	CPU load: $cpu_fin%
+	Last boot: $lb
+	LVM use: $lvmu
+	Connections TCP: $tcpc ESTABLISHED
+	User log: $ulog
+	Network: IP $ip ($mac)
+	Sudo: $cmnd cmd"
+```
+Script visto desde nano ↙️
+
+<img width="911" alt="Captura de pantalla 2022-08-03 a las 3 47 31" src="https://user-images.githubusercontent.com/66915274/182506484-f5a095b8-4751-461e-a114-f8e36b4cfa9a.png">
+
+Resultado tras la ejecución del script ↙️
+
+<img width="796" alt="Captura de pantalla 2022-08-03 a las 3 46 15" src="https://user-images.githubusercontent.com/66915274/182506357-f5466a97-380b-4b6d-9b79-89e01a31498a.png">
+
+### 5-14 Crontab ⏰
+
+
 
 ### Última parte - Signature.txt 📝
 
 Para obtener la firma lo primero que debemos hacer es apagar la máquina virtual ya que una vez la enciendas o modifiques algo la firma cambiará. Una vez apagada la máquina la clonarás ya que deberás realizar 3 evaluaciones.
 
 ### Hoja de corrección ✅
+
+# Este tutorial ha llevado mucho trabajo, si crees que te ha sido útil agradeceria mucho starred 🌟 para que así se comparta y pueda ayudar a más estudiantes 👨🏻‍🎓❤️
+
+# Quizás pueda interesarte!
+
+### - Para ver mi progresion en el common core 42 ↙️
+
+[AQUÍ](https://github.com/gemartin99/42cursus)
+
+### - Mi perfil en la intranet de 42 ↙️
+[AQUÍ](https://profile.intra.42.fr/users/gemartin)
+
+## Contacto 📥
+
+### Contacta conmigo si crees que puedo mejorar el tutorial! Puede ayudar a futuros estudiantes! 😁
+
+◦ Email: gemartin@student.42barcelona.com
+
+◦ Linkedin: https://www.linkedin.com/in/gemartin99/
