@@ -2,7 +2,7 @@
 
 # Índice
 
-1. [Descargar imagen de la maquina virtual 💿](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#1--descargar-imagen-de-la-maquina-virtual-)
+1. [Descargar imagen de la maquina virtual 💿](https://github.com/gemartin99/Born2beroot-Tutorial/main/README.md#1--descargar-imagen-de-la-maquina-virtual-)
 2. [Instalación de la maquina 🛠](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#2--instalacion-de-la-maquina-)
 3. [Instalación Debian 🌀](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#3--instalaci%C3%B3n-debian-)
 4. [Configuración de la máquina virtual ⚙️](https://github.com/gemartin99/Born2beroot-Tutorial/edit/main/README.md#4-configuraci%C3%B3n-de-la-m%C3%A1quina-virtual-%EF%B8%8F)
