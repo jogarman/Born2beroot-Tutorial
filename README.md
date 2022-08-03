@@ -659,7 +659,7 @@ Aptitude es una version mejorada de apt. APT es un administrador de paquetes de 
 
 Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
 
-### Las capturas siguientes han sido sacadas de la guia de pasqualerossi (muy recomendable) 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
+## Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi (muy recomendable) 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
 
 ![image](https://user-images.githubusercontent.com/66915274/182514998-71de2c26-c072-4769-b16b-7706b96bcbe5.png)
 
