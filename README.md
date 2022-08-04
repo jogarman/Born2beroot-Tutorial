@@ -26,6 +26,9 @@
 6. [Crontab ⏰](#6--crontab-)
 7. [Signature.txt 📝](#7--signaturetxt-)
 8. [Hoja de corrección ✅](#8--hoja-de-corrección-)
+
+	8.1 [Respuestas de la evaluación 💯](#8-1-respuestas-de-la-evaluación-)
+	
 ## 1- _Descargar imagen de la maquina virtual_ 💿
 
 [Click aqui](https://www.debian.org/distrib/index.es.html) para redireccionarte a la URL donde puedes descargar la ISO de manera segura.
@@ -258,9 +261,9 @@ Volvemos a poner el nombre de usuario.
 
 <img width="372" alt="Captura de pantalla 2022-07-14 a las 2 16 09" src="https://user-images.githubusercontent.com/66915274/178858323-bd9cbe8e-b4cb-4cd5-817d-fd4c44f85725.png">
 
-🧠 Que es GID❓ Es el identificador de grupo, es una abreviatura de Group 🆔.
+🧠 <b>Que es GID❓</b> Es el identificador de grupo, es una abreviatura de Group 🆔.
 
-🤔 Se ha creado correctamente el grupo? Lo cierto es que si ya que no ha habido ningún mensaje de error, aún así podemos comprobar si se ha creado con el comando ```getent group nombre_grupo``` o también podemos hacer ```cat /etc/group``` y podremos ver todos los grupos y los usuarios que hay dentro de ellos.
+🤔 <b> Se ha creado correctamente el grupo? </b> Lo cierto es que si ya que no ha habido ningún mensaje de error, aún así podemos comprobar si se ha creado con el comando ```getent group nombre_grupo``` o también podemos hacer ```cat /etc/group``` y podremos ver todos los grupos y los usuarios que hay dentro de ellos.
 
 6 ◦ Con el comando ```sudo adduser user group``` incluiremos al usuario en el grupo. Debemos incluir al usuario en los grupos ```root``` y ```login42```.
 
@@ -276,7 +279,7 @@ Volvemos a poner el nombre de usuario.
 
 ### 4.2 - Instalación y configuración SSH 📶
 
-🧠 Que es SSH❓ Es el nombre de un protocolo y del programa que lo implementa cuya principal función es el acceso remoto a un servidor por medio de un canal seguro en el que toda la información está cifrada.
+🧠 <b> Que es SSH❓</b> Es el nombre de un protocolo y del programa que lo implementa cuya principal función es el acceso remoto a un servidor por medio de un canal seguro en el que toda la información está cifrada.
 
 1 ◦ Lo primero que haremos será hacer ```sudo apt update``` para actualizar los repositorios que definimos en el archivo /etc/apt/sources.list
 
@@ -323,7 +326,7 @@ Editaremos la siguiente línea:
 
 ### 4-3 Instalació y configuración de UFW 🔥🧱
 
-🧠 Que es [UFW](https://es.wikipedia.org/wiki/Uncomplicated_Firewall)❓ Es un [firewall](https://es.wikipedia.org/wiki/Cortafuegos_(inform%C3%A1tica)) el cual utiliza la línea de comandos para configurar las [iptables](https://es.wikipedia.org/wiki/Iptables) usando un pequeño número de comandos simples.
+🧠 <b>Que es [UFW](https://es.wikipedia.org/wiki/Uncomplicated_Firewall)❓</b> Es un [firewall](https://es.wikipedia.org/wiki/Cortafuegos_(inform%C3%A1tica)) el cual utiliza la línea de comandos para configurar las [iptables](https://es.wikipedia.org/wiki/Iptables) usando un pequeño número de comandos simples.
 
 1 ◦ Lo primero que debemos hacer el instalar UFW, para ello haremos uso del comando ```sudo apt install ufw``` acto seguido escribiremos una ```y``` para confirmar que deseamos instalarlo y esperaremos a que termine.
 
@@ -373,7 +376,7 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 <img width="1202" alt="Captura de pantalla 2022-07-16 a las 2 03 45" src="https://user-images.githubusercontent.com/66915274/179326003-1fd67295-4be2-47bd-98fc-d5821f5f1c4d.png">
 
-🤔 Que hace cada comando❓ 
+🤔 <b>Que hace cada comando❓ </b>
 
 <img width="802" alt="Captura de pantalla 2022-07-16 a las 2 04 56" src="https://user-images.githubusercontent.com/66915274/179326915-b374f679-fa2e-4e02-8b38-cdb53c6354a6.png">
 
@@ -425,7 +428,7 @@ enforce_for_root
 
 <img width="800" alt="Captura de pantalla 2022-07-16 a las 3 38 08" src="https://user-images.githubusercontent.com/66915274/179329787-1b718843-9272-43e4-8d92-8d83933cc938.png">
 
-🤔 Que hace cada comando❓
+🤔 <b>Que hace cada comando❓</b>
 
 minlen=10 ➤ La cantidad minima de caracteres que debe contener la contraseña.
 
@@ -468,6 +471,8 @@ enforce_for_root ➤ Implementaremos esta política para el usuario root.
 ## 5- Script 🚨
 
 Esta es una parte muy importante del proyecto. Debes prestar atención en todo, muy importante no copiar y pegar directamente el fichero sin saber que hace cada cosa. En la evaluación debes explicar cada comando si el evaluador lo pide.
+
+🧠 <b>Que es un script❓</b> Es una secuencia de comandos guardada en un fichero que cuando se ejecuta hara la funcion de cada comando.
 
 ### 5-1 Architecture 
 
@@ -664,37 +669,23 @@ El siguiente paso será ubicarnos en la ruta donde tengamos el .vdi de nuestra m
 
 Por último haremos ```shasum nombremaquina.vdi``` y esto nos dara la firma. El resultado de esta firma es lo que tendremos añadir a nuestro fichero signature.txt para posteriormente subir el fichero al repositorio de la intra. Muy importante no volver a abrir la maquina ya que se modificara la firma. Para las correcciones recuerda clonar la maquina ya que asi podras encenderla sin miedo a que cambie la firma.
 
-🧠 Que es shasum? Es un comando que permite identificar la integridad de un fichero mediante la suma de comprobación del hash SHA-1 de un archivo.
+🧠 <b> Que es shasum❓</b> Es un comando que permite identificar la integridad de un fichero mediante la suma de comprobación del hash SHA-1 de un archivo.
 
 <img width="416" alt="Screen Shot 2022-08-03 at 4 58 48 AM" src="https://user-images.githubusercontent.com/66915274/182514627-f11026d0-de0d-447d-a2e4-31a3c1af0f35.png">
+<br>
+<br>
+<br>
+
+<img width="946" alt="Screen Shot 2022-08-04 at 2 57 59 PM" src="https://user-images.githubusercontent.com/66915274/182852721-91c3a4fa-96cc-4e94-aa95-00eef1640841.png">
+
+
+<br>
+<br>
+<br>
 
 ## 8- Hoja de corrección ✅
 
-### ▪️ Que es una maquina virtual?
-
-Es un software que simula un sistema de computación y puede ejecutar programas como si fuese una computadora real. Permite crear múltiples entornos simulados o recursos dedicados desde un solo sistema de hardware físico. 
-
-### ▪️ Porque has escogido Debian?
-
-Esto es algo personal para cada uno, mi opinion: El propio subject explica que es mas sencillo hacerlo en Debian y si buscas documentacion/tutoriales hay muchos y todos se han hecho en debian.
-
-### ▪️ Diferencias basicas entre CentOS y Debian:
-
-![182516961-c3e4da77-2db8-4737-a68f-27b033908705 (1) (1)](https://user-images.githubusercontent.com/66915274/182517306-edb92eac-cba4-444a-83f8-9692bac69231.png)
-
-### ▪️ Cual es el proposito de las maquinas virtuales?
-
-Su objetivo es el de proporcionar un entorno de ejecución independiente de la plataforma de hardware y del sistema operativo, que oculte los detalles de la plataforma subyacente y permita que un programa se ejecute siempre de la misma forma sobre cualquier plataforma.
-
-### ▪️ Diferencias entre apt y aptitude:
-
-Aptitude es una version mejorada de apt. APT es un administrador de paquetes de nivel inferior y aptitude es un administrador de paquetes de alto nivel. Otra gran diferencia es la funcionalidad que ofrecen ambas herramientas. Aptitude ofrece una mejor funcionalidad en comparación con apt-get. Ambos son capaces de de proporcionar los medios necesarios para realizar la gestión de paquetes. Sin embargo, si se busca un enfoque con mas caracteristicas, debería ser, Aptitude. 
-
-### ▪️ Que es APPArmor?
-
-Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
-
-## Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi (muy recomendable) 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
+### Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi (muy recomendable) 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
 
 ![image](https://user-images.githubusercontent.com/66915274/182514998-71de2c26-c072-4769-b16b-7706b96bcbe5.png)
 
@@ -706,7 +697,39 @@ Es un módulo de seguridad del kernel Linux que permite al administrador del sis
 
 ![image](https://user-images.githubusercontent.com/66915274/182515110-f766c351-24fd-44ef-a747-e706fd50382c.png)
 
-# Este tutorial ha llevado mucho trabajo, si crees que te ha sido útil agradeceria mucho starred 🌟 para que así se comparta y pueda ayudar a más estudiantes 👨🏻‍🎓❤️
+## 8-1 Respuestas de la evaluación 💯
+
+### ▪️ Que es una maquina virtual❓
+
+Es un software que simula un sistema de computación y puede ejecutar programas como si fuese una computadora real. Permite crear múltiples entornos simulados o recursos dedicados desde un solo sistema de hardware físico. 
+
+### ▪️ Porque has escogido Debian❓
+
+Esto es algo personal para cada uno, mi opinion: El propio subject explica que es mas sencillo hacerlo en Debian y si buscas documentacion/tutoriales hay muchos y todos se han hecho en debian.
+
+### ▪️ Diferencias basicas entre CentOS y Debian
+
+![182516961-c3e4da77-2db8-4737-a68f-27b033908705 (1) (1)](https://user-images.githubusercontent.com/66915274/182517306-edb92eac-cba4-444a-83f8-9692bac69231.png)
+
+### ▪️ Cual es el proposito de las maquinas virtuales❓
+
+Su objetivo es el de proporcionar un entorno de ejecución independiente de la plataforma de hardware y del sistema operativo, que oculte los detalles de la plataforma subyacente y permita que un programa se ejecute siempre de la misma forma sobre cualquier plataforma.
+
+### ▪️ Diferencias entre apt y aptitude ↙️
+
+Aptitude es una version mejorada de apt. APT es un administrador de paquetes de nivel inferior y aptitude es un administrador de paquetes de alto nivel. Otra gran diferencia es la funcionalidad que ofrecen ambas herramientas. Aptitude ofrece una mejor funcionalidad en comparación con apt-get. Ambos son capaces de de proporcionar los medios necesarios para realizar la gestión de paquetes. Sin embargo, si se busca un enfoque con mas caracteristicas, debería ser, Aptitude. 
+
+### ▪️ Que es APPArmor❓
+
+Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
+
+# Contacto 📥
+
+### Contacta conmigo si crees que puedo mejorar el tutorial! Puede ayudar a futuros estudiantes! 😁
+
+◦ Email: gemartin@student.42barcelona.com
+
+◦ Linkedin: https://www.linkedin.com/in/gemartin99/
 
 # Quizás pueda interesarte!
 
@@ -716,11 +739,3 @@ Es un módulo de seguridad del kernel Linux que permite al administrador del sis
 
 ### - Mi perfil en la intranet de 42 ↙️
 [AQUÍ](https://profile.intra.42.fr/users/gemartin)
-
-## Contacto 📥
-
-### Contacta conmigo si crees que puedo mejorar el tutorial! Puede ayudar a futuros estudiantes! 😁
-
-◦ Email: gemartin@student.42barcelona.com
-
-◦ Linkedin: https://www.linkedin.com/in/gemartin99/
