@@ -676,16 +676,15 @@ Por último haremos ```shasum nombremaquina.vdi``` y esto nos dara la firma. El 
 <br>
 <br>
 
-<img width="946" alt="Screen Shot 2022-08-04 at 2 57 59 PM" src="https://user-images.githubusercontent.com/66915274/182852721-91c3a4fa-96cc-4e94-aa95-00eef1640841.png">
-
-
+#
+# Este tutorial ha llevado mucho trabajo, si crees que te ha sido útil agradeceria mucho starred 🌟 para que así se comparta y pueda ayudar a más estudiantes 👨🏻‍🎓❤️
 <br>
 <br>
 <br>
 
 ## 8- Hoja de corrección ✅
 
-### Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi (muy recomendable) 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
+### Que no te sorprenda nada❗️ Sigue bajando para poder ver todo lo que aparece en la corrección. Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi (muy recomendable) 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
 
 ![image](https://user-images.githubusercontent.com/66915274/182514998-71de2c26-c072-4769-b16b-7706b96bcbe5.png)
 
