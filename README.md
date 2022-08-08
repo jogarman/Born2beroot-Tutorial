@@ -241,7 +241,7 @@ Volvemos a poner el nombre de usuario.
 
 ### 4.1 - Instalación de sudo y configuración de usuarios y grupos 👤
 
-1 ◦ Para la instalación de sudo primero debemos estar en el usuario root, para ello pondremos ```Su``` en el terminal y introduciremos la contraseña, en mi caso es ```Hola42bcn```. Una vez hemos accedido al usuario root debemos poner el comando ```sudo apt install``` para instalar los paquetes necesarios.
+1 ◦ Para la instalación de sudo primero debemos estar en el usuario root, para ello pondremos ```Su``` en el terminal y introduciremos la contraseña, en mi caso es ```Hola42bcn```. Una vez hemos accedido al usuario root debemos poner el comando ```apt install sudo``` para así instalar los paquetes necesarios.
 
 <img width="796" alt="Captura de pantalla 2022-07-14 a las 1 36 46" src="https://user-images.githubusercontent.com/66915274/178855273-fc76689c-224b-4368-b7b1-5d1954427aff.png">
 
