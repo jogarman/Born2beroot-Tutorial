@@ -636,7 +636,7 @@ Resultado tras la ejecución del script ↙️
 
 ## 6- Crontab ⏰
 
-🧠 Que es crontab? Es un administrador de procesos en segundo plano. Los procesos indicados seran ejecutados en el momento que especifiques en el fichero crontab.
+🧠 <b>Que es crontab? </b>Es un administrador de procesos en segundo plano. Los procesos indicados seran ejecutados en el momento que especifiques en el fichero crontab.
 
 Para tener correctamente crontab configurado debemos editar el fichero crontab con el siguiente comando ```sudo crontab -u root -e```. 
 
@@ -684,7 +684,7 @@ Por último haremos ```shasum nombremaquina.vdi``` y esto nos dara la firma. El 
 
 ## 8- Hoja de corrección ✅
 
-### Que no te sorprenda nada❗️ Sigue bajando para poder ver todo lo que aparece en la corrección. Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi (muy recomendable) 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
+### Que no te sorprenda nada❗️ Sigue bajando para poder ver todo lo que aparece en la corrección. Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
 
 ![image](https://user-images.githubusercontent.com/66915274/182514998-71de2c26-c072-4769-b16b-7706b96bcbe5.png)
 
