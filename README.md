@@ -268,13 +268,10 @@ Volvemos a poner el nombre de usuario.
 6 ◦ Con el comando ```sudo adduser user group``` incluiremos al usuario en el grupo. Debemos incluir al usuario en los grupos ```sudo``` y ```login42```.
 
 <img width="487" alt="Captura de pantalla 2022-07-14 a las 2 24 49" src="https://user-images.githubusercontent.com/66915274/178859065-a3b0126c-339a-4962-a4ac-14e5c26784bd.png">
-<img width="373" alt="Captura de pantalla 2022-07-14 a las 2 25 53" src="https://user-images.githubusercontent.com/66915274/178859421-ba9f5d99-7350-4d0e-b6ee-620b4792a093.png">
 
 7 ◦ Una vez los hayamos introducido para checkear que todo se haya hecho correctamente podemos ejecutar el comando ```getent group nombre_grupo``` o tambien podemos editar el fichero /etc/group ```nano /etc/group``` y en los grupos ```sudo``` y ```login42``` debera aparecer nuestro usuario.
 
 <img width="346" alt="Captura de pantalla 2022-07-14 a las 2 35 20" src="https://user-images.githubusercontent.com/66915274/178859927-9dc9b784-2873-41c7-968a-ad6f5fb8dcc4.png">
-<img width="305" alt="Captura de pantalla 2022-07-14 a las 2 35 35" src="https://user-images.githubusercontent.com/66915274/178859955-ff6afb7b-3339-4a11-bdd6-8198fbfa729f.png">
-<img width="495" alt="Captura de pantalla 2022-07-14 a las 2 31 13" src="https://user-images.githubusercontent.com/66915274/178859585-cbe031a4-99fb-4cf2-975e-275a6147a866.png">
 <img width="222" alt="Captura de pantalla 2022-07-14 a las 2 31 30" src="https://user-images.githubusercontent.com/66915274/178859602-3ef48daf-f485-4b37-af53-6664046358cb.png">
 
 ### 4.2 - Instalación y configuración SSH 📶
