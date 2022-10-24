@@ -25,9 +25,10 @@
 	
 6. [Crontab ⏰](#6--crontab-)
 7. [Signature.txt 📝](#7--signaturetxt-)
-9. [Hoja de corrección ✅](#8--hoja-de-corrección-)
+8. [Bonus ⭐](#8--bonus-%EF%B8%8F)
+9. [Hoja de corrección ✅](#9--hoja-de-corrección-)
 
-	9.1 [Respuestas de la evaluación 💯](#8-1-respuestas-de-la-evaluación-)
+	9.1 [Respuestas de la evaluación 💯](#9-1-respuestas-de-la-evaluación-)
 	
 ## 1- _Descargar imagen de la maquina virtual_ 💿
 
