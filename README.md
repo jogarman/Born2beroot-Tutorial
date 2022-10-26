@@ -258,22 +258,29 @@ Volvemos a poner el nombre de usuario.
 
 <img width="509" alt="Captura de pantalla 2022-07-14 a las 2 15 11" src="https://user-images.githubusercontent.com/66915274/178858240-95ce2a2b-004a-4bcb-981a-7990c1cc4fdd.png">
 
-5 ◦ Ahora deberemos crear un nuevo grupo llamado ```login42```. Para crearlo debemos hacer ```sudo addgroup login42```. 
+5 ◦ Ahora deberemos crear un nuevo grupo llamado ```user42```. Para crearlo debemos hacer ```sudo addgroup user42```. 
 
-<img width="372" alt="Captura de pantalla 2022-07-14 a las 2 16 09" src="https://user-images.githubusercontent.com/66915274/178858323-bd9cbe8e-b4cb-4cd5-817d-fd4c44f85725.png">
+<img width="367" alt="Screen Shot 2022-10-26 at 6 30 52 PM" src="https://user-images.githubusercontent.com/66915274/198082677-d393243e-363a-4d1f-95d8-a6695336a47a.png">
 
 🧠 <b>Que es GID❓</b> Es el identificador de grupo, es una abreviatura de Group 🆔.
 
 🤔 <b> Se ha creado correctamente el grupo? </b> Lo cierto es que si ya que no ha habido ningún mensaje de error, aún así podemos comprobar si se ha creado con el comando ```getent group nombre_grupo``` o también podemos hacer ```cat /etc/group``` y podremos ver todos los grupos y los usuarios que hay dentro de ellos.
 
-6 ◦ Con el comando ```sudo adduser user group``` incluiremos al usuario en el grupo. Debemos incluir al usuario en los grupos ```sudo``` y ```login42```.
+6 ◦ Con el comando ```sudo adduser user group``` incluiremos al usuario en el grupo. Debemos incluir al usuario en los grupos ```sudo``` y ```user42```.
 
-<img width="487" alt="Captura de pantalla 2022-07-14 a las 2 24 49" src="https://user-images.githubusercontent.com/66915274/178859065-a3b0126c-339a-4962-a4ac-14e5c26784bd.png">
+<img width="422" alt="Screen Shot 2022-10-26 at 6 32 30 PM" src="https://user-images.githubusercontent.com/66915274/198083019-c5a442bb-c625-45ce-84e1-bcbca3a7dba5.png">
+
+<img width="404" alt="Screen Shot 2022-10-26 at 6 34 09 PM" src="https://user-images.githubusercontent.com/66915274/198083377-bd4162c6-317b-474f-8bc4-e542be4dcfde.png">
 
 7 ◦ Una vez los hayamos introducido para checkear que todo se haya hecho correctamente podemos ejecutar el comando ```getent group nombre_grupo``` o tambien podemos editar el fichero /etc/group ```nano /etc/group``` y en los grupos ```sudo``` y ```login42``` debera aparecer nuestro usuario.
 
-<img width="346" alt="Captura de pantalla 2022-07-14 a las 2 35 20" src="https://user-images.githubusercontent.com/66915274/178859927-9dc9b784-2873-41c7-968a-ad6f5fb8dcc4.png">
-<img width="222" alt="Captura de pantalla 2022-07-14 a las 2 31 30" src="https://user-images.githubusercontent.com/66915274/178859602-3ef48daf-f485-4b37-af53-6664046358cb.png">
+<img width="328" alt="Screen Shot 2022-10-26 at 6 35 50 PM" src="https://user-images.githubusercontent.com/66915274/198083739-ad16e388-69c3-41d1-a061-e55dd66b0d14.png">
+
+<img width="151" alt="Screen Shot 2022-10-26 at 6 36 18 PM" src="https://user-images.githubusercontent.com/66915274/198083854-0fba5296-a49f-44cc-8427-59a692e69288.png">
+
+<img width="353" alt="Screen Shot 2022-10-26 at 6 39 22 PM" src="https://user-images.githubusercontent.com/66915274/198084464-f73352ee-ed21-478b-a44d-d86eb6d8a1cd.png">
+
+<img width="183" alt="Screen Shot 2022-10-26 at 6 38 25 PM" src="https://user-images.githubusercontent.com/66915274/198084311-45a50162-ff89-4e7d-a3c5-45e7048520a4.png">
 
 ### 4.2 - Instalación y configuración SSH 📶
 
