@@ -26,7 +26,12 @@
 6. [Crontab ⏰](#6--crontab-)
 7. [Signature.txt 📝](#7--signaturetxt-)
 8. [Bonus ⭐](#8--bonus-%EF%B8%8F)
-9. [Hoja de corrección ✅](#9--hoja-de-corrección-)
+
+	8.1 [Particionado manual del disco](#81--particionado-manual-del-disco)
+	
+	8.2 [Wordpress y configuración de servicios 🌐](#82---wordpress-y-configuración-de-servicios-)
+
+10. [Hoja de corrección ✅](#9--hoja-de-corrección-)
 
 	9.1 [Respuestas de la evaluación 💯](#9-1-respuestas-de-la-evaluación-)
 	
@@ -680,7 +685,7 @@ Por último haremos ```shasum nombremaquina.vdi``` y esto nos dara la firma. El 
 
 ## 8- Bonus ⭐️
 
-### 8.1- Particionado del disco manual 
+### 8.1- Particionado manual del disco
 
 1 ◦ En el momento de escoger el particionado de disco seleccionaremos manual. De esta manera podremos editar las particiones una a una.
 
@@ -1068,9 +1073,12 @@ Descripción breve de todos los tipos de particiones:
 
 [Click aqui para dirigirte a la configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
+### 8.2 - Wordpress y configuración de servicios 🌐
 ### WordPress y servicios proximamente... 🔜🛠
 
-lighttpd
+### Lighttpd 
+
+🧠 <b> Que es Lighttpd❓</b> 
 
 <img width="791" alt="Screen Shot 2022-10-27 at 4 09 24 AM" src="https://user-images.githubusercontent.com/66915274/198174389-428c30e0-c437-4bc1-b8df-40dd2fb0c0ce.png">
 
@@ -1078,7 +1086,9 @@ lighttpd
 
 <img width="460" alt="Screen Shot 2022-10-27 at 4 15 45 AM" src="https://user-images.githubusercontent.com/66915274/198175075-da6833f1-2360-4e08-b708-99f920b8215c.png">
 
-mariadb
+### Mariadb
+
+🧠 <b> Que es MariaDB❓</b> 
 
 <img width="797" alt="Screen Shot 2022-10-27 at 4 17 09 AM" src="https://user-images.githubusercontent.com/66915274/198175218-65dec75f-5727-425c-97d0-2baa2b8cd457.png">
 
@@ -1087,6 +1097,18 @@ mariadb
 <img width="704" alt="Screen Shot 2022-10-27 at 1 00 20 AM" src="https://user-images.githubusercontent.com/66915274/198175719-b22bd572-ab50-4590-9298-5f5a69f98862.png">
 
 <img width="551" alt="Screen Shot 2022-10-27 at 1 00 40 AM" src="https://user-images.githubusercontent.com/66915274/198175732-eff97e65-d8ef-4b44-8930-62d58d910598.png">
+
+### Phpmyadmin
+
+🧠 <b> Que es Phpmyadmin❓</b> 
+
+<img width="733" alt="Screen Shot 2022-10-27 at 4 22 33 AM" src="https://user-images.githubusercontent.com/66915274/198175891-74168b70-13e1-41a6-a46d-74fe03077a2e.png">
+
+<img width="641" alt="Screen Shot 2022-10-27 at 1 13 56 AM" src="https://user-images.githubusercontent.com/66915274/198175978-8744b575-c23e-4563-80de-1f733df9341d.png">
+
+<img width="578" alt="Screen Shot 2022-10-27 at 4 26 55 AM" src="https://user-images.githubusercontent.com/66915274/198176405-f6bf2457-1174-4571-a495-d96ba80f5b83.png">
+
+
 
 
 <br>
