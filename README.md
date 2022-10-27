@@ -1080,15 +1080,22 @@ Descripción breve de todos los tipos de particiones:
 
 🧠 <b> Que es Lighttpd❓</b> 
 
+1 ◦ Instalación de paquetes de lighttpd.
+
 <img width="791" alt="Screen Shot 2022-10-27 at 4 09 24 AM" src="https://user-images.githubusercontent.com/66915274/198174389-428c30e0-c437-4bc1-b8df-40dd2fb0c0ce.png">
 
+2 ◦ Permitimos las conexiones mediante el puerto 80 con el comando ```sudo ufw allow 80```.
+
 <img width="306" alt="Screen Shot 2022-10-27 at 4 15 24 AM" src="https://user-images.githubusercontent.com/66915274/198175046-8ea3f052-32f1-4107-a9a1-c9271d6c9ce6.png">
+
+3 ◦ Checkeamos que realmente hayamos permitido. Debe aparecer el puerto 80 y allow.
 
 <img width="460" alt="Screen Shot 2022-10-27 at 4 15 45 AM" src="https://user-images.githubusercontent.com/66915274/198175075-da6833f1-2360-4e08-b708-99f920b8215c.png">
 
 ### Mariadb
 
 🧠 <b> Que es MariaDB❓</b> 
+
 
 <img width="797" alt="Screen Shot 2022-10-27 at 4 17 09 AM" src="https://user-images.githubusercontent.com/66915274/198175218-65dec75f-5727-425c-97d0-2baa2b8cd457.png">
 
