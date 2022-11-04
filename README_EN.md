@@ -40,7 +40,7 @@
 
 	8.1 [Manual partition](#81--manual-partition)
 	
-	8.2 [Wordpress & services configuration 🌐](##82---wordpress--services-configuration-)
+	8.2 [Wordpress & services configuration 🌐](#82---wordpress--services-configuration-)
 
 9. [Correction sheet ✅](#9--correction-sheet-)
 
