@@ -3,40 +3,48 @@
 
 # Born2beroot-Tutorial 💻
 
-# Índice
+### Before starting...
 
-1. [Descargar imagen de la maquina virtual 💿](#1--descargar-imagen-de-la-maquina-virtual-)
-2. [Instalación de la maquina 🛠](#2--instalacion-de-la-maquina-)
-3. [Instalación Debian 🌀](#3--instalación-debian-)
-4. [Configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
+```
+	This is a complete guide step by step of the Born2Broot project at 42 school.
+	You should not take everythng here as granted, and do your own search.
+	Thank you in advance for using this guide.
+```
 
-	4.1 [Instalación de sudo y configuración de usuarios y grupos 👤](#41---instalación-de-sudo-y-configuración-de-usuarios-y-grupos-)
+# Index
+
+1. [Download virtual machine ISO💿](#1--descargar-imagen-de-la-maquina-virtual-)
+2. [Virtual machine installation 🛠](#2--instalacion-de-la-maquina-)
+3. [Debian installation 🌀](#3--instalación-debian-)
+4. [Virtual machine setup ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
+
+	4.1 [Installing sudo & configuration of users and groups 👤](#41---instalación-de-sudo-y-configuración-de-usuarios-y-grupos-)
 	
-	4.2 [Instalación y configuración de SSH 📶](#42---instalación-y-configuración-ssh-)
+	4.2 [Installing & configuring SSH 📶](#42---instalación-y-configuración-ssh-)
 	
-	4.3 [Instalación y configuración de UFW 🔥🧱](#4-3-instalació-y-configuración-de-ufw-)
+	4.3 [Installing & configuring UFW 🔥🧱](#4-3-instalació-y-configuración-de-ufw-)
 	
-	4.4 [Configurar contraseña fuerte para sudo 🔒](#4-4-configurar-contraseña-fuerte-para-sudo-)
+	4.4 [Setting up the sudo policies 🔒](#4-4-configurar-contraseña-fuerte-para-sudo-)
 	
-	4.5 [Configuración de política de contraseñas fuerte 🔑](#4-5-configuración-de-política-de-contraseñas-fuerte-)
+	4.5 [Setting up the strong password policy 🔑](#4-5-configuración-de-política-de-contraseñas-fuerte-)
 	
-	4.6 [Conectarse via SSH 🗣](#4-6-conectarse-via-ssh-)
+	4.6 [Connecting via SSH 🗣](#4-6-conectarse-via-ssh-)
 	
 5. [Script 🚨](#5--script-)
 
-	5.1 [Resultado total del script 🆗](#5-13-resultado-total-del-script)
+	5.1 [End result of the script 🆗](#5-13-resultado-total-del-script)
 	
 6. [Crontab ⏰](#6--crontab-)
 7. [Signature.txt 📝](#7--signaturetxt-)
 8. [Bonus ⭐](#8--bonus-%EF%B8%8F)
 
-	8.1 [Particionado manual del disco](#81--particionado-manual-del-disco)
+	8.1 [Manual partition](#81--particionado-manual-del-disco)
 	
-	8.2 [Wordpress y configuración de servicios 🌐](#82---wordpress-y-configuración-de-servicios-)
+	8.2 [Wordpress & services configuration 🌐](#82---wordpress-y-configuración-de-servicios-)
 
-10. [Hoja de corrección ✅](#9--hoja-de-corrección-)
+10. [Correction sheet ✅](#9--hoja-de-corrección-)
 
-	9.1 [Respuestas de la evaluación 💯](#9-1-respuestas-de-la-evaluación-)
+	9.1 [Evaluation answers 💯](#9-1-respuestas-de-la-evaluación-)
 	
 ## 1- _Descargar imagen de la maquina virtual_ 💿
 
