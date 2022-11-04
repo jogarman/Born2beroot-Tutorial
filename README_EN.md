@@ -13,8 +13,8 @@
 
 # Index
 
-1. [Download virtual machine ISO 💿](#1--descargar-imagen-de-la-maquina-virtual-)
-2. [Virtual machine installation 🛠](#2--instalacion-de-la-maquina-)
+1. [Download virtual machine ISO 💿](#1--download-the-virtual-machine-iso-)
+2. [Virtual machine installation 🛠](#2--installing-the-virtual-machine-)
 3. [Debian installation 🌀](#3--instalación-debian-)
 4. [Virtual machine setup ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
