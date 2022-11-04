@@ -6,9 +6,9 @@
 ### Before starting...
 
 ```
-	This is a complete guide step by step of the Born2Broot project at 42 school.
-	You should not take everythng here as granted, and do your own search.
-	Thank you in advance for using this guide.
+		This is a complete guide step by step of the Born2Broot project at 42 school.
+		You should not take everythng here as granted, and do your own search.
+		Thank you in advance for using this guide.
 ```
 
 # Index
