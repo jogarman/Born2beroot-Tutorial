@@ -13,7 +13,7 @@
 
 # Index
 
-1. [Download virtual machine ISO💿](#1--descargar-imagen-de-la-maquina-virtual-)
+1. [Download virtual machine ISO 💿](#1--descargar-imagen-de-la-maquina-virtual-)
 2. [Virtual machine installation 🛠](#2--instalacion-de-la-maquina-)
 3. [Debian installation 🌀](#3--instalación-debian-)
 4. [Virtual machine setup ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
@@ -46,11 +46,11 @@
 
 	9.1 [Evaluation answers 💯](#9-1-respuestas-de-la-evaluación-)
 	
-## 1- _Descargar imagen de la maquina virtual_ 💿
+## 1- _Download the virtual machine ISO_ 💿
 
-[Click aqui](https://www.debian.org/distrib/index.es.html) para redireccionarte a la URL donde puedes descargar la ISO de manera segura.
+[CLICK HERE](https://www.debian.org/download.en.html) for the URL of the debian ISO. Ths is a direct link to debian.org/download.
 
-## 2- Instalacion de la maquina 🛠
+## 2- _Installing the virtual machine_ 🛠
 
 Para realizar la instalación se requiere de un software de virtualización. En este tutorial haremos uso de [VirtualBox](https://www.virtualbox.org/). Si ya tienes VirtualBox instalado y dispones de la ISO Debian ya podemos empezar con el tutorial.
 
