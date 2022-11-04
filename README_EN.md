@@ -16,7 +16,7 @@
 1. [Download virtual machine ISO 💿](#1--download-the-virtual-machine-iso-)
 2. [Virtual machine installation 🛠](#2--installing-the-virtual-machine-)
 3. [Debian installation 🌀](#3--installing-debian-)
-4. [Virtual machine setup ⚙️](#4-virtual-machine-setup-%EF%B8%8F)
+4. [Virtual machine setup ⚙️](#4--virtual-machine-setup-%EF%B8%8F)
 
 	4.1 [Installing sudo & configuration of users and groups 👤](#41---installing-sudo--configuration-of-user-and-groups-)
 	
@@ -242,7 +242,7 @@ Volvemos a poner el nombre de usuario.
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 20 39 30" src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
 
-## 4 Virtual machine setup ⚙️
+## 4- Virtual machine setup ⚙️
 
 ➤ Lo primero que debemos hacer es seleccionar ```Debian GNU/Linux```.
 
