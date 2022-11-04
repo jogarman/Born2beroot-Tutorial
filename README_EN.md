@@ -52,9 +52,9 @@
 
 ## 2- _Installing the virtual machine_ 🛠
 
-Para realizar la instalación se requiere de un software de virtualización. En este tutorial haremos uso de [VirtualBox](https://www.virtualbox.org/). Si ya tienes VirtualBox instalado y dispones de la ISO Debian ya podemos empezar con el tutorial.
+	A virtualization software is required to perform the installation. In this tutorial we will use [Virtual Box](https://www.virtualbox.org/). If you already have installed this software and you have the Debian ISO we can proceed.
 
-1 ◦ Debemos abrir VirtualBox y pinchar sobre ```Nueva```
+1 ◦ We need to open VirtualBox and click ```New```
 
 <img width="836" alt="Captura de pantalla 2022-07-13 a las 18 02 05" src="https://user-images.githubusercontent.com/66915274/178779265-38eade6e-2789-4597-89e9-5beca2d3921a.png">
 
