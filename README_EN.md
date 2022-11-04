@@ -52,61 +52,61 @@
 
 ## 2- _Installing the virtual machine_ 🛠
 
-	A virtualization software is required to perform the installation. In this tutorial we will use [Virtual Box](https://www.virtualbox.org/). If you already have installed this software and you have the Debian ISO we can proceed.
+A virtualization software is required to perform the installation. In this tutorial we will use [Virtual Box](https://www.virtualbox.org/). If you already have installed this software and you have the Debian ISO we can proceed.
 
 1 ◦ We need to open VirtualBox and click ```New```
 
 <img width="836" alt="Captura de pantalla 2022-07-13 a las 18 02 05" src="https://user-images.githubusercontent.com/66915274/178779265-38eade6e-2789-4597-89e9-5beca2d3921a.png">
 
-2 ◦ Escogemos el nombre de nuestra máquina y la carpeta donde estará ubicada. Importante introducir la maquina dentro de la carpeta sgoinfre ya que si no la ubicamos ahí nos quedaremos sin espacio y fallará la instalación (dependiendo del campus la ruta de sgoinfre puede cambiar). 
+2 ◦ We must choose a name for the machine and the folder which will locate it. **IMPORTANT** Store the machine created inside the sgoinfre folder located in your campus server; this is important because we will run out of memory space in our session and the installation will fail. (Ask your staff if you can't find it)
 
 <img width="928" alt="Screen Shot 2022-10-23 at 2 57 11 PM" src="https://user-images.githubusercontent.com/66915274/197393458-dda8da5f-2362-4d36-b740-0951ebf03d3c.png">
 
-3 ◦ Seleccionamos la cantidad de memoria RAM que reservaremos para la máquina. 
+3 ◦ Select the total RAM memory which we will reserve for the machine.
 
 <img width="685" alt="Captura de pantalla 2022-07-13 a las 13 06 05" src="https://user-images.githubusercontent.com/66915274/178781098-8aa07fbc-e1d2-4bee-8021-ddf052880364.png">
 
-4 ◦ Seleccionamos la segunda opción para asi crear un disco duro virtual ahora.
+4 ◦ Select the second option so we can create a virtual disk now.
 
 <img width="826" alt="Captura de pantalla 2022-07-13 a las 18 13 24" src="https://user-images.githubusercontent.com/66915274/178781390-289236e0-1732-4dd8-8d3d-34eb0a229a18.png">
 
-5 ◦ Escogemos la primera opción ```VDI``` ya que nos hemos descargado una imagen de disco.
+5 ◦ Choose the first option ```VDI``` since we downloaded a ISO.
 
 <img width="829" alt="Captura de pantalla 2022-07-13 a las 18 16 35" src="https://user-images.githubusercontent.com/66915274/178781999-a42c3c6c-bc1e-4ad5-8bc5-b4b3f811c3f2.png">
 
-6 ◦ Seleccionamos la primera opción ```Reservado dinámicamente``` para que asi se vaya reservando memoria en la máquina real segun vayamos utilizandola en la virtual hasta llegado al límite máximo disponible en la virtual.
+6 ◦ Select the first option ```Dynamically allocated``` so it will allocate the memory of the fisical machine as it feels necessary while using the virtual machine until we reach the available limit.
 
 <img width="833" alt="Captura de pantalla 2022-07-13 a las 18 19 33" src="https://user-images.githubusercontent.com/66915274/178782529-fb309739-3169-4e20-b3e1-23d17a122a18.png">
 
-7 ◦ Una vez hayamos establecido la cantidad recomendada ```12 GB``` deberemos darle a ```Crear```. Si haremos el bonus seleccionaremos ```30 GB```.
+7 ◦ One we established the recommended ```12 GB``` we must click on ```Create```. If we are doing the bonus we might set ```30 GB```.
 
 <img width="835" alt="Captura de pantalla 2022-07-13 a las 18 25 20" src="https://user-images.githubusercontent.com/66915274/178783666-4fa624a3-9c38-4c45-b6a8-d476c2864200.png">
 
-8 ◦ Puede parecer que ya hemos terminado la instalación , pero todavía faltan un par de pasos más. Debemos darle a configuración
+8 ◦ It might seem that we have already finish the installation , but there's still some steps to do. Click on ```Settings```.
 
 <img width="831" alt="Captura de pantalla 2022-07-13 a las 18 30 46" src="https://user-images.githubusercontent.com/66915274/178784822-38228e96-ca37-4cc0-b3ca-551829e4c8c8.png">
 
-9 ◦ Acto seguido pincharemos encima de ```Almacenamiento``` , volveremos a pinchar sobre el emoticono 💿 que se encuentra a la derecha y de nuevo pincharemos sobre ```Seleccionar un archivo de disco```.
+9 ◦ Now click on ```Storage``` , again click on the 💿 that we find on the right and click on ```Choose a disk file```.
 
 <img width="962" alt="Captura de pantalla 2022-07-13 a las 18 33 28" src="https://user-images.githubusercontent.com/66915274/178785148-2904cf4f-93c0-4866-a5d6-778390bddeb7.png">
 
-10 ◦ Seleccionaremos la ISO que acabamos de descargar y le damos a ```Abrir``` y después le daremos a ```Aceptar```. 
+10 ◦ Select the ISO that we just downloaded and click ```Open```, then click on ```Ok```. 
 
 <img width="790" alt="Captura de pantalla 2022-07-13 a las 18 38 39" src="https://user-images.githubusercontent.com/66915274/178786115-24f93fde-bc01-4e60-bf8d-20d7a5ae83be.png">
 
-11. ◦ Una vez completados todos los pasos anteriores ya podemos ```Iniciar``` nuestra máquina virtual.
+11. ◦ Once all this steps have been completed we can ```Start``` our new virtual machine.
 
 <img width="833" alt="Captura de pantalla 2022-07-13 a las 18 44 55" src="https://user-images.githubusercontent.com/66915274/178787317-aab80b53-8244-4ede-9c75-11fcf4efdd1c.png">
 
-## 3- Instalación Debian 🌀
+## 3- Installing Debian 🌀
 
-➤ Espera❗️ Tu vista es muy importante 👀❗️ Para poder hacer la ventana más grande debes hacer lo siguiente: 
+➤ **You there, wait**❗️ Your eyesight is important 👀❗️ Making the window bigger will help: 
 
 <img width="666" alt="Captura de pantalla 2022-07-13 a las 18 51 41" src="https://user-images.githubusercontent.com/66915274/178788620-61064b58-0c0c-4f48-815e-60b4a8eaecae.png">
 
-Utiliza la tecla ```command``` para que la captura del ratón pase de la maquina real a la virtual y al reves.
+Use the ```command``` key so the machine capture your mouse and vice versa.
 
-### Sigamos con la instalación 🛠
+### Now we proceed 🛠
 
 1 ◦ Escogeremos la version sin interfaz gráfica ```Install``` ya que el subject indica que no se utilice ninguna Cada vez que queramos confirmar algo presionaremos ```Enter``` y para movernos por las opciones utilizaremos las flechas.
 
@@ -242,7 +242,7 @@ Volvemos a poner el nombre de usuario.
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 20 39 30" src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
 
-## 4 Configuración de la máquina virtual ⚙️
+## 4 Virtual machine setup ⚙️
 
 ➤ Lo primero que debemos hacer es seleccionar ```Debian GNU/Linux```.
 
@@ -256,7 +256,7 @@ Volvemos a poner el nombre de usuario.
 
 ### Ya tenemos todo listo para empezar a configurar nuestra máquina virtual Debian❗️
 
-### 4.1 - Instalación de sudo y configuración de usuarios y grupos 👤
+### 4.1 - Installing sudo & configuration of user and groups 👤
 
 1 ◦ Para la instalación de sudo primero debemos estar en el usuario root, para ello pondremos ```Su``` en el terminal y introduciremos la contraseña, en mi caso es ```Hola42bcn```. Una vez hemos accedido al usuario root debemos poner el comando ```apt install sudo``` para así instalar los paquetes necesarios.
 
@@ -298,7 +298,7 @@ Volvemos a poner el nombre de usuario.
 
 <img width="183" alt="Screen Shot 2022-10-26 at 6 38 25 PM" src="https://user-images.githubusercontent.com/66915274/198084311-45a50162-ff89-4e7d-a3c5-45e7048520a4.png">
 
-### 4.2 - Instalación y configuración SSH 📶
+### 4.2 - Installing & configuring SSH 📶
 
 🧠 <b> Que es SSH❓</b> Es el nombre de un protocolo y del programa que lo implementa cuya principal función es el acceso remoto a un servidor por medio de un canal seguro en el que toda la información está cifrada.
 
@@ -345,7 +345,7 @@ Editaremos la siguiente línea:
 <img width="713" alt="Captura de pantalla 2022-07-14 a las 3 56 56" src="https://user-images.githubusercontent.com/66915274/178880333-0e2ad7fd-674b-4b4f-b92a-25acbc36c8a5.png">
 
 
-### 4-3 Instalació y configuración de UFW 🔥🧱
+### 4-3 Installing & configuring UFW 🔥🧱
 
 🧠 <b>Que es [UFW](https://es.wikipedia.org/wiki/Uncomplicated_Firewall)❓</b> Es un [firewall](https://es.wikipedia.org/wiki/Cortafuegos_(inform%C3%A1tica)) el cual utiliza la línea de comandos para configurar las [iptables](https://es.wikipedia.org/wiki/Iptables) usando un pequeño número de comandos simples.
 
@@ -367,7 +367,7 @@ Editaremos la siguiente línea:
 
 <img width="575" alt="Captura de pantalla 2022-07-14 a las 19 38 37" src="https://user-images.githubusercontent.com/66915274/179047574-8073045c-6e78-4b6f-8487-cb0f490a2cd0.png">
 
-### 4-4 Configurar contraseña fuerte para sudo 🔒
+### 4-4 Setting up the sudo policies 🔒
 
 1 ◦ Crearemos un fichero en la ruta /etc/sudoers.d/ a mi fichero yo le he decidido llamar sudo_config ya que en ese fichero se almacenará la configuración de la contraseña. El comando exacto para crear el fichero es ```touch /etc/sudoers.d/sudo_config```.
 
@@ -401,7 +401,7 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 <img width="802" alt="Captura de pantalla 2022-07-16 a las 2 04 56" src="https://user-images.githubusercontent.com/66915274/179326915-b374f679-fa2e-4e02-8b38-cdb53c6354a6.png">
 
-### 4-5 Configuración de política de contraseñas fuerte 🔑
+### 4-5 Setting up a strong password policy 🔑
 
 1 ◦ El primer paso será editar el fichero login.defs.
 
@@ -465,7 +465,7 @@ difok=7 ➤  Debe tener al menos 7 caracteres que no sean parte de la antigua co
 
 enforce_for_root ➤ Implementaremos esta política para el usuario root.
 
-### 4-6 Conectarse via SSH 🗣
+### 4-6 Connecting via SSH 🗣
 
 1 ◦ Para conectarnos por SSH debemos cerrar la máquina, abrir VirtualBox y darle a configuración.
 
@@ -501,21 +501,21 @@ Para poder ver la arquitectura del SO y su versión de kernel utilizaremos el co
 
 <img width="715" alt="Screen Shot 2022-10-27 at 4 50 06 PM" src="https://user-images.githubusercontent.com/66915274/198322524-8c2d305f-bfe8-4e4a-bf31-6a883af71ad3.png">
 
-### 5-2 Núcleos físicos
+### 5-2 Fisicl cores
 
 Para poder mostrar el numero de nucleos fisicos haremos uso del fichero /proc/cpuinfo el cual  proporciona información acerca del procesador: su tipo, marca, modelo, rendimiento, etc. Usaremos el comando ```grep "physical id" /proc/cpuinfo | wc -l``` con el comando grep buscaremos dentro del fichero "physical id" y con wc -l contaremos las lineas del resultado de grep. Esto lo hacemos ya que la manera de cuantificar los nucleos no es muy común. Si hay un procesador marcará 0 y si tiene más de un procesador, mostrará toda la información del procesador por separado contando los procesadores usando la notación cero. De esta manera simplemente contaremos las lineas que hay ya que es más cómodo cuantificarlo así.
 
 <img width="596" alt="Screen Shot 2022-10-27 at 4 50 49 PM" src="https://user-images.githubusercontent.com/66915274/198322799-4bf2131e-7fba-4c9e-8d1b-bb9cc1b89e76.png">
 
 
-### 5-3 Núcleos virtuales
+### 5-3 Virtual cores
 
 Para poder mostrar el numero de nucleos virtuales es muy parecido al anterior. Haremos uso de nuevo del fichero /proc/cpuinfo , pero, en este caso utilizaremos el comando ```grep processor /proc/cpuinfo | wc -l```. El uso es practicamente el mismo al anterior solo que en vez de contar las lineas de "physical id" lo haremos de processor. Lo hacemos así por el mismo motivo de antes, la manera de cuantificar marca 0 si hay un procesador.
 
 <img width="586" alt="Screen Shot 2022-10-27 at 4 55 48 PM" src="https://user-images.githubusercontent.com/66915274/198324254-3d0f247d-b767-4e02-9e69-11b4e0586280.png">
 
 
-### 5-4 Memoria RAM
+### 5-4 RAM memory
 
 Para mostrar la memoria ram haremos uso del comando ```free``` para así ver al momento información sobre la ram, la parte usada, libre, reservada para otros recursos, etc. Para más info sobre el comando pondremos free --help. Nosotros daremos uso de free --mega ya que en el subject aparece esa unidad de medida.
 
@@ -533,7 +533,7 @@ Por última parte debemos calcular el % de memoria usada. El comando de nuevo es
 
 <img width="798" alt="Captura de pantalla 2022-08-02 a las 3 51 01" src="https://user-images.githubusercontent.com/66915274/182274627-195476b2-1e17-4a4c-8d5c-2056e4e2bbb6.png">
 
-### 5-5 Memoria del disco
+### 5-5 Disk memory
 
 Para poder ver la memoria del disco ocupada y disponible utilizaremos el comando ```df``` que significa "disk filesystem" , se utiliza para obtener un resumen completo del uso del espacio en disco. Como en el sibject indica la memoria utilizada se muestra en MB asi que entonces utilizaremos el flag -m. Acto seguido haremos un grep para que solo nos muestre las lineas que contengan "/dev/" y seguidamente volveremos a hacer otro grep con el flag -v para excluir las lineas que contengan "/boot". Por último utilizaremos el comando awk y sumaremos el valor de la tercera palabra de cada linea para una vez sumadas todas las lineas printar el resultado final de la suma. El comando entero es el siguiente: ```df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use}'```.
 
@@ -548,25 +548,25 @@ Por último debemos mostrar un porcentaje de la memoria usada. Para ello , de nu
 <img width="798" alt="Captura de pantalla 2022-08-03 a las 2 49 33" src="https://user-images.githubusercontent.com/66915274/182500836-dd4b068e-b6ce-4dc6-b832-f90acecfb71c.png">
 
 
-### 5-6 Porcentaje uso de CPU
+### 5-6 CPU usage.
 
 Para poder ver el porcentaje de uso de CPU haremos uso del comando ```vmstat``` este muestra estadísticas del sistema, permitiendo obtener un detalle general de los procesos, uso de memoria, actividad de CPU, estado del sistema, etc. Podriamos poner si ninguna opción pero en mi caso pondré un intervalo de segundos de 1 a 4. Tambien daremos uso del comando ```tail -1``` que este lo que nos va a permitir es que solo produzca el output la ultima linea, entonces de las 4 generadas solo se printara la ultima. Por ultimo solo printaremos la palabra 15 que es el uso de memoria disponible. El comando entero es el siguiente: ```vmstat 1 4 | tail -1 | awk '{print %15}'```. El resultado de este comando solo es una parte del resultado final ya que todavia hay que hacer alguna operación en el script para que quede bien. Lo que habria que hacer es a 100 restarle la cantidad que nos ha devuelto nuestro comando, el resultado de esa operación lo printaremos con un decimal y un % al final y ya estaría hecha la operación. 
 
 <img width="580" alt="Captura de pantalla 2022-08-03 a las 0 33 39" src="https://user-images.githubusercontent.com/66915274/182484896-def71bf0-b7eb-49d8-b83b-a019d15f62f1.png">
 
-### 5-7 Último reinicio
+### 5-7 Last reboot
 
 Para ver la fecha y hora de nuestro último reinicio haremos uso del comando ```who``` con el flag ```-b``` ya que con ese flag nos mostrará por pantalla el tiempo del último arranque del sistema. Como ya nos ha pasado anteriormente nos muestra más información de la que deseamos asique filtraremos y solo mostraremos lo que nos interesa, para ello haremos uso del comando awk y compararemos si la primera palabra de una linea es "system" se printara por pantalla la tercera palabra de esa linea , un espacio y la cuarta palabra. El comando entero seria el siguiente: ```who -b | awk '$1 == "system" {print $3 " " $4}'```.
 
 <img width="661" alt="Captura de pantalla 2022-08-02 a las 12 24 58" src="https://user-images.githubusercontent.com/66915274/182352895-d985e675-5afc-445a-bcd3-68189702fe70.png">
 
-### 5-8 Uso LVM
+### 5-8 LVM check
 
 Para checkear si LVM esta activo o no haremos uso del comando lsblk , este nos muestra información de todos los dispositivos de bloque (discos duros, SSD, memorias, etc) entre toda la información que proporciona podemos ver lvm en el tipo de gestor. Para este comando haremos un if ya que o printaremos Yes o No. Basicamente la condicion que buscamos sera contar el numero de lineas en las que aparece "lvm" y si hay mas de 0 printamos Yes, si hay 0 se printara No. Todo el comando seria: ```if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi```.
 
 <img width="801" alt="Captura de pantalla 2022-08-02 a las 22 38 43" src="https://user-images.githubusercontent.com/66915274/182468904-3789e22f-dbde-4874-b153-0d86497c55e2.png">
 
-### 5-9 Conexiones TCP
+### 5-9 TCP connections
 
 Para mirar el numero de conexiones TCP establecidas. Utilizaremos el comando ```ss``` sustituyendo al ya obsoleto netstat. Filtraremos con el flag ```-ta``` para que solo se muestren las conexiones TCP. Por último haremos un grep para ver las que estan establecidas ya que tambien hay solo de escucha y cerraremos con wc -l para que cuente el numero de lineas. El comando queda tal que asi: ```ss -ta | grep ESTAB | wc -l```. 
 
@@ -579,20 +579,20 @@ Daremos uso del comando ```users``` que nos mostrará el nombre de los usuarios 
 <img width="380" alt="Captura de pantalla 2022-08-02 a las 12 33 29" src="https://user-images.githubusercontent.com/66915274/182354436-282547cf-22c8-4b03-9484-6801c0466de7.png">
 
 
-### 5-11 Dirección IP y MAC
+### 5-11 IP address & MAC
 
 Para obtener la dirección del host haremos uso del comando ```hostname -I``` y para obtener la MAC haremos uso del comando ```ip link``` que se utiliza para mostrar o modificar las interfaces de red. Como aparecen más de una interfaz, IP's etc. Utilizaremos el comando grep para buscar lo que deseamos y asi poder printar por pantalla solo lo que nos piden. Para ello pondremos ```ip link | grep "link/ether" | awk '{print $2}'``` y de esta manera solo printaremos la MAC.
 
 <img width="639" alt="Captura de pantalla 2022-08-02 a las 14 53 14" src="https://user-images.githubusercontent.com/66915274/182379380-8e3b803d-d001-42ae-8aea-467e8c9f3ea9.png">
 
-### 5-12 Número de comandos ejecutados con sudo
+### 5-12 Number of sudo usage
 
 Para poder obtener el numero de comandos que son ejecutados con sudo haremos uso del comando jornalctl que este es una herramienta que se encarga de recopilar y administrar los registros del sistema. Acto seguido pondremos ```_COMM=sudo``` par así filtrar las entradas especificando su ruta. En nuestro ponemos ```_COMM``` ya que hace referencia a un script ejecutable. Una vez tengamos filtrada la busqueda y solo aparezcan los registros de sudo todavía deberemos filtrar un poco más ya que cuando incias o cierras sesion de root tambien aparece en el registro, entonces para terminar de filtrar pondremos un ```grep COMMAND``` y asi solo apareceran las lineas de comandos. Por ultimo pondremos ```wc -l``` para que asi nos salgan enumeradas las lineas. El comando entero es el siguiente: ```journalctl _COMM=sudo | grep COMMAND | wc -l)```. Para comprobar que funcione correctamente podemos correr el comando en el terminal, poner un comando que incluya sudo y volver a correr el comando y deberá
 incrementar el número de ejecucciones de sudo.
 
 <img width="632" alt="Captura de pantalla 2022-08-02 a las 23 50 39" src="https://user-images.githubusercontent.com/66915274/182479668-949b8eee-81f6-4593-83f4-99053d199f1b.png">
 
-### 5-13 Resultado total del script
+### 5-13 End result of the script
 
 ⚠️ Recuerda no hacer copia y pega si no sabes el funcionamiento de cada comando ⚠️
 
@@ -704,7 +704,7 @@ Por último haremos ```shasum nombremaquina.vdi``` y esto nos dara la firma. El 
 
 ## 8- Bonus ⭐️
 
-### 8.1- Particionado manual del disco
+### 8.1- Manual partition
 
 1 ◦ En el momento de escoger el particionado de disco seleccionaremos manual. De esta manera podremos editar las particiones una a una.
 
@@ -1092,7 +1092,7 @@ Descripción breve de todos los tipos de particiones:
 
 [Click aqui para dirigirte a la configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
-### 8.2 - Wordpress y configuración de servicios 🌐
+### 8.2 - Wordpress & services configuration 🌐
 ### WordPress y servicios proximamente... 🔜🛠
 
 ### Lighttpd 
@@ -1148,7 +1148,7 @@ Descripción breve de todos los tipos de particiones:
 <br>
 
 
-## 9- Hoja de corrección ✅
+## 9- Correction sheet ✅
 
 ### Que no te sorprenda nada❗️ Sigue bajando para poder ver todo lo que aparece en la corrección. Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
 
@@ -1162,7 +1162,7 @@ Descripción breve de todos los tipos de particiones:
 
 ![image](https://user-images.githubusercontent.com/66915274/182515110-f766c351-24fd-44ef-a747-e706fd50382c.png)
 
-## 9-1 Respuestas de la evaluación 💯
+## 9-1 Evaluation answers 💯
 
 ### ▪️ Que es una maquina virtual❓
 
