@@ -1151,6 +1151,8 @@ Descripción breve de todos los tipos de particiones:
 
 ![image](https://user-images.githubusercontent.com/66915274/182515110-f766c351-24fd-44ef-a747-e706fd50382c.png)
 
+<img width="759" alt="Screen Shot 2022-11-04 at 7 38 08 PM" src="https://user-images.githubusercontent.com/66915274/200096829-9f8b55e1-7d74-4f04-afae-7e982acf6059.png">
+
 ## 9-1 Respuestas de la evaluación 💯
 
 ### ▪️ Que es una maquina virtual❓
