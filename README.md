@@ -1139,19 +1139,13 @@ Descripción breve de todos los tipos de particiones:
 
 ## 9- Hoja de corrección ✅
 
-### Que no te sorprenda nada❗️ Sigue bajando para poder ver todo lo que aparece en la corrección. Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
+<img width="854" alt="Screen Shot 2022-10-15 at 10 29 57 PM (1)" src="https://user-images.githubusercontent.com/66915274/200190182-65e895a8-b612-49d0-b8d5-a2452a2ff8ba.png">
 
-![image](https://user-images.githubusercontent.com/66915274/182514998-71de2c26-c072-4769-b16b-7706b96bcbe5.png)
+<img width="854" alt="Screen Shot 2022-10-15 at 10 30 26 PM" src="https://user-images.githubusercontent.com/66915274/200190188-d0ac23cb-b66c-437a-b4c2-27390e07a2ed.png">
 
-![image](https://user-images.githubusercontent.com/66915274/182515024-5725b2f1-e687-4dea-a9a2-ef2e7fec7b78.png)
+<img width="854" alt="Screen Shot 2022-10-15 at 10 30 57 PM" src="https://user-images.githubusercontent.com/66915274/200190198-c6f69628-dda3-4fc3-8c33-1de39f2e7ba8.png">
 
-![image](https://user-images.githubusercontent.com/66915274/182515037-6e267905-ae52-4d21-9959-54b4fd7c3db7.png)
-
-![image](https://user-images.githubusercontent.com/66915274/182515074-dfcf5f81-1c14-484d-a0e0-4e57acac7802.png)
-
-![image](https://user-images.githubusercontent.com/66915274/182515110-f766c351-24fd-44ef-a747-e706fd50382c.png)
-
-<img width="759" alt="Screen Shot 2022-11-04 at 7 38 08 PM" src="https://user-images.githubusercontent.com/66915274/200096829-9f8b55e1-7d74-4f04-afae-7e982acf6059.png">
+<img width="854" alt="Screen Shot 2022-10-15 at 10 31 12 PM" src="https://user-images.githubusercontent.com/66915274/200190210-c7dda7e8-8776-461f-8fd9-1e59a5f024c6.png">
 
 ## 9-1 Respuestas de la evaluación 💯
 
