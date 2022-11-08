@@ -108,68 +108,68 @@ Use the ```command``` key so the machine capture your mouse and vice versa.
 
 ### Now we proceed 🛠
 
-1 ◦ Escogeremos la version sin interfaz gráfica ```Install``` ya que el subject indica que no se utilice ninguna Cada vez que queramos confirmar algo presionaremos ```Enter``` y para movernos por las opciones utilizaremos las flechas.
+1 ◦ We will choose the version without graphic interface ```Install``` size the subject says so. Any time we want to confirm something ```Enter key``` must be pressed, and the ```Arrow keys``` must be used any time to move around.
 
 <img width="632" alt="Captura de pantalla 2022-07-13 a las 18 58 48" src="https://user-images.githubusercontent.com/66915274/178789643-e987c6d0-5b6f-4b98-ad4a-5c092a352183.png">
 
-2 ◦ Escogeremos el idioma que usaremos para la instalación y el predeterminado que se le quedará al sistema ```English```.  
+2 ◦ Now lenguage must be choosed for the machine that will be present during the installation and the default setting. Select ```English```.  
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 19 00 41" src="https://user-images.githubusercontent.com/66915274/178789949-4fe83ac8-23b8-4f82-a034-a6d5e81d4f17.png">
 
-3 ◦ Introducimos nuestro País, territorio o zona. En mi caso pondre ```Other```.
+3 ◦ It's time to select the country. If yours no on the pressent list go to ```Other```.
 
 <img width="791" alt="Captura de pantalla 2022-07-13 a las 19 07 50" src="https://user-images.githubusercontent.com/66915274/178791067-44230a4c-e647-46cb-9d6f-bc441bf0227b.png">
 
-4 ◦ Como he seleccionado other debo indicar mi continente o region. En mi caso pongo ```Europe``` 🇪🇺. 
+4 ◦ Time to select continent. In our case we will select ```Europe``` 🇪🇺. 
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 19 09 58" src="https://user-images.githubusercontent.com/66915274/178791387-78171f90-2834-42ab-aedb-9cf900d0ecd5.png">
 
-5 ◦ Seleccionamos el país. En mi caso ```Spain``` 🇪🇸.
+5 ◦ Now select the country. In out case we will select ```Spain``` 🇪🇸.
 
 <img width="793" alt="Captura de pantalla 2022-07-13 a las 19 12 01" src="https://user-images.githubusercontent.com/66915274/178791824-7a34813c-eae9-4b5c-9873-cea158229e07.png">
 
-6 ◦ Seleccionamos ```United States```.
+6 ◦ Choose ```United States```.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 19 13 43" src="https://user-images.githubusercontent.com/66915274/178792054-4e72dfdd-8175-48f9-a06d-f2696fa752e3.png">
 
-7 ◦ Importante seleccionar ```American English``` como configuración de teclado ya que si no tendremos las teclas mal enlazadas.
+7 ◦ This time it's turn for selecting a keymap. Our keyboard follows the ANSI standard so ```American English```. If you don't know what keyboard standard is yours we higly recommend you to ask your staff.
 
 <img width="793" alt="Captura de pantalla 2022-07-13 a las 19 02 21" src="https://user-images.githubusercontent.com/66915274/178790230-d2571d4f-a546-4b43-bd44-c6a591d92d72.png">
 
-8 ◦ En este paso debemos elegir el ```Host Name``` de la máquina, el cual debe ser tu login seguido de 42. 
+8 ◦ Now we must set a ```Host Name``` of the machine, which must be your login followed by a 42.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 19 17 23" src="https://user-images.githubusercontent.com/66915274/178792607-1cc585eb-ae32-4b2c-97fd-4fcf5bad4262.png">
 
-9 ◦ Este apartado lo dejaremos vacío ya que el subject no mencionada nada de ```Domain name```.
+9 ◦ This section will be left blank since the subject doesn't requiere it.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 19 20 29" src="https://user-images.githubusercontent.com/66915274/178793113-b0934aac-fac4-4844-8412-aca124038fd0.png">
 
-10 ◦ Debemos introducir una contraseña para la cuenta de administración del sistema. Importante apuntarla o hacer una foto ya que le daremos uso. Si quieres ver la contraseña para asegurarte de que la has escrito correctamente debes tabular hasta llegar a la opción ```Show Password in Clear``` debes darle a la barra espaciadora y se mostrara la clave.
+10 ◦ We have to set a password for the root user. **IMPORTANT** Save this password since we need to use the root user. If you want to check the password is correct, try going to *Show Pawssword in Clear* and then press the ```Space bar```.
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 19 21 29" src="https://user-images.githubusercontent.com/66915274/178793296-c2c3b6c5-9744-4ba8-ac32-8e3c21c44f9b.png">
 
-11 ◦ Repetimos el proceso de nuevo para comprobar que no la hayamos escrito mal.
+11 ◦ Repeat the process as you need to confirm the password we just set.
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 19 24 53" src="https://user-images.githubusercontent.com/66915274/178793903-2ea7c623-7175-4c27-98bf-85c8c1b359db.png">
 
-12 ◦ Elegimos el nombre de nuestro nuevo usuario. Como indica el subject hay que crear un usuario adicional que no sea el root con nuestro login, por ese motivo llamaré ```gemartin``` a mi nuevo usuario.
+12 ◦ Set up the user name. As is in the subject, we need a new user that isn't the root user, and the name for that user have to be your student login.
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 19 26 20" src="https://user-images.githubusercontent.com/66915274/178794178-901f7951-a978-458d-a925-4586026784f7.png">
 
-Volvemos a poner el nombre de usuario.
+Repeat you user name.
 
 ![image](https://user-images.githubusercontent.com/66915274/182679675-4d3805a9-34c9-4ba3-9488-1a7fe30f2519.png)
 
 
-13 ◦ Ahora debemos introducir la contraseña de nuestro nuevo usuario. Como la anterior , repetiremos el proceso para comprobar que no la hayas escrito mal y tambien es importante que la guardes porque le daremos uso más adelante.
+13 ◦ And now we have to set our new user password. Just as before, repeat te process; save this password too because it will be used later.
 
 <img width="790" alt="Captura de pantalla 2022-07-13 a las 19 30 08" src="https://user-images.githubusercontent.com/66915274/178794862-94de8c7a-282e-4a83-9903-d3b8439122ea.png">
 
-14 ◦ Seleccionamos la hora de nuestra ubicación.
+14 ◦ Select your time zone.
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 19 31 41" src="https://user-images.githubusercontent.com/66915274/178795105-956854e1-deff-4851-8eba-26cdefb1e06f.png">
 
-15 ◦ Esocgeremos la tercera opción ```Guied - use entire disk and set up encrypted LVM``` ya que el subject nos dice que deben ser particiones cifradas. ⚠️❗️ Si quieres hacer el bonus deberás darle a ```Manual``` y [hacer click aquí](#8--bonus-%EF%B8%8F) ❗️⚠️
+15 ◦ Select ```Guied - use entire disk and set up encrypted LVM```. ⚠️❗️ **If you want to do the bonus select ```Manual``` and then [click here](#8--bonus-%EF%B8%8F)** ❗️⚠️
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 19 33 13" src="https://user-images.githubusercontent.com/66915274/178795367-b82018de-edc8-47d3-8cd6-b90c5e3be2fa.png">
 
