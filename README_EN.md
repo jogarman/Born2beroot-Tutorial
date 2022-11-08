@@ -124,7 +124,7 @@ Use the ```command``` key so the machine capture your mouse and vice versa.
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 19 09 58" src="https://user-images.githubusercontent.com/66915274/178791387-78171f90-2834-42ab-aedb-9cf900d0ecd5.png">
 
-5 ◦ Now select the country. In out case we will select ```Spain``` 🇪🇸.
+5 ◦ Now select the country. In our case we will select ```Spain``` 🇪🇸.
 
 <img width="793" alt="Captura de pantalla 2022-07-13 a las 19 12 01" src="https://user-images.githubusercontent.com/66915274/178791824-7a34813c-eae9-4b5c-9873-cea158229e07.png">
 
