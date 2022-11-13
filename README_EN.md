@@ -243,17 +243,17 @@ Repeat you user name.
 
 ## 4- Virtual machine setup ⚙️
 
-➤ Lo primero que debemos hacer es seleccionar ```Debian GNU/Linux```.
+➤ First of all, we must select ```Debian GNU/Linux```.
 
-➤ Debemos introducir la contraseña de encriptación que utilizamos previamente. En mi caso es ```Hello42bcn```.
+➤ Now we must introduce the encryptation password that we previously set. In my case ```Hello42bcn```.
 
 <img width="714" alt="Captura de pantalla 2022-07-13 a las 20 47 26" src="https://user-images.githubusercontent.com/66915274/178808699-f1024129-5f90-41d0-a9a8-4806f5bc114b.png">
 
-➤ Debemos introducir el usuario y contraseña que hemos creado. En mi caso el usuario es ```gemartin``` y la contraseña ```Hola42spain```.
+➤ After that we must introduce the user and password that we created. In my case the user is ```gemartin``` and the password is ```Hola42spain```.
 
 <img width="798" alt="Captura de pantalla 2022-07-13 a las 20 48 38" src="https://user-images.githubusercontent.com/66915274/178808994-664025ac-36df-4332-8e44-505ecd2ca305.png">
 
-### Ya tenemos todo listo para empezar a configurar nuestra máquina virtual Debian❗️
+### We have set everything ready for starting the setup of our Debian virtual machine❗️
 
 ### 4.1 - Installing sudo & configuration of user and groups 👤
 
