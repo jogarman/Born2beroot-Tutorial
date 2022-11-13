@@ -257,15 +257,15 @@ Repeat you user name.
 
 ### 4.1 - Installing sudo & configuration of user and groups 👤
 
-1 ◦ Para la instalación de sudo primero debemos estar en el usuario root, para ello pondremos ```Su``` en el terminal y introduciremos la contraseña, en mi caso es ```Hola42bcn```. Una vez hemos accedido al usuario root debemos poner el comando ```apt install sudo``` para así instalar los paquetes necesarios.
+1 ◦ The beginning of the installation starts with changing user to root so we can install sudo, for this purpouse we write ```su``` in the bash prompt and introduce the root password, in my case ```Hola42bcn```. Once we are done we write down the command ```apt install sudo``` so the package manager install the required packages for sudo.
 
-<img width="796" alt="Captura de pantalla 2022-07-14 a las 1 36 46" src="https://user-images.githubusercontent.com/66915274/178855273-fc76689c-224b-4368-b7b1-5d1954427aff.png">
+<img width="796" alt="Captura de pantalla 2022-07-14 a las 1 36 46" src="https://user-images.githubusercontent.com/66915274/178855273-fc76689c-224b-4368-b7b1-5d1954427aff.png"> 
 
-2 ◦ Debemos reiniciar la máquina para que se apliquen los cambios. Para ello haremos uso del comando ```sudo reboot``` y esperaremos a que se reinicie. 
+2 ◦ We must reboot machine so the changes can be applied. For that porpouse we will use the commando ```sudo reboot```.
 
 <img width="514" alt="Captura de pantalla 2022-07-14 a las 2 02 24" src="https://user-images.githubusercontent.com/66915274/178857108-a51988e1-084c-498c-86c6-98ab5a3b1305.png">
 
-3 ◦ Una vez reiniciado debemos volver a introducir las contraseñas de cifrado y del usuario. Para verificar que hayamos instalado ```sudo``` correctamente entraremos de nuevo en el usuario root y pondremos el comando ```sudo -V```, este comando además de mostrarnos la versión de sudo también mostrará los argumentos pasados para configurar cuando se creó sudo y los plugins que  pueden mostrar información más detallada. (Opcional) ➤ Puesto que el output del comando es muy largo si deseamos verlo completamente debemos redireccionar la salida del mismo a un fichero ```sudo -V > file.txt``` y luego editar el fichero ```nano file.txt```. O poner ```| more``` despues del comando.
+3 ◦ Once the machine is rebooted we have to input the encryptation password and the login again. To check if sudo have been installed correctly we must switch to root user and then use the command ```sudo -V```; this command will show the sudo version (it will show extra info like the plugins installed). **OPTIONAL** ➤ In case of the output being too large we can redirect the command output to a file via ```sudo -V > file.txt``` and then edit the file using ```nano file.txt```. Other option would be putting ```| more``` after the command.
 
 <img width="799" alt="Captura de pantalla 2022-07-14 a las 2 09 59" src="https://user-images.githubusercontent.com/66915274/178857742-96356272-abd6-44c4-a3e6-5e8b9f471146.png">
 
