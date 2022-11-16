@@ -269,25 +269,25 @@ Repeat you user name.
 
 <img width="799" alt="Captura de pantalla 2022-07-14 a las 2 09 59" src="https://user-images.githubusercontent.com/66915274/178857742-96356272-abd6-44c4-a3e6-5e8b9f471146.png">
 
-4 ◦ Siguiendo en el usuario root crearemos un usuario con nuestro login con el comando ```sudo adduser login``` como nostros ya hemos creado el usuario en la instalación nos debe aparecer que el usuario ya existe.
+4 ◦ **Now, this step is for the everyone that didn't put his user as the other user asked by the subject during the installation of the system.** Still in the root user we will create an aditional user with ```sudo adduser <login>```. If you had already done it will show the same message as is the image.
 
 <img width="509" alt="Captura de pantalla 2022-07-14 a las 2 15 11" src="https://user-images.githubusercontent.com/66915274/178858240-95ce2a2b-004a-4bcb-981a-7990c1cc4fdd.png">
 
-5 ◦ Ahora deberemos crear un nuevo grupo llamado ```user42```. Para crearlo debemos hacer ```sudo addgroup user42```. 
+5 ◦ We will create a new group called ```user42```. For that we must use ```sudo addgroup user42```.
 
 <img width="367" alt="Screen Shot 2022-10-26 at 6 30 52 PM" src="https://user-images.githubusercontent.com/66915274/198082677-d393243e-363a-4d1f-95d8-a6695336a47a.png">
 
-🧠 <b>Que es GID❓</b> Es el identificador de grupo, es una abreviatura de Group 🆔.
+🧠 <b>What is GID❓</b> It's the group identifier, in short, Group 🆔.
 
-🤔 <b> Se ha creado correctamente el grupo? </b> Lo cierto es que si ya que no ha habido ningún mensaje de error, aún así podemos comprobar si se ha creado con el comando ```getent group nombre_grupo``` o también podemos hacer ```cat /etc/group``` y podremos ver todos los grupos y los usuarios que hay dentro de ellos.
+🤔 <b> Was the group created without problems? </b> Truth is that there is no sign of one, still we can check it using ```getent group <groupname>``` or we can also use ```cat /etc/group``` and see all groups and the users in any of them.
 
-6 ◦ Con el comando ```sudo adduser user group``` incluiremos al usuario en el grupo. Debemos incluir al usuario en los grupos ```sudo``` y ```user42```.
+6 ◦ With ```sudo adduser <user> <groupname>``` we can include a user to a group. We mst include out user in the groups ```sudo``` and ```user42```.
 
 <img width="422" alt="Screen Shot 2022-10-26 at 6 32 30 PM" src="https://user-images.githubusercontent.com/66915274/198083019-c5a442bb-c625-45ce-84e1-bcbca3a7dba5.png">
 
 <img width="404" alt="Screen Shot 2022-10-26 at 6 34 09 PM" src="https://user-images.githubusercontent.com/66915274/198083377-bd4162c6-317b-474f-8bc4-e542be4dcfde.png">
 
-7 ◦ Una vez los hayamos introducido para checkear que todo se haya hecho correctamente podemos ejecutar el comando ```getent group nombre_grupo``` o tambien podemos editar el fichero /etc/group ```nano /etc/group``` y en los grupos ```sudo``` y ```login42``` debera aparecer nuestro usuario.
+7 ◦ Once we are done with that we can check it using ```getent group <groupname>``` or editing the /etc/group file using ```nano /etc/group```; the groups ```sudo``` and ```user42``` must be present with our user.
 
 <img width="328" alt="Screen Shot 2022-10-26 at 6 35 50 PM" src="https://user-images.githubusercontent.com/66915274/198083739-ad16e388-69c3-41d1-a061-e55dd66b0d14.png">
 
@@ -299,25 +299,25 @@ Repeat you user name.
 
 ### 4.2 - Installing & configuring SSH 📶
 
-🧠 <b> Que es SSH❓</b> Es el nombre de un protocolo y del programa que lo implementa cuya principal función es el acceso remoto a un servidor por medio de un canal seguro en el que toda la información está cifrada.
+🧠 <b> What is SSH❓</b> The acronym SSH stands for "Secure Shell." The SSH protocol was designed as a secure alternative to unsecured remote shell protocols. It utilizes a client-server paradigm, in which clients and servers communicate via a secure channel.
 
-1 ◦ Lo primero que haremos será hacer ```sudo apt update``` para actualizar los repositorios que definimos en el archivo /etc/apt/sources.list
+1 ◦ First thing, we should update the system using ```sudo apt update```.
 
 <img width="774" alt="Captura de pantalla 2022-07-14 a las 3 09 44" src="https://user-images.githubusercontent.com/66915274/178864173-aa5a08cf-8562-4484-a60a-3e1c7a533a28.png">
 
-2 ◦ Acto seguido instalaremos la herramienta principal de conectividad para el inicio de sesión remoto con el protocolo SSH, esta herramienta es OpenSSH. Para instalarla debemos introducir el comando ```sudo apt install openssh-server```. En el mensaje de confirmación ponemos ```Y```, acto seguido esperaremos a que termine la instalación.
+2 ◦ Following up we will install the main tool for remote access with the SSH protocol, using OpenSSH. The installation requieres the package ```sudo apt install openssh-server```. When we are asked for confirmation we will write ```y```, and just then the installation will proceed.
 
 <img width="772" alt="Captura de pantalla 2022-07-14 a las 3 14 52" src="https://user-images.githubusercontent.com/66915274/178865991-cdb90f12-ebd8-4583-bcbb-70f47c86abe6.png">
 
-Para comprobar que se haya instalado correctamente haremos ```sudo service ssh status``` y nos debe aparecer active.
+Anywan curious that the installation have been realices without problems we can use ```sudo service ssh status``` and it will show how is the state of it. **Active** must be show to continue.
 
 <img width="702" alt="Captura de pantalla 2022-07-14 a las 3 53 59" src="https://user-images.githubusercontent.com/66915274/178876938-7fd74214-15df-4759-bf8d-52b53a8f4251.png">
 
-3 ◦ Una vez terminada la instalación se han creado algunos ficheros que debemos configurar. Para ello utilizaremos [Nano](https://es.wikipedia.org/wiki/GNU_Nano) o si tu lo prefieres otro editor de texto. El primer fichero que editaremos será ```/etc/ssh/sshd_config```. Si no estas desde el usuario root no tendrás permisos de escritura, para ello haremos ```su``` y ponemos la contraseña para entrar al usuario root o si no quieres entrar en el usuario root ponemos sudo al principio del comando ```sudo nano /etc/ssh/sshd_config```.
+3 ◦ Going on, some files have been created and we need to configur them. For that we will use [Nano](https://en.wikipedia.org/wiki/GNU_Nano) or [VIM](https://en.wikipedia.org/wiki/Vim_(text_editor)) (we will need to install vim since it's not preinstalled using ```sudo apt install vim```) or any other text editor. First file that we will edit will be ```/etc/ssh/sshd_config```. If you are not on root you will not be able to edit the file; as you know, for switching to root we use ```su```.
 
 <img width="497" alt="Captura de pantalla 2022-07-14 a las 3 24 21" src="https://user-images.githubusercontent.com/66915274/178867150-273c75c1-c935-45f0-a551-1a115d3f6f6a.png">
 
-4 ◦ Los ```#``` al comienzo de una línea significan que esta comentada, las líneas que vayamos a modificar deberás quitarle el comentario. Una vez estemos editando el fichero deberemos modificar las siguientes líneas:
+4 ◦ The ```#``` means that line it is commented; the lines that we will be edit have to be uncommented. Once we are editing the  file we need to update the following lines:
 
 ➤ #Port 22 -> Port 4242
 
@@ -327,60 +327,60 @@ Para comprobar que se haya instalado correctamente haremos ```sudo service ssh s
 
 <img width="798" alt="Captura de pantalla 2022-07-14 a las 3 34 13" src="https://user-images.githubusercontent.com/66915274/178868266-fc6d6684-8196-4021-b884-a047a443a3ec.png">
 
-Una vez hayamos modificado esas líneas debemos guardar los cambios realizados sobre el fichero y dejar de editarlo.
+When finish we have to save the changes and leave the file.
 
-5 ◦ Ahora debemos editar el fichero ```/etc/ssh/ssh_config```.
+5 ◦ Now with the file ```/etc/ssh/ssh_config```. (not ```sshd_config```)
 
 <img width="501" alt="Captura de pantalla 2022-07-14 a las 3 48 56" src="https://user-images.githubusercontent.com/66915274/178872582-8277e687-8ab7-4087-bd17-a71e5e86d5e6.png">
 
-Editaremos la siguiente línea: 
+Edit the following line: 
 
 ➤ #Port 22 -> Port 4242
 
 <img width="795" alt="Captura de pantalla 2022-07-14 a las 3 50 29" src="https://user-images.githubusercontent.com/66915274/178875013-1969c13f-9e43-4f2a-a037-f384a8e87a78.png">
 
-6 ◦ Por último debemos reiniciar el servicio ssh para que así se actualicen las modificaciones que acabamos de realizar. Para ello debemos escribir el comando ```sudo service ssh restart``` y una vez reseteado miraremos el estado actual con ```sudo service ssh status``` y para confirmar que se hayan realizado los cambios en la escucha del servidor debe aparecer el Puerto 4242.
+6 ◦ Finally we must restart the ssh service so it can be updated. For that purpuse we will use ```sudo service ssh restart``` and once it is done we will check the service state with ```sudo service ssh status``` and confirm that everything is alright.
 
 <img width="713" alt="Captura de pantalla 2022-07-14 a las 3 56 56" src="https://user-images.githubusercontent.com/66915274/178880333-0e2ad7fd-674b-4b4f-b92a-25acbc36c8a5.png">
 
 
 ### 4.3 Installing & configuring UFW 🔥🧱
 
-🧠 <b>Que es [UFW](https://es.wikipedia.org/wiki/Uncomplicated_Firewall)❓</b> Es un [firewall](https://es.wikipedia.org/wiki/Cortafuegos_(inform%C3%A1tica)) el cual utiliza la línea de comandos para configurar las [iptables](https://es.wikipedia.org/wiki/Iptables) usando un pequeño número de comandos simples.
+🧠 <b>What is [UFW](https://en.wikipedia.org/wiki/Uncomplicated_Firewall)❓</b> It is a [firewall](https://en.wikipedia.org/wiki/Firewall_(computing)) which use the command line for setting up [iptables](https://en.wikipedia.org/wiki/Iptables) using a small number of easy commands.
 
-1 ◦ Lo primero que debemos hacer el instalar UFW, para ello haremos uso del comando ```sudo apt install ufw``` acto seguido escribiremos una ```y``` para confirmar que deseamos instalarlo y esperaremos a que termine.
+1 ◦ First things first, we need to install the packages for UFW, for that we will use ```sudo apt install ufw```, then when we are asked for confirmation type ```y``` and the installation will proceed
 
 <img width="771" alt="Captura de pantalla 2022-07-14 a las 19 28 55" src="https://user-images.githubusercontent.com/66915274/179045920-4a9aec64-b1d7-4785-89a1-4a299aae21a3.png">
 
 <img width="802" alt="Captura de pantalla 2022-07-14 a las 19 29 25" src="https://user-images.githubusercontent.com/66915274/179045994-19cdf6e0-be61-454b-9adc-ba1f9c2dfd84.png">
 
-2 ◦ Una vez instalado debemos habilitarlo , para ello debemos poner el siguiente comando ```sudo ufw enable``` y acto seguido nos debe indicar que el firewall esta activo.
+2 ◦ When we are done with it, we want to start it using the command ```sudo ufw enable``` and then it have to show us the the *firewall is ative.*
 
 <img width="498" alt="Captura de pantalla 2022-07-14 a las 19 32 57" src="https://user-images.githubusercontent.com/66915274/179046565-307c042b-243e-4224-bcb2-d02859332352.png">
 
-3 ◦ Ahora lo que debemos hacer es que nuestro firewall permita las conexiones que se lleven a cabo mediante el puerto 4242. Lo haremos con el siguiente comando ```sudo ufw allow 4242```.
+3 ◦ Then we must allow our firewall to accept the connections that will happens in the 4242 port. What we will do is use ```sudo ufw allow 4242```. 
 
 <img width="514" alt="Captura de pantalla 2022-07-14 a las 19 34 12" src="https://user-images.githubusercontent.com/66915274/179046765-5277ec55-b8e4-4d4f-a617-a2a8758b80a8.png">
 
-4 ◦ Por último comprobaremos que esta todo correctamente configurado mirando el estado de nuestro cortafuegos , en donde ya debe aparecer como permitidas las conexiones mediante el puerto 4242. Para ver el estado daremos uso del comando ```sudo ufw status```.
+4 ◦ Lastly we will check if everything done here is correct checking the actual state of our firewall. For that we will use ```sudo ufw status```. Alternatively ```sudo ufw status verbose``` or ```sudo ufw status numbered``` can be used.
 
 <img width="575" alt="Captura de pantalla 2022-07-14 a las 19 38 37" src="https://user-images.githubusercontent.com/66915274/179047574-8073045c-6e78-4b6f-8487-cb0f490a2cd0.png">
 
 ### 4.4 Setting up the sudo policies 🔒
 
-1 ◦ Crearemos un fichero en la ruta /etc/sudoers.d/ a mi fichero yo le he decidido llamar sudo_config ya que en ese fichero se almacenará la configuración de la contraseña. El comando exacto para crear el fichero es ```touch /etc/sudoers.d/sudo_config```.
+1 ◦ Begining with this section, we will create a file in */etc/sudoerd.d/*. The file will serve the purpouse of storing our sudo policy. The command that we will use will be ```touch /etc/sudoers.d/sudo_config```.
 
 <img width="511" alt="Captura de pantalla 2022-07-14 a las 22 00 40" src="https://user-images.githubusercontent.com/66915274/179072822-2f86bd8b-216e-45e4-a15b-8fe3a49149ff.png">
 
-2 ◦ Debemos crear el directorio sudo en la ruta /var/log porque cada comando que ejecutemos con sudo , tanto el input como el output debe quedar almacenado en ese directorio. Para crearlo utilizaremos el comando ```mkdir /var/log/sudo```.
+2 ◦ Then we must create a directory as is asked in the subject in */var/log/* because each commands need to be logged, the input and output. We will use ```mkdir /var/log/sudo``` for our folder.
 
 <img width="502" alt="Captura de pantalla 2022-07-14 a las 21 56 53" src="https://user-images.githubusercontent.com/66915274/179072210-ad99e50d-fa57-494b-999d-3a80dd0f7849.png">
 
-3 ◦ Debemos editar el fichero creado en el paso 1. Como he comentado anteriormente puedes utilizar el editor que mas te guste , pero yo dare uso de nano. Comando para editar el fichero:  ```nano /etc/sudoers.d/sudo_config```.
+3 ◦ We must edit the file that we created in the first step of this section. Use any text editor, but for this guide as is in every screenshot we will use nano. Use ```nano /etc/sudoers.d/sudo_config```.
 
 <img width="502" alt="Captura de pantalla 2022-07-14 a las 22 04 10" src="https://user-images.githubusercontent.com/66915274/179073389-5b2a9c16-811c-4133-87c6-479e770c880b.png">
 
-4 ◦ Una vez estamos editando el fichero deberemos introducir los siguientes comandos para cumplir todos los requisitos que pide el subject.
+4 ◦ Once we are editing the file we must set it up with the following commands.
 
 ```
 Defaults  passwd_tries=3
@@ -392,17 +392,17 @@ Defaults  requiretty
 Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
 
-➤ Como debería verse el fichero.
+➤ As it should be on the file.
 
 <img width="1202" alt="Captura de pantalla 2022-07-16 a las 2 03 45" src="https://user-images.githubusercontent.com/66915274/179326003-1fd67295-4be2-47bd-98fc-d5821f5f1c4d.png">
 
-🤔 <b>Que hace cada comando❓ </b>
+🤔 <b>What does each command❓ </b>
 
 <img width="802" alt="Captura de pantalla 2022-07-16 a las 2 04 56" src="https://user-images.githubusercontent.com/66915274/179326915-b374f679-fa2e-4e02-8b38-cdb53c6354a6.png">
 
 ### 4.5 Setting up a strong password policy 🔑
 
-1 ◦ El primer paso será editar el fichero login.defs.
+1 ◦ First step will be editing the login.defs file.
 
 <img width="493" alt="Captura de pantalla 2022-07-16 a las 2 54 06" src="https://user-images.githubusercontent.com/66915274/179327943-67432d4a-7042-44ea-96f4-5975556ce4dc.png">
 
