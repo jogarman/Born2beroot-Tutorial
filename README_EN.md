@@ -400,6 +400,13 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 <img width="802" alt="Captura de pantalla 2022-07-16 a las 2 04 56" src="https://user-images.githubusercontent.com/66915274/179326915-b374f679-fa2e-4e02-8b38-cdb53c6354a6.png">
 
+**GREEN**	-> Total tries for entering the sudo password.
+**RED**		-> The message that will show when the password failed.
+**YELLOW**	-> Path where will the sudo logs will be stored.
+**BLUE**	-> What will be logged.
+**BROWN**	-> TTY is required lol.
+**LIGHTB**	-> Folders that will be excluded of sudo
+
 ### 4.5 Setting up a strong password policy 🔑
 
 1 ◦ First step will be editing the login.defs file.
