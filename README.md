@@ -1086,9 +1086,7 @@ Descripción breve de todos los tipos de particiones:
 
 ### Lighttpd 
 
-🧠 <b> Que es Lighttpd❓</b> 
-
-Es un servidor web diseñado para ser rápido, seguro, flexible, y fiel a los estándares. Está optimizado para entornos donde la velocidad es muy importante. Esto se debe a que consume menos CPU y memoria RAM que otros servidores.
+🧠 <b> Que es Lighttpd❓</b> Es un servidor web diseñado para ser rápido, seguro, flexible, y fiel a los estándares. Está optimizado para entornos donde la velocidad es muy importante. Esto se debe a que consume menos CPU y memoria RAM que otros servidores.
 
 1 ◦ Instalación de paquetes de lighttpd.
 
@@ -1104,9 +1102,7 @@ Es un servidor web diseñado para ser rápido, seguro, flexible, y fiel a los es
 
 ### Mariadb
 
-🧠 <b> Que es MariaDB❓</b> 
-
-Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de datos, el comercio electrónico, funciones a nivel empresarial y las aplicaciones de registro. 
+🧠 <b> Que es MariaDB❓</b> Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de datos, el comercio electrónico, funciones a nivel empresarial y las aplicaciones de registro. 
 
 <img width="797" alt="Screen Shot 2022-10-27 at 4 17 09 AM" src="https://user-images.githubusercontent.com/66915274/198175218-65dec75f-5727-425c-97d0-2baa2b8cd457.png">
 
@@ -1118,9 +1114,7 @@ Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de 
 
 ### Phpmyadmin
 
-🧠 <b> Que es Phpmyadmin❓</b> 
-
-Es una aplicación web que sirve para administrar bases de datos de forma sencilla y con una interfaz amistosa.
+🧠 <b> Que es Phpmyadmin❓</b> Es una aplicación web que sirve para administrar bases de datos de forma sencilla y con una interfaz amistosa.
 
 <img width="733" alt="Screen Shot 2022-10-27 at 4 22 33 AM" src="https://user-images.githubusercontent.com/66915274/198175891-74168b70-13e1-41a6-a46d-74fe03077a2e.png">
 
