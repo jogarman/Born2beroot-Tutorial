@@ -31,9 +31,11 @@
 	
 	8.2 [Wordpress y configuración de servicios 🌐](#82---wordpress-y-configuración-de-servicios-)
 
-10. [Hoja de corrección ✅](#9--hoja-de-corrección-)
+9. [Hoja de corrección ✅](#9--hoja-de-corrección-)
 
 	9.1 [Respuestas de la evaluación 💯](#9-1-respuestas-de-la-evaluación-)
+	
+	9.2 [Comandos de la evaluación ⌨️](#9-2-comando-de-la-evaluación-%EF%B8%8F)
 	
 ## 1- _Descargar imagen de la maquina virtual_ 💿
 
@@ -1101,6 +1103,10 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="460" alt="Screen Shot 2022-10-27 at 4 15 45 AM" src="https://user-images.githubusercontent.com/66915274/198175075-da6833f1-2360-4e08-b708-99f920b8215c.png">
 
+4 ◦ Añadimos la regla que incluya el puerto 80. Si no recuerdas como se añadian reglas en el reenvío de puertos. Configuración de la máquina → Red → Reenvío de puertos → Replicar la captura.
+
+<img width="877" alt="Screen Shot 2022-11-18 at 2 49 56 PM" src="https://user-images.githubusercontent.com/66915274/202720044-d7a51add-c5ee-4da4-9057-258e47cfd036.png">
+
 ### Mariadb
 
 🧠 <b> Que es MariaDB❓</b> Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de datos, el comercio electrónico, funciones a nivel empresarial y las aplicaciones de registro. 
@@ -1123,7 +1129,27 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="578" alt="Screen Shot 2022-10-27 at 4 26 55 AM" src="https://user-images.githubusercontent.com/66915274/198176405-f6bf2457-1174-4571-a495-d96ba80f5b83.png">
 
+WORDPRESS
 
+<img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
+
+<img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
+
+<img width="629" alt="Screen Shot 2022-11-18 at 2 46 44 PM" src="https://user-images.githubusercontent.com/66915274/202719300-08ff9e6e-fc28-47fb-a63e-706a3e72994a.png">
+
+<img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
+
+<img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
+
+<img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
+
+<img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
+
+<img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
+
+<img width="524" alt="Screen Shot 2022-11-18 at 2 55 26 PM" src="https://user-images.githubusercontent.com/66915274/202721061-5eb6c0cc-6ad5-4864-be08-12509e269832.png">
+
+<img width="1811" alt="Screen Shot 2022-11-18 at 2 55 52 PM" src="https://user-images.githubusercontent.com/66915274/202721157-0b246d43-09cf-4254-870b-d8897697f5ee.png">
 
 
 <br>
@@ -1173,7 +1199,7 @@ Aptitude es una version mejorada de apt. APT es un administrador de paquetes de 
 
 Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
 
-## 9-2 Comando de la evaluación ⌨️
+## 9-2 Comandos de la evaluación ⌨️
 
 
 
