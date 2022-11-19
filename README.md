@@ -1129,7 +1129,9 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="578" alt="Screen Shot 2022-10-27 at 4 26 55 AM" src="https://user-images.githubusercontent.com/66915274/198176405-f6bf2457-1174-4571-a495-d96ba80f5b83.png">
 
-WORDPRESS
+### Wordpress 
+
+🧠 <b> Que es Wordpress❓</b>
 
 <img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
 
