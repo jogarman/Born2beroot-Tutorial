@@ -413,7 +413,7 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 <img width="493" alt="Captura de pantalla 2022-07-16 a las 2 54 06" src="https://user-images.githubusercontent.com/66915274/179327943-67432d4a-7042-44ea-96f4-5975556ce4dc.png">
 
-2 ◦ Una vez estemos editando el fichero modificaremos los siguientes parametros: 
+2 ◦ Once we are done editing the file, we will set the next parameters:
 
 ➤ PASS_MAX_DAYS 99999 -> PASS_MAX_DAYS 30
 
@@ -422,13 +422,14 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 <img width="802" alt="Captura de pantalla 2022-07-16 a las 3 05 49" src="https://user-images.githubusercontent.com/66915274/179328449-32a40f67-a18d-4f29-993b-94d013cd7670.png">
 
-PASS_MAX_DAYS: Es el tiempo de expiración de la contraseña. El numero corresponde a días.
+PASS_MAX_DAYS: It's the max days till password expiration.
 
-PASS_MIN_DAYS: El número mínimo de días permitido antes de modificar una contraseña.
+PASS_MIN_DAYS: It's the min days till password change.
 
-PASS_WARN_AGE: El usuario recibira un mensaje de aviso indicando que faltan los dias especificados para que expire su contraseña.
+PASS_WARN_AGE: It's the days till password warning.
 
-3 ◦ Para poder seguir con la configuración debemos instalar los siguientes paquetes con este comando ```sudo apt install libpam-pwquality``` , acto seguido pondremos ```Y``` para confirmar la instalación y esperaremos a que termine. 
+3 ◦ 
+Para poder seguir con la configuración debemos instalar los siguientes paquetes con este comando ```sudo apt install libpam-pwquality``` , acto seguido pondremos ```Y``` para confirmar la instalación y esperaremos a que termine. 
 
 <img width="770" alt="Captura de pantalla 2022-07-16 a las 3 13 52" src="https://user-images.githubusercontent.com/66915274/179328708-c5054703-bdb0-4cca-82a8-6ab25ce42b40.png">
 
