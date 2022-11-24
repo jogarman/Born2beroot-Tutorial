@@ -35,7 +35,7 @@
 
 	9.1 [Respuestas de la evaluación 💯](#9-1-respuestas-de-la-evaluación-)
 	
-	9.2 [Comandos de la evaluación ⌨️](#9-2-comando-de-la-evaluación-%EF%B8%8F)
+	9.2 [Comandos de la evaluación ⌨️](#9-2-comandos-de-la-evaluación-%EF%B8%8F)
 	
 ## 1- _Descargar imagen de la maquina virtual_ 💿
 
@@ -1407,6 +1407,18 @@ Ejecutamos el siguiente comando para asi modificar el fichero crontab ```sudo cr
 Modificamos el primer paramentro , en vez de 10 lo cambiamos a 1.
 
 <img width="638" alt="Screen Shot 2022-11-24 at 6 31 44 AM" src="https://user-images.githubusercontent.com/66915274/203701944-393bd687-8b9c-4643-9d59-4789361e314d.png">
+
+22 ◦ Finalmente haz que el script deje de ejecutarse cuando el servidor se haya iniciado, pero sin modificar el script.
+
+```sudo /etc/init.d/cron stop```
+
+<img width="483" alt="Screen Shot 2022-11-24 at 3 25 53 PM" src="https://user-images.githubusercontent.com/66915274/203807610-d87124f2-47ca-4546-8037-b904e8bcf5d1.png">
+
+Si queremos que vuelva a ejecutarse:
+
+```sudo /etc/init.d/cron start```
+
+<img width="483" alt="Screen Shot 2022-11-24 at 3 27 38 PM" src="https://user-images.githubusercontent.com/66915274/203807970-8fc69a39-6d10-4e64-9be1-eb49c4bf95f8.png">
 
 # Contacto 📥
 
