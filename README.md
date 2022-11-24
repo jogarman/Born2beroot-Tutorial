@@ -1153,6 +1153,17 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="1811" alt="Screen Shot 2022-11-18 at 2 55 52 PM" src="https://user-images.githubusercontent.com/66915274/202721157-0b246d43-09cf-4254-870b-d8897697f5ee.png">
 
+### FTP (File Transfer Protocol)
+
+🧠 <b> Que es FTP❓</b> Es un protocolo de red para la transferencia de archivos entre sistemas conectados a una red TCP, basado en la arquitectura cliente-servidor.
+
+1 ◦ Debemos instalar vsftpd que es un servidor FTP. Para ellos usaremos el comando ```sudo apt install vsftpd```.
+
+<img width="546" alt="Screen Shot 2022-11-24 at 3 48 42 PM" src="https://user-images.githubusercontent.com/66915274/203812140-faa67c8f-15fe-45d1-9bf2-a91064f55930.png">
+
+2 ◦ Debemos agregar una regla que permita las conexiones por el puerto 21. Haremos uso del comando ```sudo ufw allow 21```. 
+
+<img width="406" alt="Screen Shot 2022-11-24 at 3 52 56 PM" src="https://user-images.githubusercontent.com/66915274/203812991-2f98d661-1425-4edf-bc21-28cf34a8f02e.png">
 
 <br>
 <br>
