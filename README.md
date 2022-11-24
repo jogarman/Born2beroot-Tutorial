@@ -1201,6 +1201,10 @@ Aptitude es una version mejorada de apt. APT es un administrador de paquetes de 
 
 Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
 
+### ▪️ Que es LVM❓
+
+Es un gestor de volúmenes lógicos. Proporciona un método para asignar espacio en dispositivos de almacenamiento masivo, que es más flexible que los esquemas de particionado convencionales para almacenar volúmenes.
+
 ## 9-2 Comandos de la evaluación ⌨️
 
 1 ◦ Comprobar que no haya ninguna interfaz grafica en uso.
@@ -1242,7 +1246,67 @@ TEST: echo $xdg_current_desktop
 ```sudo adduser name``` y introducimos una contraseña que siga la politica.
 
 <img width="465" alt="Screen Shot 2022-11-24 at 3 29 45 AM" src="https://user-images.githubusercontent.com/66915274/203680847-b4555fd4-f847-4bce-b944-edf3e7720c99.png">
+
+7 ◦ Creamos un nuevo grupo llamado "evaluating". 
+
+```sudo addgroup evaluating```
+
 <img width="363" alt="Screen Shot 2022-11-24 at 3 30 47 AM" src="https://user-images.githubusercontent.com/66915274/203680980-784b2b60-82f4-405a-9f07-ec4948e86868.png">
+
+8 ◦ Añadimos el nuevo usuario al nuevo grupo.
+
+```sudo adduser name evaluating```
+
+<img width="411" alt="Screen Shot 2022-11-24 at 3 33 08 AM" src="https://user-images.githubusercontent.com/66915274/203681233-096b200a-2b99-4638-81f3-a3bff046c0db.png">
+
+Para comprobar que se haya introducido correctamente.
+
+<img width="356" alt="Screen Shot 2022-11-24 at 3 33 31 AM" src="https://user-images.githubusercontent.com/66915274/203681267-106e4d37-0ec4-4006-95a4-88dd7109c4b6.png">
+
+9 ◦ Comprobar que el hostname de la maquina es correcto login42.
+
+<img width="224" alt="Screen Shot 2022-11-24 at 3 37 27 AM" src="https://user-images.githubusercontent.com/66915274/203681701-4f9b9ff1-28b6-4d06-9489-f930eee4b6e5.png">
+
+
+10 ◦ Modificar hostname para remplazar tu login por el del evaluador. En este caso lo reemplazare por student42.
+
+```sudo nano /etc/hostname``` y remplazamos nuestro login por el nuevo.
+
+<img width="445" alt="Screen Shot 2022-11-24 at 3 42 30 AM" src="https://user-images.githubusercontent.com/66915274/203682323-dfd14846-9c98-48d0-9c83-56739de3220b.png">
+
+<img width="525" alt="Screen Shot 2022-11-24 at 3 43 47 AM" src="https://user-images.githubusercontent.com/66915274/203682470-598a9dbf-ef28-4ef5-86cf-8caeef083ec3.png">
+
+```sudo nano /etc/hosts``` y remplazamos nuestro login por el nuevo.
+
+<img width="418" alt="Screen Shot 2022-11-24 at 3 44 08 AM" src="https://user-images.githubusercontent.com/66915274/203682512-5dd1452d-a704-466b-b9e1-89aa472fada6.png">
+
+<img width="512" alt="Screen Shot 2022-11-24 at 3 44 35 AM" src="https://user-images.githubusercontent.com/66915274/203682562-36741000-6203-4a98-9de7-53afb24d6ea2.png">
+
+Reiniciamos la maquina.
+
+<img width="358" alt="Screen Shot 2022-11-24 at 3 44 58 AM" src="https://user-images.githubusercontent.com/66915274/203682614-60b10a36-c5d9-478b-a119-73e32a87b7fb.png">
+
+Una vez nos hemos logueado de nuevo podemos ver como el hostname se ha cambiado correctamente.
+
+<img width="263" alt="Screen Shot 2022-11-24 at 3 46 30 AM" src="https://user-images.githubusercontent.com/66915274/203682819-bd35ff17-3810-4644-9c44-93957e41d181.png">
+
+11 ◦ Comprobar que todas las particiones son como indica el subject.
+
+```lsblk```
+
+<img width="495" alt="Screen Shot 2022-11-24 at 3 52 17 AM" src="https://user-images.githubusercontent.com/66915274/203683496-b49a7ada-2a0c-4f87-a013-e307370b3900.png">
+
+12 ◦ Comprobar que sudo esta instalado.
+
+```which sudo```
+
+<img width="275" alt="Screen Shot 2022-11-24 at 4 00 42 AM" src="https://user-images.githubusercontent.com/66915274/203684520-1340d8dc-1b13-4828-9056-2631e659ddcf.png">
+
+Utilizar which realmente no es una buena practica ya que no todos los paquetes se encuentran en las rutas donde which busca, aun asi para la evaluacion es mejor ya que es un comando sencillo y facil de aprender. Para un mejor uso haremos uso del siguiente comando:
+
+```dpkg -s sudo```
+
+<img width="789" alt="Screen Shot 2022-11-24 at 4 02 13 AM" src="https://user-images.githubusercontent.com/66915274/203684698-d66c3c5b-2d6b-43c5-8f63-1a3cddaf7b4d.png">
 
 # Contacto 📥
 
