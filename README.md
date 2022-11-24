@@ -1283,7 +1283,9 @@ Es un gestor de volúmenes lógicos. Proporciona un método para asignar espacio
 
 1 ◦ Comprobar que no haya ninguna interfaz grafica en uso.
 
-TEST: echo $xdg_current_desktop
+Utilizaremos el comando ```ls /usr/bin/*session``` y nos debe aparecer el mismo resultado que en la captura. Si aparece algo diferente se esta utilizando una interfaz grafica.
+
+<img width="352" alt="Screen Shot 2022-11-25 at 12 00 02 AM" src="https://user-images.githubusercontent.com/66915274/203872315-0e87428b-5c5a-475b-9d7c-350eafbe3bea.png">
 
 2 ◦ Comprobar que el servicio UFW esta en uso.
 
