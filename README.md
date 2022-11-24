@@ -1243,7 +1243,7 @@ TEST: echo $xdg_current_desktop
 
 6 ◦ Crear un nuevo usuario y mostrar que sigue la politica de contraseñas que hemos creado.
 
-```sudo adduser name``` y introducimos una contraseña que siga la politica.
+```sudo adduser name_user``` y introducimos una contraseña que siga la politica.
 
 <img width="465" alt="Screen Shot 2022-11-24 at 3 29 45 AM" src="https://user-images.githubusercontent.com/66915274/203680847-b4555fd4-f847-4bce-b944-edf3e7720c99.png">
 
@@ -1255,7 +1255,7 @@ TEST: echo $xdg_current_desktop
 
 8 ◦ Añadimos el nuevo usuario al nuevo grupo.
 
-```sudo adduser name evaluating```
+```sudo adduser name_user evaluating```
 
 <img width="411" alt="Screen Shot 2022-11-24 at 3 33 08 AM" src="https://user-images.githubusercontent.com/66915274/203681233-096b200a-2b99-4638-81f3-a3bff046c0db.png">
 
@@ -1307,6 +1307,26 @@ Utilizar which realmente no es una buena practica ya que no todos los paquetes s
 ```dpkg -s sudo```
 
 <img width="789" alt="Screen Shot 2022-11-24 at 4 02 13 AM" src="https://user-images.githubusercontent.com/66915274/203684698-d66c3c5b-2d6b-43c5-8f63-1a3cddaf7b4d.png">
+
+13 ◦ Introducimos el nuevo usuario dentro del grupo sudo.
+
+```sudo adduser name_user sudo```
+
+<img width="468" alt="Screen Shot 2022-11-24 at 5 02 24 AM" src="https://user-images.githubusercontent.com/66915274/203691378-2f2f5309-e650-486e-9cd6-cae4dec2ffa6.png">
+
+Comprobamos que esta dentro del grupo.
+
+ <img width="415" alt="Screen Shot 2022-11-24 at 5 02 39 AM" src="https://user-images.githubusercontent.com/66915274/203691402-6b84f333-10f7-4908-8255-652613afeede.png">
+
+14 ◦ Muestra la aplicación de las reglas impuestas para sudo por el subject.
+
+<img width="503" alt="Screen Shot 2022-11-24 at 5 12 02 AM" src="https://user-images.githubusercontent.com/66915274/203692615-bc1ec51c-ae5f-444f-9577-39b01112c969.png">
+
+<img width="762" alt="Screen Shot 2022-11-24 at 5 12 17 AM" src="https://user-images.githubusercontent.com/66915274/203692638-e6de6cba-ad42-48b9-ac84-21e2b8c50563.png">
+
+15 ◦ Muestra que la ruta /var/log/sudo/ existe y contiene almenos un fichero.
+
+<img width="394" alt="Screen Shot 2022-11-24 at 5 05 59 AM" src="https://user-images.githubusercontent.com/66915274/203691812-78f9e53b-6ae3-47a2-a5b6-b079b9aaa45e.png">
 
 # Contacto 📥
 
