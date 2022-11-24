@@ -1188,12 +1188,12 @@ contraseña que queramos.
 
 ```sudo ufw reload```
 
-6 ◦ Una vez completado el paso anterior ya podemos conectarnos. Pondremos en el buscador de nuestro navegador ```localhost:7080``` proporcionamos nuestras credenciales de inicio de 
+6 ◦ Una vez completado el paso anterior ya podemos conectarnos. Pondremos en el buscador de nuestro navegador ```localhost:7080``` proporcionamos nuestras credenciales de inicio de sesión y ya tendremos acceso a todo.
 
 <img width="803" alt="Screen Shot 2022-11-24 at 8 36 57 PM" src="https://user-images.githubusercontent.com/66915274/203854954-577f888a-9dc2-4aea-8949-6aa61a153d9a.png">
 
 
-
+<img width="1206" alt="Screen Shot 2022-11-24 at 8 49 24 PM" src="https://user-images.githubusercontent.com/66915274/203856104-d4454636-2f45-4e51-8cf5-a1501398ea57.png">
 
 
 
