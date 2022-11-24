@@ -1398,7 +1398,15 @@ Nos conectamos por ssh con el nuevo usuario con el comando ```ssh newuser@localh
 
 <img width="1384" alt="Screen Shot 2022-11-24 at 5 48 06 AM" src="https://user-images.githubusercontent.com/66915274/203696612-f2c98ebf-be55-4830-b5ea-b0ac98de7c65.png">
 
-21 ◦ 
+21 ◦ Modifica el tiempo de ejecución del script de 10 minutos a 1.
+
+Ejecutamos el siguiente comando para asi modificar el fichero crontab ```sudo crontab -u root -e```
+
+<img width="455" alt="Screen Shot 2022-11-24 at 6 30 57 AM" src="https://user-images.githubusercontent.com/66915274/203701854-956c27de-367f-4b54-b21f-8a892d4891d4.png">
+
+Modificamos el primer paramentro , en vez de 10 lo cambiamos a 1.
+
+<img width="638" alt="Screen Shot 2022-11-24 at 6 31 44 AM" src="https://user-images.githubusercontent.com/66915274/203701944-393bd687-8b9c-4643-9d59-4789361e314d.png">
 
 # Contacto 📥
 
