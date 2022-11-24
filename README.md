@@ -1153,6 +1153,69 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="1811" alt="Screen Shot 2022-11-18 at 2 55 52 PM" src="https://user-images.githubusercontent.com/66915274/202721157-0b246d43-09cf-4254-870b-d8897697f5ee.png">
 
+### LiteSpeed
+
+🧠 <b> Que es LiteSpeed❓</b>
+
+1 ◦ Antes de instalar cualquier software, es importante asegurarse de que su sistema esté actualizado ejecutando los siguientes comandos apt en la terminal
+
+```sudo apt update```
+```sudo apt upgrade```
+
+2 ◦ De forma predeterminada, OpenLiteSpeed está disponible en el repositorio base de Debian 11. Entonces, ahora ejecute el siguiente comando a continuación para agregar el repositorio OpenLiteSpeed a su sistema Debian:
+
+```wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash```
+
+3 ◦ Luego, actualice su paquete APT e instale OpenLiteSpeed usando el siguiente comando a continuación:
+
+```sudo apt update```
+
+```sudo apt install openlitespeed```
+
+4 ◦ La contraseña predeterminada para OpenLiteSpeed es 123456. Debe cambiar la contraseña a algo más seguro como mínimo antes de completar el proceso de instalación. Puedes hacerlo con el siguiente comando:
+
+```sudo /usr/local/lsws/admin/misc/admpass.sh```
+
+idroot
+
+contraseña que queramos.
+
+5 ◦ Configuramos el firewall para permitir las conexiones mediante los puertos 8088 y 7080. Acto seguido agregaremos las reglas en el reenvio de puertos.
+
+```sudo ufw allow 8088/tcp```
+
+```sudo ufw allow 7080/tcp```
+
+```sudo ufw reload```
+
+6 ◦ Una vez completado el paso anterior ya podemos conectarnos. Pondremos en el buscador de nuestro navegador ```localhost:7080``` proporcionamos nuestras credenciales de inicio de 
+
+<img width="803" alt="Screen Shot 2022-11-24 at 8 36 57 PM" src="https://user-images.githubusercontent.com/66915274/203854954-577f888a-9dc2-4aea-8949-6aa61a153d9a.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### FTP (File Transfer Protocol)
 
 🧠 <b> Que es FTP❓</b> Es un protocolo de red para la transferencia de archivos entre sistemas conectados a una red TCP, basado en la arquitectura cliente-servidor.
