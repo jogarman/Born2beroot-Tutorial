@@ -1203,7 +1203,23 @@ Es un módulo de seguridad del kernel Linux que permite al administrador del sis
 
 ## 9-2 Comandos de la evaluación ⌨️
 
+1 ◦ Comprobar que el servicio UFW esta en uso.
 
+```sudo ufw status```
+
+<img width="326" alt="Screen Shot 2022-11-24 at 1 25 06 AM" src="https://user-images.githubusercontent.com/66915274/203668014-bd228793-3532-4494-8b01-d046e4930c10.png">
+
+```sudo service ufw status```
+
+<img width="720" alt="Screen Shot 2022-11-24 at 1 25 37 AM" src="https://user-images.githubusercontent.com/66915274/203668066-6a3420d4-ae72-4263-8474-2e4946e2367a.png">
+
+2 ◦ Comprobar que el servicio SSH esta en uso.
+
+```sudo service ssh status```
+
+<img width="711" alt="Screen Shot 2022-11-24 at 1 26 43 AM" src="https://user-images.githubusercontent.com/66915274/203668165-e642c21f-a11e-48b1-bed5-83639445251e.png">
+
+3 ◦ 
 
 # Contacto 📥
 
