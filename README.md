@@ -1203,7 +1203,11 @@ Es un módulo de seguridad del kernel Linux que permite al administrador del sis
 
 ## 9-2 Comandos de la evaluación ⌨️
 
-1 ◦ Comprobar que el servicio UFW esta en uso.
+1 ◦ Comprobar que no haya ninguna interfaz grafica en uso.
+
+TEST: echo $xdg_current_desktop
+
+2 ◦ Comprobar que el servicio UFW esta en uso.
 
 ```sudo ufw status```
 
@@ -1213,13 +1217,32 @@ Es un módulo de seguridad del kernel Linux que permite al administrador del sis
 
 <img width="720" alt="Screen Shot 2022-11-24 at 1 25 37 AM" src="https://user-images.githubusercontent.com/66915274/203668066-6a3420d4-ae72-4263-8474-2e4946e2367a.png">
 
-2 ◦ Comprobar que el servicio SSH esta en uso.
+3 ◦ Comprobar que el servicio SSH esta en uso.
 
 ```sudo service ssh status```
 
 <img width="711" alt="Screen Shot 2022-11-24 at 1 26 43 AM" src="https://user-images.githubusercontent.com/66915274/203668165-e642c21f-a11e-48b1-bed5-83639445251e.png">
 
-3 ◦ 
+4 ◦ Comprobar que utilizas el sistema operativo Debian o Centos.
+
+```uname -v``` o ```uname --kernel-version```
+
+<img width="306" alt="Screen Shot 2022-11-24 at 1 37 17 AM" src="https://user-images.githubusercontent.com/66915274/203669122-0be5033c-c882-4a2e-bf22-6a680f998a56.png">
+
+5 ◦ Comprobar que tu usuario este dentro de los grupos "sudo" y "user42".
+
+```getent group sudo```
+
+```getent group user42```
+
+<img width="314" alt="Screen Shot 2022-11-24 at 3 26 30 AM" src="https://user-images.githubusercontent.com/66915274/203680444-5fb18ae1-724e-4f78-a77f-a0f5bcc04913.png">
+
+6 ◦ Crear un nuevo usuario y mostrar que sigue la politica de contraseñas que hemos creado.
+
+```sudo adduser name``` y introducimos una contraseña que siga la politica.
+
+<img width="465" alt="Screen Shot 2022-11-24 at 3 29 45 AM" src="https://user-images.githubusercontent.com/66915274/203680847-b4555fd4-f847-4bce-b944-edf3e7720c99.png">
+<img width="363" alt="Screen Shot 2022-11-24 at 3 30 47 AM" src="https://user-images.githubusercontent.com/66915274/203680980-784b2b60-82f4-405a-9f07-ec4948e86868.png">
 
 # Contacto 📥
 
