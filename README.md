@@ -1,9 +1,9 @@
-# Born2beroot-Tutorial 💻
+# Born2beroot-Tutorial 🖥
 
 # Índice
 
 1. [Descargar imagen de la maquina virtual 💿](#1--descargar-imagen-de-la-maquina-virtual-)
-2. [Instalación de la maquina 🛠](#2--instalacion-de-la-maquina-)
+2. [Instalación de la maquina 💻](#2--instalacion-de-la-maquina-)
 3. [Instalación Debian 🌀](#3--instalación-debian-)
 4. [Configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
@@ -27,9 +27,11 @@
 7. [Signature.txt 📝](#7--signaturetxt-)
 8. [Bonus ⭐](#8--bonus-%EF%B8%8F)
 
-	8.1 [Particionado manual del disco](#81--particionado-manual-del-disco)
+	8.1 [Particionado manual del disco 🛠](#81--particionado-manual-del-disco)
 	
 	8.2 [Wordpress y configuración de servicios 🌐](#82---wordpress-y-configuración-de-servicios-)
+	
+	8.3 [Servicio adicional ➕](#83---servicio-adicional-)
 
 9. [Hoja de corrección ✅](#9--hoja-de-corrección-)
 
@@ -1085,6 +1087,7 @@ Descripción breve de todos los tipos de particiones:
 [Click aqui para dirigirte a la configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
 ### 8.2 - Wordpress y configuración de servicios 🌐
+
 ### WordPress y servicios proximamente... 🔜🛠
 
 ### Lighttpd 
@@ -1153,9 +1156,11 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="1811" alt="Screen Shot 2022-11-18 at 2 55 52 PM" src="https://user-images.githubusercontent.com/66915274/202721157-0b246d43-09cf-4254-870b-d8897697f5ee.png">
 
-### LiteSpeed
+### 8.3 - Servicio adicional ➕
 
-🧠 <b> Que es LiteSpeed❓</b>
+### LiteSpeed ⚡️
+
+🧠 <b> Que es LiteSpeed❓</b> Es un software de servidor web patentado. Es el cuarto servidor web más popular, y se estima que lo utiliza el 10% de los sitios web.
 
 1 ◦ Antes de instalar cualquier software, es importante asegurarse de que su sistema esté actualizado ejecutando los siguientes comandos apt en la terminal
 
@@ -1192,41 +1197,7 @@ contraseña que queramos.
 
 <img width="803" alt="Screen Shot 2022-11-24 at 8 36 57 PM" src="https://user-images.githubusercontent.com/66915274/203854954-577f888a-9dc2-4aea-8949-6aa61a153d9a.png">
 
-
 <img width="1206" alt="Screen Shot 2022-11-24 at 8 49 24 PM" src="https://user-images.githubusercontent.com/66915274/203856104-d4454636-2f45-4e51-8cf5-a1501398ea57.png">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### FTP (File Transfer Protocol)
-
-🧠 <b> Que es FTP❓</b> Es un protocolo de red para la transferencia de archivos entre sistemas conectados a una red TCP, basado en la arquitectura cliente-servidor.
-
-1 ◦ Debemos instalar vsftpd que es un servidor FTP. Para ellos usaremos el comando ```sudo apt install vsftpd```.
-
-<img width="546" alt="Screen Shot 2022-11-24 at 3 48 42 PM" src="https://user-images.githubusercontent.com/66915274/203812140-faa67c8f-15fe-45d1-9bf2-a91064f55930.png">
-
-2 ◦ Debemos agregar una regla que permita las conexiones por el puerto 21. Haremos uso del comando ```sudo ufw allow 21```. 
-
-<img width="406" alt="Screen Shot 2022-11-24 at 3 52 56 PM" src="https://user-images.githubusercontent.com/66915274/203812991-2f98d661-1425-4edf-bc21-28cf34a8f02e.png">
 
 <br>
 <br>
