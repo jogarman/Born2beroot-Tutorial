@@ -1088,8 +1088,6 @@ Descripción breve de todos los tipos de particiones:
 
 ### 8.2 - Wordpress y configuración de servicios 🌐
 
-### WordPress y servicios proximamente... 🔜🛠
-
 ### Lighttpd 
 
 🧠 <b> Que es Lighttpd❓</b> Es un servidor web diseñado para ser rápido, seguro, flexible, y fiel a los estándares. Está optimizado para entornos donde la velocidad es muy importante. Esto se debe a que consume menos CPU y memoria RAM que otros servidores.
@@ -1140,7 +1138,7 @@ Descripción breve de todos los tipos de particiones:
 
 ### Wordpress 
 
-🧠 <b> Que es Wordpress❓</b>
+🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
 
 <img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
 
