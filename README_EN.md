@@ -497,32 +497,31 @@ enforce_for_root ➤ We will implement this password policy to root.
 
 ## 5- Script 🚨
 
-This part 
 Esta es una parte muy importante del proyecto. Debes prestar atención en todo, muy importante no copiar y pegar directamente el fichero sin saber que hace cada cosa. En la evaluación debes explicar cada comando si el evaluador lo pide.
 
 🧠 <b>Que es un script❓</b> Es una secuencia de comandos guardada en un fichero que cuando se ejecuta hara la funcion de cada comando.
 
-### 5.1 Architecture 
+### 5-1 Architecture 
 
 Para poder ver la arquitectura del SO y su versión de kernel utilizaremos el comando ```uname -a``` ( "-a" == "--all" ) que basicamente printara toda la información excepto si el tipo de procesador es desconocido o la plataforma de hardware. 
 
 <img width="715" alt="Screen Shot 2022-10-27 at 4 50 06 PM" src="https://user-images.githubusercontent.com/66915274/198322524-8c2d305f-bfe8-4e4a-bf31-6a883af71ad3.png">
 
-### 5.2 Fisicl cores
+### 5-2 Núcleos físicos
 
 Para poder mostrar el numero de nucleos fisicos haremos uso del fichero /proc/cpuinfo el cual  proporciona información acerca del procesador: su tipo, marca, modelo, rendimiento, etc. Usaremos el comando ```grep "physical id" /proc/cpuinfo | wc -l``` con el comando grep buscaremos dentro del fichero "physical id" y con wc -l contaremos las lineas del resultado de grep. Esto lo hacemos ya que la manera de cuantificar los nucleos no es muy común. Si hay un procesador marcará 0 y si tiene más de un procesador, mostrará toda la información del procesador por separado contando los procesadores usando la notación cero. De esta manera simplemente contaremos las lineas que hay ya que es más cómodo cuantificarlo así.
 
 <img width="596" alt="Screen Shot 2022-10-27 at 4 50 49 PM" src="https://user-images.githubusercontent.com/66915274/198322799-4bf2131e-7fba-4c9e-8d1b-bb9cc1b89e76.png">
 
 
-### 5.3 Virtual cores
+### 5-3 Núcleos virtuales
 
 Para poder mostrar el numero de nucleos virtuales es muy parecido al anterior. Haremos uso de nuevo del fichero /proc/cpuinfo , pero, en este caso utilizaremos el comando ```grep processor /proc/cpuinfo | wc -l```. El uso es practicamente el mismo al anterior solo que en vez de contar las lineas de "physical id" lo haremos de processor. Lo hacemos así por el mismo motivo de antes, la manera de cuantificar marca 0 si hay un procesador.
 
 <img width="586" alt="Screen Shot 2022-10-27 at 4 55 48 PM" src="https://user-images.githubusercontent.com/66915274/198324254-3d0f247d-b767-4e02-9e69-11b4e0586280.png">
 
 
-### 5.4 RAM memory
+### 5-4 Memoria RAM
 
 Para mostrar la memoria ram haremos uso del comando ```free``` para así ver al momento información sobre la ram, la parte usada, libre, reservada para otros recursos, etc. Para más info sobre el comando pondremos free --help. Nosotros daremos uso de free --mega ya que en el subject aparece esa unidad de medida.
 
@@ -540,7 +539,7 @@ Por última parte debemos calcular el % de memoria usada. El comando de nuevo es
 
 <img width="798" alt="Captura de pantalla 2022-08-02 a las 3 51 01" src="https://user-images.githubusercontent.com/66915274/182274627-195476b2-1e17-4a4c-8d5c-2056e4e2bbb6.png">
 
-### 5.5 Disk memory
+### 5-5 Memoria del disco
 
 Para poder ver la memoria del disco ocupada y disponible utilizaremos el comando ```df``` que significa "disk filesystem" , se utiliza para obtener un resumen completo del uso del espacio en disco. Como en el sibject indica la memoria utilizada se muestra en MB asi que entonces utilizaremos el flag -m. Acto seguido haremos un grep para que solo nos muestre las lineas que contengan "/dev/" y seguidamente volveremos a hacer otro grep con el flag -v para excluir las lineas que contengan "/boot". Por último utilizaremos el comando awk y sumaremos el valor de la tercera palabra de cada linea para una vez sumadas todas las lineas printar el resultado final de la suma. El comando entero es el siguiente: ```df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use}'```.
 
@@ -555,51 +554,51 @@ Por último debemos mostrar un porcentaje de la memoria usada. Para ello , de nu
 <img width="798" alt="Captura de pantalla 2022-08-03 a las 2 49 33" src="https://user-images.githubusercontent.com/66915274/182500836-dd4b068e-b6ce-4dc6-b832-f90acecfb71c.png">
 
 
-### 5.6 CPU usage.
+### 5-6 Porcentaje uso de CPU
 
 Para poder ver el porcentaje de uso de CPU haremos uso del comando ```vmstat``` este muestra estadísticas del sistema, permitiendo obtener un detalle general de los procesos, uso de memoria, actividad de CPU, estado del sistema, etc. Podriamos poner si ninguna opción pero en mi caso pondré un intervalo de segundos de 1 a 4. Tambien daremos uso del comando ```tail -1``` que este lo que nos va a permitir es que solo produzca el output la ultima linea, entonces de las 4 generadas solo se printara la ultima. Por ultimo solo printaremos la palabra 15 que es el uso de memoria disponible. El comando entero es el siguiente: ```vmstat 1 4 | tail -1 | awk '{print %15}'```. El resultado de este comando solo es una parte del resultado final ya que todavia hay que hacer alguna operación en el script para que quede bien. Lo que habria que hacer es a 100 restarle la cantidad que nos ha devuelto nuestro comando, el resultado de esa operación lo printaremos con un decimal y un % al final y ya estaría hecha la operación. 
 
 <img width="580" alt="Captura de pantalla 2022-08-03 a las 0 33 39" src="https://user-images.githubusercontent.com/66915274/182484896-def71bf0-b7eb-49d8-b83b-a019d15f62f1.png">
 
-### 5.7 Last reboot
+### 5-7 Último reinicio
 
 Para ver la fecha y hora de nuestro último reinicio haremos uso del comando ```who``` con el flag ```-b``` ya que con ese flag nos mostrará por pantalla el tiempo del último arranque del sistema. Como ya nos ha pasado anteriormente nos muestra más información de la que deseamos asique filtraremos y solo mostraremos lo que nos interesa, para ello haremos uso del comando awk y compararemos si la primera palabra de una linea es "system" se printara por pantalla la tercera palabra de esa linea , un espacio y la cuarta palabra. El comando entero seria el siguiente: ```who -b | awk '$1 == "system" {print $3 " " $4}'```.
 
 <img width="661" alt="Captura de pantalla 2022-08-02 a las 12 24 58" src="https://user-images.githubusercontent.com/66915274/182352895-d985e675-5afc-445a-bcd3-68189702fe70.png">
 
-### 5.8 LVM check
+### 5-8 Uso LVM
 
 Para checkear si LVM esta activo o no haremos uso del comando lsblk , este nos muestra información de todos los dispositivos de bloque (discos duros, SSD, memorias, etc) entre toda la información que proporciona podemos ver lvm en el tipo de gestor. Para este comando haremos un if ya que o printaremos Yes o No. Basicamente la condicion que buscamos sera contar el numero de lineas en las que aparece "lvm" y si hay mas de 0 printamos Yes, si hay 0 se printara No. Todo el comando seria: ```if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi```.
 
 <img width="801" alt="Captura de pantalla 2022-08-02 a las 22 38 43" src="https://user-images.githubusercontent.com/66915274/182468904-3789e22f-dbde-4874-b153-0d86497c55e2.png">
 
-### 5.9 TCP connections
+### 5-9 Conexiones TCP
 
 Para mirar el numero de conexiones TCP establecidas. Utilizaremos el comando ```ss``` sustituyendo al ya obsoleto netstat. Filtraremos con el flag ```-ta``` para que solo se muestren las conexiones TCP. Por último haremos un grep para ver las que estan establecidas ya que tambien hay solo de escucha y cerraremos con wc -l para que cuente el numero de lineas. El comando queda tal que asi: ```ss -ta | grep ESTAB | wc -l```. 
 
 <img width="479" alt="Captura de pantalla 2022-08-03 a las 0 53 36" src="https://user-images.githubusercontent.com/66915274/182487028-746244f8-2cda-4dc7-a14c-b2e5a7e0dc51.png">
 
-### 5.10 Número de usuarios
+### 5-10 Número de usuarios
 
 Daremos uso del comando ```users``` que nos mostrará el nombre de los usuarios que hay, sabiendo esto, pondremos wc -w para que cuente la cantidad de palabras que hay en la salida del comando. El comando entero queda así ```users | wc -w```.
 
 <img width="380" alt="Captura de pantalla 2022-08-02 a las 12 33 29" src="https://user-images.githubusercontent.com/66915274/182354436-282547cf-22c8-4b03-9484-6801c0466de7.png">
 
 
-### 5.11 IP address & MAC
+### 5-11 Dirección IP y MAC
 
 Para obtener la dirección del host haremos uso del comando ```hostname -I``` y para obtener la MAC haremos uso del comando ```ip link``` que se utiliza para mostrar o modificar las interfaces de red. Como aparecen más de una interfaz, IP's etc. Utilizaremos el comando grep para buscar lo que deseamos y asi poder printar por pantalla solo lo que nos piden. Para ello pondremos ```ip link | grep "link/ether" | awk '{print $2}'``` y de esta manera solo printaremos la MAC.
 
 <img width="639" alt="Captura de pantalla 2022-08-02 a las 14 53 14" src="https://user-images.githubusercontent.com/66915274/182379380-8e3b803d-d001-42ae-8aea-467e8c9f3ea9.png">
 
-### 5.12 Number of sudo usage
+### 5-12 Número de comandos ejecutados con sudo
 
 Para poder obtener el numero de comandos que son ejecutados con sudo haremos uso del comando jornalctl que este es una herramienta que se encarga de recopilar y administrar los registros del sistema. Acto seguido pondremos ```_COMM=sudo``` par así filtrar las entradas especificando su ruta. En nuestro ponemos ```_COMM``` ya que hace referencia a un script ejecutable. Una vez tengamos filtrada la busqueda y solo aparezcan los registros de sudo todavía deberemos filtrar un poco más ya que cuando incias o cierras sesion de root tambien aparece en el registro, entonces para terminar de filtrar pondremos un ```grep COMMAND``` y asi solo apareceran las lineas de comandos. Por ultimo pondremos ```wc -l``` para que asi nos salgan enumeradas las lineas. El comando entero es el siguiente: ```journalctl _COMM=sudo | grep COMMAND | wc -l)```. Para comprobar que funcione correctamente podemos correr el comando en el terminal, poner un comando que incluya sudo y volver a correr el comando y deberá
 incrementar el número de ejecucciones de sudo.
 
 <img width="632" alt="Captura de pantalla 2022-08-02 a las 23 50 39" src="https://user-images.githubusercontent.com/66915274/182479668-949b8eee-81f6-4593-83f4-99053d199f1b.png">
 
-### 5.13 End result of the script
+### 5-13 Resultado total del script
 
 ⚠️ Recuerda no hacer copia y pega si no sabes el funcionamiento de cada comando ⚠️
 
@@ -1100,11 +1099,10 @@ Descripción breve de todos los tipos de particiones:
 [Click aqui para dirigirte a la configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
 ### 8.2 - Wordpress & services configuration 🌐
-### WordPress y servicios proximamente... 🔜🛠
 
 ### Lighttpd 
 
-🧠 <b> Que es Lighttpd❓</b> 
+🧠 <b> Que es Lighttpd❓</b> Es un servidor web diseñado para ser rápido, seguro, flexible, y fiel a los estándares. Está optimizado para entornos donde la velocidad es muy importante. Esto se debe a que consume menos CPU y memoria RAM que otros servidores.
 
 1 ◦ Instalación de paquetes de lighttpd.
 
@@ -1118,14 +1116,23 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="460" alt="Screen Shot 2022-10-27 at 4 15 45 AM" src="https://user-images.githubusercontent.com/66915274/198175075-da6833f1-2360-4e08-b708-99f920b8215c.png">
 
+4 ◦ Añadimos la regla que incluya el puerto 80. Si no recuerdas como se añadian reglas en el reenvío de puertos. Configuración de la máquina → Red → Reenvío de puertos → Replicar la captura.
+
+<img width="877" alt="Screen Shot 2022-11-18 at 2 49 56 PM" src="https://user-images.githubusercontent.com/66915274/202720044-d7a51add-c5ee-4da4-9057-258e47cfd036.png">
+
 ### Mariadb
 
-🧠 <b> Que es MariaDB❓</b> 
+🧠 <b> Que es MariaDB❓</b> Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de datos, el comercio electrónico, funciones a nivel empresarial y las aplicaciones de registro. 
 
+1 ◦ Instalaremos los paquetes con el comando ```sudo apt install mariadb-server```
 
 <img width="797" alt="Screen Shot 2022-10-27 at 4 17 09 AM" src="https://user-images.githubusercontent.com/66915274/198175218-65dec75f-5727-425c-97d0-2baa2b8cd457.png">
 
+2 ◦ Debido a que la configuración predeterminada deja su instalación de MariaDB poco segura, utilizaremos un script que proporciona el paquete mariadb-server para restringir el acceso al servidor y eliminar las cuentas no utilizadas. Ejecutaremos el script con el siguiente comando ```sudo mysql_secure_installation```. Preguntará si deseamos cambiar a la autenticación de socket de Unix. Como ya tenemos una cuenta root protegida escribiremos ```N```.
+
 <img width="629" alt="Screen Shot 2022-10-27 at 4 19 25 AM" src="https://user-images.githubusercontent.com/66915274/198175511-d826b699-770e-4142-b464-cd6a91211d6a.png">
+
+3 ◦
 
 <img width="704" alt="Screen Shot 2022-10-27 at 1 00 20 AM" src="https://user-images.githubusercontent.com/66915274/198175719-b22bd572-ab50-4590-9298-5f5a69f98862.png">
 
@@ -1133,7 +1140,7 @@ Descripción breve de todos los tipos de particiones:
 
 ### Phpmyadmin
 
-🧠 <b> Que es Phpmyadmin❓</b> 
+🧠 <b> Que es Phpmyadmin❓</b> Es una aplicación web que sirve para administrar bases de datos de forma sencilla y con una interfaz amistosa.
 
 <img width="733" alt="Screen Shot 2022-10-27 at 4 22 33 AM" src="https://user-images.githubusercontent.com/66915274/198175891-74168b70-13e1-41a6-a46d-74fe03077a2e.png">
 
@@ -1141,8 +1148,96 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="578" alt="Screen Shot 2022-10-27 at 4 26 55 AM" src="https://user-images.githubusercontent.com/66915274/198176405-f6bf2457-1174-4571-a495-d96ba80f5b83.png">
 
+### Wordpress 
+
+🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
+
+<img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
+
+<img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
+
+<img width="629" alt="Screen Shot 2022-11-18 at 2 46 44 PM" src="https://user-images.githubusercontent.com/66915274/202719300-08ff9e6e-fc28-47fb-a63e-706a3e72994a.png">
+
+<img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
+
+<img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
+
+<img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
+
+<img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
+
+<img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
+
+<img width="524" alt="Screen Shot 2022-11-18 at 2 55 26 PM" src="https://user-images.githubusercontent.com/66915274/202721061-5eb6c0cc-6ad5-4864-be08-12509e269832.png">
+
+<img width="1811" alt="Screen Shot 2022-11-18 at 2 55 52 PM" src="https://user-images.githubusercontent.com/66915274/202721157-0b246d43-09cf-4254-870b-d8897697f5ee.png">
+
+### 8.3 - Aditional service ➕
+
+### LiteSpeed ⚡️
+
+🧠 <b> Que es LiteSpeed❓</b> Es un software de servidor web patentado. Es el cuarto servidor web más popular, y se estima que lo utiliza el 10% de los sitios web.
+
+1 ◦ Antes de instalar cualquier software, es importante asegurarse de que el sistema esté actualizado.
+
+```sudo apt update```
+
+<img width="701" alt="Screen Shot 2022-11-25 at 2 59 17 AM" src="https://user-images.githubusercontent.com/66915274/203885206-209ac64f-51a3-42e4-814e-2063cf83a156.png">
 
 
+```sudo apt upgrade```
+
+<img width="507" alt="Screen Shot 2022-11-25 at 3 00 18 AM" src="https://user-images.githubusercontent.com/66915274/203885306-3b3eb6cd-64cb-4d34-967a-19e650286cf5.png">
+
+2 ◦ De forma predeterminada, OpenLiteSpeed está disponible en el repositorio base de Debian 11. Entonces, debes ejecutar el siguiente comando para agregar el repositorio OpenLiteSpeed a su sistema Debian:
+
+```wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash```
+
+Como el comando es largo me he conectado via ssh.
+
+<img width="1129" alt="Screen Shot 2022-11-25 at 3 05 49 AM" src="https://user-images.githubusercontent.com/66915274/203885808-b4e0ff9a-580c-4121-b06f-ec229e514df9.png">
+
+3 ◦ De nuevo, actualizamos los paquetes y instalaremos OpenLiteSpeed.
+
+```sudo apt update```
+
+<img width="627" alt="Screen Shot 2022-11-25 at 3 07 31 AM" src="https://user-images.githubusercontent.com/66915274/203885968-e0297682-b18c-4363-8fcb-7553cd908f91.png">
+
+```sudo apt install openlitespeed```
+
+<img width="801" alt="Screen Shot 2022-11-25 at 3 11 22 AM" src="https://user-images.githubusercontent.com/66915274/203886321-dbda490e-726d-4dfb-aa91-b9e10206976a.png">
+
+
+4 ◦ La contraseña predeterminada para OpenLiteSpeed es 123456. Cambiaremos la contraseña a algo más seguro con el siguiente comando.
+
+```sudo /usr/local/lsws/admin/misc/admpass.sh```
+
+<img width="607" alt="Screen Shot 2022-11-25 at 3 12 33 AM" src="https://user-images.githubusercontent.com/66915274/203886432-cb14665f-63a0-4373-919d-0dff7c04b212.png">
+
+5 ◦ Configuramos el firewall para permitir las conexiones mediante los puertos 8088 y 7080. Acto seguido agregaremos las reglas en el reenvio de puertos.
+
+```sudo ufw allow 8088/tcp```
+
+<img width="446" alt="Screen Shot 2022-11-25 at 3 15 39 AM" src="https://user-images.githubusercontent.com/66915274/203886798-41d4c14f-cb4a-4982-bd92-82ade321f244.png">
+
+```sudo ufw allow 7080/tcp```
+
+<img width="445" alt="Screen Shot 2022-11-25 at 3 15 59 AM" src="https://user-images.githubusercontent.com/66915274/203886833-f9016672-8fda-46fc-87a9-cd194de3cc1b.png">
+
+```sudo ufw reload```
+
+<img width="393" alt="Screen Shot 2022-11-25 at 3 16 18 AM" src="https://user-images.githubusercontent.com/66915274/203886863-03406d5c-456a-4e80-83e9-1bf3904154d3.png">
+
+Reglas en el reenvio de puertos.
+
+<img width="825" alt="Screen Shot 2022-11-25 at 3 16 52 AM" src="https://user-images.githubusercontent.com/66915274/203886923-1db4cf56-d197-4c41-87f6-846253e08450.png">
+
+
+6 ◦ Una vez completado el paso anterior ya podemos conectarnos. Pondremos en el buscador de nuestro navegador ```localhost:7080``` proporcionamos nuestras credenciales de inicio de sesión y ya tendremos acceso a todo.
+
+<img width="800" alt="Screen Shot 2022-11-25 at 3 18 53 AM" src="https://user-images.githubusercontent.com/66915274/203887182-73d29abc-674c-4ace-bffb-de42b636ec38.png">
+
+<img width="1206" alt="Screen Shot 2022-11-24 at 8 49 24 PM" src="https://user-images.githubusercontent.com/66915274/203856104-d4454636-2f45-4e51-8cf5-a1501398ea57.png">
 
 <br>
 <br>
@@ -1157,17 +1252,13 @@ Descripción breve de todos los tipos de particiones:
 
 ## 9- Correction sheet ✅
 
-### Que no te sorprenda nada❗️ Sigue bajando para poder ver todo lo que aparece en la corrección. Todas las siguientes capturas han sido sacadas de la guia de pasqualerossi 🇦🇺🤝🇪🇸 ➤ [Repository](https://github.com/pasqualerossi/Born2BeRoot-Guide)
+<img width="854" alt="Screen Shot 2022-10-15 at 10 29 57 PM (1)" src="https://user-images.githubusercontent.com/66915274/200190182-65e895a8-b612-49d0-b8d5-a2452a2ff8ba.png">
 
-![image](https://user-images.githubusercontent.com/66915274/182514998-71de2c26-c072-4769-b16b-7706b96bcbe5.png)
+<img width="854" alt="Screen Shot 2022-10-15 at 10 30 26 PM" src="https://user-images.githubusercontent.com/66915274/200190188-d0ac23cb-b66c-437a-b4c2-27390e07a2ed.png">
 
-![image](https://user-images.githubusercontent.com/66915274/182515024-5725b2f1-e687-4dea-a9a2-ef2e7fec7b78.png)
+<img width="854" alt="Screen Shot 2022-10-15 at 10 30 57 PM" src="https://user-images.githubusercontent.com/66915274/200190198-c6f69628-dda3-4fc3-8c33-1de39f2e7ba8.png">
 
-![image](https://user-images.githubusercontent.com/66915274/182515037-6e267905-ae52-4d21-9959-54b4fd7c3db7.png)
-
-![image](https://user-images.githubusercontent.com/66915274/182515074-dfcf5f81-1c14-484d-a0e0-4e57acac7802.png)
-
-![image](https://user-images.githubusercontent.com/66915274/182515110-f766c351-24fd-44ef-a747-e706fd50382c.png)
+<img width="854" alt="Screen Shot 2022-10-15 at 10 31 12 PM" src="https://user-images.githubusercontent.com/66915274/200190210-c7dda7e8-8776-461f-8fd9-1e59a5f024c6.png">
 
 ## 9.1 Evaluation answers 💯
 
@@ -1194,6 +1285,227 @@ Aptitude es una version mejorada de apt. APT es un administrador de paquetes de 
 ### ▪️ Que es APPArmor❓
 
 Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
+
+### ▪️ Que es LVM❓
+
+Es un gestor de volúmenes lógicos. Proporciona un método para asignar espacio en dispositivos de almacenamiento masivo, que es más flexible que los esquemas de particionado convencionales para almacenar volúmenes.
+
+## 9-2 Evaluation commands ⌨️
+
+1 ◦ Comprobar que no haya ninguna interfaz grafica en uso.
+
+Utilizaremos el comando ```ls /usr/bin/*session``` y nos debe aparecer el mismo resultado que en la captura. Si aparece algo diferente se esta utilizando una interfaz grafica.
+
+<img width="352" alt="Screen Shot 2022-11-25 at 12 00 02 AM" src="https://user-images.githubusercontent.com/66915274/203872315-0e87428b-5c5a-475b-9d7c-350eafbe3bea.png">
+
+2 ◦ Comprobar que el servicio UFW esta en uso.
+
+```sudo ufw status```
+
+<img width="326" alt="Screen Shot 2022-11-24 at 1 25 06 AM" src="https://user-images.githubusercontent.com/66915274/203668014-bd228793-3532-4494-8b01-d046e4930c10.png">
+
+```sudo service ufw status```
+
+<img width="720" alt="Screen Shot 2022-11-24 at 1 25 37 AM" src="https://user-images.githubusercontent.com/66915274/203668066-6a3420d4-ae72-4263-8474-2e4946e2367a.png">
+
+3 ◦ Comprobar que el servicio SSH esta en uso.
+
+```sudo service ssh status```
+
+<img width="711" alt="Screen Shot 2022-11-24 at 1 26 43 AM" src="https://user-images.githubusercontent.com/66915274/203668165-e642c21f-a11e-48b1-bed5-83639445251e.png">
+
+4 ◦ Comprobar que utilizas el sistema operativo Debian o Centos.
+
+```uname -v``` o ```uname --kernel-version```
+
+<img width="306" alt="Screen Shot 2022-11-24 at 1 37 17 AM" src="https://user-images.githubusercontent.com/66915274/203669122-0be5033c-c882-4a2e-bf22-6a680f998a56.png">
+
+5 ◦ Comprobar que tu usuario este dentro de los grupos "sudo" y "user42".
+
+```getent group sudo```
+
+```getent group user42```
+
+<img width="314" alt="Screen Shot 2022-11-24 at 3 26 30 AM" src="https://user-images.githubusercontent.com/66915274/203680444-5fb18ae1-724e-4f78-a77f-a0f5bcc04913.png">
+
+6 ◦ Crear un nuevo usuario y mostrar que sigue la politica de contraseñas que hemos creado.
+
+```sudo adduser name_user``` y introducimos una contraseña que siga la politica.
+
+<img width="465" alt="Screen Shot 2022-11-24 at 3 29 45 AM" src="https://user-images.githubusercontent.com/66915274/203680847-b4555fd4-f847-4bce-b944-edf3e7720c99.png">
+
+7 ◦ Creamos un nuevo grupo llamado "evaluating". 
+
+```sudo addgroup evaluating```
+
+<img width="363" alt="Screen Shot 2022-11-24 at 3 30 47 AM" src="https://user-images.githubusercontent.com/66915274/203680980-784b2b60-82f4-405a-9f07-ec4948e86868.png">
+
+8 ◦ Añadimos el nuevo usuario al nuevo grupo.
+
+```sudo adduser name_user evaluating```
+
+<img width="411" alt="Screen Shot 2022-11-24 at 3 33 08 AM" src="https://user-images.githubusercontent.com/66915274/203681233-096b200a-2b99-4638-81f3-a3bff046c0db.png">
+
+Para comprobar que se haya introducido correctamente.
+
+<img width="356" alt="Screen Shot 2022-11-24 at 3 33 31 AM" src="https://user-images.githubusercontent.com/66915274/203681267-106e4d37-0ec4-4006-95a4-88dd7109c4b6.png">
+
+9 ◦ Comprobar que el hostname de la maquina es correcto login42.
+
+<img width="224" alt="Screen Shot 2022-11-24 at 3 37 27 AM" src="https://user-images.githubusercontent.com/66915274/203681701-4f9b9ff1-28b6-4d06-9489-f930eee4b6e5.png">
+
+
+10 ◦ Modificar hostname para remplazar tu login por el del evaluador. En este caso lo reemplazare por student42.
+
+```sudo nano /etc/hostname``` y remplazamos nuestro login por el nuevo.
+
+<img width="445" alt="Screen Shot 2022-11-24 at 3 42 30 AM" src="https://user-images.githubusercontent.com/66915274/203682323-dfd14846-9c98-48d0-9c83-56739de3220b.png">
+
+<img width="525" alt="Screen Shot 2022-11-24 at 3 43 47 AM" src="https://user-images.githubusercontent.com/66915274/203682470-598a9dbf-ef28-4ef5-86cf-8caeef083ec3.png">
+
+```sudo nano /etc/hosts``` y remplazamos nuestro login por el nuevo.
+
+<img width="418" alt="Screen Shot 2022-11-24 at 3 44 08 AM" src="https://user-images.githubusercontent.com/66915274/203682512-5dd1452d-a704-466b-b9e1-89aa472fada6.png">
+
+<img width="512" alt="Screen Shot 2022-11-24 at 3 44 35 AM" src="https://user-images.githubusercontent.com/66915274/203682562-36741000-6203-4a98-9de7-53afb24d6ea2.png">
+
+Reiniciamos la maquina.
+
+<img width="358" alt="Screen Shot 2022-11-24 at 3 44 58 AM" src="https://user-images.githubusercontent.com/66915274/203682614-60b10a36-c5d9-478b-a119-73e32a87b7fb.png">
+
+Una vez nos hemos logueado de nuevo podemos ver como el hostname se ha cambiado correctamente.
+
+<img width="263" alt="Screen Shot 2022-11-24 at 3 46 30 AM" src="https://user-images.githubusercontent.com/66915274/203682819-bd35ff17-3810-4644-9c44-93957e41d181.png">
+
+11 ◦ Comprobar que todas las particiones son como indica el subject.
+
+```lsblk```
+
+<img width="495" alt="Screen Shot 2022-11-24 at 3 52 17 AM" src="https://user-images.githubusercontent.com/66915274/203683496-b49a7ada-2a0c-4f87-a013-e307370b3900.png">
+
+12 ◦ Comprobar que sudo esta instalado.
+
+```which sudo```
+
+<img width="275" alt="Screen Shot 2022-11-24 at 4 00 42 AM" src="https://user-images.githubusercontent.com/66915274/203684520-1340d8dc-1b13-4828-9056-2631e659ddcf.png">
+
+Utilizar which realmente no es una buena practica ya que no todos los paquetes se encuentran en las rutas donde which busca, aun asi para la evaluacion es mejor ya que es un comando sencillo y facil de aprender. Para un mejor uso haremos uso del siguiente comando:
+
+```dpkg -s sudo```
+
+<img width="789" alt="Screen Shot 2022-11-24 at 4 02 13 AM" src="https://user-images.githubusercontent.com/66915274/203684698-d66c3c5b-2d6b-43c5-8f63-1a3cddaf7b4d.png">
+
+13 ◦ Introducimos el nuevo usuario dentro del grupo sudo.
+
+```sudo adduser name_user sudo```
+
+<img width="468" alt="Screen Shot 2022-11-24 at 5 02 24 AM" src="https://user-images.githubusercontent.com/66915274/203691378-2f2f5309-e650-486e-9cd6-cae4dec2ffa6.png">
+
+Comprobamos que esta dentro del grupo.
+
+ <img width="415" alt="Screen Shot 2022-11-24 at 5 02 39 AM" src="https://user-images.githubusercontent.com/66915274/203691402-6b84f333-10f7-4908-8255-652613afeede.png">
+
+14 ◦ Muestra la aplicación de las reglas impuestas para sudo por el subject.
+
+<img width="503" alt="Screen Shot 2022-11-24 at 5 12 02 AM" src="https://user-images.githubusercontent.com/66915274/203692615-bc1ec51c-ae5f-444f-9577-39b01112c969.png">
+
+<img width="762" alt="Screen Shot 2022-11-24 at 5 12 17 AM" src="https://user-images.githubusercontent.com/66915274/203692638-e6de6cba-ad42-48b9-ac84-21e2b8c50563.png">
+
+15 ◦ Muestra que la ruta /var/log/sudo/ existe y contiene almenos un fichero, en este se debería ver un historial de los comandos utilizados con sudo.
+
+<img width="295" alt="Screen Shot 2022-11-24 at 5 17 54 AM" src="https://user-images.githubusercontent.com/66915274/203693244-39cb5903-7934-4f8a-8c39-f4ad94d305fb.png">
+
+<img width="643" alt="Screen Shot 2022-11-24 at 5 19 07 AM" src="https://user-images.githubusercontent.com/66915274/203693358-b8a2832e-a80d-4304-b3be-43680ab9ba6d.png">
+
+Ejecuta un comando con sudo y comprueba que se actualiza el fichero.
+
+<img width="439" alt="Screen Shot 2022-11-24 at 5 23 08 AM" src="https://user-images.githubusercontent.com/66915274/203693791-21697c05-5087-4494-92ed-56ef9680f9fc.png">
+
+<img width="661" alt="Screen Shot 2022-11-24 at 5 23 21 AM" src="https://user-images.githubusercontent.com/66915274/203693816-be7f7b83-d492-4d01-89cf-abff01d07d96.png">
+
+16 ◦ Comprueba que el programa UFW esta instalado en la maquina virtual y comprueba que funciona correctamente.
+
+```dpkg -s ufw```
+
+<img width="730" alt="Screen Shot 2022-11-24 at 5 24 47 AM" src="https://user-images.githubusercontent.com/66915274/203693974-9e37e6d4-13a1-45b9-bb0d-03960a072694.png">
+
+```sudo service ufw status```
+
+<img width="704" alt="Screen Shot 2022-11-24 at 5 25 49 AM" src="https://user-images.githubusercontent.com/66915274/203694095-3bcf3a2e-04b8-4d63-a55c-b1e952e52dad.png">
+
+17 ◦ Lista las reglas activas en UFW si no esta hecha la parte bonus solo debe aparecer la regla para el puerto 4242.
+
+```sudo ufw status numbered```
+
+<img width="500" alt="Screen Shot 2022-11-24 at 5 27 50 AM" src="https://user-images.githubusercontent.com/66915274/203694334-08b7791e-c7b6-4325-be60-7dc4e0257411.png">
+
+18 ◦ Crea una nueva regla para el puerto 8080. Comprueba que se ha añadido a las reglas activas y acto seguido puedes borrarla.
+
+```sudo ufw allow 8080``` para crearla
+
+<img width="327" alt="Screen Shot 2022-11-24 at 5 31 35 AM" src="https://user-images.githubusercontent.com/66915274/203694718-09ae8097-e636-477d-bdc7-2d45ce892b72.png">
+
+```sudo ufw status numbered```
+
+<img width="473" alt="Screen Shot 2022-11-24 at 5 31 59 AM" src="https://user-images.githubusercontent.com/66915274/203694782-4f70c4a5-0de2-41ea-aba7-b1887e1fd517.png">
+
+Para borrar la regla debemos utilizar el comando ```sudo ufw delete num_rule```
+
+<img width="308" alt="Screen Shot 2022-11-24 at 5 33 15 AM" src="https://user-images.githubusercontent.com/66915274/203694914-82ae09cc-7e96-47db-b5ea-89e496f57db6.png">
+
+Comprobamos que se ha eliminado y vemos el numero de la siguiente regla que hay que borrar.
+
+<img width="467" alt="Screen Shot 2022-11-24 at 5 33 41 AM" src="https://user-images.githubusercontent.com/66915274/203694968-623554d2-f9c6-42db-aa34-c3c627b45f8e.png">
+
+Borramos de nuevo la regla.
+
+<img width="308" alt="Screen Shot 2022-11-24 at 5 34 03 AM" src="https://user-images.githubusercontent.com/66915274/203695003-deccc02f-ffc9-445a-a202-48b57cb66545.png">
+
+Comprobamos que solo nos quedan las reglas requeridas en el subject.
+
+<img width="461" alt="Screen Shot 2022-11-24 at 5 34 11 AM" src="https://user-images.githubusercontent.com/66915274/203695013-6b9ff40b-d23f-4a95-9694-f4e73e17f252.png">
+
+19 ◦ Comprueba que el servicio ssh esta instalado en la maquina virtual, que funciona correctamente y que solo funciona por el puerto 4242.
+
+```which ssh```
+
+<img width="235" alt="Screen Shot 2022-11-24 at 5 37 25 AM" src="https://user-images.githubusercontent.com/66915274/203695373-c1cf2aca-15d5-4e7d-8c13-6e327824ae2c.png">
+
+```sudo service ssh status```
+
+<img width="616" alt="Screen Shot 2022-11-24 at 5 40 34 AM" src="https://user-images.githubusercontent.com/66915274/203695746-b8a3235d-6084-40c6-8cc0-83e78d0b497c.png">
+
+20 ◦ Usa ssh para iniciar sesión con el usuario recién creado. Asegurate de que no puede usar ssh con el usuario root.
+
+Intentamos conectarnos por ssh con el usuario root pero no tenemos permisos.
+
+<img width="1377" alt="Screen Shot 2022-11-24 at 5 44 07 AM" src="https://user-images.githubusercontent.com/66915274/203696165-f1107b33-0c7e-4cce-8d04-56b845637ec8.png">
+
+Nos conectamos por ssh con el nuevo usuario con el comando ```ssh newuser@localhost -p 4242```
+
+<img width="1384" alt="Screen Shot 2022-11-24 at 5 48 06 AM" src="https://user-images.githubusercontent.com/66915274/203696612-f2c98ebf-be55-4830-b5ea-b0ac98de7c65.png">
+
+21 ◦ Modifica el tiempo de ejecución del script de 10 minutos a 1.
+
+Ejecutamos el siguiente comando para asi modificar el fichero crontab ```sudo crontab -u root -e```
+
+<img width="455" alt="Screen Shot 2022-11-24 at 6 30 57 AM" src="https://user-images.githubusercontent.com/66915274/203701854-956c27de-367f-4b54-b21f-8a892d4891d4.png">
+
+Modificamos el primer paramentro , en vez de 10 lo cambiamos a 1.
+
+<img width="638" alt="Screen Shot 2022-11-24 at 6 31 44 AM" src="https://user-images.githubusercontent.com/66915274/203701944-393bd687-8b9c-4643-9d59-4789361e314d.png">
+
+22 ◦ Finalmente haz que el script deje de ejecutarse cuando el servidor se haya iniciado, pero sin modificar el script.
+
+```sudo /etc/init.d/cron stop```
+
+<img width="483" alt="Screen Shot 2022-11-24 at 3 25 53 PM" src="https://user-images.githubusercontent.com/66915274/203807610-d87124f2-47ca-4546-8037-b904e8bcf5d1.png">
+
+Si queremos que vuelva a ejecutarse:
+
+```sudo /etc/init.d/cron start```
+
+<img width="483" alt="Screen Shot 2022-11-24 at 3 27 38 PM" src="https://user-images.githubusercontent.com/66915274/203807970-8fc69a39-6d10-4e64-9be1-eb49c4bf95f8.png">
 
 # Contacto 📥
 
