@@ -428,16 +428,15 @@ PASS_MIN_DAYS: It's the min days till password change.
 
 PASS_WARN_AGE: It's the days till password warning.
 
-3 ◦ 
-Para poder seguir con la configuración debemos instalar los siguientes paquetes con este comando ```sudo apt install libpam-pwquality``` , acto seguido pondremos ```Y``` para confirmar la instalación y esperaremos a que termine. 
+3 ◦ For continuing the installation we must install the next packages with the following command```sudo apt install libpam-pwquality``` , then we wrute ```Y``` so we can continue; we wait till it finish.
 
 <img width="770" alt="Captura de pantalla 2022-07-16 a las 3 13 52" src="https://user-images.githubusercontent.com/66915274/179328708-c5054703-bdb0-4cca-82a8-6ab25ce42b40.png">
 
-4 ◦ Lo siguiente que debemos hacer es volver a editar un fichero y modificar algunas líneas. Haremos ```nano /etc/pam.d/common-password```. 
+4 ◦ Next thing we must do is is edit a file and change itś content. We will use ```nano /etc/pam.d/common-password```. 
 
 <img width="500" alt="Captura de pantalla 2022-07-16 a las 3 27 02" src="https://user-images.githubusercontent.com/66915274/179329260-0e18bd27-a522-4c7c-86bf-21823eee0f8b.png">
 
-5 ◦ Despues de retry=3 debemos añadir los siguientes comandos:
+5 ◦ After retry=3 we must add the following commands:
 
 ```
 minlen=10
@@ -448,41 +447,41 @@ reject_username
 difok=7
 enforce_for_root
 ```
-➤ Así debe ser la línea ↙️
+➤ This is how the line must be↙️
 
 <img width="1127" alt="Captura de pantalla 2022-07-16 a las 3 34 33" src="https://user-images.githubusercontent.com/66915274/179329511-0619183a-8ccc-456b-8f27-3962fc542cc3.png">
 
-➤ Así se debe ver en el fichero ↙️
+➤ This is how the file must look ↙️
 
 <img width="800" alt="Captura de pantalla 2022-07-16 a las 3 38 08" src="https://user-images.githubusercontent.com/66915274/179329787-1b718843-9272-43e4-8d92-8d83933cc938.png">
 
-🤔 <b>Que hace cada comando❓</b>
+🤔 <b>What does each command❓</b>
 
-minlen=10 ➤ La cantidad minima de caracteres que debe contener la contraseña.
+minlen=10 ➤ The minimun characters a password must contain.
 
-ucredit=-1 ➤ Como mínimo debe contener un caracter ```Mayus```. Ponemos el - ya que debe contener como mínimo un caracter, si ponemos + nos referimos a como maximo esos caracteres.
+ucredit=-1 ➤ The password at least have to contain a ```Mayus``` character. We must write it with a - sign, as is how it knows that's refering to minumum caracters; if we put a + sign it will refer to maximum characters.
 
-dcredit=-1 ➤Como mínimo debe contener un digito.
+dcredit=-1 ➤ The passworld at least have to containt a digit.
 
-maxrepeat=3 ➤ No puede tener más de 3 veces seguidas el mismo caracter.
+maxrepeat=3 ➤ The password can not have the same character repited three contiusly times.
 
-reject_username ➤ No puede contener el nombre del usuario.
+reject_username ➤ The password can not contain the username inside itself.
 
-difok=7 ➤  Debe tener al menos 7 caracteres que no sean parte de la antigua contraseña. 
+difok=7 ➤ The password it have to containt at least seven diferent characters from the last password ussed. 
 
-enforce_for_root ➤ Implementaremos esta política para el usuario root.
+enforce_for_root ➤ We will implement this password policy to root.
 
 ### 4.6 Connecting via SSH 🗣
 
-1 ◦ Para conectarnos por SSH debemos cerrar la máquina, abrir VirtualBox y darle a configuración.
+1 ◦ If we want to connect via SSH we must close the machine and go to settings.
 
 <img width="832" alt="Captura de pantalla 2022-07-18 a las 10 15 13" src="https://user-images.githubusercontent.com/66915274/179470948-d9a863ef-f1a3-41fb-a103-25378064e747.png">
 
-2 ◦ Una vez en configuración debemos pinchar sobre el apartado de ```Red``` , pincharemos sobre ```Avanzadas``` para que así nos muestre más opciones y le daremos a ```Reenvío de puertos```.
+2 ◦ Once there we will click on ```Network```, click on ```Advanced``` so it shows more options, then we click on ```Port fowarding```.
 
 <img width="684" alt="Captura de pantalla 2022-07-18 a las 10 18 32" src="https://user-images.githubusercontent.com/66915274/179471690-cfbdbf4b-ab93-4b12-9504-2482712652a3.png">
 
-3 ◦ Pincharemos sobre el siguiente emoticono para agregar una regla de reenvío.
+3 ◦ Click on the emoji for adding a new rule.
 
 <img width="585" alt="Captura de pantalla 2022-07-18 a las 10 21 24" src="https://user-images.githubusercontent.com/66915274/179471855-913a684d-c7b0-43e2-9e01-d2c954fe75a4.png">
 
