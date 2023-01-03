@@ -430,6 +430,7 @@ PASS_WARN_AGE: El usuario recibira un mensaje de aviso indicando que faltan los 
 minlen=10
 ucredit=-1
 dcredit=-1
+lcredit=-1
 maxrepeat=3
 reject_username
 difok=7
@@ -437,7 +438,7 @@ enforce_for_root
 ```
 ➤ Así debe ser la línea ↙️
 
-<img width="1127" alt="Captura de pantalla 2022-07-16 a las 3 34 33" src="https://user-images.githubusercontent.com/66915274/179329511-0619183a-8ccc-456b-8f27-3962fc542cc3.png">
+<img width="1047" alt="Screen Shot 2023-01-03 at 7 41 57 PM" src="https://user-images.githubusercontent.com/66915274/210420896-8274b75b-86e4-4fba-9a14-ca838b61c2e6.png">
 
 ➤ Así se debe ver en el fichero ↙️
 
