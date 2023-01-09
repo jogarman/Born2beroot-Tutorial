@@ -670,40 +670,40 @@ Resultado tras la ejecución del script ↙️
 
 ## 6- Crontab ⏰
 
-🧠 <b>Que es crontab? </b>Es un administrador de procesos en segundo plano. Los procesos indicados seran ejecutados en el momento que especifiques en el fichero crontab.
+🧠 <b>What is crontab?</b>It is a background process manager. The specified processes will be executed at the time you specify in the crontab file.
 
-Para tener correctamente crontab configurado debemos editar el fichero crontab con el siguiente comando ```sudo crontab -u root -e```. 
+To properly configure crontab, we must edit the crontab file with the following command ```sudo crontab -u root -e```. 
 
-En el fichero debemos añadir el siguiente comando para que el script se ejecute cada 10 minutos ```*/10 * * * * sh /ruta del script```. 
+In the file, we must add the following command for the script to execute every 10 minutes ```*/10 * * * * sh /ruta del script```. 
 
 <img width="798" alt="Captura de pantalla 2022-08-03 a las 4 40 18" src="https://user-images.githubusercontent.com/66915274/182512395-eaebabc2-5866-4ae3-966c-1a80818cde07.png">
 
-Funcionamiento de cada parametro de crontab: 
+Operation of each crontab parameter:
 
-m ➤ Corresponde al minuto en que se va a ejecutar el script, el valor va de 0 a 59.
+m ➤ Corresponds to the minute at which the script will be executed, the value ranges from 0 to 59.
 
-h ➤ La hora exacta, se maneja el formato de 24 horas, los valores van de 0 a 23, siendo 0 las 12:00 de la medianoche.
-dom ➤ hace referencia al día del mes, por ejemplo se puede especificar 15 si se quiere ejecutar cada dia 15.
+h ➤ The exact hour, the 24-hour format is used, the values range from 0 to 23, with 0 being 12:00 midnight.
+dom ➤ refers to the day of the month, for example, you can specify 15 if you want to execute every day 15.
 
-dow ➤ Significa el día de la semana, puede ser numérico (0 a 7, donde 0 y 7 son domingo) o las 3 primeras letras del día en inglés: mon, tue, wed, thu, fri, sat, sun.
+dow ➤ means the day of the week, it can be numeric (0 to 7, where 0 and 7 are Sunday) or the first three letters of the day in English: mon, tue, wed, thu, fri, sat, sun.
 
-user ➤ Define el usuario que va a ejecutar el comando, puede ser root, u otro usuario diferente siempre y cuando tenga permisos de ejecución del script.
+user ➤ Defines the user who will execute the command, it can be root, or another user as long as it has permission to execute the script.
 
-command ➤ Refiere al comando o a la ruta absoluta del script a ejecutar.
+command ➤ Refers to the command or the absolute path of the script to be executed.
 
 ## 7- Signature.txt 📝
 
-Para obtener la firma lo primero que debemos hacer es apagar la máquina virtual ya que una vez la enciendas o modifiques algo la firma cambiará.
+To obtain the signature, the first thing we must do is shut down the virtual machine, since once you turn it on or modify something, the signature will change.
 
 <img width="834" alt="Captura de pantalla 2022-08-03 a las 4 47 32" src="https://user-images.githubusercontent.com/66915274/182513283-1cfc319f-982d-47cf-a596-8475d4c96616.png">
 
-El siguiente paso será ubicarnos en la ruta donde tengamos el .vdi de nuestra maquina virtual. 
+The next step will be to locate ourselves in the path where we have the .vdi of our virtual machine.
 
 <img width="465" alt="Screen Shot 2022-08-03 at 4 57 37 AM" src="https://user-images.githubusercontent.com/66915274/182514499-f0ad5ba7-c0c2-493e-b0ae-9b79c970816e.png">
 
-Por último haremos ```shasum nombremaquina.vdi``` y esto nos dara la firma. El resultado de esta firma es lo que tendremos añadir a nuestro fichero signature.txt para posteriormente subir el fichero al repositorio de la intra. Muy importante no volver a abrir la maquina ya que se modificara la firma. Para las correcciones recuerda clonar la maquina ya que asi podras encenderla sin miedo a que cambie la firma.
+Finally, we will run ```shasum machinename.vdi``` and this will give us the signature. The result of this signature is what we will need to add to our signature.txt file and subsequently upload the file to the intra repository. It is very important not to reopen the machine since the signature will be modified. For corrections, remember to clone the machine so you can turn it on without fear of changing the signature.
 
-🧠 <b> Que es shasum❓</b> Es un comando que permite identificar la integridad de un fichero mediante la suma de comprobación del hash SHA-1 de un archivo.
+🧠 <b> What is shasum❓</b> It is a command that allows you to identify the integrity of a file using the SHA-1 hash check sum of a file.
 
 <img width="416" alt="Screen Shot 2022-08-03 at 4 58 48 AM" src="https://user-images.githubusercontent.com/66915274/182514627-f11026d0-de0d-447d-a2e4-31a3c1af0f35.png">
 
