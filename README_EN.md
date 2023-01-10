@@ -885,7 +885,7 @@ Brief description of all types of partitions:
 
 <img width="782" alt="Screen Shot 2022-10-23 at 4 58 11 PM" src="https://user-images.githubusercontent.com/66915274/197399310-fc6c397e-8257-4e06-8fba-ad35431c9b96.png">
 
-39 ◦ Repetimos el proceso para ```home```. Solo cambiaremos el nombre y el tamaño.
+39 ◦ We repeat the process for ```home```. We only change the name and size.
 
 <img width="476" alt="Screen Shot 2022-10-23 at 4 58 57 PM" src="https://user-images.githubusercontent.com/66915274/197399347-a815d58b-686e-4d9d-bb5c-34a7b54476ab.png">
 
@@ -895,7 +895,7 @@ Brief description of all types of partitions:
 
 <img width="770" alt="Screen Shot 2022-10-23 at 5 04 34 PM" src="https://user-images.githubusercontent.com/66915274/197399610-247a7a35-0141-4c14-884e-7ecd07caa96d.png">
 
-40 ◦ Repetimos el proceso para ```var```. Solo cambiaremos el nombre y el tamaño.
+40 ◦ We repeat the process for ```var```. We only change the name and size.
 
 <img width="482" alt="Screen Shot 2022-10-23 at 5 05 10 PM" src="https://user-images.githubusercontent.com/66915274/197399644-58da651c-f4ad-4d1e-b128-de87c92cc292.png">
 
@@ -903,7 +903,7 @@ Brief description of all types of partitions:
 
 <img width="774" alt="Screen Shot 2022-10-23 at 5 06 03 PM" src="https://user-images.githubusercontent.com/66915274/197399693-b49c2ffe-b21a-43c5-bd3f-160bc544b072.png">
 
-41 ◦ Repetimos el proceso para ```srv```. Solo cambiaremos el nombre.
+41 ◦ We repeat the process for ```srv```. We only change the name.
 
 <img width="446" alt="Screen Shot 2022-10-23 at 5 06 14 PM" src="https://user-images.githubusercontent.com/66915274/197399702-6d531de3-690d-458d-9a3b-bf6ceedd7cda.png">
 
@@ -913,7 +913,7 @@ Brief description of all types of partitions:
 
 <img width="771" alt="Screen Shot 2022-10-23 at 5 07 13 PM" src="https://user-images.githubusercontent.com/66915274/197399757-94732b16-585e-4f7d-a20f-f7ef0814b4e7.png">
 
-42 ◦ Repetimos el proceso para ```tmp```. Solo cambiaremos el nombre.
+42 ◦ We repeat the process for ```tmp```. We only change the name.
 
 <img width="481" alt="Screen Shot 2022-10-23 at 5 07 34 PM" src="https://user-images.githubusercontent.com/66915274/197399777-9d871f2a-856d-4b4d-ad18-1195001b0fdf.png">
 
@@ -923,7 +923,7 @@ Brief description of all types of partitions:
 
 <img width="768" alt="Screen Shot 2022-10-23 at 5 08 19 PM" src="https://user-images.githubusercontent.com/66915274/197399827-5dfc8571-e82c-4a28-aae7-dc716fb6e77b.png">
 
-43 ◦ Por último repetimos el proceso para ```var-log```. Solo cambiaremos el nombre y el tamaño.
+43 ◦ Finally, we repeat the process for ```var-log```. We only change the name and size.
 
 <img width="448" alt="Screen Shot 2022-10-23 at 5 08 34 PM" src="https://user-images.githubusercontent.com/66915274/197399838-2cd49171-45dd-469a-887c-3ce99d84b7cd.png">
 
@@ -934,35 +934,35 @@ Brief description of all types of partitions:
 <img width="779" alt="Screen Shot 2022-10-23 at 5 09 28 PM" src="https://user-images.githubusercontent.com/66915274/197399886-a1e9ee69-78a4-4071-af99-2192d535c6cd.png">
 
 
-44 ◦ Una vez hayamos completado todos los pasos anteriores finalizaremos la configuración del gestor de volúmenes lógicos.
+44 ◦ Once we have completed all the previous steps, we will finish the configuration of the logical volume manager.
 
 <img width="438" alt="Screen Shot 2022-10-23 at 5 09 51 PM" src="https://user-images.githubusercontent.com/66915274/197399904-c584fcdf-eb38-486f-af12-7374f1e04465.png">
 
-45 ◦ Ahora podemos observar como en el apartado donde nos muestran todas nuestras particiones y espacio libre ya aparecen todas las particiones lógicas que acabamos de crear. Bien , debemos configurar todas para seleccionar el sistema de archivos que queremos y el punto de montaje que indica el subject. De nuevo iremos por orden y seleccionaremos la primera que nos aparece que es ```home```.
+45 ◦ Now we can see how in the section where it shows us all our partitions and free space, all the logical partitions that we just created are already appearing. Good, we must configure all of them to select the file system that we want and the mount point indicated in the subject. Again we will go in order and select the first one that appears, which is ```home```.
 
 <img width="783" alt="Screen Shot 2022-10-23 at 5 10 36 PM" src="https://user-images.githubusercontent.com/66915274/197399944-bccbe599-b80a-4abe-ac6c-d770447ea727.png">
 
-46 ◦ Nos muestra la configuración de la partición. Debemos escoger un sistema de ficheros ya que actualmente no tiene.
+46 ◦ Show us the configuration of the partition. We must choose a file system as it currently does not have one.
 
 <img width="782" alt="Screen Shot 2022-10-23 at 5 10 55 PM" src="https://user-images.githubusercontent.com/66915274/197399976-9b871bda-9425-4dbe-b8c9-25c8c6d6c811.png">
 
-47 ◦ Escogemos el sistema de archivos Ext4, es el sistema de archivos más utilizado en distribuciones Linux.  
+47 ◦ Choose the Ext4 file system, it is the most commonly used file system in Linux distributions.
 
 <img width="412" alt="Screen Shot 2022-10-23 at 5 11 18 PM" src="https://user-images.githubusercontent.com/66915274/197400000-2e855fc9-10b1-4f3e-9c58-85b6ff02a4fb.png">
 
-48 ◦ Ahora debemos seleccionar el punto de montaje. 
+48 ◦ Now we need to select the mount point.
 
 <img width="782" alt="Screen Shot 2022-10-23 at 5 11 44 PM" src="https://user-images.githubusercontent.com/66915274/197400023-387a70aa-b491-43c0-91d2-cb378da9fc75.png">
 
-49 ◦ Seleccionamos ```home``` como bien indica el subject.
+49 ◦ We select ```home``` as indicated in the subject.
 
 <img width="515" alt="Screen Shot 2022-10-23 at 5 11 54 PM" src="https://user-images.githubusercontent.com/66915274/197400040-e79cad4f-368b-4cee-9ec0-942f38b2f785.png">
 
-50 ◦ Una vez ya lo hemos seleccionado terminaremos la configuración de la partición.
+50 ◦ Once we have selected it, we will finish the configuration of the partition.
 
 <img width="785" alt="Screen Shot 2022-10-23 at 5 12 10 PM" src="https://user-images.githubusercontent.com/66915274/197400059-ab96f2c4-cd92-47cb-a9ee-61257537ee6a.png">
 
-51 ◦ De nuevo estos pasos se pueden volver muy repetitivos asique no comentare mucho. Repetimos todo igual (excepto el punto de montaje) para ```root```.
+51 ◦ Again, these steps can become very repetitive so I won't comment much. We repeat everything the same way (except for the mount point) for ```root```.
 
 <img width="782" alt="Screen Shot 2022-10-23 at 5 13 36 PM" src="https://user-images.githubusercontent.com/66915274/197400135-c08444fe-e39d-45fa-a3b6-3c73db2a4935.png">
 
@@ -976,7 +976,7 @@ Brief description of all types of partitions:
 
 <img width="790" alt="Screen Shot 2022-10-23 at 5 14 52 PM" src="https://user-images.githubusercontent.com/66915274/197400186-88da831a-c672-4ec0-a64c-0ad2808bb6c5.png">
 
-52 ◦ Repetimos el proceso para ```srv``` y cambiaremos el punto de montaje.
+52 ◦ Repeat the process for ```srv``` and change the mount point.
 
 <img width="778" alt="Screen Shot 2022-10-23 at 5 15 05 PM" src="https://user-images.githubusercontent.com/66915274/197400198-599b4aa3-a511-45d1-86b0-dd42da4c380f.png">
 
@@ -990,21 +990,21 @@ Brief description of all types of partitions:
 
 <img width="790" alt="Screen Shot 2022-10-23 at 5 16 04 PM" src="https://user-images.githubusercontent.com/66915274/197400249-035f6b9d-3716-4565-9776-aa0af49b3fd7.png">
 
-53 ◦ Para ```swap``` haremos una excepción ya el sistema de archivos será diferente. Seleccionamos ```swap```.
+53 ◦ For ```swap```, we will make an exception because the file system will be different. We select ```swap```.
 
 <img width="780" alt="Screen Shot 2022-10-23 at 5 16 32 PM" src="https://user-images.githubusercontent.com/66915274/197400272-112b44ef-4996-438a-90b8-6620cdd7d2ff.png">
 
-54 ◦ En el momento de seleccionar el sistema de archivos lo dejamos en ```swap area```.
+54 ◦ At the time of selecting the file system, we leave it on ```swap area```.
 
 <img width="785" alt="Screen Shot 2022-10-23 at 5 16 41 PM" src="https://user-images.githubusercontent.com/66915274/197400281-e12ee636-8696-4bee-9198-862b7d6be199.png">
 
-55 ◦ Una vez realizado el paso anterior terminaremos la configuración de la partición.
+55 ◦ Once the previous step is completed, we will finish the partition configuration.
 
 <img width="370" alt="Screen Shot 2022-10-23 at 5 16 59 PM" src="https://user-images.githubusercontent.com/66915274/197400297-8eed129d-0ec0-49a8-8b2a-dd0d04055f75.png">
 
 <img width="787" alt="Screen Shot 2022-10-23 at 5 17 09 PM" src="https://user-images.githubusercontent.com/66915274/197400309-74e83209-4b2a-4e27-9a67-44373c1db362.png">
 
-56 ◦ Ahora si volveremos a hacer lo mismo que antes pero ahora lo haremos con ```tmp``` y cambiando el punto de montaje.
+56 ◦ Now we will do the same thing as before, but now we will do it with ```tmp``` and changing the mount point.
 
 <img width="777" alt="Screen Shot 2022-10-23 at 5 17 41 PM" src="https://user-images.githubusercontent.com/66915274/197400341-608516f6-0f5a-4cdd-83d8-c8fbd1635624.png">
 
@@ -1018,7 +1018,7 @@ Brief description of all types of partitions:
 
 <img width="783" alt="Screen Shot 2022-10-23 at 5 18 40 PM" src="https://user-images.githubusercontent.com/66915274/197400405-4a368bfb-f862-4bbd-a33e-b87c3038d232.png">
 
-57 ◦ Repetimos de nuevo el proceso para ```var``` cambiando el punto de montaje.
+57 ◦ We repeat the process again for ```var```, changing the mount point.
 
 <img width="773" alt="Screen Shot 2022-10-23 at 5 19 13 PM" src="https://user-images.githubusercontent.com/66915274/197400447-85bcad13-8083-4aec-acb2-fa467e5d4e33.png">
 
@@ -1032,7 +1032,7 @@ Brief description of all types of partitions:
 
 <img width="779" alt="Screen Shot 2022-10-23 at 5 20 00 PM" src="https://user-images.githubusercontent.com/66915274/197400482-1f8c147f-66d8-438b-866f-3e9eff75ef5e.png">
 
-58 ◦ Por último repetimos de nuevo el proceso para ```var-log``` en este deberemos introducir manualmente el punto de montaje.
+58 ◦ Finally, we repeat the process again for ```var-log```. In this case, we will have to manually enter the mount point..
 
 <img width="772" alt="Screen Shot 2022-10-23 at 5 20 23 PM" src="https://user-images.githubusercontent.com/66915274/197400513-53b3f899-47f5-4cdb-ab4b-205b1d1bce31.png">
 
@@ -1048,27 +1048,27 @@ Brief description of all types of partitions:
 
 ![image](https://user-images.githubusercontent.com/66915274/197602741-431bd866-1558-4735-bb34-ab57dc5745b7.png)
 
-59 ◦ Una vez hemos completado todos los pasos anteriores ya casi hemos acabado, debemos darle a finalizar el particionado y asi se guarden todos los cambios en el disco.
+59 ◦ Once we have completed all of the previous steps, we are almost finished. We must click 'finish partitioning' to save all of the changes to the disk.
 
 ![image](https://user-images.githubusercontent.com/66915274/197602907-4a3ba459-1a5d-468e-81dc-5206403cf034.png)
 
-60 ◦ Aceptamos el mensaje y asi se guardaran los cambios. Asegurate que todas las particiones quedan igual que en la captura.
+60 ◦ We accept the message and the changes will be saved. Make sure that all of the partitions look the same as in the screenshot.
 
 ![image](https://user-images.githubusercontent.com/66915274/197602944-13ca67b2-bcc5-476c-84dc-aadc5e1d3baf.png)
 
-61 ◦ Seleccionamos la opción ```No``` ya que no necesitamos paquetes adicionales. 
+61 ◦ We select the option ```No``` because we do not need additional packages. 
 
 <img width="770" alt="Captura de pantalla 2022-07-13 a las 20 05 42" src="https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png">
 
-62 ◦ Escogemos nuestro País.
+62 ◦ We choose our Country.
 
 <img width="756" alt="Captura de pantalla 2022-07-13 a las 20 14 23" src="https://user-images.githubusercontent.com/66915274/178802653-d9e8504a-b60b-4441-8ee3-8d48ca4a6bf0.png">
 
-63 ◦ Escogemos ```deb.debian.org``` ya que tenindo en cuenta nuestra region es donde tendremos una mejor conexión.
+63 ◦ We choose ```deb.debian.org``` because, considering our region, it is where we will have the best connection.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 15 00" src="https://user-images.githubusercontent.com/66915274/178802772-4f67cd99-60d5-4439-8502-317e81e07d70.png">
 
-64 ◦ Esta opción la dejaremos vacía le daremos directamente a ```Continue```.
+64 ◦ We will leave this option empty and click directly on ```Continue```.
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 20 17 24" src="https://user-images.githubusercontent.com/66915274/178803208-2969acae-3fa7-423e-8a3c-bb7c76eff824.png">
 
