@@ -836,46 +836,46 @@ Brief description of all types of partitions:
 
 <img width="722" alt="Screen Shot 2022-10-23 at 4 49 01 PM" src="https://user-images.githubusercontent.com/66915274/197398875-3fa85638-7105-42bf-bbc2-e189fbbc1918.png">
 
-29 ◦ Configuraremos el gestor de volumenes logicos. 
+29 ◦ We will configure the logical volume manager.
 
 <img width="785" alt="Screen Shot 2022-10-23 at 4 50 17 PM" src="https://user-images.githubusercontent.com/66915274/197398933-85e0025e-0a4d-41f0-8fd0-5f0c8ee32e9b.png">
 
-30 ◦ Aceptaremos en mensaje de confirmación ya que estamos de acuerdo con que se guarden los cambion en el disco.
+30 ◦ We will accept the confirmation message as we agree to save the changes to the disk.
 
 <img width="786" alt="Screen Shot 2022-10-23 at 4 50 42 PM" src="https://user-images.githubusercontent.com/66915274/197398945-d79ea2a7-a13e-4e6a-9e9c-40bdcd2dd502.png">
 
-31 ◦ Crearemos un nuevo grupo de volumen. Los grupos de volúmenes agrupan particiones.
+31 ◦ We will create a new volume group. Volume groups group partitions.
 
 <img width="454" alt="Screen Shot 2022-10-23 at 4 52 04 PM" src="https://user-images.githubusercontent.com/66915274/197399021-29b21274-37c1-4fd9-8526-962969d1cce3.png">
 
-32 ◦ Introduciremos el nombre que queremos darle. ```LVMGroup``` tal y como indica el subject.
+32 ◦ We will enter the name we want to give it. ```LVMGroup``` as indicated in the subject.
 
 <img width="695" alt="Screen Shot 2022-10-23 at 4 52 58 PM" src="https://user-images.githubusercontent.com/66915274/197399065-1ac8d80d-9e18-4b4a-a60f-11496e7de26d.png">
 
-33 ◦ Seleccionaremos la partición donde queremos cear el grupo. 
+33 ◦ We will select the partition where we want to create the group.
 
 <img width="590" alt="Screen Shot 2022-10-23 at 4 53 22 PM" src="https://user-images.githubusercontent.com/66915274/197399089-5ea5f48e-176c-4278-8b14-a13b7f5ee45c.png">
 
-34 ◦ Ahora debemos crear todas las particiones lógicas. Al tener que repetir las mismas acciones varias veces hay capturas que no serán documentadas.
+34 ◦ Now we must create all the logical partitions. As we have to repeat the same actions several times, there are captures that will not be documented.
 
 ![image](https://user-images.githubusercontent.com/66915274/197439138-889d6368-1875-402b-a094-bd146bb7cb8a.png)
 
 
 <img width="457" alt="Screen Shot 2022-10-23 at 4 53 50 PM" src="https://user-images.githubusercontent.com/66915274/197399108-fb566eb4-664f-4509-8948-ab4ed04407b5.png">
 
-35 ◦ Empezaremos escogiendo el grupo donde queremos que se creen. Seleccionamos el único disponible (el que acabamos de crear). 
+35 ◦ We will start by choosing the group where we want them to be created. We select the only one available (the one we just created).
 
 <img width="760" alt="Screen Shot 2022-10-23 at 4 54 02 PM" src="https://user-images.githubusercontent.com/66915274/197399115-e7d3b313-763c-421c-a71d-850d318432e7.png">
 
-36 ◦ El orden de la creación de las unidades lógicas será el mismo que indica el subject asique empezaremos por root y acabaremos por var-log. Entonces seleccionaremos el nombre del volumen lógico.
+36 ◦ The order of creation of the logical units will be the same as indicated in the subject, so we will start with root and end with var-log. Then we will select the name of the logical volume.
 
 <img width="662" alt="Screen Shot 2022-10-23 at 4 55 42 PM" src="https://user-images.githubusercontent.com/66915274/197399188-6ae8c83b-057d-498f-b112-9116079b0808.png">
 
-37 ◦ Tamaño como bien indica el subject será de 10g.
+37 ◦ Size, as indicated in the subject, will be 10g.
 
 <img width="782" alt="Screen Shot 2022-10-23 at 4 56 21 PM" src="https://user-images.githubusercontent.com/66915274/197399216-c65f43ca-fb8e-4d05-9212-24ad2ee87b39.png">
 
-38 ◦ Repetimos el proceso para ```swap```. Solo cambiaremos el nombre y el tamaño.
+38 ◦ We repeat the process for ```swap```. We only change the name and size.
 
 <img width="443" alt="Screen Shot 2022-10-23 at 4 56 49 PM" src="https://user-images.githubusercontent.com/66915274/197399239-c26598cb-e7bb-474c-aece-90f043e1990f.png">
 
