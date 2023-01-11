@@ -1252,7 +1252,7 @@ Reglas en el reenvio de puertos.
 <br>
 
 #
-# Este tutorial ha llevado mucho trabajo, si crees que te ha sido útil agradeceria mucho starred 🌟 para que así se comparta y pueda ayudar a más estudiantes 👨🏻‍🎓❤️
+# This tutorial has taken a lot of work, if you think it has been useful I would greatly appreciate a starred 🌟 so that it can be shared and help more students 👨🏻‍🎓❤️
 <br>
 <br>
 <br>
