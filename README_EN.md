@@ -1093,7 +1093,7 @@ Brief description of all types of partitions:
 
 70 ◦ Once we have finished with the installation of Debian, we must set up our virtual machine.
 
-[Click here to navigate to the virtual machine settings ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
+[Click here to navigate to the virtual machine settings ⚙️](#4--virtual-machine-setup-%EF%B8%8F)
 
 ### 8.2 - Wordpress & services configuration 🌐
 
