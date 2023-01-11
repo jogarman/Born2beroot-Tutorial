@@ -35,7 +35,7 @@
 
 	9.1 [Evaluation answers 💯](#91-evaluation-answers-)
 
-	9.2 [Evaluation commands ⌨️](9-2-evaluation-commands-%EF%B8%8F)
+	9.2 [Evaluation commands ⌨️](#9-2-evaluation-commands-%EF%B8%8F)
 
 ## 1- _Download the virtual machine ISO_ 💿
 
