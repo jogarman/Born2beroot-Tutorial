@@ -1,4 +1,4 @@
-# Born2beroot-Tutorial 💻🇬🇧
+# Born2beroot-Tutorial 🖥🇬🇧
 
 # Index
 
