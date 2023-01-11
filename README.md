@@ -448,9 +448,11 @@ enforce_for_root
 
 minlen=10 ➤ La cantidad minima de caracteres que debe contener la contraseña.
 
-ucredit=-1 ➤ Como mínimo debe contener un caracter ```Mayus```. Ponemos el - ya que debe contener como mínimo un caracter, si ponemos + nos referimos a como maximo esos caracteres.
+ucredit=-1 ➤ Como mínimo debe contener una letra mayúscula. Ponemos el - ya que debe contener como mínimo un caracter, si ponemos + nos referimos a como maximo esos caracteres.
 
-dcredit=-1 ➤Como mínimo debe contener un digito.
+dcredit=-1 ➤ Como mínimo debe contener un digito.
+
+lcredit=-1 ➤ Como mínimo debe contener una letra minúscula.
 
 maxrepeat=3 ➤ No puede tener más de 3 veces seguidas el mismo caracter.
 
