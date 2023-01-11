@@ -1,15 +1,4 @@
-#ENGLISH VERSION - WIP 🛠
-
-
-# Born2beroot-Tutorial 💻
-
-### Before starting...
-
-```
-		This is a complete guide step by step for the Born2Broot project at 42 school.
-		You should not take everythng here for granted, and do your own research.
-		Thank you in advance for using this guide. 
-```
+# Born2beroot-Tutorial 💻🇬🇧
 
 # Index
 
