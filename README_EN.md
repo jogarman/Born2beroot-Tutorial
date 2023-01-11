@@ -36,7 +36,7 @@
 	9.1 [Evaluation answers 💯](#91-evaluation-answers-)
 
 	9.2 [Evaluation commands ⌨️](9-2-evaluation-commands-%EF%B8%8F)
-	
+
 ## 1- _Download the virtual machine ISO_ 💿
 
 [CLICK HERE](https://www.debian.org/download.en.html) for the URL of the debian ISO. Ths is a direct link to debian.org/download.
@@ -506,7 +506,7 @@ For the architecture of the SO to be shown, you will use the command ```uname -a
 
 <img width="715" alt="Screen Shot 2022-10-27 at 4 50 06 PM" src="https://user-images.githubusercontent.com/66915274/198322524-8c2d305f-bfe8-4e4a-bf31-6a883af71ad3.png">
 
-### 5-2 Fisical Cores
+### 5-2 Physical Cores
 
 For the number of fisical cores to be shown we will use the file /proc/cpuinfo, which give us information about the CPU: its type, brand, model, performance, etc. We will use ```grep "physical id" /proc/cpuinfo | wc -l``` with the command grep looking inside the file "physical id" and with wc -l to count the line of the grep output. 
 
@@ -1071,73 +1071,90 @@ Brief description of all types of partitions:
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 20 17 24" src="https://user-images.githubusercontent.com/66915274/178803208-2969acae-3fa7-423e-8a3c-bb7c76eff824.png">
 
-65 ◦ Seleccionamos la opcion ```No``` ya que no queremos que los developers vean nuestras estadísticas aunque sean anónimas.
+65 ◦ We selected the option ```No``` because we do not want developers to see our statistics even though they are anonymous.
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 20 21 54" src="https://user-images.githubusercontent.com/66915274/178803926-a4efbc70-f3e2-4e6c-9809-9152478d8237.png">
 
-66 ◦ Quitaremos todas las opciones de software (con la barra espaciadora) y le daremos a ```Continue```.
+66 ◦ We will remove all the software options (using the spacebar) and press ```Continue```.
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 20 24 17" src="https://user-images.githubusercontent.com/66915274/178804377-e775b89e-93d4-482f-a4d0-0ef126f47719.png">
 
-67 ◦ Seleccionaremos ```Yes``` para instalar [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) en el disco duro.
+67 ◦ We will select ```Yes``` to install  [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) on the hard drive.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 26 24" src="https://user-images.githubusercontent.com/66915274/178804771-ba16e0b7-9f06-4c5b-9451-0bfd65efd2bb.png">
 
-68 ◦ Escogeremos el dispositivo para la instalación del cargador de arranque ```/dev/sda (ata_VBOX_HARDDISK)```.
+68 ◦ We will choose the device for the bootloader installation ```/dev/sda (ata_VBOX_HARDDISK)```.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 35 46" src="https://user-images.githubusercontent.com/66915274/178806441-f1bf3159-4e09-4c9a-9102-b3261c9000d8.png">
 
-69 ◦ Le daremos a ```Continue``` para finalizar la instalación. 
+69 ◦ We will press ```Continue``` to finish the installation. 
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 20 39 30" src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
 
-70 ◦ Una vez hemos terminado con la instalación de debian debemos configurar nuestra máquina virtual.
+70 ◦ Once we have finished with the installation of Debian, we must set up our virtual machine.
 
-[Click aqui para dirigirte a la configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
+[Click here to navigate to the virtual machine settings ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
 ### 8.2 - Wordpress & services configuration 🌐
 
 ### Lighttpd 
 
-🧠 <b> Que es Lighttpd❓</b> Es un servidor web diseñado para ser rápido, seguro, flexible, y fiel a los estándares. Está optimizado para entornos donde la velocidad es muy importante. Esto se debe a que consume menos CPU y memoria RAM que otros servidores.
+🧠 <b> What is Lighttpd❓</b> Lighttpd is a web server designed to be fast, secure, flexible, and standards-compliant. It is optimized for environments where speed is a top priority because it consumes less CPU and RAM than other servers.
 
-1 ◦ Instalación de paquetes de lighttpd.
+1 ◦ Installation of Lighttpd packages.
 
 <img width="791" alt="Screen Shot 2022-10-27 at 4 09 24 AM" src="https://user-images.githubusercontent.com/66915274/198174389-428c30e0-c437-4bc1-b8df-40dd2fb0c0ce.png">
 
-2 ◦ Permitimos las conexiones mediante el puerto 80 con el comando ```sudo ufw allow 80```.
+2 ◦ We allow connections through port 80 with the command ```sudo ufw allow 80```.
 
 <img width="306" alt="Screen Shot 2022-10-27 at 4 15 24 AM" src="https://user-images.githubusercontent.com/66915274/198175046-8ea3f052-32f1-4107-a9a1-c9271d6c9ce6.png">
 
-3 ◦ Checkeamos que realmente hayamos permitido. Debe aparecer el puerto 80 y allow.
+3 ◦ We check that we have actually allowed it. Port 80 and allow should appear.
 
 <img width="460" alt="Screen Shot 2022-10-27 at 4 15 45 AM" src="https://user-images.githubusercontent.com/66915274/198175075-da6833f1-2360-4e08-b708-99f920b8215c.png">
 
-4 ◦ Añadimos la regla que incluya el puerto 80. Si no recuerdas como se añadian reglas en el reenvío de puertos. Configuración de la máquina → Red → Reenvío de puertos → Replicar la captura.
+4 ◦ We add the rule that includes port 80. If you don't remember how to add rules in port forwarding. Machine configuration → Network → Port forwarding → Replicate the capture
 
 <img width="877" alt="Screen Shot 2022-11-18 at 2 49 56 PM" src="https://user-images.githubusercontent.com/66915274/202720044-d7a51add-c5ee-4da4-9057-258e47cfd036.png">
 
 ### Mariadb
 
-🧠 <b> Que es MariaDB❓</b> Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de datos, el comercio electrónico, funciones a nivel empresarial y las aplicaciones de registro. 
+🧠 <b> What is MariaDB❓</b> It is a database. It is used for various purposes, such as data warehousing, e-commerce, enterprise-level functions, and logging applications. 
 
-1 ◦ Instalaremos los paquetes con el comando ```sudo apt install mariadb-server```
+1 ◦ We will install the packages with the command ```sudo apt install mariadb-server```
 
 <img width="797" alt="Screen Shot 2022-10-27 at 4 17 09 AM" src="https://user-images.githubusercontent.com/66915274/198175218-65dec75f-5727-425c-97d0-2baa2b8cd457.png">
 
-2 ◦ Debido a que la configuración predeterminada deja su instalación de MariaDB poco segura, utilizaremos un script que proporciona el paquete mariadb-server para restringir el acceso al servidor y eliminar las cuentas no utilizadas. Ejecutaremos el script con el siguiente comando ```sudo mysql_secure_installation```. Preguntará si deseamos cambiar a la autenticación de socket de Unix. Como ya tenemos una cuenta root protegida escribiremos ```N```.
+2 ◦ Because the default configuration leaves your MariaDB installation unsecure, we will use a script provided by the mariadb-server package to restrict access to the server and remove unused accounts. We will run the script with the following command ```sudo mysql_secure_installation```. It will ask if we want to switch to Unix socket authentication. Since we already have a protected root account we will type ```N```.
+
+```
+Switch to unix_socket autentication? → N
+Change the root password? → N
+Remove anonymous users? → Y
+Disallow root login remotely? → Y
+Remove test database and acces to it? → Y
+Reaload privilege tables now? → Y
+````
 
 <img width="629" alt="Screen Shot 2022-10-27 at 4 19 25 AM" src="https://user-images.githubusercontent.com/66915274/198175511-d826b699-770e-4142-b464-cd6a91211d6a.png">
-
-3 ◦
 
 <img width="704" alt="Screen Shot 2022-10-27 at 1 00 20 AM" src="https://user-images.githubusercontent.com/66915274/198175719-b22bd572-ab50-4590-9298-5f5a69f98862.png">
 
 <img width="551" alt="Screen Shot 2022-10-27 at 1 00 40 AM" src="https://user-images.githubusercontent.com/66915274/198175732-eff97e65-d8ef-4b44-8930-62d58d910598.png">
 
+Switch to unix_socket authentication? We choose ```N``` because we don't want it to switch to Unix socket authentication because we already have a protected root account.
+
+Change the root password? We choose ```N```. We do not want to change the root password. By default we have no password but in mariadb he is not really root as we must give him administrator permissions.
+
+Remove anonymous users? We choose ```Y```. By default when you install mariadb it has an anonymous user, which allows anyone to log into mariadb without having to create their own user account. This is designed for testing purposes and to make the installation smoother. When we leave the development environment and want to move to a production environment we must remove the anonymous users. 
+
+Disallow root login remotely? Choose ```Y```. Disabling root login remotely will prevent anyone from guessing the root password. We will only be able to connect to root from localhost.
+
+Remove test database and access to it? 
+
 ### Phpmyadmin
 
-🧠 <b> Que es Phpmyadmin❓</b> Es una aplicación web que sirve para administrar bases de datos de forma sencilla y con una interfaz amistosa.
+🧠 <b> What is Phpmyadmin❓</b> It is a web application used to manage databases in a simple and friendly interface.
 
 <img width="733" alt="Screen Shot 2022-10-27 at 4 22 33 AM" src="https://user-images.githubusercontent.com/66915274/198175891-74168b70-13e1-41a6-a46d-74fe03077a2e.png">
 
@@ -1147,7 +1164,7 @@ Brief description of all types of partitions:
 
 ### Wordpress 
 
-🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
+🧠 <b> What is Wordpress❓</b> It is a content management system focused on the creation of any type of website.
 
 <img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
 
@@ -1173,9 +1190,9 @@ Brief description of all types of partitions:
 
 ### LiteSpeed ⚡️
 
-🧠 <b> Que es LiteSpeed❓</b> Es un software de servidor web patentado. Es el cuarto servidor web más popular, y se estima que lo utiliza el 10% de los sitios web.
+🧠 <b> What is LiteSpeed❓</b> It is a proprietary web server software. It is the fourth most popular web server, and is estimated to be used by 10% of websites.
 
-1 ◦ Antes de instalar cualquier software, es importante asegurarse de que el sistema esté actualizado.
+1 ◦ Before installing any software, it is important to ensure that the system is up to date.
 
 ```sudo apt update```
 
@@ -1186,15 +1203,15 @@ Brief description of all types of partitions:
 
 <img width="507" alt="Screen Shot 2022-11-25 at 3 00 18 AM" src="https://user-images.githubusercontent.com/66915274/203885306-3b3eb6cd-64cb-4d34-967a-19e650286cf5.png">
 
-2 ◦ De forma predeterminada, OpenLiteSpeed está disponible en el repositorio base de Debian 11. Entonces, debes ejecutar el siguiente comando para agregar el repositorio OpenLiteSpeed a su sistema Debian:
+2 ◦ By default, OpenLiteSpeed is available in the Debian 11 base repository. So, you must run the following command to add the OpenLiteSpeed repository to your Debian system:
 
 ```wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash```
 
-Como el comando es largo me he conectado via ssh.
+As the command is long, I connected via ssh.
 
 <img width="1129" alt="Screen Shot 2022-11-25 at 3 05 49 AM" src="https://user-images.githubusercontent.com/66915274/203885808-b4e0ff9a-580c-4121-b06f-ec229e514df9.png">
 
-3 ◦ De nuevo, actualizamos los paquetes y instalaremos OpenLiteSpeed.
+3 ◦ Again, we update the packages and install OpenLiteSpeed.
 
 ```sudo apt update```
 
@@ -1205,13 +1222,13 @@ Como el comando es largo me he conectado via ssh.
 <img width="801" alt="Screen Shot 2022-11-25 at 3 11 22 AM" src="https://user-images.githubusercontent.com/66915274/203886321-dbda490e-726d-4dfb-aa91-b9e10206976a.png">
 
 
-4 ◦ La contraseña predeterminada para OpenLiteSpeed es 123456. Cambiaremos la contraseña a algo más seguro con el siguiente comando.
+4 ◦ The default password for OpenLiteSpeed is 123456. We will change the password to something more secure with the following command.
 
 ```sudo /usr/local/lsws/admin/misc/admpass.sh```
 
 <img width="607" alt="Screen Shot 2022-11-25 at 3 12 33 AM" src="https://user-images.githubusercontent.com/66915274/203886432-cb14665f-63a0-4373-919d-0dff7c04b212.png">
 
-5 ◦ Configuramos el firewall para permitir las conexiones mediante los puertos 8088 y 7080. Acto seguido agregaremos las reglas en el reenvio de puertos.
+5 ◦ We configure the firewall to allow connections through ports 8088 and 7080. We then add the rules in the port forwarding.
 
 ```sudo ufw allow 8088/tcp```
 
@@ -1225,12 +1242,12 @@ Como el comando es largo me he conectado via ssh.
 
 <img width="393" alt="Screen Shot 2022-11-25 at 3 16 18 AM" src="https://user-images.githubusercontent.com/66915274/203886863-03406d5c-456a-4e80-83e9-1bf3904154d3.png">
 
-Reglas en el reenvio de puertos.
+Port forwarding rules.
 
 <img width="825" alt="Screen Shot 2022-11-25 at 3 16 52 AM" src="https://user-images.githubusercontent.com/66915274/203886923-1db4cf56-d197-4c41-87f6-846253e08450.png">
 
 
-6 ◦ Una vez completado el paso anterior ya podemos conectarnos. Pondremos en el buscador de nuestro navegador ```localhost:7080``` proporcionamos nuestras credenciales de inicio de sesión y ya tendremos acceso a todo.
+6 ◦ Once we have completed the previous step we can connect. We will put in the search engine of our browser ```localhost:7080``` we provide our login credentials and we will have access to everything.
 
 <img width="800" alt="Screen Shot 2022-11-25 at 3 18 53 AM" src="https://user-images.githubusercontent.com/66915274/203887182-73d29abc-674c-4ace-bffb-de42b636ec38.png">
 
@@ -1259,33 +1276,33 @@ Reglas en el reenvio de puertos.
 
 ## 9.1 Evaluation answers 💯
 
-### ▪️ Que es una maquina virtual❓
+### ▪️ What is a virtual machine❓
 
-Es un software que simula un sistema de computación y puede ejecutar programas como si fuese una computadora real. Permite crear múltiples entornos simulados o recursos dedicados desde un solo sistema de hardware físico. 
+It is software that simulates a computer system and can run programs as if it were a real computer. It allows the creation of multiple simulated environments or dedicated resources from a single physical hardware system. 
 
-### ▪️ Porque has escogido Debian❓
+### ▪️ Why you have chosen Debian❓
 
-Esto es algo personal para cada uno, mi opinion: El propio subject explica que es mas sencillo hacerlo en Debian y si buscas documentacion/tutoriales hay muchos y todos se han hecho en debian.
+This is a personal thing for everyone, my opinion: The subject itself explains that it is easier to do it in Debian and if you look for documentation/tutorials there are many and all of them have been done in debian.
 
-### ▪️ Diferencias basicas entre CentOS y Debian
+### ▪️ Basic differences between CentOS and Debian
 
 ![182516961-c3e4da77-2db8-4737-a68f-27b033908705 (1) (1)](https://user-images.githubusercontent.com/66915274/182517306-edb92eac-cba4-444a-83f8-9692bac69231.png)
 
-### ▪️ Cual es el proposito de las maquinas virtuales❓
+### ▪️ What is the purpose of virtual machines❓
 
-Su objetivo es el de proporcionar un entorno de ejecución independiente de la plataforma de hardware y del sistema operativo, que oculte los detalles de la plataforma subyacente y permita que un programa se ejecute siempre de la misma forma sobre cualquier plataforma.
+Their purpose is to provide a hardware platform and operating system independent execution environment, which hides the details of the underlying platform and allows a program to always run the same way on any platform.
 
-### ▪️ Diferencias entre apt y aptitude ↙️
+### ▪️ Differences between apt and aptitude ↙️
 
-Aptitude es una version mejorada de apt. APT es un administrador de paquetes de nivel inferior y aptitude es un administrador de paquetes de alto nivel. Otra gran diferencia es la funcionalidad que ofrecen ambas herramientas. Aptitude ofrece una mejor funcionalidad en comparación con apt-get. Ambos son capaces de de proporcionar los medios necesarios para realizar la gestión de paquetes. Sin embargo, si se busca un enfoque con mas caracteristicas, debería ser, Aptitude. 
+Aptitude is an enhanced version of apt. APT is a lower-level package manager and aptitude is a high-level package manager. Another big difference is the functionality offered by both tools. Aptitude offers better functionality compared to apt-get. Both are able to provide the necessary means to perform package management. However, if you are looking for a more feature-rich approach, Aptitude should be it.
 
-### ▪️ Que es APPArmor❓
+### ▪️ What is APPArmor❓
 
-Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
+A security module in the Linux kernel that allows the system administrator to restrict the capabilities of a program.
 
-### ▪️ Que es LVM❓
+### ▪️ What is LVM❓
 
-Es un gestor de volúmenes lógicos. Proporciona un método para asignar espacio en dispositivos de almacenamiento masivo, que es más flexible que los esquemas de particionado convencionales para almacenar volúmenes.
+It is a logical volume manager. It provides a method for allocating space on mass storage devices, which is more flexible than conventional partitioning schemes for storing volumes.
 
 ## 9-2 Evaluation commands ⌨️
 
@@ -1504,19 +1521,19 @@ Si queremos que vuelva a ejecutarse:
 
 <img width="483" alt="Screen Shot 2022-11-24 at 3 27 38 PM" src="https://user-images.githubusercontent.com/66915274/203807970-8fc69a39-6d10-4e64-9be1-eb49c4bf95f8.png">
 
-# Contacto 📥
+# Contact 📥
 
-### Contacta conmigo si crees que puedo mejorar el tutorial! Puede ayudar a futuros estudiantes! 😁
+### Contact me if you think I can improve the tutorial! It may help future students! 😁
 
 ◦ Email: gemartin@student.42barcelona.com
 
 ◦ Linkedin: https://www.linkedin.com/in/gemartin99/
 
-# Quizás pueda interesarte!
+# You might be interested!
 
-### - Para ver mi progresion en el common core 42 ↙️
+### - To see my progress in the common core 42 ↙️
 
-[AQUÍ](https://github.com/gemartin99/42cursus)
+[HERE](https://github.com/gemartin99/42cursus)
 
-### - Mi perfil en la intranet de 42 ↙️
-[AQUÍ](https://profile.intra.42.fr/users/gemartin)
+### - My profile on the intra 42 ↙️
+[HERE](https://profile.intra.42.fr/users/gemartin)
