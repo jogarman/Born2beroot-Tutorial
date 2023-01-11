@@ -1521,6 +1521,14 @@ Si queremos que vuelva a ejecutarse:
 
 <img width="483" alt="Screen Shot 2022-11-24 at 3 27 38 PM" src="https://user-images.githubusercontent.com/66915274/203807970-8fc69a39-6d10-4e64-9be1-eb49c4bf95f8.png">
 
+### Partner 👨🏻‍💻
+
+This English version of the guide would not have been possible without the help of [ElPatatin](https://github.com/ElPatatin)
+
+◦ Linkedin: https://www.linkedin.com/in/cristope/
+
+◦ Intra profile: https://profile.intra.42.fr/users/cpeset-c
+
 # Contact 📥
 
 ### Contact me if you think I can improve the tutorial! It may help future students! 😁
