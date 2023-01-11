@@ -32,7 +32,7 @@
 	
 5. [Script 🚨](#5--script-)
 
-	5.1 [End result of the script 🆗](#513-end-result-of-the-script)
+	5.1 [Total result of the script 🆗](#5-13-total-result-of-the-script)
 	
 6. [Crontab ⏰](#6--crontab-)
 7. [Signature.txt 📝](#7--signaturetxt-)
@@ -45,6 +45,8 @@
 9. [Correction sheet ✅](#9--correction-sheet-)
 
 	9.1 [Evaluation answers 💯](#91-evaluation-answers-)
+
+	9.2 [Evaluation commands ⌨️](9-2-evaluation-commands-%EF%B8%8F)
 	
 ## 1- _Download the virtual machine ISO_ 💿
 
@@ -398,14 +400,19 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 🤔 <b>What does each command❓ </b>
 
-<img width="802" alt="Captura de pantalla 2022-07-16 a las 2 04 56" src="https://user-images.githubusercontent.com/66915274/179326915-b374f679-fa2e-4e02-8b38-cdb53c6354a6.png">
+![F5B5BED3-C144-4EDF-91AB-226533DD5B18_4_5005_c](https://user-images.githubusercontent.com/66915274/211846396-e3212104-b8ce-412c-ac1a-e4d3124dfba8.jpeg)
 
-**GREEN**	-> Total tries for entering the sudo password.
-**RED**		-> The message that will show when the password failed.
-**YELLOW**	-> Path where will the sudo logs will be stored.
-**BLUE**	-> What will be logged.
-**BROWN**	-> TTY is required lol.
-**LIGHTB**	-> Folders that will be excluded of sudo
+🟩 **GREEN**	-> Total tries for entering the sudo password.
+
+🟥 **RED**		-> The message that will show when the password failed.
+
+🟨 **YELLOW**	-> Path where will the sudo logs will be stored.
+
+🟦 **BLUE**	-> What will be logged.
+
+🟫 **BROWN**	-> TTY is required lol.
+
+🟪 **PURPLE**	-> Folders that will be excluded of sudo
 
 ### 4.5 Setting up a strong password policy 🔑
 
@@ -442,6 +449,7 @@ PASS_WARN_AGE: It's the days till password warning.
 minlen=10
 ucredit=-1
 dcredit=-1
+lcredit=-1
 maxrepeat=3
 reject_username
 difok=7
@@ -459,9 +467,11 @@ enforce_for_root
 
 minlen=10 ➤ The minimun characters a password must contain.
 
-ucredit=-1 ➤ The password at least have to contain a ```Mayus``` character. We must write it with a - sign, as is how it knows that's refering to minumum caracters; if we put a + sign it will refer to maximum characters.
+ucredit=-1 ➤ The password at least have to contain a capital letter. We must write it with a - sign, as is how it knows that's refering to minumum caracters; if we put a + sign it will refer to maximum characters.
 
 dcredit=-1 ➤ The passworld at least have to containt a digit.
+
+lcredit=-1 ➤ The password at least have to contain a lowercase letter.
 
 maxrepeat=3 ➤ The password can not have the same character repited three contiusly times.
 
@@ -520,7 +530,7 @@ To show the number of virtual cores is very similar to the previous one. We will
 <img width="586" alt="Screen Shot 2022-10-27 at 4 55 48 PM" src="https://user-images.githubusercontent.com/66915274/198324254-3d0f247d-b767-4e02-9e69-11b4e0586280.png">
 
 
-### 5-4 Memoria RAM
+### 5-4 RAM
 
 To show the RAM memory we will use the command ```free``` to see at the moment information about the RAM, the used part, free, reserved for other resources, etc. For more info about the command we will put free --help. We will use free --mega since that unit of measure appears in the subject.
 
@@ -538,7 +548,7 @@ Finally, we must calculate the % of used memory. The command is again similar to
 
 <img width="798" alt="Captura de pantalla 2022-08-02 a las 3 51 01" src="https://user-images.githubusercontent.com/66915274/182274627-195476b2-1e17-4a4c-8d5c-2056e4e2bbb6.png">
 
-### 5-5 Memoria del disco
+### 5-5 Disk memory
 
 To view the occupied and available memory of the disk, we will use the ```df``` command, which stands for "disk filesystem", it is used to get a complete summary of the use of disk space. As indicated in the subject, the used memory is shown in MB, so we will then use the -m flag. Next, we will do a grep to only show us the lines that contain "/dev/" and then we will do another grep with the -v flag to exclude lines that contain "/boot". Finally, we will use the awk command and sum the value of the third word of each line to once all the lines are summed, print the final result of the sum. The entire command is as follows: ```df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use}'```.
 
@@ -553,44 +563,44 @@ Finally, we must show a percentage of the used memory. To do this, again, we wil
 <img width="798" alt="Captura de pantalla 2022-08-03 a las 2 49 33" src="https://user-images.githubusercontent.com/66915274/182500836-dd4b068e-b6ce-4dc6-b832-f90acecfb71c.png">
 
 
-### 5-6 Porcentaje uso de CPU
+### 5-6 CPU usage percentage
 
 To view the percentage of CPU usage, we will use the ```vmstat``` command, which shows system statistics, allowing us to obtain a general detail of the processes, memory usage, CPU activity, system status, etc. We could put no option but in my case I will put an interval of seconds from 1 to 4. We will also use the ```tail -1``` command, which will allow us to produce the output only on the last line, so of the 4 generated, only the last one will be printed. Finally, we will only print word 15, which is the available memory usage. The entire command is as follows: ```vmstat 1 4 | tail -1 | awk '{print %15}'```. The result of this command is only part of the final result since there is still some operation to be done in the script for it to be correct. What should be done is to subtract the amount returned by our command from 100, the result of this operation will be printed with one decimal and a % at the end and the operation would be finished.
 
 <img width="580" alt="Captura de pantalla 2022-08-03 a las 0 33 39" src="https://user-images.githubusercontent.com/66915274/182484896-def71bf0-b7eb-49d8-b83b-a019d15f62f1.png">
 
-### 5-7 Último reinicio
+### 5-7 Last reboot
 
 To see the date and time of our last restart, we will use the ```who``` command with the ```-b``` flag, as this flag will display the time of the last system boot on the screen. As has happened to us before, it shows us more information than we want, so we will filter it and only show what we are interested in, for this we will use the awk command and compare if the first word of a line is "system", the third word of that line will be printed on the screen, a space, and the fourth word. The entire command would be as follows: ```who -b | awk '$1 == "system" {print $3 " " $4}'```.
 
 <img width="661" alt="Captura de pantalla 2022-08-02 a las 12 24 58" src="https://user-images.githubusercontent.com/66915274/182352895-d985e675-5afc-445a-bcd3-68189702fe70.png">
 
-### 5-8 Uso LVM
+### 5-8 LVM active
 
 To check if LVM is active or not, we will use the ```lsblk``` command, which shows us information about all block devices (hard drives, SSDs, memories, etc) among all the information it provides, we can see lvm in the type of manager. For this command we will do an if because we will print Yes or No. Basically, the condition we are looking for will be to count the number of lines in which "lvm" appears and if there are more than 0 we will print Yes, if there are 0 we will print No. The entire command would be: ```if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi```.
 
 <img width="801" alt="Captura de pantalla 2022-08-02 a las 22 38 43" src="https://user-images.githubusercontent.com/66915274/182468904-3789e22f-dbde-4874-b153-0d86497c55e2.png">
 
-### 5-9 Conexiones TCP
+### 5-9 TCP connections
 
 To check the number of established TCP connections, we will use the ```ss``` command replacing the now obsolete netstat. We will filter with the ```-ta``` flag so that only TCP connections are shown. Finally, we will do a grep to see those that are established as there are also only listening and close with wc -l to count the number of lines. The command is as follows: ```ss -ta | grep ESTAB | wc -l```.
 
 <img width="479" alt="Captura de pantalla 2022-08-03 a las 0 53 36" src="https://user-images.githubusercontent.com/66915274/182487028-746244f8-2cda-4dc7-a14c-b2e5a7e0dc51.png">
 
-### 5-10 Número de usuarios
+### 5-10 Number of users
 
 We will use the ```users``` command which will show us the names of the users there are, knowing this, we will put ```wc -w``` to count the number of words in the command output. The entire command is as follows: ```users | wc -w```.
 
 <img width="380" alt="Captura de pantalla 2022-08-02 a las 12 33 29" src="https://user-images.githubusercontent.com/66915274/182354436-282547cf-22c8-4b03-9484-6801c0466de7.png">
 
 
-### 5-11 Dirección IP y MAC
+### 5-11 IP adress & MAC
 
 To obtain the host address, we will use the ```hostname -I``` command and to obtain the MAC, we will use the ```ip link``` command which is used to show or modify the network interfaces. As more than one interface, IP's etc. appear, we will use the grep command to search for what we want and thus be able to print only what is requested. To do this, we will put ```ip link | grep "link/ether" | awk '{print $2}'``` and in this way we will only print the MAC.
 
 <img width="639" alt="Captura de pantalla 2022-08-02 a las 14 53 14" src="https://user-images.githubusercontent.com/66915274/182379380-8e3b803d-d001-42ae-8aea-467e8c9f3ea9.png">
 
-### 5-12 Número de comandos ejecutados con sudo
+### 5-12 Number of commands executed with sudo
 
 To obtain the number of commands executed with sudo, we will use the ```journaclctl``` command, which is a tool that is responsible for collecting and managing the system logs. Next, we will put ```_COMM=sudo``` in order to filter the entries by specifying its path. In our case we put ```_COMM``` because it refers to an executable script. Once we have filtered the search and only the sudo logs appear, we still need to filter a bit more as when you start or close the root session it also appears in the log, so to finish filtering we will put a ```grep COMMAND``` and this will only show the command lines. Finally, we will put ```wc -l``` so that the lines are numbered. The entire command is as follows: ```journalctl _COMM=sudo | grep COMMAND | wc -l)```. To check that it works correctly, we can run the command in the terminal, put a command that includes sudo and run the command again and it should increase the number of sudo executions.
 
