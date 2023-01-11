@@ -1,4 +1,14 @@
-# Born2beroot-Tutorial 🖥
+# Born2beroot-Tutorial 🖥🇪🇸
+
+This guide has versions in different languages. Choose the one you prefer.
+
+### English version 🇬🇧
+
+![CLICK HERE](https://github.com/gemartin99/Born2beroot-Tutorial/blob/main/README_EN.md)
+
+### Portuguese version 🇵🇹
+
+![WIP](https://github.com/gemartin99/Born2beroot-Tutorial/blob/main/README_POR.md)
 
 # Índice
 
