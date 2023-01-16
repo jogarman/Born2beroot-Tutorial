@@ -498,7 +498,7 @@ enforce_for_root ➤ We will implement this password policy to root.
 
 Going into this part, you need to take special atention to everything, as is important to learn all that is here. **Do not cheat this part!** You will be asked how the script works during the evaluation, or as the evaluator sees.
 
-🧠 <b>Que es un script❓</b> Es una secuencia de comandos guardada en un fichero que cuando se ejecuta hara la funcion de cada comando.
+🧠 <b> What is a script❓</b> It is a sequence of commands stored in a file that when executed will do the function of each command.
 
 ### 5-1 Architecture 
 
