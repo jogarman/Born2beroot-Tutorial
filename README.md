@@ -1266,13 +1266,13 @@ Reglas en el reenvio de puertos.
 
 ## 9- Hoja de corrección ✅
 
-<img width="854" alt="Screen Shot 2022-10-15 at 10 29 57 PM (1)" src="https://user-images.githubusercontent.com/66915274/200190182-65e895a8-b612-49d0-b8d5-a2452a2ff8ba.png">
+<img width="773" alt="Screen Shot 2023-01-22 at 5 13 44 PM" src="https://user-images.githubusercontent.com/66915274/214894873-b92fcaeb-251b-46fb-8ab8-fb8f861976ab.png">
 
-<img width="854" alt="Screen Shot 2022-10-15 at 10 30 26 PM" src="https://user-images.githubusercontent.com/66915274/200190188-d0ac23cb-b66c-437a-b4c2-27390e07a2ed.png">
+<img width="772" alt="Screen Shot 2023-01-22 at 5 14 52 PM" src="https://user-images.githubusercontent.com/66915274/214894986-a0697331-8395-4f2b-9acd-50052b5b0f40.png">
 
-<img width="854" alt="Screen Shot 2022-10-15 at 10 30 57 PM" src="https://user-images.githubusercontent.com/66915274/200190198-c6f69628-dda3-4fc3-8c33-1de39f2e7ba8.png">
+<img width="772" alt="Screen Shot 2023-01-22 at 5 15 10 PM" src="https://user-images.githubusercontent.com/66915274/214895053-482efa21-b254-41ca-8239-c5f183a4ff41.png">
 
-<img width="854" alt="Screen Shot 2022-10-15 at 10 31 12 PM" src="https://user-images.githubusercontent.com/66915274/200190210-c7dda7e8-8776-461f-8fd9-1e59a5f024c6.png">
+<img width="772" alt="Screen Shot 2023-01-22 at 5 15 22 PM" src="https://user-images.githubusercontent.com/66915274/214895097-ec42a53a-b897-4af8-adec-eb99aa6554c8.png">
 
 ## 9-1 Respuestas de la evaluación 💯
 
@@ -1284,7 +1284,7 @@ Es un software que simula un sistema de computación y puede ejecutar programas 
 
 Esto es algo personal para cada uno, mi opinion: El propio subject explica que es mas sencillo hacerlo en Debian y si buscas documentacion/tutoriales hay muchos y todos se han hecho en debian.
 
-### ▪️ Diferencias basicas entre CentOS y Debian
+### ▪️ Diferencias basicas entre Rocky y Debian
 
 ![182516961-c3e4da77-2db8-4737-a68f-27b033908705 (1) (1)](https://user-images.githubusercontent.com/66915274/182517306-edb92eac-cba4-444a-83f8-9692bac69231.png)
 
