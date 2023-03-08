@@ -168,9 +168,9 @@ Repeat you user name.
 
 <img width="789" alt="Captura de pantalla 2022-07-13 a las 19 40 03" src="https://user-images.githubusercontent.com/66915274/178796481-29ef7ebc-0518-40f0-9429-3f43316b35d3.png">
 
-17 ◦ Once we choosed the disk we must make the partition as is in the subject. To do it properly we select the third option ```Separate /home, /var, and /tmp partitions```.
+17 ◦ Once we choosed the disk we must make the partition as is in the subject. To do it properly we select the second option ```Separate /home partition```.
 
-<img width="777" alt="Captura de pantalla 2022-07-13 a las 19 41 16" src="https://user-images.githubusercontent.com/66915274/178796683-13f3ce53-9032-40c4-9957-c715856ff448.png">
+<img width="787" alt="Screen Shot 2023-03-08 at 1 44 16 PM" src="https://user-images.githubusercontent.com/66915274/223716446-9ffb6f66-1ad3-4bfe-81ce-1f297bed0ede.png">
 
 18 ◦ We choose option ```Yes``` so the changes will be writen in the disk and so we can set the logical volume manager (LVM).
 
@@ -190,11 +190,11 @@ Repeat you user name.
 
 22 ◦ To wrap the partitioning and write the changes in the disk we choose the option ```Finish partitioning and write changes to disk```.
 
-<img width="795" alt="Captura de pantalla 2022-07-13 a las 19 59 15" src="https://user-images.githubusercontent.com/66915274/178800001-a0762a14-3d55-47e6-98c2-1198c7ee7d87.png">
+<img width="789" alt="Screen Shot 2023-03-08 at 1 46 17 PM" src="https://user-images.githubusercontent.com/66915274/223716909-c20cea01-950f-49cd-9ce6-99ec0eab0ea4.png">
 
 23 ◦ We choose the option ```Yes``` and then we confirm that we do not want more changes.
 
-<img width="795" alt="Captura de pantalla 2022-07-13 a las 20 00 58" src="https://user-images.githubusercontent.com/66915274/178800331-4e9daf83-fe4e-47c0-9737-d1a89a10b3a8.png">
+<img width="770" alt="Screen Shot 2023-03-08 at 1 46 52 PM" src="https://user-images.githubusercontent.com/66915274/223716940-b2e29ee7-3c98-434e-bccd-ac21d72eda2d.png">
 
 24 ◦ We select the option ```No``` as is not required addicional packages.
 
