@@ -36,6 +36,7 @@
 	9.1 [Evaluation answers 💯](#91-evaluation-answers-)
 
 	9.2 [Evaluation commands ⌨️](#9-2-evaluation-commands-%EF%B8%8F)
+10. [Tester 🆗](#10--tester-)
 
 ## 1- _Download the virtual machine ISO_ 💿
 
@@ -1520,6 +1521,14 @@ Si queremos que vuelva a ejecutarse:
 ```sudo /etc/init.d/cron start```
 
 <img width="483" alt="Screen Shot 2022-11-24 at 3 27 38 PM" src="https://user-images.githubusercontent.com/66915274/203807970-8fc69a39-6d10-4e64-9be1-eb49c4bf95f8.png">
+
+## 10- Tester 🆗
+
+Check that you didn't forget anything! Own tester to check that the installation and configuration has been carried out successfully.
+
+[HERE](https://github.com/gemartin99/Born2beroot-Tester)
+
+<img width="440" alt="Screen Shot 2023-03-09 at 3 40 54 AM" src="https://user-images.githubusercontent.com/66915274/223902066-f2f6a059-9df8-4e32-a92a-14c43ff8fb0f.png">
 
 ### Partner 👨🏻‍💻
 
