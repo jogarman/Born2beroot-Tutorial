@@ -1156,9 +1156,21 @@ Remove test database and acces to it?
 
 <img width="492" alt="Screen Shot 2023-03-31 at 12 16 28 AM" src="https://user-images.githubusercontent.com/66915274/228976032-2a3bd66e-ce88-4bc1-9264-1d5d7f88f295.png">
 
-<img width="580" alt="Screen Shot 2023-03-31 at 12 16 53 AM" src="https://user-images.githubusercontent.com/66915274/228976085-661254b5-9428-4f08-aac9-0e4fc79b65ab.png">
+<img width="384" alt="Screen Shot 2023-03-31 at 9 53 17 PM" src="https://user-images.githubusercontent.com/66915274/229216821-fba3d891-c477-4e68-9799-57bcb9efcde3.png">
 
-<img width="416" alt="Screen Shot 2023-03-31 at 12 17 18 AM" src="https://user-images.githubusercontent.com/66915274/228976128-d0b07c4e-c4b6-4a1c-b23f-486c356320e0.png">
+<img width="282" alt="Screen Shot 2023-03-31 at 9 54 04 PM" src="https://user-images.githubusercontent.com/66915274/229216973-fa35f5e1-04f1-4e56-8c44-55c4ad5a8745.png">
+
+<img width="616" alt="Screen Shot 2023-03-31 at 9 56 59 PM" src="https://user-images.githubusercontent.com/66915274/229217478-6f7f5f3c-12cb-4d5a-981c-6fd53f884aa3.png">
+
+<img width="669" alt="Screen Shot 2023-03-31 at 10 01 32 PM" src="https://user-images.githubusercontent.com/66915274/229218529-e2cdcb3f-f8bc-4474-8e7b-c1cf9499aa57.png">
+
+<img width="321" alt="Screen Shot 2023-03-31 at 10 02 01 PM" src="https://user-images.githubusercontent.com/66915274/229218623-bad5faf3-231e-4472-a617-2ead2e713313.png">
+
+
+
+
+
+
 
 ### Wordpress 
 
