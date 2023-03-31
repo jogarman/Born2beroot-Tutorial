@@ -1154,15 +1154,11 @@ Disallow root login remotely? Escogemos ```Y```. Al deshabilitar el inicio de se
 
 Remove test database and acces to it? 
 
-### Phpmyadmin
+<img width="492" alt="Screen Shot 2023-03-31 at 12 16 28 AM" src="https://user-images.githubusercontent.com/66915274/228976032-2a3bd66e-ce88-4bc1-9264-1d5d7f88f295.png">
 
-🧠 <b> Que es Phpmyadmin❓</b> Es una aplicación web que sirve para administrar bases de datos de forma sencilla y con una interfaz amistosa.
+<img width="580" alt="Screen Shot 2023-03-31 at 12 16 53 AM" src="https://user-images.githubusercontent.com/66915274/228976085-661254b5-9428-4f08-aac9-0e4fc79b65ab.png">
 
-<img width="733" alt="Screen Shot 2022-10-27 at 4 22 33 AM" src="https://user-images.githubusercontent.com/66915274/198175891-74168b70-13e1-41a6-a46d-74fe03077a2e.png">
-
-<img width="641" alt="Screen Shot 2022-10-27 at 1 13 56 AM" src="https://user-images.githubusercontent.com/66915274/198175978-8744b575-c23e-4563-80de-1f733df9341d.png">
-
-<img width="578" alt="Screen Shot 2022-10-27 at 4 26 55 AM" src="https://user-images.githubusercontent.com/66915274/198176405-f6bf2457-1174-4571-a495-d96ba80f5b83.png">
+<img width="416" alt="Screen Shot 2023-03-31 at 12 17 18 AM" src="https://user-images.githubusercontent.com/66915274/228976128-d0b07c4e-c4b6-4a1c-b23f-486c356320e0.png">
 
 ### Wordpress 
 
