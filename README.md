@@ -1119,6 +1119,26 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="877" alt="Screen Shot 2022-11-18 at 2 49 56 PM" src="https://user-images.githubusercontent.com/66915274/202720044-d7a51add-c5ee-4da4-9057-258e47cfd036.png">
 
+### Wordpress 
+
+🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
+
+<img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
+
+<img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
+
+<img width="629" alt="Screen Shot 2022-11-18 at 2 46 44 PM" src="https://user-images.githubusercontent.com/66915274/202719300-08ff9e6e-fc28-47fb-a63e-706a3e72994a.png">
+
+<img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
+
+<img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
+
+<img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
+
+<img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
+
+<img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
+
 ### Mariadb
 
 🧠 <b> Que es MariaDB❓</b> Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de datos, el comercio electrónico, funciones a nivel empresarial y las aplicaciones de registro. 
@@ -1166,35 +1186,31 @@ Remove test database and acces to it?
 
 <img width="321" alt="Screen Shot 2023-03-31 at 10 02 01 PM" src="https://user-images.githubusercontent.com/66915274/229218623-bad5faf3-231e-4472-a617-2ead2e713313.png">
 
+ACABADO MARIADB
+
+Instalacion php 
+
+<img width="541" alt="Screen Shot 2023-03-31 at 10 07 04 PM" src="https://user-images.githubusercontent.com/66915274/229308102-24ddd152-8687-410d-b207-953d36c9b591.png">
+
+Configuracion wordpress
+
+1 ◦ Accedemos al directorio /var/www/html con el comando: ```cd /var/www/html```
+
+<img width="326" alt="Screen Shot 2023-04-01 at 8 26 46 PM" src="https://user-images.githubusercontent.com/66915274/229308150-88ec9c15-4791-4541-baf2-5d2267b94eec.png">
+
+2 ◦ Copiamos el fichero wp-config-sample.php y lo renombraremos wp-config.php
+
+<img width="616" alt="Screen Shot 2023-04-01 at 8 28 42 PM" src="https://user-images.githubusercontent.com/66915274/229308231-a022e3b4-1606-4958-b530-5b2ada908997.png">
+
+3 ◦ Una vez lo hayamos renombrado editaremos el fichero wp-config.php ```nano wp-config.php``` y modificaremos los siguientes valores.
+
+<img width="841" alt="Screen Shot 2023-04-01 at 8 42 25 PM" src="https://user-images.githubusercontent.com/66915274/229308713-bbbb69f4-5f6c-4146-bc10-006cd968fb95.png">
+
+Hay que remplazarlos por los valores que hemos puesto anteriormente para la creacion de la base de datos y del usuario.
+
+<img width="842" alt="Screen Shot 2023-04-01 at 8 46 08 PM" src="https://user-images.githubusercontent.com/66915274/229308845-4eac418d-c03f-48d1-9b74-463ef56a2ee5.png">
 
 
-
-
-
-
-### Wordpress 
-
-🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
-
-<img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
-
-<img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
-
-<img width="629" alt="Screen Shot 2022-11-18 at 2 46 44 PM" src="https://user-images.githubusercontent.com/66915274/202719300-08ff9e6e-fc28-47fb-a63e-706a3e72994a.png">
-
-<img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
-
-<img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
-
-<img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
-
-<img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
-
-<img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
-
-<img width="524" alt="Screen Shot 2022-11-18 at 2 55 26 PM" src="https://user-images.githubusercontent.com/66915274/202721061-5eb6c0cc-6ad5-4864-be08-12509e269832.png">
-
-<img width="1811" alt="Screen Shot 2022-11-18 at 2 55 52 PM" src="https://user-images.githubusercontent.com/66915274/202721157-0b246d43-09cf-4254-870b-d8897697f5ee.png">
 
 ### 8.3 - Servicio adicional ➕
 
