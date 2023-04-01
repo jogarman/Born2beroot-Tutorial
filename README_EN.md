@@ -31,11 +31,14 @@
 	
 	8.2 [Wordpress & services configuration 🌐](#82---wordpress--services-configuration-)
 
+	8.3 [Aditional service ➕](#83---aditional-service-)
+
 9. [Correction sheet ✅](#9--correction-sheet-)
 
 	9.1 [Evaluation answers 💯](#91-evaluation-answers-)
 
 	9.2 [Evaluation commands ⌨️](#9-2-evaluation-commands-%EF%B8%8F)
+
 10. [Tester 🆗](#10--tester-)
 
 ## 1- _Download the virtual machine ISO_ 💿
@@ -1118,6 +1121,42 @@ Brief description of all types of partitions:
 
 <img width="877" alt="Screen Shot 2022-11-18 at 2 49 56 PM" src="https://user-images.githubusercontent.com/66915274/202720044-d7a51add-c5ee-4da4-9057-258e47cfd036.png">
 
+### WordPress 
+
+🧠 <b> What is Wordpress❓</b> It is a content management system focused on the creation of any type of website.
+
+1 ◦ To install the latest version of WordPress we must first install wget and zip. To do this we will use the following command ```sudo apt install wget zip```.
+
+🧠 <b>What is wget❓</b> It is a command line tool used to download files from the web.
+
+🧠 <b>What is zip❓</b> It is a command line utility for compressing and decompressing files in ZIP format.
+
+<img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
+
+2 ◦ Once we have installed the packages we must locate ourselves in the folder /var/www/ with the command cd we will access it ```cd /var/www/```.
+
+<img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
+
+3 ◦ Once we are in the path /var/www/ we must download the latest version of WordPress. As my native language is Spanish I will select the latest version in Spanish. We will use the following command: ```sudo wget https://es.wordpress.org/latest-es_ES.zip```.
+
+<img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
+
+4 ◦ Unzip the file you just downloaded with the command ```sudo unzip latest-en_US.zip```.
+
+<img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
+
+5 ◦ We will rename the folder html and call it html_old. ```sudo mv html/ html_old/```.
+
+<img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
+
+6 ◦ Now we will rename the wordpress folder and call it html. ```sudo mv wordpress/ html```.
+
+<img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
+
+7 ◦ Finally we will set these permissions on the html folder. We will use the command ```sudo chmod -R 755 html```. The number 7 indicates that the owner has read, write and execute permissions. The number 5 indicates that the group and others only have read and execute permissions.
+
+<img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
+
 ### Mariadb
 
 🧠 <b> What is MariaDB❓</b> It is a database. It is used for various purposes, such as data warehousing, e-commerce, enterprise-level functions, and logging applications. 
@@ -1151,41 +1190,91 @@ Remove anonymous users? We choose ```Y```. By default when you install mariadb i
 
 Disallow root login remotely? Choose ```Y```. Disabling root login remotely will prevent anyone from guessing the root password. We will only be able to connect to root from localhost.
 
-Remove test database and access to it? 
+Remove test database and access to it? Choose ```Y```. This will remove the test database and any users who have access to it.
 
-### Phpmyadmin
+Reaload privilege tables now? Choose ```Y```. This will reload the MySQL permission tables so that the changes to the security settings will take effect immediately.
 
-🧠 <b> What is Phpmyadmin❓</b> It is a web application used to manage databases in a simple and friendly interface.
+1 ◦ Once we have finished with the installation of mariadb we must create the database and the user for the WordPress. First we must access mariadb.
 
-<img width="733" alt="Screen Shot 2022-10-27 at 4 22 33 AM" src="https://user-images.githubusercontent.com/66915274/198175891-74168b70-13e1-41a6-a46d-74fe03077a2e.png">
+<img width="492" alt="Screen Shot 2023-03-31 at 12 16 28 AM" src="https://user-images.githubusercontent.com/66915274/228976032-2a3bd66e-ce88-4bc1-9264-1d5d7f88f295.png">
 
-<img width="641" alt="Screen Shot 2022-10-27 at 1 13 56 AM" src="https://user-images.githubusercontent.com/66915274/198175978-8744b575-c23e-4563-80de-1f733df9341d.png">
+2 ◦ We create a database for the WordPress. In my case I'm going to call it wp_database. I will do all this with the command ```CREATE DATABASE wp_database;```.
 
-<img width="578" alt="Screen Shot 2022-10-27 at 4 26 55 AM" src="https://user-images.githubusercontent.com/66915274/198176405-f6bf2457-1174-4571-a495-d96ba80f5b83.png">
+<img width="384" alt="Screen Shot 2023-03-31 at 9 53 17 PM" src="https://user-images.githubusercontent.com/66915274/229216821-fba3d891-c477-4e68-9799-57bcb9efcde3.png">
 
-### Wordpress 
+3 ◦ To make sure that the database for WordPress has been created we can view all existing databases with the command ```SHOW DATABASES;```.
 
-🧠 <b> What is Wordpress❓</b> It is a content management system focused on the creation of any type of website.
+<img width="282" alt="Screen Shot 2023-03-31 at 9 54 04 PM" src="https://user-images.githubusercontent.com/66915274/229216973-fa35f5e1-04f1-4e56-8c44-55c4ad5a8745.png">
 
-<img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
+4 ◦ Next we need to create a user inside the database. We will use the command ```CREATE USER 'gemartin'@'localhost' IDENTIFIED BY '12345';```.
 
-<img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
+<img width="616" alt="Screen Shot 2023-03-31 at 9 56 59 PM" src="https://user-images.githubusercontent.com/66915274/229217478-6f7f5f3c-12cb-4d5a-981c-6fd53f884aa3.png">
 
-<img width="629" alt="Screen Shot 2022-11-18 at 2 46 44 PM" src="https://user-images.githubusercontent.com/66915274/202719300-08ff9e6e-fc28-47fb-a63e-706a3e72994a.png">
+5 ◦ We bind the new user to our database so that we grant him the necessary permissions to be able to work. We will use the command ```GRANT ALL PRIVILEGES ON wp_database.* TO 'gemartin'@'localhost';```.
 
-<img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
+<img width="669" alt="Screen Shot 2023-03-31 at 10 01 32 PM" src="https://user-images.githubusercontent.com/66915274/229218529-e2cdcb3f-f8bc-4474-8e7b-c1cf9499aa57.png">
 
-<img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
+6 ◦ We update the permissions for the changes to take effect with the command ```FLUSH PRIVILEGES;```.
 
-<img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
+<img width="321" alt="Screen Shot 2023-03-31 at 10 02 01 PM" src="https://user-images.githubusercontent.com/66915274/229218623-bad5faf3-231e-4472-a617-2ead2e713313.png">
 
-<img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
+7 ◦ Once we have completed the previous step, we can exit mariadb.
 
-<img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
+<img width="295" alt="Screen Shot 2023-04-01 at 10 43 40 PM" src="https://user-images.githubusercontent.com/66915274/229313206-36b09583-1930-4754-b70a-8d4caa38db9e.png">
 
-<img width="524" alt="Screen Shot 2022-11-18 at 2 55 26 PM" src="https://user-images.githubusercontent.com/66915274/202721061-5eb6c0cc-6ad5-4864-be08-12509e269832.png">
+### PHP
 
-<img width="1811" alt="Screen Shot 2022-11-18 at 2 55 52 PM" src="https://user-images.githubusercontent.com/66915274/202721157-0b246d43-09cf-4254-870b-d8897697f5ee.png">
+🧠 <b>What is PHP❓</b> It is a programming language. It is mainly used to develop dynamic web applications and interactive websites. PHP runs on the server side.
+
+1 ◦ We install the necessary packages to be able to run web applications written in PHP language and that need to connect to a MySQL database. Run the following command ```sudo apt install php-cgi php-mysql```.
+
+<img width="541" alt="Screen Shot 2023-03-31 at 10 07 04 PM" src="https://user-images.githubusercontent.com/66915274/229308102-24ddd152-8687-410d-b207-953d36c9b591.png">
+
+### WordPress configuration
+
+1 ◦ Access the /var/www/html directory with the command: ```cd /var/www/html```.
+
+<img width="326" alt="Screen Shot 2023-04-01 at 8 26 46 PM" src="https://user-images.githubusercontent.com/66915274/229308150-88ec9c15-4791-4541-baf2-5d2267b94eec.png">
+
+2 ◦ Copy the file wp-config-sample.php and rename it wp-config.php
+
+<img width="616" alt="Screen Shot 2023-04-01 at 8 28 42 PM" src="https://user-images.githubusercontent.com/66915274/229308231-a022e3b4-1606-4958-b530-5b2ada908997.png">
+
+3 ◦ Once we have renamed it we will edit the file wp-config.php ```nano wp-config.php``` and modify the following values.
+
+<img width="841" alt="Screen Shot 2023-04-01 at 8 42 25 PM" src="https://user-images.githubusercontent.com/66915274/229308713-bbbb69f4-5f6c-4146-bc10-006cd968fb95.png">
+
+You have to replace them with the values that we have previously set when we created the database and the user so that WordPress can connect and make use of it.
+
+<img width="842" alt="Screen Shot 2023-04-01 at 8 46 08 PM" src="https://user-images.githubusercontent.com/66915274/229308845-4eac418d-c03f-48d1-9b74-463ef56a2ee5.png">
+
+4 ◦ Once we have completed the previous steps we can go back to our browser and type ```localhost```. You should see the following:
+
+<img width="674" alt="Screen Shot 2023-04-01 at 8 49 00 PM" src="https://user-images.githubusercontent.com/66915274/229308949-6224a7c8-2dda-414a-b313-c14e981aca01.png">
+
+<img width="1075" alt="Screen Shot 2023-04-01 at 8 00 38 PM" src="https://user-images.githubusercontent.com/66915274/229308962-d39b1b6b-62cc-49d1-ad13-a016d6e73683.png">
+
+5 ◦ We must fill in all the fields. In my case I have put the following:
+
+<img width="793" alt="Screen Shot 2023-04-01 at 8 02 29 PM" src="https://user-images.githubusercontent.com/66915274/229309346-c712fff4-1530-42c8-ad9e-a59f85d4de51.png">
+
+6 ◦ Once we have filled in all the fields we must click on ```Install WordPress``` and we will have finished the installation. You will see the next tab. Now WordPress can create the tables and dump all the data it needs to work in the database we have assigned to it.
+
+<img width="798" alt="Screen Shot 2023-04-01 at 8 02 52 PM" src="https://user-images.githubusercontent.com/66915274/229309399-719f525e-7859-468f-a9e6-6b6954102153.png">
+
+7 ◦ If we access again to our localhost from the browser we can see our functional page.
+
+<img width="2560" alt="Screen Shot 2023-04-01 at 9 02 51 PM" src="https://user-images.githubusercontent.com/66915274/229309529-96f3a1bb-d4a2-434f-bc01-2f2db0e0839d.png">
+
+8 ◦ If we want to access the admin panel to make changes to our site we will have to put in the browser ```localhost/wp-admin``` and log in with our account.
+
+<img width="368" alt="Screen Shot 2023-04-01 at 9 05 41 PM" src="https://user-images.githubusercontent.com/66915274/229309619-024d5dcc-ea8d-4895-88f3-bb65fcdca7e2.png">
+
+<img width="359" alt="Screen Shot 2023-04-01 at 9 06 44 PM" src="https://user-images.githubusercontent.com/66915274/229309653-02e398e9-0c28-470e-825d-1431f7ca2bc2.png">
+
+9 ◦ Once you have logged in, you can modify whatever you like. Customizing the page is optional, as it is not specified in the subject of this guide, we will not deal with it. 
+
+<img width="1100" alt="Screen Shot 2023-04-01 at 9 07 38 PM" src="https://user-images.githubusercontent.com/66915274/229309676-b670be09-47dd-445f-969a-bb41131aa3f9.png">
 
 ### 8.3 - Aditional service ➕
 
