@@ -1119,23 +1119,39 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="877" alt="Screen Shot 2022-11-18 at 2 49 56 PM" src="https://user-images.githubusercontent.com/66915274/202720044-d7a51add-c5ee-4da4-9057-258e47cfd036.png">
 
-### Wordpress 
+### WordPress 
 
 🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
 
+1 ◦ Para instalar la última versión de WordPress primero debemos instalar wget y zip. Para ello haremos uso del siguiente comando ```sudo apt install wget zip```.
+
+🧠 <b> Que es wget❓</b> Es una herramienta de línea de comandos que se utiliza para descargar archivos de la web.
+
+🧠 <b> Que es zip❓</b> Es una utilidad de línea de comandos para comprimir y descomprimir archivos en formato ZIP.
+
 <img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
+
+2 ◦ Una vez hayamos instalado los paquetes nos debemos ubicar en la carpeta /var/www/ con el comando cd accederemos a ella ```cd /var/wwww```.
 
 <img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
 
-<img width="629" alt="Screen Shot 2022-11-18 at 2 46 44 PM" src="https://user-images.githubusercontent.com/66915274/202719300-08ff9e6e-fc28-47fb-a63e-706a3e72994a.png">
+3 ◦ Una vez estemos en la ruta /var/www/ deberemos descargar la última versión de WordPress. Como mi idioma nativo es el español yo seleccionaré la última versión en español. Utilizaremos el siguiente comando: ```sudo wget https://es.wordpress.org/latest-es_ES.zip```.
 
 <img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
 
+4 ◦ Descomprimimos el archivo que acabamos de descargar con el comando ```sudo unzip latest-es_ES.zip```.
+
 <img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
+
+5 ◦ Renombraremos la carpeta html y la llamaremos html_old. ```sudo mv html/ html_old/```.
 
 <img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
 
+6 ◦ Ahora renombraremos la carpeta wordpress y la llamaremos html. ```sudo mv wordpress/ html```.
+
 <img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
+
+7 ◦ Por último estableceremos estos permisos en la carpeta html. Daremos uso del comando ```sudo chmod -R 755 html```. El número 7 indica que el propietario tiene permisos de lectura, escritura y ejecución. El número 5 indica que el grupo y otros solo tienen permisos de lectura y ejecución.
 
 <img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
 
@@ -1186,13 +1202,15 @@ Remove test database and acces to it?
 
 <img width="321" alt="Screen Shot 2023-03-31 at 10 02 01 PM" src="https://user-images.githubusercontent.com/66915274/229218623-bad5faf3-231e-4472-a617-2ead2e713313.png">
 
-ACABADO MARIADB
+### PHP
 
-Instalacion php 
+🧠 <b> Que es PHP❓</b> Es un lenguaje de programación. Se utiliza principalmente para desarrollar aplicaciones web dinámicas y sitios web interactivos. PHP se ejecuta en el lado del servidor.
+
+1 ◦ Instalamos los paquetes necesarios para poder ejecutar aplicaciones web escritas en lenguaje PHP y que necesiten conectarse a una base de datos MySQL. Ejecutaremos el siguiente comando ```sudo apt install php-cgi php-mysql```.
 
 <img width="541" alt="Screen Shot 2023-03-31 at 10 07 04 PM" src="https://user-images.githubusercontent.com/66915274/229308102-24ddd152-8687-410d-b207-953d36c9b591.png">
 
-Configuracion wordpress
+### Configuración WordPress
 
 1 ◦ Accedemos al directorio /var/www/html con el comando: ```cd /var/www/html```
 
