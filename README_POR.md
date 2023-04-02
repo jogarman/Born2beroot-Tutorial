@@ -21,15 +21,15 @@
 	
 5. [Script 🚨](#5--script-)
 
-	5.1 [Resultado total do guião 🆗](#5-13-resultado-total-del-script)
+	5.1 [Resultado total do script 🆗](#5-13-resultado-total-do-script)
 	
 6. [Crontab ⏰](#6--crontab-)
 7. [Signature.txt 📝](#7--signaturetxt-)
 8. [Bonus ⭐](#8--bonus-%EF%B8%8F)
 
-	8.1 [Particionado manual del disco 🛠](#81--particionado-manual-del-disco)
+	8.1 [Particionamento manual do disco 🛠](#81--particionamento-manual-do-disco)
 	
-	8.2 [Wordpress y configuración de servicios 🌐](#82---wordpress-y-configuración-de-servicios-)
+	8.2 [Wordpress e configuração de serviços 🌐](#82---wordpress-e-configuração-de-serviços-)
 	
 	8.3 [Servicio adicional ➕](#83---servicio-adicional-)
 
@@ -1126,39 +1126,39 @@ Breve descrição de todos os tipos de divisórias:
 
 <img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
 
-2 ◦ Una vez hayamos instalado los paquetes nos debemos ubicar en la carpeta /var/www/ con el comando cd accederemos a ella ```cd /var/wwww```.
+2 ◦ Uma vez instalados os pacotes, devemos localizar-nos na pasta /var/wwww/ com o comando cd, aceder-lhe-emos. ```cd /var/wwww```.
 
 <img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
 
-3 ◦ Una vez estemos en la ruta /var/www/ deberemos descargar la última versión de WordPress. Como mi idioma nativo es el español yo seleccionaré la última versión en español. Utilizaremos el siguiente comando: ```sudo wget https://es.wordpress.org/latest-es_ES.zip```.
+3 ◦ Uma vez no caminho /var/wwww/ temos de descarregar a última versão do WordPress. Como a minha língua materna é o espanhol, vou seleccionar a versão mais recente em espanhol. Usaremos o seguinte comando: ```sudo wget https://es.wordpress.org/latest-es_ES.zip```.
 
 <img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
 
-4 ◦ Descomprimimos el archivo que acabamos de descargar con el comando ```sudo unzip latest-es_ES.zip```.
+4 ◦ Descompacte o ficheiro que acabou de descarregar com o comando ```sudo unzip latest-es_ES.zip```.
 
 <img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
 
-5 ◦ Renombraremos la carpeta html y la llamaremos html_old. ```sudo mv html/ html_old/```.
+5 ◦ Vamos renomear a pasta html e chamar-lhe html_old. ```sudo mv html/ html_old/```.
 
 <img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
 
-6 ◦ Ahora renombraremos la carpeta wordpress y la llamaremos html. ```sudo mv wordpress/ html```.
+6 ◦ Agora vamos renomear a pasta wordpress e chamar-lhe html. ```sudo mv wordpress/ html```.
 
 <img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
 
-7 ◦ Por último estableceremos estos permisos en la carpeta html. Daremos uso del comando ```sudo chmod -R 755 html```. El número 7 indica que el propietario tiene permisos de lectura, escritura y ejecución. El número 5 indica que el grupo y otros solo tienen permisos de lectura y ejecución.
+7 ◦ Finalmente, colocaremos estas permissões na pasta html. Utilizaremos o comando ```sudo chmod -R 755 html```. O número 7 indica que o proprietário tem permissões de leitura, escrita e execução. O número 5 indica que o grupo e outros só têm permissões de leitura e execução.
 
 <img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
 
 ### Mariadb
 
-🧠 <b> Que es MariaDB❓</b> Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de datos, el comercio electrónico, funciones a nivel empresarial y las aplicaciones de registro. 
+🧠 <b>O que é MariaDB❓</b> É uma base de dados. É utilizada para diversos fins, tais como armazenamento de dados, comércio electrónico, funções a nível empresarial e aplicações de registo.  
 
-1 ◦ Instalaremos los paquetes con el comando ```sudo apt install mariadb-server```
+1 ◦ Vamos instalar os pacotes com o comando ```sudo apt install mariadb-server```
 
 <img width="797" alt="Screen Shot 2022-10-27 at 4 17 09 AM" src="https://user-images.githubusercontent.com/66915274/198175218-65dec75f-5727-425c-97d0-2baa2b8cd457.png">
 
-2 ◦ Debido a que la configuración predeterminada deja su instalación de MariaDB poco segura, utilizaremos un script que proporciona el paquete mariadb-server para restringir el acceso al servidor y eliminar las cuentas no utilizadas. Ejecutaremos el script con el siguiente comando ```sudo mysql_secure_installation```. Una vez ejecutemos el script nos hara una serie de preguntas.Preguntará si deseamos cambiar a la autenticación de socket de Unix. Como ya tenemos una cuenta root protegida escribiremos ```N```.
+2 ◦ Como a configuração padrão deixa a sua instalação MariaDB insegura, utilizaremos um script fornecido pelo pacote mariadb-server para restringir o acesso ao servidor e remover contas não utilizadas. Iremos executar o script com o seguinte comando ```sudo mysql_secure_installation```. Assim que executarmos o guião, ele irá fazer-nos uma série de perguntas, perguntando se queremos mudar para a autenticação da tomada Unix. Como já temos uma conta raiz protegida, iremos escrever ```N```.
 
 ```
 Switch to unix_socket autentication? → N
@@ -1175,108 +1175,108 @@ Reaload privilege tables now? → Y
 
 <img width="551" alt="Screen Shot 2022-10-27 at 1 00 40 AM" src="https://user-images.githubusercontent.com/66915274/198175732-eff97e65-d8ef-4b44-8930-62d58d910598.png">
 
-Switch to unix_socket autentication? Escogemos ```N``` porque no deseamos que cambie a la auntenticación de socket de Unix ya tenemos una cuenta root protegida.
+Switch to unix_socket autentication? Escolhemos ```N``` porque não queremos que mude para autenticação de tomada Unix porque já temos uma conta raiz protegida.
 
-Change the root password? Escogemos ```N```. No deseamos cambiar la contraseña del usuario root. Por defecto no tenemos contraseña pero en mariadb realmente no es root ya que debemos darle permisos de administrador.
+Change the root password? Escolhemos ```N```. Não queremos alterar a palavra-passe do utilizador de raiz. Por defeito não temos palavra-passe, mas em mariadb não é realmente root, uma vez que temos de lhe dar permissões de administrador.
 
-Remove anonymous users? Escogemos ```Y```. Por defecto cuando instalas mariadb tiene un usuario anonimo, lo que permite que cualquier persona inicie sesión en mariadb sin tener que crear una cuenta de usuario propia. Esto esta diseñado para realizar pruebas y que la instalación sea más fluida. Cuando dejemos el entorno de desarrollo y queramos pasar a un entorno de producción debemos eliminar los usuarios anonimos. 
+Remove anonymous users? Escolhemos ```Y```. Por defeito quando se instala mariadb tem um utilizador anónimo, o que permite a qualquer pessoa entrar no mariadb sem ter de criar a sua própria conta de utilizador. Isto é concebido para fins de teste e para tornar a instalação mais suave. Quando deixamos o ambiente de desenvolvimento e queremos mudar para um ambiente de produção, temos de remover os utilizadores anónimos. 
 
-Disallow root login remotely? Escogemos ```Y```. Al deshabilitar el inicio de sesion en root de forma remota evitaremos que alguien pueda adivinar la contraseña root. Solo podremos conectarnos al root desde localhost.
+Disallow root login remotely? Escolhemos ```Y```. A desactivação do login remoto de raiz impedirá qualquer pessoa de adivinhar a palavra-passe de raiz. Só nos será possível ligar à raiz a partir do anfitrião local.
 
-Remove test database and acces to it? Escogemos ```Y```. De esta manera se eliminará la base de datos de prueba y cualquier usuario que tenga acceso a ella.
+Remove test database and acces to it? Escolhemos ```Y```. Isto irá remover a base de dados de testes e quaisquer utilizadores que tenham acesso à mesma.
 
-Reaload privilege tables now? Escogemos ```Y```. Asi se recargarán las tablas de permisos de MySQL para que los cambios en la configuración de seguridad entren en vigor de inmediato.
+Reaload privilege tables now? Escolhemos ```Y```. Isto irá recarregar as tabelas de permissão MySQL para que as alterações às definições de segurança entrem em vigor imediatamente.
 
-1 ◦ Una vez hayamos terminado con la instalación de mariadb debemos crear la base de datos y el usuario para el WordPress. Lo primero debemos acceder a mariadb.
+1 ◦ Uma vez terminada a instalação da mariadb devemos criar a base de dados e o utilizador para o WordPress. Primeiro temos de aceder à mariadb.
 
 <img width="492" alt="Screen Shot 2023-03-31 at 12 16 28 AM" src="https://user-images.githubusercontent.com/66915274/228976032-2a3bd66e-ce88-4bc1-9264-1d5d7f88f295.png">
 
-2 ◦ Creamos una base de datos para el WordPress. En mi caso le voy a llamar wp_database. Todo esto lo hare con el comando ```CREATE DATABASE wp_database;```.
+2 ◦ Criamos uma base de dados para o WordPress. No meu caso, vou chamar-lhe wp_database. Vou fazer tudo isto com o comando ```CREATE DATABASE wp_database;```.
 
 <img width="384" alt="Screen Shot 2023-03-31 at 9 53 17 PM" src="https://user-images.githubusercontent.com/66915274/229216821-fba3d891-c477-4e68-9799-57bcb9efcde3.png">
 
-3 ◦ Para asegurarnos que se ha creado la base de datos para el WordPress podemos ver todas las bases existentes con el comando ```SHOW DATABASES;```.
+3 ◦ Para garantir que a base de dados para o WordPress foi criada, podemos visualizar todas as bases de dados existentes com o comando ```SHOW DATABASES;```.
 
 <img width="282" alt="Screen Shot 2023-03-31 at 9 54 04 PM" src="https://user-images.githubusercontent.com/66915274/229216973-fa35f5e1-04f1-4e56-8c44-55c4ad5a8745.png">
 
-4 ◦ Acto seguido debemos crearemos un usuario dentro de la base de datos. Utilizaremos el comando ```CREATE USER 'gemartin'@'localhost' IDENTIFIED BY '12345';```.
+4 ◦ A seguir, temos de criar um utilizador na base de dados. Utilizaremos o comando ```CREATE USER 'gemartin'@'localhost' IDENTIFIED BY '12345';```.
 
 <img width="616" alt="Screen Shot 2023-03-31 at 9 56 59 PM" src="https://user-images.githubusercontent.com/66915274/229217478-6f7f5f3c-12cb-4d5a-981c-6fd53f884aa3.png">
 
-5 ◦ Vinculamos el nuevo usuario a nuestra base de datos de manera que le otorguemos los permisos necesario para poder trabajar. Daremos uso del comando ```GRANT ALL PRIVILEGES ON wp_database.* TO 'gemartin'@'localhost';```.
+5 ◦ Ligamos o novo utilizador à nossa base de dados de modo a conceder-lhe as permissões necessárias para poder trabalhar. Utilizaremos o comando ```GRANT ALL PRIVILEGES ON wp_database.* TO 'gemartin'@'localhost';```.
 
 <img width="669" alt="Screen Shot 2023-03-31 at 10 01 32 PM" src="https://user-images.githubusercontent.com/66915274/229218529-e2cdcb3f-f8bc-4474-8e7b-c1cf9499aa57.png">
 
-6 ◦ Actualizamos los permisos para que los cambios tengan efecto con el comando ```FLUSH PRIVILEGES;```.
+6 ◦ Actualizamos as permissões para que as alterações entrem em vigor com o comando ```FLUSH PRIVILEGES;```.
 
 <img width="321" alt="Screen Shot 2023-03-31 at 10 02 01 PM" src="https://user-images.githubusercontent.com/66915274/229218623-bad5faf3-231e-4472-a617-2ead2e713313.png">
 
-7 ◦ Una vez hemos completado el paso anterior ya podemos salir de mariadb.
+7 ◦ Uma vez concluída a etapa anterior, podemos sair de mariadb.
 
 <img width="295" alt="Screen Shot 2023-04-01 at 10 43 40 PM" src="https://user-images.githubusercontent.com/66915274/229313206-36b09583-1930-4754-b70a-8d4caa38db9e.png">
 
 ### PHP
 
-🧠 <b> Que es PHP❓</b> Es un lenguaje de programación. Se utiliza principalmente para desarrollar aplicaciones web dinámicas y sitios web interactivos. PHP se ejecuta en el lado del servidor.
+🧠 <b>O que é PHP❓</b> É uma linguagem de programação. É utilizada principalmente para desenvolver aplicações web dinâmicas e sites interactivos. O PHP corre no lado do servidor.
 
-1 ◦ Instalamos los paquetes necesarios para poder ejecutar aplicaciones web escritas en lenguaje PHP y que necesiten conectarse a una base de datos MySQL. Ejecutaremos el siguiente comando ```sudo apt install php-cgi php-mysql```.
+1 ◦ Instalamos os pacotes necessários para poder executar aplicações web escritas em linguagem PHP e que necessitam de se ligar a uma base de dados MySQL. Executamos o seguinte comando ```sudo apt install php-cgi php-mysql```.
 
 <img width="541" alt="Screen Shot 2023-03-31 at 10 07 04 PM" src="https://user-images.githubusercontent.com/66915274/229308102-24ddd152-8687-410d-b207-953d36c9b591.png">
 
-### Configuración WordPress
+### Configuração WordPress
 
-1 ◦ Accedemos al directorio /var/www/html con el comando: ```cd /var/www/html```
+1 ◦ Aceder ao directório /var/wwww/html com o comando: ```cd /var/www/html```
 
 <img width="326" alt="Screen Shot 2023-04-01 at 8 26 46 PM" src="https://user-images.githubusercontent.com/66915274/229308150-88ec9c15-4791-4541-baf2-5d2267b94eec.png">
 
-2 ◦ Copiamos el fichero wp-config-sample.php y lo renombraremos wp-config.php
+2 ◦ Copie o ficheiro wp-config-sample.php e renomeie-o wp-config.php
 
 <img width="616" alt="Screen Shot 2023-04-01 at 8 28 42 PM" src="https://user-images.githubusercontent.com/66915274/229308231-a022e3b4-1606-4958-b530-5b2ada908997.png">
 
-3 ◦ Una vez lo hayamos renombrado editaremos el fichero wp-config.php ```nano wp-config.php``` y modificaremos los siguientes valores.
+3 ◦ Uma vez alterado o seu nome, editaremos o ficheiro wp-config.php ```nano wp-config.php``` e modificaremos os seguintes valores.
 
 <img width="841" alt="Screen Shot 2023-04-01 at 8 42 25 PM" src="https://user-images.githubusercontent.com/66915274/229308713-bbbb69f4-5f6c-4146-bc10-006cd968fb95.png">
 
-Hay que remplazarlos por los valores que hemos puesto anteriormente cuando creábamos la base de datos y el usuario para que WordPress pueda conectar y hacer uso de ella.
+É necessário substituí-los pelos valores que definimos anteriormente quando criámos a base de dados e o utilizador, para que o WordPress possa ligar-se e fazer uso dela.
 
 <img width="842" alt="Screen Shot 2023-04-01 at 8 46 08 PM" src="https://user-images.githubusercontent.com/66915274/229308845-4eac418d-c03f-48d1-9b74-463ef56a2ee5.png">
 
-4 ◦ Una vez ya hemos completado los pasos anteriores podemos volver a dirigirnos a nuestro navegador y escribiremos ```localhost```. Nos deberá salir lo siguiente:
+4 ◦ Uma vez completados os passos anteriores, podemos voltar ao nosso navegador e digitar ```localhost```. Deverá ver o seguinte:
 
 <img width="674" alt="Screen Shot 2023-04-01 at 8 49 00 PM" src="https://user-images.githubusercontent.com/66915274/229308949-6224a7c8-2dda-414a-b313-c14e981aca01.png">
 
 <img width="1075" alt="Screen Shot 2023-04-01 at 8 00 38 PM" src="https://user-images.githubusercontent.com/66915274/229308962-d39b1b6b-62cc-49d1-ad13-a016d6e73683.png">
 
-5 ◦ Debemos rellenar todos los campos. En mi caso he puesto lo siguiente:
+5 ◦ Temos de preencher todos os campos. No meu caso, coloquei o seguinte:
 
 <img width="793" alt="Screen Shot 2023-04-01 at 8 02 29 PM" src="https://user-images.githubusercontent.com/66915274/229309346-c712fff4-1530-42c8-ad9e-a59f85d4de51.png">
 
-6 ◦ Una vez hayamos rellenado todos los campos debemos darle a ```Instalar WordPress``` y ya habremos terminado la instalación. Nos saldrá la siguiente pestaña. Ahora WordPress puede crear las tablas y volcar todos los datos que necesita para funcionar en la base de datos que le hemos asignado.
+6 ◦ Uma vez preenchidos todos os campos, devemos clicar em ```Install WordPress``` e teremos terminado a instalação. Verá o próximo separador. Agora o WordPress pode criar as tabelas e descarregar todos os dados que necessita para trabalhar na base de dados que lhe atribuímos.
 
 <img width="798" alt="Screen Shot 2023-04-01 at 8 02 52 PM" src="https://user-images.githubusercontent.com/66915274/229309399-719f525e-7859-468f-a9e6-6b6954102153.png">
 
-7 ◦ Si accedemos de nuevo a nuestro localhost desde el navegador ya podemos ver nuestra página funcional.
+7 ◦ Se voltarmos a aceder ao nosso localhost a partir do browser, podemos ver a nossa página funcional.
 
 <img width="2560" alt="Screen Shot 2023-04-01 at 9 02 51 PM" src="https://user-images.githubusercontent.com/66915274/229309529-96f3a1bb-d4a2-434f-bc01-2f2db0e0839d.png">
 
-8 ◦ Si queremos acceder al panel de administrador para hacer cambios en nuestra página deberemos poner en el navegador ```localhost/wp-admin``` y iniciaremos sesión con nuestra cuenta.
+8 ◦ Se quisermos aceder ao painel de administração para fazer alterações ao nosso site, teremos de colocar no browser ```localhost/wp-admin``` e iniciar sessão com a nossa conta
 
 <img width="368" alt="Screen Shot 2023-04-01 at 9 05 41 PM" src="https://user-images.githubusercontent.com/66915274/229309619-024d5dcc-ea8d-4895-88f3-bb65fcdca7e2.png">
 
 <img width="359" alt="Screen Shot 2023-04-01 at 9 06 44 PM" src="https://user-images.githubusercontent.com/66915274/229309653-02e398e9-0c28-470e-825d-1431f7ca2bc2.png">
 
-9 ◦ Una vez accedamos ya podemos modificar lo que queramos a gusto propio. Personalizar la página es algo opcional, como no está especificado en el subject en esta guia no se tratará nada al respecto. 
+9 ◦ Uma vez iniciada a sessão, pode modificar o que quiser. A personalização da página é opcional, uma vez que não está especificada no assunto deste guia, não a trataremos. 
 
 <img width="1100" alt="Screen Shot 2023-04-01 at 9 07 38 PM" src="https://user-images.githubusercontent.com/66915274/229309676-b670be09-47dd-445f-969a-bb41131aa3f9.png">
 
 
-### 8.3 - Servicio adicional ➕
+### 8.3 - Serviço adicional ➕
 
 ### LiteSpeed ⚡️
 
-🧠 <b> Que es LiteSpeed❓</b> Es un software de servidor web patentado. Es el cuarto servidor web más popular, y se estima que lo utiliza el 10% de los sitios web.
+🧠 <b>O que é LiteSpeed❓</b> É um software proprietário de servidor web. É o quarto servidor web mais popular, e estima-se que seja utilizado por 10% dos sítios web.
 
-1 ◦ Antes de instalar cualquier software, es importante asegurarse de que el sistema esté actualizado.
+1 ◦  Antes de instalar qualquer software, é importante assegurar que o sistema está actualizado.
 
 ```sudo apt update```
 
@@ -1287,15 +1287,15 @@ Hay que remplazarlos por los valores que hemos puesto anteriormente cuando creá
 
 <img width="507" alt="Screen Shot 2022-11-25 at 3 00 18 AM" src="https://user-images.githubusercontent.com/66915274/203885306-3b3eb6cd-64cb-4d34-967a-19e650286cf5.png">
 
-2 ◦ De forma predeterminada, OpenLiteSpeed está disponible en el repositorio base de Debian 11. Entonces, debes ejecutar el siguiente comando para agregar el repositorio OpenLiteSpeed a su sistema Debian:
+2 ◦ Por defeito, o OpenLiteSpeed está disponível no repositório base do Debian 11. Assim, deve executar o seguinte comando para adicionar o repositório OpenLiteSpeed ao seu sistema Debian:
 
 ```wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash```
 
-Como el comando es largo me he conectado via ssh.
+Como o comando é longo, liguei-me via ssh.
 
 <img width="1129" alt="Screen Shot 2022-11-25 at 3 05 49 AM" src="https://user-images.githubusercontent.com/66915274/203885808-b4e0ff9a-580c-4121-b06f-ec229e514df9.png">
 
-3 ◦ De nuevo, actualizamos los paquetes y instalaremos OpenLiteSpeed.
+3 ◦ Mais uma vez, actualizamos os pacotes e instalamos o OpenLiteSpeed.
 
 ```sudo apt update```
 
@@ -1306,13 +1306,13 @@ Como el comando es largo me he conectado via ssh.
 <img width="801" alt="Screen Shot 2022-11-25 at 3 11 22 AM" src="https://user-images.githubusercontent.com/66915274/203886321-dbda490e-726d-4dfb-aa91-b9e10206976a.png">
 
 
-4 ◦ La contraseña predeterminada para OpenLiteSpeed es 123456. Cambiaremos la contraseña a algo más seguro con el siguiente comando.
+4 ◦ A password predefinida para OpenLiteSpeed é 123456. Alteraremos a palavra-passe para algo mais seguro com o seguinte comando.
 
 ```sudo /usr/local/lsws/admin/misc/admpass.sh```
 
 <img width="607" alt="Screen Shot 2022-11-25 at 3 12 33 AM" src="https://user-images.githubusercontent.com/66915274/203886432-cb14665f-63a0-4373-919d-0dff7c04b212.png">
 
-5 ◦ Configuramos el firewall para permitir las conexiones mediante los puertos 8088 y 7080. Acto seguido agregaremos las reglas en el reenvio de puertos.
+5 ◦ Configuramos a firewall para permitir ligações através das portas 8088 e 7080. Depois adicionamos as regras no reencaminhamento de portas.
 
 ```sudo ufw allow 8088/tcp```
 
@@ -1326,12 +1326,12 @@ Como el comando es largo me he conectado via ssh.
 
 <img width="393" alt="Screen Shot 2022-11-25 at 3 16 18 AM" src="https://user-images.githubusercontent.com/66915274/203886863-03406d5c-456a-4e80-83e9-1bf3904154d3.png">
 
-Reglas en el reenvio de puertos.
+Regras de encaminhamento de portos.
 
 <img width="825" alt="Screen Shot 2022-11-25 at 3 16 52 AM" src="https://user-images.githubusercontent.com/66915274/203886923-1db4cf56-d197-4c41-87f6-846253e08450.png">
 
 
-6 ◦ Una vez completado el paso anterior ya podemos conectarnos. Pondremos en el buscador de nuestro navegador ```localhost:7080``` proporcionamos nuestras credenciales de inicio de sesión y ya tendremos acceso a todo.
+6 ◦ Uma vez concluída a etapa anterior, podemos ligar-nos. Colocaremos no motor de busca do nosso navegador ```localhost:7080``` fornecemos as nossas credenciais de login e teremos acesso a tudo.
 
 <img width="800" alt="Screen Shot 2022-11-25 at 3 18 53 AM" src="https://user-images.githubusercontent.com/66915274/203887182-73d29abc-674c-4ace-bffb-de42b636ec38.png">
 
@@ -1342,13 +1342,13 @@ Reglas en el reenvio de puertos.
 <br>
 
 #
-# Este tutorial ha llevado mucho trabajo, si crees que te ha sido útil agradeceria mucho starred 🌟 para que así se comparta y pueda ayudar a más estudiantes 👨🏻‍🎓❤️
+# Este tutorial tem tido muito trabalho, se acharem que tem sido útil ficaria muito grato por ter starred 🌟 para que possa ser partilhado e ajudar mais estudantes. 👨🏻‍🎓❤️
 <br>
 <br>
 <br>
 
 
-## 9- Hoja de corrección ✅
+## 9- Folha de correcção ✅
 
 <img width="773" alt="Screen Shot 2023-01-22 at 5 13 44 PM" src="https://user-images.githubusercontent.com/66915274/214894873-b92fcaeb-251b-46fb-8ab8-fb8f861976ab.png">
 
@@ -1358,45 +1358,45 @@ Reglas en el reenvio de puertos.
 
 <img width="772" alt="Screen Shot 2023-01-22 at 5 15 22 PM" src="https://user-images.githubusercontent.com/66915274/214895097-ec42a53a-b897-4af8-adec-eb99aa6554c8.png">
 
-## 9-1 Respuestas de la evaluación 💯
+## 9-1 Respostas de avaliação 💯
 
-### ▪️ Que es una maquina virtual❓
+### ▪️ O que é uma máquina virtual?
 
-Es un software que simula un sistema de computación y puede ejecutar programas como si fuese una computadora real. Permite crear múltiples entornos simulados o recursos dedicados desde un solo sistema de hardware físico. 
+Software que simula um sistema informático e pode executar programas como se fosse um computador real. Permite a criação de múltiplos ambientes simulados ou recursos dedicados a partir de um único sistema de hardware físico. 
 
-### ▪️ Porque has escogido Debian❓
+### ▪️ Porque escolheu Debian❓
 
-Esto es algo personal para cada uno, mi opinion: El propio subject explica que es mas sencillo hacerlo en Debian y si buscas documentacion/tutoriales hay muchos y todos se han hecho en debian.
+Isto é uma coisa pessoal para todos, a minha opinião: o próprio assunto explica que é mais fácil fazê-lo no Debian e se procurar documentação/tutoriais há muitos e todos eles foram feitos no debian.
 
-### ▪️ Diferencias basicas entre Rocky y Debian
+### ▪️ Diferenças básicas entre Rocky e Debian
 
 ![182516961-c3e4da77-2db8-4737-a68f-27b033908705 (1) (1)](https://user-images.githubusercontent.com/66915274/182517306-edb92eac-cba4-444a-83f8-9692bac69231.png)
 
-### ▪️ Cual es el proposito de las maquinas virtuales❓
+### ▪️ Qual é a finalidade das máquinas virtuais❓
 
-Su objetivo es el de proporcionar un entorno de ejecución independiente de la plataforma de hardware y del sistema operativo, que oculte los detalles de la plataforma subyacente y permita que un programa se ejecute siempre de la misma forma sobre cualquier plataforma.
+Visa fornecer uma plataforma de hardware e um ambiente de execução independente do sistema operativo, que esconde os detalhes da plataforma subjacente e permite que um programa seja sempre executado da mesma forma em qualquer plataforma.
 
-### ▪️ Diferencias entre apt y aptitude ↙️
+### ▪️ Diferenças entre aptidão e aptidão ↙️
 
-Aptitude es una version mejorada de apt. APT es un administrador de paquetes de nivel inferior y aptitude es un administrador de paquetes de alto nivel. Otra gran diferencia es la funcionalidad que ofrecen ambas herramientas. Aptitude ofrece una mejor funcionalidad en comparación con apt-get. Ambos son capaces de de proporcionar los medios necesarios para realizar la gestión de paquetes. Sin embargo, si se busca un enfoque con mas caracteristicas, debería ser, Aptitude. 
+Aptitude é uma versão melhorada do apt. APT é um gestor de pacotes de nível inferior e aptitude é um gestor de pacotes de nível superior. Outra grande diferença é a funcionalidade oferecida por ambas as ferramentas. O Aptitude oferece uma melhor funcionalidade em comparação com o apt-get. Ambos são capazes de fornecer os meios necessários para efectuar a gestão de pacotes. Contudo, se estiver à procura de uma abordagem mais rica em funcionalidades, o Aptitude deve ser ele.  
 
-### ▪️ Que es APPArmor❓
+### ▪️  O que é APPArmor❓
 
-Es un módulo de seguridad del kernel Linux que permite al administrador del sistema restringir las capacidades de un programa.
+Um módulo de segurança no kernel do Linux que permite ao administrador do sistema restringir as capacidades de um programa.
 
-### ▪️ Que es LVM❓
+### ▪️ O que é LVM❓
 
-Es un gestor de volúmenes lógicos. Proporciona un método para asignar espacio en dispositivos de almacenamiento masivo, que es más flexible que los esquemas de particionado convencionales para almacenar volúmenes.
+É um gestor de volume lógico. Fornece um método de atribuição de espaço em dispositivos de armazenamento de massa, que é mais flexível do que os esquemas convencionais de partição para armazenamento de volumes.
 
-## 9-2 Comandos de la evaluación ⌨️
+## 9-2 Comandos de avaliação ⌨️
 
-1 ◦ Comprobar que no haya ninguna interfaz grafica en uso.
+1 ◦ Verificar se não há nenhuma interface gráfica em uso.
 
-Utilizaremos el comando ```ls /usr/bin/*session``` y nos debe aparecer el mismo resultado que en la captura. Si aparece algo diferente se esta utilizando una interfaz grafica.
+Utilize o comando ```ls /usr/bin/*session``` e deverá obter o mesmo resultado que na imagem do ecrã. Se vir algo diferente, estará a utilizar uma interface gráfica.
 
 <img width="352" alt="Screen Shot 2022-11-25 at 12 00 02 AM" src="https://user-images.githubusercontent.com/66915274/203872315-0e87428b-5c5a-475b-9d7c-350eafbe3bea.png">
 
-2 ◦ Comprobar que el servicio UFW esta en uso.
+2 ◦ Verificar se o serviço UFW está a ser utilizado.
 
 ```sudo ufw status```
 
@@ -1406,19 +1406,19 @@ Utilizaremos el comando ```ls /usr/bin/*session``` y nos debe aparecer el mismo 
 
 <img width="720" alt="Screen Shot 2022-11-24 at 1 25 37 AM" src="https://user-images.githubusercontent.com/66915274/203668066-6a3420d4-ae72-4263-8474-2e4946e2367a.png">
 
-3 ◦ Comprobar que el servicio SSH esta en uso.
+3 ◦ Verificar se o serviço SSH está a ser utilizado.
 
 ```sudo service ssh status```
 
 <img width="711" alt="Screen Shot 2022-11-24 at 1 26 43 AM" src="https://user-images.githubusercontent.com/66915274/203668165-e642c21f-a11e-48b1-bed5-83639445251e.png">
 
-4 ◦ Comprobar que utilizas el sistema operativo Debian o Centos.
+4 ◦ Verifique se está a utilizar o sistema operativo Debian ou Centos.
 
 ```uname -v``` o ```uname --kernel-version```
 
 <img width="306" alt="Screen Shot 2022-11-24 at 1 37 17 AM" src="https://user-images.githubusercontent.com/66915274/203669122-0be5033c-c882-4a2e-bf22-6a680f998a56.png">
 
-5 ◦ Comprobar que tu usuario este dentro de los grupos "sudo" y "user42".
+5 ◦ Verifique se o seu utilizador está nos grupos "sudo" e "user42".
 
 ```getent group sudo```
 
@@ -1426,56 +1426,56 @@ Utilizaremos el comando ```ls /usr/bin/*session``` y nos debe aparecer el mismo 
 
 <img width="314" alt="Screen Shot 2022-11-24 at 3 26 30 AM" src="https://user-images.githubusercontent.com/66915274/203680444-5fb18ae1-724e-4f78-a77f-a0f5bcc04913.png">
 
-6 ◦ Crear un nuevo usuario y mostrar que sigue la politica de contraseñas que hemos creado.
+6 ◦ Criar um novo utilizador e mostrar que segue a política de palavra-passe que criámos.
 
-```sudo adduser name_user``` y introducimos una contraseña que siga la politica.
+```sudo adduser name_user``` e introduzir uma palavra-passe que siga a política.
 
 <img width="465" alt="Screen Shot 2022-11-24 at 3 29 45 AM" src="https://user-images.githubusercontent.com/66915274/203680847-b4555fd4-f847-4bce-b944-edf3e7720c99.png">
 
-7 ◦ Creamos un nuevo grupo llamado "evaluating". 
+7 ◦ Criamos um novo grupo chamado "evaluating". 
 
 ```sudo addgroup evaluating```
 
 <img width="363" alt="Screen Shot 2022-11-24 at 3 30 47 AM" src="https://user-images.githubusercontent.com/66915274/203680980-784b2b60-82f4-405a-9f07-ec4948e86868.png">
 
-8 ◦ Añadimos el nuevo usuario al nuevo grupo.
+8 ◦ Acrescentar o novo utilizador ao novo grupo.
 
 ```sudo adduser name_user evaluating```
 
 <img width="411" alt="Screen Shot 2022-11-24 at 3 33 08 AM" src="https://user-images.githubusercontent.com/66915274/203681233-096b200a-2b99-4638-81f3-a3bff046c0db.png">
 
-Para comprobar que se haya introducido correctamente.
+Para verificar se foi introduzido correctamente.
 
 <img width="356" alt="Screen Shot 2022-11-24 at 3 33 31 AM" src="https://user-images.githubusercontent.com/66915274/203681267-106e4d37-0ec4-4006-95a4-88dd7109c4b6.png">
 
-9 ◦ Comprobar que el hostname de la maquina es correcto login42.
+9 ◦ Verificar se o nome da máquina está correcto para o login42.
 
 <img width="224" alt="Screen Shot 2022-11-24 at 3 37 27 AM" src="https://user-images.githubusercontent.com/66915274/203681701-4f9b9ff1-28b6-4d06-9489-f930eee4b6e5.png">
 
 
-10 ◦ Modificar hostname para remplazar tu login por el del evaluador. En este caso lo reemplazare por student42.
+10 ◦ Modifique o nome de anfitrião para substituir o seu login pelo login do avaliador. Neste caso, substituí-lo-ei por estudante42.
 
-```sudo nano /etc/hostname``` y remplazamos nuestro login por el nuevo.
+```sudo nano /etc/hostname``` e substituir o nosso login pelo novo.
 
 <img width="445" alt="Screen Shot 2022-11-24 at 3 42 30 AM" src="https://user-images.githubusercontent.com/66915274/203682323-dfd14846-9c98-48d0-9c83-56739de3220b.png">
 
 <img width="525" alt="Screen Shot 2022-11-24 at 3 43 47 AM" src="https://user-images.githubusercontent.com/66915274/203682470-598a9dbf-ef28-4ef5-86cf-8caeef083ec3.png">
 
-```sudo nano /etc/hosts``` y remplazamos nuestro login por el nuevo.
+```sudo nano /etc/hosts``` e substituir o nosso login pelo novo.
 
 <img width="418" alt="Screen Shot 2022-11-24 at 3 44 08 AM" src="https://user-images.githubusercontent.com/66915274/203682512-5dd1452d-a704-466b-b9e1-89aa472fada6.png">
 
 <img width="512" alt="Screen Shot 2022-11-24 at 3 44 35 AM" src="https://user-images.githubusercontent.com/66915274/203682562-36741000-6203-4a98-9de7-53afb24d6ea2.png">
 
-Reiniciamos la maquina.
+Reiniciar a máquina.
 
 <img width="358" alt="Screen Shot 2022-11-24 at 3 44 58 AM" src="https://user-images.githubusercontent.com/66915274/203682614-60b10a36-c5d9-478b-a119-73e32a87b7fb.png">
 
-Una vez nos hemos logueado de nuevo podemos ver como el hostname se ha cambiado correctamente.
+Uma vez que tenhamos entrado novamente no sistema, podemos ver que o nome do anfitrião foi alterado correctamente.
 
 <img width="263" alt="Screen Shot 2022-11-24 at 3 46 30 AM" src="https://user-images.githubusercontent.com/66915274/203682819-bd35ff17-3810-4644-9c44-93957e41d181.png">
 
-11 ◦ Comprobar que todas las particiones son como indica el subject.
+11 ◦ Verificar se todas as partições estão como indicado no subject.
 
 ```lsblk```
 
