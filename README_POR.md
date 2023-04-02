@@ -31,13 +31,13 @@
 	
 	8.2 [Wordpress e configuração de serviços 🌐](#82---wordpress-e-configuração-de-serviços-)
 	
-	8.3 [Servicio adicional ➕](#83---servicio-adicional-)
+	8.3 [Servicio adicional ➕](#83---serviço-adicional-)
 
-9. [Hoja de corrección ✅](#9--hoja-de-corrección-)
+9. [Folha de correcção ✅](#9--folha-de-correcção-)
 
-	9.1 [Respuestas de la evaluación 💯](#9-1-respuestas-de-la-evaluación-)
+	9.1 [Respostas de avaliação 💯](#9-1-respostas-de-avaliação-)
 	
-	9.2 [Comandos de la evaluación ⌨️](#9-2-comandos-de-la-evaluación-%EF%B8%8F)
+	9.2 [Comandos de avaliação ⌨️](#9-2-comandos-de-avaliação-%EF%B8%8F)
 10. [Tester 🆗](#10--tester-)
 	
 ## 1- Descarregar imagem da máquina virtual 💿
