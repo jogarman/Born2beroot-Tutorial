@@ -6,6 +6,10 @@ This guide has versions in different languages. Choose the one you prefer.
 
 ![CLICK HERE](https://github.com/gemartin99/Born2beroot-Tutorial/blob/main/README_EN.md)
 
+### Versão portuguesa 🇵🇹
+
+![CLIQUE AQUI](https://github.com/gemartin99/Born2beroot-Tutorial/blob/main/README_POR.md)
+
 # Índice
 
 1. [Descargar imagen de la maquina virtual 💿](#1--descargar-imagen-de-la-maquina-virtual-)
