@@ -547,53 +547,53 @@ Finalmente, precisamos de mostrar uma percentagem da memória utilizada. Para ta
 <img width="798" alt="Captura de pantalla 2022-08-03 a las 2 49 33" src="https://user-images.githubusercontent.com/66915274/182500836-dd4b068e-b6ce-4dc6-b832-f90acecfb71c.png">
 
 
-### 5-6 Porcentaje uso de CPU
+### 5-6 Percentagem de utilização de CPU
 
-Para poder ver el porcentaje de uso de CPU haremos uso del comando ```vmstat``` este muestra estadísticas del sistema, permitiendo obtener un detalle general de los procesos, uso de memoria, actividad de CPU, estado del sistema, etc. Podriamos poner si ninguna opción pero en mi caso pondré un intervalo de segundos de 1 a 4. Tambien daremos uso del comando ```tail -1``` que este lo que nos va a permitir es que solo produzca el output la ultima linea, entonces de las 4 generadas solo se printara la ultima. Por ultimo solo printaremos la palabra 15 que es el uso de memoria disponible. El comando entero es el siguiente: ```vmstat 1 4 | tail -1 | awk '{print %15}'```. El resultado de este comando solo es una parte del resultado final ya que todavia hay que hacer alguna operación en el script para que quede bien. Lo que habria que hacer es a 100 restarle la cantidad que nos ha devuelto nuestro comando, el resultado de esa operación lo printaremos con un decimal y un % al final y ya estaría hecha la operación. 
+Para ver a percentagem de utilização de CPU faremos uso do comando ```vmstat``` que mostra as estatísticas do sistema, permitindo-nos obter um detalhe geral dos processos, utilização de memória, actividade de CPU, estado do sistema, etc. Poderemos colocar se não houver opção mas no meu caso colocarei um intervalo de segundos de 1 a 4. Também faremos uso do comando ```tail -1``` que nos permitirá produzir apenas a última linha, depois dos 4 gerados apenas a última será impressa. Finalmente, imprimiremos apenas a palavra 15 que é a utilização de memória disponível. O comando completo é o seguinte: ```vmstat 1 4 | tail -1 | awk '{print %15}'```. O resultado deste comando é apenas uma parte do resultado final, uma vez que ainda é necessário fazer algumas operações no guião para o obter correctamente. O que teríamos de fazer é subtrair de 100 o montante devolvido pelo nosso comando, o resultado desta operação será impresso com uma casa decimal e uma % no final e a operação será feita. 
 
 <img width="580" alt="Captura de pantalla 2022-08-03 a las 0 33 39" src="https://user-images.githubusercontent.com/66915274/182484896-def71bf0-b7eb-49d8-b83b-a019d15f62f1.png">
 
-### 5-7 Último reinicio
+### 5-7 Último reinício
 
-Para ver la fecha y hora de nuestro último reinicio haremos uso del comando ```who``` con el flag ```-b``` ya que con ese flag nos mostrará por pantalla el tiempo del último arranque del sistema. Como ya nos ha pasado anteriormente nos muestra más información de la que deseamos asique filtraremos y solo mostraremos lo que nos interesa, para ello haremos uso del comando awk y compararemos si la primera palabra de una linea es "system" se printara por pantalla la tercera palabra de esa linea , un espacio y la cuarta palabra. El comando entero seria el siguiente: ```who -b | awk '$1 == "system" {print $3 " " $4}'```.
+Para ver a data e hora do nosso último reboot utilizaremos o comando ```quem``` com a bandeira ```-b``` porque com esta flag veremos a hora do último boot do sistema. Como já aconteceu antes, mostra-nos mais informação do que queremos, por isso filtraremos e mostraremos apenas aquilo em que estamos interessados, para o fazer utilizaremos o comando awk e compararemos se a primeira palavra de uma linha for "sistema" a terceira palavra dessa linha, um espaço e a quarta palavra será impressa no ecrã. Todo o comando seria o seguinte: ```who -b | awk '$1 == "system" {print $3 " " $4}'```.
 
 <img width="661" alt="Captura de pantalla 2022-08-02 a las 12 24 58" src="https://user-images.githubusercontent.com/66915274/182352895-d985e675-5afc-445a-bcd3-68189702fe70.png">
 
-### 5-8 Uso LVM
+### 5-8 Utilização de LVM
 
-Para checkear si LVM esta activo o no haremos uso del comando lsblk , este nos muestra información de todos los dispositivos de bloque (discos duros, SSD, memorias, etc) entre toda la información que proporciona podemos ver lvm en el tipo de gestor. Para este comando haremos un if ya que o printaremos Yes o No. Basicamente la condicion que buscamos sera contar el numero de lineas en las que aparece "lvm" y si hay mas de 0 printamos Yes, si hay 0 se printara No. Todo el comando seria: ```if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi```.
+Para verificar se o LVM está ou não activo, utilizaremos o comando lsblk, que nos mostra informação de todos os dispositivos de bloco (discos rígidos, SSD, memórias, etc.) entre toda a informação que nos fornece, podemos ver o lvm no tipo de gestor. Basicamente a condição que procuramos é contar o número de linhas onde "lvm" aparece e se houver mais de 0 imprimimos Sim, se houver 0 imprimimos Não. O comando completo seria: ```if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi```.
 
 <img width="801" alt="Captura de pantalla 2022-08-02 a las 22 38 43" src="https://user-images.githubusercontent.com/66915274/182468904-3789e22f-dbde-4874-b153-0d86497c55e2.png">
 
-### 5-9 Conexiones TCP
+### 5-9 Conexões TCP
 
-Para mirar el numero de conexiones TCP establecidas. Utilizaremos el comando ```ss``` sustituyendo al ya obsoleto netstat. Filtraremos con el flag ```-ta``` para que solo se muestren las conexiones TCP. Por último haremos un grep para ver las que estan establecidas ya que tambien hay solo de escucha y cerraremos con wc -l para que cuente el numero de lineas. El comando queda tal que asi: ```ss -ta | grep ESTAB | wc -l```. 
+Para olhar para o número de ligações TCP estabelecidas. Utilizaremos o comando ```ss``` para substituir o comando obsoleto netstat. Filtrar com a flag ```-ta``` para que apenas as ligações TCP sejam mostradas. Finalmente, vamos ver quais são as que estão estabelecidas, uma vez que também existem as que só ouvem, e fechar com wc -l para contar o número de linhas. O comando é o seguinte: ```ss -ta | grep ESTAB | wc -l```. 
 
 <img width="479" alt="Captura de pantalla 2022-08-03 a las 0 53 36" src="https://user-images.githubusercontent.com/66915274/182487028-746244f8-2cda-4dc7-a14c-b2e5a7e0dc51.png">
 
-### 5-10 Número de usuarios
+### 5-10 Número de utilizadores
 
-Daremos uso del comando ```users``` que nos mostrará el nombre de los usuarios que hay, sabiendo esto, pondremos wc -w para que cuente la cantidad de palabras que hay en la salida del comando. El comando entero queda así ```users | wc -w```.
+Utilizaremos o comando ```users``` que nos mostrará o nome dos utilizadores, sabendo isto, configuraremos wc -w para contar o número de palavras na saída do comando. Todo o comando tem o seguinte aspecto ```users | wc -w```.
 
 <img width="380" alt="Captura de pantalla 2022-08-02 a las 12 33 29" src="https://user-images.githubusercontent.com/66915274/182354436-282547cf-22c8-4b03-9484-6801c0466de7.png">
 
 
-### 5-11 Dirección IP y MAC
+### 5-11 Endereço IP e MAC
 
-Para obtener la dirección del host haremos uso del comando ```hostname -I``` y para obtener la MAC haremos uso del comando ```ip link``` que se utiliza para mostrar o modificar las interfaces de red. Como aparecen más de una interfaz, IP's etc. Utilizaremos el comando grep para buscar lo que deseamos y asi poder printar por pantalla solo lo que nos piden. Para ello pondremos ```ip link | grep "link/ether" | awk '{print $2}'``` y de esta manera solo printaremos la MAC.
+Para obter o endereço do anfitrião utilizaremos o comando ```Hostname -I``` e para obter o endereço MAC utilizaremos o comando ```ip link``` que é utilizado para mostrar ou modificar as interfaces de rede. Como mais do que uma interface, aparecem os IP's, etc. Utilizaremos o comando grep para procurar o que queremos imprimir no ecrã apenas o que nos é pedido. Para tal, utilizaremos ```ip link | grep "link/ether" | awk '{print $2}'``` e, desta forma, imprimiremos apenas o MAC.
 
 <img width="639" alt="Captura de pantalla 2022-08-02 a las 14 53 14" src="https://user-images.githubusercontent.com/66915274/182379380-8e3b803d-d001-42ae-8aea-467e8c9f3ea9.png">
 
-### 5-12 Número de comandos ejecutados con sudo
+### 5-12 Número de comandos executados com sudo
 
-Para poder obtener el numero de comandos que son ejecutados con sudo haremos uso del comando jornalctl que este es una herramienta que se encarga de recopilar y administrar los registros del sistema. Acto seguido pondremos ```_COMM=sudo``` par así filtrar las entradas especificando su ruta. En nuestro ponemos ```_COMM``` ya que hace referencia a un script ejecutable. Una vez tengamos filtrada la busqueda y solo aparezcan los registros de sudo todavía deberemos filtrar un poco más ya que cuando incias o cierras sesion de root tambien aparece en el registro, entonces para terminar de filtrar pondremos un ```grep COMMAND``` y asi solo apareceran las lineas de comandos. Por ultimo pondremos ```wc -l``` para que asi nos salgan enumeradas las lineas. El comando entero es el siguiente: ```journalctl _COMM=sudo | grep COMMAND | wc -l)```. Para comprobar que funcione correctamente podemos correr el comando en el terminal, poner un comando que incluya sudo y volver a correr el comando y deberá
-incrementar el número de ejecucciones de sudo.
+Para obter o número de comandos que são executados com o sudo, utilizaremos o comando jornalctl, que é uma ferramenta responsável pela recolha e gestão dos registos do sistema. Depois colocamos ```_COMM=sudo``` para filtrar as entradas, especificando o seu caminho. No nosso caso, colocamos ```_COMM```, uma vez que se refere a um script executável. Depois de filtrarmos a pesquisa e só aparecerem os logs do sudo, ainda temos de filtrar um pouco mais porque quando se faz o log in ou log out como root também aparece no log, então para terminar a filtragem colocaremos um ```grep COMMAND``` e assim só aparecem as linhas de comando. Finalmente, colocaremos ````wc -l```` para que as linhas sejam listadas. O comando completo é o seguinte: ```journalctl _COMM=sudo | grep COMMAND | wc -l)```. Para verificar se funciona correctamente, podemos executar o comando no terminal, colocar um comando que inclui o sudo e executar novamente o comando e este deve
+aumentar o número de execuções de sudo.
 
 <img width="632" alt="Captura de pantalla 2022-08-02 a las 23 50 39" src="https://user-images.githubusercontent.com/66915274/182479668-949b8eee-81f6-4593-83f4-99053d199f1b.png">
 
-### 5-13 Resultado total del script
+### 5-13 Resultado total do guião
 
-⚠️ Recuerda no hacer copia y pega si no sabes el funcionamiento de cada comando ⚠️
+⚠️ Lembre-se de não copiar e colar se não souber como funciona cada comando. ⚠️
 
 ```
 #!/bin/bash
@@ -654,223 +654,224 @@ wall "	Architecture: $arch
 	Network: IP $ip ($mac)
 	Sudo: $cmnd cmd"
 ```
-Script visto desde nano ↙️
+Script visto de nano ↙️
 
 <img width="911" alt="Captura de pantalla 2022-08-03 a las 3 47 31" src="https://user-images.githubusercontent.com/66915274/182506484-f5a095b8-4751-461e-a114-f8e36b4cfa9a.png">
 
-Resultado tras la ejecución del script ↙️
+Resultado após a execução do script ↙️
 
 <img width="796" alt="Captura de pantalla 2022-08-03 a las 3 46 15" src="https://user-images.githubusercontent.com/66915274/182506357-f5466a97-380b-4b6d-9b79-89e01a31498a.png">
 
 ## 6- Crontab ⏰
 
-🧠 <b>Que es crontab? </b>Es un administrador de procesos en segundo plano. Los procesos indicados seran ejecutados en el momento que especifiques en el fichero crontab.
+🧠 <b>O que é crontab❓</b>É um gestor de processos de fundo. Os processos especificados serão executados no momento que especificar no ficheiro crontab.
 
-Para tener correctamente crontab configurado debemos editar el fichero crontab con el siguiente comando ```sudo crontab -u root -e```. 
+Para termos a crontab correctamente configurada, devemos editar o ficheiro crontab com o seguinte comando ```sudo crontab -u root -e```. 
 
-En el fichero debemos añadir el siguiente comando para que el script se ejecute cada 10 minutos ```*/10 * * * * sh /ruta del script```. 
+No ficheiro devemos adicionar o seguinte comando para que o script seja executado de 10 em 10 minutos ```*/10 * * * * sh /ruta del script```. 
 
 <img width="798" alt="Captura de pantalla 2022-08-03 a las 4 40 18" src="https://user-images.githubusercontent.com/66915274/182512395-eaebabc2-5866-4ae3-966c-1a80818cde07.png">
 
-Funcionamiento de cada parametro de crontab: 
+Funcionamento de cada parâmetro da crontab: 
 
-m ➤ Corresponde al minuto en que se va a ejecutar el script, el valor va de 0 a 59.
+m ➤ Corresponde ao minuto em que o script será executado, o valor varia de 0 a 59.
 
-h ➤ La hora exacta, se maneja el formato de 24 horas, los valores van de 0 a 23, siendo 0 las 12:00 de la medianoche.
-dom ➤ hace referencia al día del mes, por ejemplo se puede especificar 15 si se quiere ejecutar cada dia 15.
+h ➤ A hora exacta, o formato de 24 horas é utilizado, os valores variam entre 0 e 23, sendo 0 às 12:00 da meia-noite.
 
-dow ➤ Significa el día de la semana, puede ser numérico (0 a 7, donde 0 y 7 son domingo) o las 3 primeras letras del día en inglés: mon, tue, wed, thu, fri, sat, sun.
+dom ➤ Refere-se ao dia do mês, por exemplo, pode especificar 15 se quiser correr todos os 15 dias.
 
-user ➤ Define el usuario que va a ejecutar el comando, puede ser root, u otro usuario diferente siempre y cuando tenga permisos de ejecución del script.
+dow ➤ Significa o dia da semana, pode ser numérico (0 a 7, onde 0 e 7 são domingo) ou as 3 primeiras letras do dia em inglês: mon, tue, tue, wed, thu, fri, sat, sun.
 
-command ➤ Refiere al comando o a la ruta absoluta del script a ejecutar.
+user ➤ Definir o utilizador que vai executar o comando, pode ser o root, ou outro utilizador desde que tenha permissões para executar o script.
+
+command ➤ Refere-se ao comando ou caminho absoluto do script a ser executado.
 
 ## 7- Signature.txt 📝
 
-Para obtener la firma lo primero que debemos hacer es apagar la máquina virtual ya que una vez la enciendas o modifiques algo la firma cambiará.
+Para obter a assinatura, a primeira coisa a fazer é desligar a máquina virtual, porque assim que a ligar ou modificar algo, a assinatura mudará.
 
 <img width="834" alt="Captura de pantalla 2022-08-03 a las 4 47 32" src="https://user-images.githubusercontent.com/66915274/182513283-1cfc319f-982d-47cf-a596-8475d4c96616.png">
 
-El siguiente paso será ubicarnos en la ruta donde tengamos el .vdi de nuestra maquina virtual. 
+O próximo passo será localizar o caminho onde temos o .vdi da nossa máquina virtual. 
 
 <img width="465" alt="Screen Shot 2022-08-03 at 4 57 37 AM" src="https://user-images.githubusercontent.com/66915274/182514499-f0ad5ba7-c0c2-493e-b0ae-9b79c970816e.png">
 
-Por último haremos ```shasum nombremaquina.vdi``` y esto nos dara la firma. El resultado de esta firma es lo que tendremos añadir a nuestro fichero signature.txt para posteriormente subir el fichero al repositorio de la intra. Muy importante no volver a abrir la maquina ya que se modificara la firma. Para las correcciones recuerda clonar la maquina ya que asi podras encenderla sin miedo a que cambie la firma.
+Finalmente, faremos ````shasum nomemáquina.vdi```` e isto dar-nos-á a assinatura. O resultado desta assinatura é o que teremos de adicionar ao nosso ficheiro signature.txt para mais tarde carregar o ficheiro para o repositório intra. É muito importante não reabrir a máquina, pois isto irá modificar a assinatura. Para as correcções lembrem-se de clonar a máquina para que a possam ligar sem medo de alterar a assinatura.
 
-🧠 <b> Que es shasum❓</b> Es un comando que permite identificar la integridad de un fichero mediante la suma de comprobación del hash SHA-1 de un archivo.
+🧠 <b>O que é shasum❓</b> Um comando para identificar a integridade de um ficheiro através da soma de verificação do hash SHA-1 de um ficheiro.
 
 <img width="416" alt="Screen Shot 2022-08-03 at 4 58 48 AM" src="https://user-images.githubusercontent.com/66915274/182514627-f11026d0-de0d-447d-a2e4-31a3c1af0f35.png">
 
 ## 8- Bonus ⭐️
 
-### 8.1- Particionado manual del disco
+### 8.1- Particionamento manual do disco
 
-1 ◦ En el momento de escoger el particionado de disco seleccionaremos manual. De esta manera podremos editar las particiones una a una.
+1 ◦ Ao escolher o particionamento do disco, seleccionar o particionamento manual. Desta forma, podemos editar as partições uma a uma.
 
 <img width="789" alt="Screen Shot 2022-10-23 at 4 30 48 PM" src="https://user-images.githubusercontent.com/66915274/197397840-b6ae9d65-a6aa-4a5d-a03f-856d9ce81644.png">
 
-2 ◦ En este apartado nos muestra una descripción general de nuestras particiones y puntos de montaje. Actualmente no tenemos particiones hechas. Para crear una nueva tabla de particiones debemos escoger el dispositivo donde queremos crearlas. En nuestro caso escogeremos el único disponible.
+2 ◦ Esta secção mostra uma visão geral das nossas divisórias e pontos de montagem. Actualmente não temos divisórias feitas. Para criar uma nova tabela de partições, devemos escolher o dispositivo onde as queremos criar. No nosso caso, escolheremos o único disponível.
 
 <img width="793" alt="Screen Shot 2022-10-23 at 4 35 39 PM" src="https://user-images.githubusercontent.com/66915274/197398114-44abc561-d34d-47c9-b512-581b4ec6fddb.png">
 
-3 ◦ Aceptamos el mensaje de confirmación. Básicamente nos avisa que si ya hay particiones en el dispositivo seran eliminadas y que si estamos seguros de crear una nueva tabla de particiones vacía..
+3 ◦ Aceitamos a mensagem de confirmação. Basicamente, avisa-nos que se já existirem partições no dispositivo, elas serão apagadas e que se tivermos a certeza de criar uma nova tabela de partições vazia.
 
 <img width="770" alt="Screen Shot 2022-10-23 at 4 36 08 PM" src="https://user-images.githubusercontent.com/66915274/197398137-b9fe1f96-5907-462e-8a50-44b71ae2aefe.png">
 
-4 ◦ Una vez hemos completado el paso anterior podemos ver como nos aparece nuestra tabla de particiones vacía. Ahora debemos configurarla , para ello debemos seleccionarla.
+4 ◦ Uma vez concluída a etapa anterior, podemos ver como aparece a nossa tabela de partição vazia. Agora temos de a configurar, para o fazermos temos de a seleccionar.
 
 <img width="786" alt="Screen Shot 2022-10-23 at 4 36 35 PM" src="https://user-images.githubusercontent.com/66915274/197398172-b05fa7aa-e5b4-40cb-afd4-03a1404d7885.png">
 
-5 ◦ Crearemos una nueva partición.
+5 ◦ Iremos criar uma nova partição.
 
 <img width="512" alt="Screen Shot 2022-10-23 at 4 36 54 PM" src="https://user-images.githubusercontent.com/66915274/197398199-70570553-de1b-49a9-8c44-da9a1e4b5c1e.png">
 
-Empezaremos creando esta:
+Começaremos por criar esta:
 
 ![image](https://user-images.githubusercontent.com/66915274/197427077-48636236-4012-4edf-b0e4-319db502e685.png)
 
-6 ◦ Como bien indica el subject el tamaño de la partición debe ser de 500 megabytes.
+6 ◦ Como o assunto indica, o tamanho da divisória deve ser de 500 megabytes.
 
 <img width="777" alt="Screen Shot 2022-10-23 at 4 37 27 PM" src="https://user-images.githubusercontent.com/66915274/197398241-604b2bb2-7303-412a-b382-40bfbf443ed0.png">
 
-7 ◦ Escogemos el tipo de la partición. Escogemos primaria ya que será la partición donde se encontrará instalado el Sistema Operativo.
+7 ◦ Escolher o tipo de divisória. Escolhemos a primária, pois será a partição onde o Sistema Operativo será instalado.
 
 <img width="457" alt="Screen Shot 2022-10-23 at 4 37 38 PM" src="https://user-images.githubusercontent.com/66915274/197398253-2c0f8205-3d3f-4ab7-94a3-70c37ee014d9.png">
 
-Descripción breve de todos los tipos de particiones:
+Breve descrição de todos os tipos de divisórias:
 
-◦ <b>Primaria:</b> La única partición en la que puede estar instalada un SO. Solo pueden haber 4 particiones primarias por disco duro o 3 primarias y una extendida.
+◦ <b>Primária:</b> A única divisória em que um sistema operativo pode ser instalado. Só pode haver 4 partições primárias por disco rígido ou 3 primárias e 1 estendida.
 
-◦ <b>Secundario/Extendida:</b>  Fue ideada para romper la limitación de 4 particiones primarias en un solo disco físico. Solo puede existir una partición de este tipo por disco, y solo sirve para contener particiones lógicas.
+◦ <b>Secundário/Extendido:</b>  Foi concebido para quebrar a limitação de 4 partições primárias num único disco físico. Apenas uma dessas partições pode existir por disco, e só pode conter partições lógicas.
 
-◦ <b>Lógica:</b>  Ocupa una porción de la partición extendida/primaria o la totalidad de la misma, la cual se ha formateado con un tipo específico de sistema de archivos (en nuestro caso usaremos ext4) y se le ha asignado una unidad, así el sistema operativo reconoce las particiones lógicas o su sistema de archivos. Puede haber un máximo de 23 particiones lógicas en una partición extendida , sin embargo linux el SO con el que trabajamos actualmente lo reduce a 15, más que suficientes para realizar este proyecto. 
+◦ <b>Lógica:</b>  Ocupa uma parte da partição alargada/primária ou a sua totalidade, que foi formatada com um tipo específico de sistema de ficheiros (no nosso caso utilizaremos ext4) e foi-lhe atribuída uma unidade, pelo que o sistema operativo reconhece as partições lógicas ou o seu sistema de ficheiros. Pode haver um máximo de 23 partições lógicas numa partição alargada, no entanto o SO linux com o qual estamos actualmente a trabalhar reduz para 15, mais do que suficiente para este projecto. 
 
-8 ◦ Seleccionaremos beginning ya que queremos que la nueva partición se cree al principio del espacio disponible.
+8 ◦ Seleccionaremos o início, pois queremos que a nova partição seja criada no início do espaço disponível.
 
 <img width="787" alt="Screen Shot 2022-10-23 at 4 37 52 PM" src="https://user-images.githubusercontent.com/66915274/197398265-c63d7b32-55b7-45ad-86b3-166e44cfd598.png">
 
-9 ◦ En la siguiente captura nos muestra los detalles de la partición. Modificaremos el punto de montaje al que escifica el subject.
+9 ◦ A captura de ecrã seguinte mostra os detalhes da divisória. Modificaremos o ponto de montagem a que o assunto especifica.
 
 <img width="781" alt="Screen Shot 2022-10-23 at 4 38 27 PM" src="https://user-images.githubusercontent.com/66915274/197398293-2487ded0-2584-48c4-a5ea-1f2464ec39f9.png">
 
-10 ◦ Escogemos boot como el punto de montaje de nuestra partición.
+10 ◦ Escolhemos boot como ponto de montagem para a nossa partição.
 
 <img width="577" alt="Screen Shot 2022-10-23 at 4 38 49 PM" src="https://user-images.githubusercontent.com/66915274/197398322-51b9854b-ab32-4d81-8126-3ef3913858a6.png">
 
-11 ◦ Terminamos de configurar la partición actual.
+11 ◦ Concluímos a configuração da partição actual.
 
 <img width="787" alt="Screen Shot 2022-10-23 at 4 39 07 PM" src="https://user-images.githubusercontent.com/66915274/197398336-72b17153-73dc-48a5-b7d3-839877e8983b.png">
 
-12 ◦ Una vez hemos completado el paso anterior ya nos debe aparecer la partición. Ahora debemos crear una partición lógica con todo el espacio disponible del disco, que no tenga punto de montaje y que este encriptada. Para ello seleccionamos el espacio libre donde queremos crearla.
+12 ◦ Uma vez concluída a etapa anterior, a partição deve aparecer. Agora devemos criar uma partição lógica com todo o espaço disponível em disco, que não tenha um ponto de montagem e esteja encriptada. Para o fazer, seleccione o espaço livre onde pretende criá-la.
 
 <img width="781" alt="Screen Shot 2022-10-23 at 4 39 37 PM" src="https://user-images.githubusercontent.com/66915274/197398367-ee8a1f5d-3941-4a86-a775-90f29b1c955e.png">
 
 ![image](https://user-images.githubusercontent.com/66915274/197431553-718358bb-6570-41dd-b114-09acc347999d.png)
 
-13 ◦ Creamos nueva partición.
+13 ◦ Criar uma nova partição.
 
 <img width="462" alt="Screen Shot 2022-10-23 at 4 39 58 PM" src="https://user-images.githubusercontent.com/66915274/197398396-843c7fb3-b945-4305-a960-02aa9d4ca940.png">
 
-14 ◦ Seleccionamos el tamaño máximo.
+14 ◦ Seleccionar o tamanho máximo.
 
 <img width="779" alt="Screen Shot 2022-10-23 at 4 40 26 PM" src="https://user-images.githubusercontent.com/66915274/197398425-63205376-839f-4986-a8d0-981cdaa380e4.png">
 
-15 ◦ Seleccionamos el tipo de particion, en este caso lógica.
+15 ◦ Seleccionar o tipo de divisória, neste caso, lógica.
 
 <img width="466" alt="Screen Shot 2022-10-23 at 4 40 53 PM" src="https://user-images.githubusercontent.com/66915274/197398448-49c99180-9a3d-4dd4-a9ce-d680bfdefa1c.png">
 
-16 ◦ Modificaremos el punto de montaje.
+16 ◦ Modificaremos o ponto de montagem.
 
 <img width="788" alt="Screen Shot 2022-10-23 at 4 41 44 PM" src="https://user-images.githubusercontent.com/66915274/197398500-188cc4fb-4eb5-4a56-893b-58838877c056.png">
 
-17 ◦ Escogeremos la opción de no montarlo.
+17 ◦ Escolheremos a opção de não a montar.
 
 <img width="590" alt="Screen Shot 2022-10-23 at 4 42 11 PM" src="https://user-images.githubusercontent.com/66915274/197398518-f6fb7588-8c53-40a9-9ceb-238d6a62d942.png">
 
-18 ◦ Terminamos de configurar la partición actual.
+18 ◦ Concluímos a configuração da partição actual.
 
 <img width="788" alt="Screen Shot 2022-10-23 at 4 42 41 PM" src="https://user-images.githubusercontent.com/66915274/197398541-922f2c4d-ed5a-4d92-8083-ccf57aec3dee.png">
 
-19 ◦ Configuraremos volúmenes encriptados. Para asi poder encriptar nuestra partición.
+19 ◦ Iremos criar volumes encriptados. A fim de encriptar a nossa partição.
 
 <img width="786" alt="Screen Shot 2022-10-23 at 4 43 08 PM" src="https://user-images.githubusercontent.com/66915274/197398562-2369fa90-7db9-4ba3-abed-7ac15ede8b81.png">
 
-20 ◦ Aceptamos el mensaje de confirmación.
+20 ◦ Aceitamos a mensagem de confirmação.
 
 <img width="777" alt="Screen Shot 2022-10-23 at 4 43 27 PM" src="https://user-images.githubusercontent.com/66915274/197398573-9720e351-04f4-49f0-a3dc-fe0ce1ada296.png">
 
-21 ◦ Creamos los volúmenes encriptados.
+21 ◦ Criamos os volumes encriptados.
 
 <img width="596" alt="Screen Shot 2022-10-23 at 4 43 46 PM" src="https://user-images.githubusercontent.com/66915274/197398595-b36ab8da-86c6-483a-99fd-079293a92570.png">
 
-22 ◦ Seleccionamos en que partición queremos realizar la encriptación.
+22 ◦ Seleccione a partição que pretende encriptar.
 
 <img width="568" alt="Screen Shot 2022-10-23 at 4 44 06 PM" src="https://user-images.githubusercontent.com/66915274/197398615-7c9f8e45-7885-4f39-84eb-e3a056eeb2c7.png">
 
-23 ◦ Terminamos de configurar la partición actual.
+23 ◦ Concluímos a configuração da partição actual.
 
 <img width="787" alt="Screen Shot 2022-10-23 at 4 44 35 PM" src="https://user-images.githubusercontent.com/66915274/197398649-06749ec8-903d-4b1a-af2a-c2dad77bcaec.png">
 
-24 ◦ Finalizamos ya que no queremos crear mas volúmenes encriptados.
+24 ◦ Fazemo-lo porque não queremos criar mais volumes encriptados.
 
 <img width="589" alt="Screen Shot 2022-10-23 at 4 44 49 PM" src="https://user-images.githubusercontent.com/66915274/197398663-0bd74c65-b3fd-430c-b3e6-4f1e0c76ae8d.png">
 
-25 ◦ Aceptamos el mensaje de confirmación. Nos comenta que que se encriptara todo lo que hay dentro de la partición y que no debe tardar mucho en terminar.
+25 ◦ Aceitamos a mensagem de confirmação. Ela diz-nos que tudo dentro da partição será encriptado e que não deverá demorar muito tempo a terminar.
 
 <img width="783" alt="Screen Shot 2022-10-23 at 4 45 06 PM" src="https://user-images.githubusercontent.com/66915274/197398670-91db3e3e-b271-4e1b-ad8a-28ceb06e0897.png">
 
-26 ◦ Nos da igual si tarda mucho o poco , le damos a cancel ya que no hay nada que encriptar ya que la partición esta vacía.
+26 ◦ Não importa se demora muito ou pouco tempo, clicamos em cancelar, pois não há nada a encriptar, uma vez que a partição está vazia.
 
 <img width="789" alt="Screen Shot 2022-10-23 at 4 45 27 PM" src="https://user-images.githubusercontent.com/66915274/197398685-6603ef31-d499-46da-949f-ade8e2a05bf9.png">
 
-27 ◦ De nuevo deberemos poner una contraseña, esta vez será la frase de encriptación. Como te he comentado previamente deberás repetir el proceso y la debes anotar ya que será importante en un futuro.
+27 ◦ Mais uma vez teremos de definir uma palavra-passe, desta vez será a frase de encriptação. Como mencionei anteriormente, terá de repetir o processo e deverá escrevê-la, pois será importante no futuro.
 
 <img width="779" alt="Screen Shot 2022-10-23 at 4 48 38 PM" src="https://user-images.githubusercontent.com/66915274/197398855-0c93f419-897e-4eee-9499-18321d8e8dfd.png">
 
-28 ◦ Repetimos la frase de encriptación.
+28 ◦ Repetimos a frase de encriptação.
 
 <img width="722" alt="Screen Shot 2022-10-23 at 4 49 01 PM" src="https://user-images.githubusercontent.com/66915274/197398875-3fa85638-7105-42bf-bbc2-e189fbbc1918.png">
 
-29 ◦ Configuraremos el gestor de volumenes logicos. 
+29 ◦ Vamos configurar o gestor de volume lógico. 
 
 <img width="785" alt="Screen Shot 2022-10-23 at 4 50 17 PM" src="https://user-images.githubusercontent.com/66915274/197398933-85e0025e-0a4d-41f0-8fd0-5f0c8ee32e9b.png">
 
-30 ◦ Aceptaremos en mensaje de confirmación ya que estamos de acuerdo con que se guarden los cambion en el disco.
+30 ◦ Aceitaremos a mensagem de confirmação, uma vez que concordamos em guardar as alterações no disco.
 
 <img width="786" alt="Screen Shot 2022-10-23 at 4 50 42 PM" src="https://user-images.githubusercontent.com/66915274/197398945-d79ea2a7-a13e-4e6a-9e9c-40bdcd2dd502.png">
 
-31 ◦ Crearemos un nuevo grupo de volumen. Los grupos de volúmenes agrupan particiones.
+31 ◦ Iremos criar um novo grupo de volume. Os grupos de volume agrupam as partições.
 
 <img width="454" alt="Screen Shot 2022-10-23 at 4 52 04 PM" src="https://user-images.githubusercontent.com/66915274/197399021-29b21274-37c1-4fd9-8526-962969d1cce3.png">
 
-32 ◦ Introduciremos el nombre que queremos darle. ```LVMGroup``` tal y como indica el subject.
+32 ◦ Introduza o nome que pretende dar-lhe: ```LVMGroup``` como indicado pelo assunto.
 
 <img width="695" alt="Screen Shot 2022-10-23 at 4 52 58 PM" src="https://user-images.githubusercontent.com/66915274/197399065-1ac8d80d-9e18-4b4a-a60f-11496e7de26d.png">
 
-33 ◦ Seleccionaremos la partición donde queremos cear el grupo. 
+33 ◦ Seleccione a partição onde pretende criar o grupo. 
 
 <img width="590" alt="Screen Shot 2022-10-23 at 4 53 22 PM" src="https://user-images.githubusercontent.com/66915274/197399089-5ea5f48e-176c-4278-8b14-a13b7f5ee45c.png">
 
-34 ◦ Ahora debemos crear todas las particiones lógicas. Al tener que repetir las mismas acciones varias veces hay capturas que no serán documentadas.
+34 ◦ Agora temos de criar todas as partições lógicas. Como temos de repetir as mesmas acções várias vezes, há capturas que não serão documentadas.
 
 ![image](https://user-images.githubusercontent.com/66915274/197439138-889d6368-1875-402b-a094-bd146bb7cb8a.png)
 
 
 <img width="457" alt="Screen Shot 2022-10-23 at 4 53 50 PM" src="https://user-images.githubusercontent.com/66915274/197399108-fb566eb4-664f-4509-8948-ab4ed04407b5.png">
 
-35 ◦ Empezaremos escogiendo el grupo donde queremos que se creen. Seleccionamos el único disponible (el que acabamos de crear). 
+35 ◦ Começaremos por escolher o grupo onde queremos que eles sejam criados. Seleccionamos o único disponível (aquele que acabámos de criar).
 
 <img width="760" alt="Screen Shot 2022-10-23 at 4 54 02 PM" src="https://user-images.githubusercontent.com/66915274/197399115-e7d3b313-763c-421c-a71d-850d318432e7.png">
 
-36 ◦ El orden de la creación de las unidades lógicas será el mismo que indica el subject asique empezaremos por root y acabaremos por var-log. Entonces seleccionaremos el nombre del volumen lógico.
+36 ◦ A ordem de criação das unidades lógicas será a mesma que a do assunto, portanto comece pela raiz e termine com var-log. Depois seleccionaremos o nome do volume lógico.
 
 <img width="662" alt="Screen Shot 2022-10-23 at 4 55 42 PM" src="https://user-images.githubusercontent.com/66915274/197399188-6ae8c83b-057d-498f-b112-9116079b0808.png">
 
-37 ◦ Tamaño como bien indica el subject será de 10g.
+37 ◦ O tamanho, como o assunto indica, será 10g.
 
 <img width="782" alt="Screen Shot 2022-10-23 at 4 56 21 PM" src="https://user-images.githubusercontent.com/66915274/197399216-c65f43ca-fb8e-4d05-9212-24ad2ee87b39.png">
 
-38 ◦ Repetimos el proceso para ```swap```. Solo cambiaremos el nombre y el tamaño.
+38 ◦ Repetimos o processo de ```swap```. Apenas mudaremos o nome e o tamanho.
 
 <img width="443" alt="Screen Shot 2022-10-23 at 4 56 49 PM" src="https://user-images.githubusercontent.com/66915274/197399239-c26598cb-e7bb-474c-aece-90f043e1990f.png">
 
@@ -880,7 +881,7 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="782" alt="Screen Shot 2022-10-23 at 4 58 11 PM" src="https://user-images.githubusercontent.com/66915274/197399310-fc6c397e-8257-4e06-8fba-ad35431c9b96.png">
 
-39 ◦ Repetimos el proceso para ```home```. Solo cambiaremos el nombre y el tamaño.
+39 ◦ Repetimos o processo de ```home```. Apenas mudaremos o nome e o tamanho.
 
 <img width="476" alt="Screen Shot 2022-10-23 at 4 58 57 PM" src="https://user-images.githubusercontent.com/66915274/197399347-a815d58b-686e-4d9d-bb5c-34a7b54476ab.png">
 
@@ -890,7 +891,7 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="770" alt="Screen Shot 2022-10-23 at 5 04 34 PM" src="https://user-images.githubusercontent.com/66915274/197399610-247a7a35-0141-4c14-884e-7ecd07caa96d.png">
 
-40 ◦ Repetimos el proceso para ```var```. Solo cambiaremos el nombre y el tamaño.
+40 ◦ Repetimos o processo de ```var```. Apenas mudaremos o nome e o tamanho.
 
 <img width="482" alt="Screen Shot 2022-10-23 at 5 05 10 PM" src="https://user-images.githubusercontent.com/66915274/197399644-58da651c-f4ad-4d1e-b128-de87c92cc292.png">
 
@@ -898,7 +899,7 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="774" alt="Screen Shot 2022-10-23 at 5 06 03 PM" src="https://user-images.githubusercontent.com/66915274/197399693-b49c2ffe-b21a-43c5-bd3f-160bc544b072.png">
 
-41 ◦ Repetimos el proceso para ```srv```. Solo cambiaremos el nombre.
+41 ◦ Repetimos o processo para ```srv```. Apenas mudaremos o nome.
 
 <img width="446" alt="Screen Shot 2022-10-23 at 5 06 14 PM" src="https://user-images.githubusercontent.com/66915274/197399702-6d531de3-690d-458d-9a3b-bf6ceedd7cda.png">
 
@@ -908,7 +909,7 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="771" alt="Screen Shot 2022-10-23 at 5 07 13 PM" src="https://user-images.githubusercontent.com/66915274/197399757-94732b16-585e-4f7d-a20f-f7ef0814b4e7.png">
 
-42 ◦ Repetimos el proceso para ```tmp```. Solo cambiaremos el nombre.
+42 ◦Repetimos o processo para ```tmp```. Apenas mudaremos o nome.
 
 <img width="481" alt="Screen Shot 2022-10-23 at 5 07 34 PM" src="https://user-images.githubusercontent.com/66915274/197399777-9d871f2a-856d-4b4d-ad18-1195001b0fdf.png">
 
@@ -918,7 +919,7 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="768" alt="Screen Shot 2022-10-23 at 5 08 19 PM" src="https://user-images.githubusercontent.com/66915274/197399827-5dfc8571-e82c-4a28-aae7-dc716fb6e77b.png">
 
-43 ◦ Por último repetimos el proceso para ```var-log```. Solo cambiaremos el nombre y el tamaño.
+43 ◦ Finalmente, repetimos o processo para ```var-log```. Apenas mudaremos o nome e o tamanho.
 
 <img width="448" alt="Screen Shot 2022-10-23 at 5 08 34 PM" src="https://user-images.githubusercontent.com/66915274/197399838-2cd49171-45dd-469a-887c-3ce99d84b7cd.png">
 
@@ -929,35 +930,35 @@ Descripción breve de todos los tipos de particiones:
 <img width="779" alt="Screen Shot 2022-10-23 at 5 09 28 PM" src="https://user-images.githubusercontent.com/66915274/197399886-a1e9ee69-78a4-4071-af99-2192d535c6cd.png">
 
 
-44 ◦ Una vez hayamos completado todos los pasos anteriores finalizaremos la configuración del gestor de volúmenes lógicos.
+44 ◦ Uma vez concluídos todos os passos acima referidos, terminaremos a configuração do gestor lógico do volume.
 
 <img width="438" alt="Screen Shot 2022-10-23 at 5 09 51 PM" src="https://user-images.githubusercontent.com/66915274/197399904-c584fcdf-eb38-486f-af12-7374f1e04465.png">
 
-45 ◦ Ahora podemos observar como en el apartado donde nos muestran todas nuestras particiones y espacio libre ya aparecen todas las particiones lógicas que acabamos de crear. Bien , debemos configurar todas para seleccionar el sistema de archivos que queremos y el punto de montaje que indica el subject. De nuevo iremos por orden y seleccionaremos la primera que nos aparece que es ```home```.
+45 ◦ Agora podemos ver como na secção onde mostram todas as nossas divisórias e espaço livre, aparecem todas as divisórias lógicas que acabámos de criar. Bem, temos de configurar todas elas para seleccionar o sistema de ficheiros que queremos e o ponto de montagem indicado pelo assunto. Mais uma vez, iremos por ordem e seleccionar a primeira que aparece que é ```home```.
 
 <img width="783" alt="Screen Shot 2022-10-23 at 5 10 36 PM" src="https://user-images.githubusercontent.com/66915274/197399944-bccbe599-b80a-4abe-ac6c-d770447ea727.png">
 
-46 ◦ Nos muestra la configuración de la partición. Debemos escoger un sistema de ficheros ya que actualmente no tiene.
+46 ◦ Mostra-nos a configuração da partição. Temos de escolher um sistema de ficheiros, uma vez que actualmente não o tem.
 
 <img width="782" alt="Screen Shot 2022-10-23 at 5 10 55 PM" src="https://user-images.githubusercontent.com/66915274/197399976-9b871bda-9425-4dbe-b8c9-25c8c6d6c811.png">
 
-47 ◦ Escogemos el sistema de archivos Ext4, es el sistema de archivos más utilizado en distribuciones Linux.  
+47 ◦ Escolhemos o sistema de ficheiros Ext4, o sistema de ficheiros mais amplamente utilizado nas distribuições Linux.  
 
 <img width="412" alt="Screen Shot 2022-10-23 at 5 11 18 PM" src="https://user-images.githubusercontent.com/66915274/197400000-2e855fc9-10b1-4f3e-9c58-85b6ff02a4fb.png">
 
-48 ◦ Ahora debemos seleccionar el punto de montaje. 
+48 ◦ Agora temos de seleccionar o ponto de montagem. 
 
 <img width="782" alt="Screen Shot 2022-10-23 at 5 11 44 PM" src="https://user-images.githubusercontent.com/66915274/197400023-387a70aa-b491-43c0-91d2-cb378da9fc75.png">
 
-49 ◦ Seleccionamos ```home``` como bien indica el subject.
+49 ◦ Seleccione ```home``` como indicado no subject.
 
 <img width="515" alt="Screen Shot 2022-10-23 at 5 11 54 PM" src="https://user-images.githubusercontent.com/66915274/197400040-e79cad4f-368b-4cee-9ec0-942f38b2f785.png">
 
-50 ◦ Una vez ya lo hemos seleccionado terminaremos la configuración de la partición.
+50 ◦ Depois de a termos seleccionado, terminaremos a configuração da partição.
 
 <img width="785" alt="Screen Shot 2022-10-23 at 5 12 10 PM" src="https://user-images.githubusercontent.com/66915274/197400059-ab96f2c4-cd92-47cb-a9ee-61257537ee6a.png">
 
-51 ◦ De nuevo estos pasos se pueden volver muy repetitivos asique no comentare mucho. Repetimos todo igual (excepto el punto de montaje) para ```root```.
+51 ◦ Mais uma vez, estes passos podem tornar-se muito repetitivos, por isso não vou comentar muito. Repetimos tudo na mesma (excepto o ponto de montagem) para ```root```.
 
 <img width="782" alt="Screen Shot 2022-10-23 at 5 13 36 PM" src="https://user-images.githubusercontent.com/66915274/197400135-c08444fe-e39d-45fa-a3b6-3c73db2a4935.png">
 
@@ -971,7 +972,7 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="790" alt="Screen Shot 2022-10-23 at 5 14 52 PM" src="https://user-images.githubusercontent.com/66915274/197400186-88da831a-c672-4ec0-a64c-0ad2808bb6c5.png">
 
-52 ◦ Repetimos el proceso para ```srv``` y cambiaremos el punto de montaje.
+52 ◦ Repetir o processo para ```srv``` e mudar o ponto de montagem.
 
 <img width="778" alt="Screen Shot 2022-10-23 at 5 15 05 PM" src="https://user-images.githubusercontent.com/66915274/197400198-599b4aa3-a511-45d1-86b0-dd42da4c380f.png">
 
@@ -985,21 +986,21 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="790" alt="Screen Shot 2022-10-23 at 5 16 04 PM" src="https://user-images.githubusercontent.com/66915274/197400249-035f6b9d-3716-4565-9776-aa0af49b3fd7.png">
 
-53 ◦ Para ```swap``` haremos una excepción ya el sistema de archivos será diferente. Seleccionamos ```swap```.
+53 ◦ Para o ```swap```, abriremos uma excepção, pois o sistema de ficheiros será diferente. Seleccione ```swap```.
 
 <img width="780" alt="Screen Shot 2022-10-23 at 5 16 32 PM" src="https://user-images.githubusercontent.com/66915274/197400272-112b44ef-4996-438a-90b8-6620cdd7d2ff.png">
 
-54 ◦ En el momento de seleccionar el sistema de archivos lo dejamos en ```swap area```.
+54 ◦ Ao seleccionar o sistema de arquivo, deixe-o na ```swap area```.
 
 <img width="785" alt="Screen Shot 2022-10-23 at 5 16 41 PM" src="https://user-images.githubusercontent.com/66915274/197400281-e12ee636-8696-4bee-9198-862b7d6be199.png">
 
-55 ◦ Una vez realizado el paso anterior terminaremos la configuración de la partición.
+55 ◦ Uma vez concluída a etapa anterior, terminaremos a configuração da partição.
 
 <img width="370" alt="Screen Shot 2022-10-23 at 5 16 59 PM" src="https://user-images.githubusercontent.com/66915274/197400297-8eed129d-0ec0-49a8-8b2a-dd0d04055f75.png">
 
 <img width="787" alt="Screen Shot 2022-10-23 at 5 17 09 PM" src="https://user-images.githubusercontent.com/66915274/197400309-74e83209-4b2a-4e27-9a67-44373c1db362.png">
 
-56 ◦ Ahora si volveremos a hacer lo mismo que antes pero ahora lo haremos con ```tmp``` y cambiando el punto de montaje.
+56 ◦ Agora faremos o mesmo que antes, mas agora fá-lo-emos com o ```tmp``` e mudaremos o ponto de montagem.
 
 <img width="777" alt="Screen Shot 2022-10-23 at 5 17 41 PM" src="https://user-images.githubusercontent.com/66915274/197400341-608516f6-0f5a-4cdd-83d8-c8fbd1635624.png">
 
@@ -1013,7 +1014,7 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="783" alt="Screen Shot 2022-10-23 at 5 18 40 PM" src="https://user-images.githubusercontent.com/66915274/197400405-4a368bfb-f862-4bbd-a33e-b87c3038d232.png">
 
-57 ◦ Repetimos de nuevo el proceso para ```var``` cambiando el punto de montaje.
+57 ◦ Repetimos novamente o processo para ```var```, alterando o ponto de montagem.
 
 <img width="773" alt="Screen Shot 2022-10-23 at 5 19 13 PM" src="https://user-images.githubusercontent.com/66915274/197400447-85bcad13-8083-4aec-acb2-fa467e5d4e33.png">
 
@@ -1027,7 +1028,7 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="779" alt="Screen Shot 2022-10-23 at 5 20 00 PM" src="https://user-images.githubusercontent.com/66915274/197400482-1f8c147f-66d8-438b-866f-3e9eff75ef5e.png">
 
-58 ◦ Por último repetimos de nuevo el proceso para ```var-log``` en este deberemos introducir manualmente el punto de montaje.
+58 ◦ Finalmente, repetimos o processo de ```var-log``` neste, teremos de entrar manualmente no ponto de montagem.
 
 <img width="772" alt="Screen Shot 2022-10-23 at 5 20 23 PM" src="https://user-images.githubusercontent.com/66915274/197400513-53b3f899-47f5-4cdb-ab4b-205b1d1bce31.png">
 
@@ -1043,85 +1044,85 @@ Descripción breve de todos los tipos de particiones:
 
 ![image](https://user-images.githubusercontent.com/66915274/197602741-431bd866-1558-4735-bb34-ab57dc5745b7.png)
 
-59 ◦ Una vez hemos completado todos los pasos anteriores ya casi hemos acabado, debemos darle a finalizar el particionado y asi se guarden todos los cambios en el disco.
+59 ◦ Assim que tivermos completado todas as etapas acima, estamos quase a terminar, temos de clicar em Terminar partição para guardar todas as alterações no disco.
 
 ![image](https://user-images.githubusercontent.com/66915274/197602907-4a3ba459-1a5d-468e-81dc-5206403cf034.png)
 
-60 ◦ Aceptamos el mensaje y asi se guardaran los cambios. Asegurate que todas las particiones quedan igual que en la captura.
+60 ◦ Aceitar a mensagem e as alterações serão guardadas. Certificar-se de que todas as partições são as mesmas que na imagem do ecrã.
 
 ![image](https://user-images.githubusercontent.com/66915274/197602944-13ca67b2-bcc5-476c-84dc-aadc5e1d3baf.png)
 
-61 ◦ Seleccionamos la opción ```No``` ya que no necesitamos paquetes adicionales. 
+61 ◦ Seleccionamos a opção ```No``` porque não precisamos de quaisquer pacotes adicionais. 
 
 <img width="770" alt="Captura de pantalla 2022-07-13 a las 20 05 42" src="https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png">
 
-62 ◦ Escogemos nuestro País.
+62 ◦ Nós escolhemos o nosso país.
 
 <img width="756" alt="Captura de pantalla 2022-07-13 a las 20 14 23" src="https://user-images.githubusercontent.com/66915274/178802653-d9e8504a-b60b-4441-8ee3-8d48ca4a6bf0.png">
 
-63 ◦ Escogemos ```deb.debian.org``` ya que tenindo en cuenta nuestra region es donde tendremos una mejor conexión.
+63 ◦ Escolhemos ```deb.debian.org```, pois é a nossa região onde teremos uma melhor conexão.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 15 00" src="https://user-images.githubusercontent.com/66915274/178802772-4f67cd99-60d5-4439-8502-317e81e07d70.png">
 
-64 ◦ Esta opción la dejaremos vacía le daremos directamente a ```Continue```.
+64 ◦ Deixe esta opção vazia e clique directamente em ```Continue```.
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 20 17 24" src="https://user-images.githubusercontent.com/66915274/178803208-2969acae-3fa7-423e-8a3c-bb7c76eff824.png">
 
-65 ◦ Seleccionamos la opcion ```No``` ya que no queremos que los developers vean nuestras estadísticas aunque sean anónimas.
+65 ◦ Seleccionamos a opção ```No``` porque não queremos que os programadores vejam as nossas estatísticas, mesmo que sejam anónimas.
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 20 21 54" src="https://user-images.githubusercontent.com/66915274/178803926-a4efbc70-f3e2-4e6c-9809-9152478d8237.png">
 
-66 ◦ Quitaremos todas las opciones de software (con la barra espaciadora) y le daremos a ```Continue```.
+66 ◦ Remova todas as opções de software (com a barra de espaço) e clique em ```Continue```.
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 20 24 17" src="https://user-images.githubusercontent.com/66915274/178804377-e775b89e-93d4-482f-a4d0-0ef126f47719.png">
 
-67 ◦ Seleccionaremos ```Yes``` para instalar [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) en el disco duro.
+67 ◦ Seleccione ```Yes``` para instalar [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) no disco rígido.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 26 24" src="https://user-images.githubusercontent.com/66915274/178804771-ba16e0b7-9f06-4c5b-9451-0bfd65efd2bb.png">
 
-68 ◦ Escogeremos el dispositivo para la instalación del cargador de arranque ```/dev/sda (ata_VBOX_HARDDISK)```.
+68 ◦ Escolha o dispositivo para a instalação do bootloader ```/dev/sda (ata_VBOX_HARDDISK)```.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 35 46" src="https://user-images.githubusercontent.com/66915274/178806441-f1bf3159-4e09-4c9a-9102-b3261c9000d8.png">
 
-69 ◦ Le daremos a ```Continue``` para finalizar la instalación. 
+69 ◦ Clique em ```Continue``` para terminar a instalação.
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 20 39 30" src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
 
-70 ◦ Una vez hemos terminado con la instalación de debian debemos configurar nuestra máquina virtual.
+70 ◦ Uma vez terminada a instalação do debian, temos de configurar a nossa máquina virtual.
 
-[Click aqui para dirigirte a la configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
+[Clique aqui para ir para a configuração da máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
-### 8.2 - Wordpress y configuración de servicios 🌐
+### 8.2 - Wordpress e configuração de serviços 🌐
 
 ### Lighttpd 
 
-🧠 <b> Que es Lighttpd❓</b> Es un servidor web diseñado para ser rápido, seguro, flexible, y fiel a los estándares. Está optimizado para entornos donde la velocidad es muy importante. Esto se debe a que consume menos CPU y memoria RAM que otros servidores.
+🧠 <b> O que é Lighttpd❓</b> É um servidor web concebido para ser rápido, seguro, flexível, e compatível com as normas. É optimizado para ambientes onde a velocidade é muito importante. Isto é porque consome menos CPU e RAM do que outros servidores.
 
-1 ◦ Instalación de paquetes de lighttpd.
+1 ◦ Instalação de pacotes lighttpd.
 
 <img width="791" alt="Screen Shot 2022-10-27 at 4 09 24 AM" src="https://user-images.githubusercontent.com/66915274/198174389-428c30e0-c437-4bc1-b8df-40dd2fb0c0ce.png">
 
-2 ◦ Permitimos las conexiones mediante el puerto 80 con el comando ```sudo ufw allow 80```.
+2 ◦ Permitimos ligações através da porta 80 com o comando ```sudo ufw allow 80```.
 
 <img width="306" alt="Screen Shot 2022-10-27 at 4 15 24 AM" src="https://user-images.githubusercontent.com/66915274/198175046-8ea3f052-32f1-4107-a9a1-c9271d6c9ce6.png">
 
-3 ◦ Checkeamos que realmente hayamos permitido. Debe aparecer el puerto 80 y allow.
+3 ◦ Verificamos que realmente permitimos. O porto 80 e permitir deve aparecer.
 
 <img width="460" alt="Screen Shot 2022-10-27 at 4 15 45 AM" src="https://user-images.githubusercontent.com/66915274/198175075-da6833f1-2360-4e08-b708-99f920b8215c.png">
 
-4 ◦ Añadimos la regla que incluya el puerto 80. Si no recuerdas como se añadian reglas en el reenvío de puertos. Configuración de la máquina → Red → Reenvío de puertos → Replicar la captura.
+4 ◦ Adicione a regra que inclui a porta 80. Se não se lembrar como adicionar regras no reencaminhamento de portos. Configuração da máquina → Rede → Encaminhamento de Porta → Espelhar a captura.
 
 <img width="877" alt="Screen Shot 2022-11-18 at 2 49 56 PM" src="https://user-images.githubusercontent.com/66915274/202720044-d7a51add-c5ee-4da4-9057-258e47cfd036.png">
 
 ### WordPress 
 
-🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
+🧠 <b> O que é Wordpress❓</b> É um sistema de gestão de conteúdos centrado na criação de qualquer tipo de página web.
 
-1 ◦ Para instalar la última versión de WordPress primero debemos instalar wget y zip. Para ello haremos uso del siguiente comando ```sudo apt install wget zip```.
+1 ◦ Para instalar a última versão do WordPress temos primeiro de instalar wget e zip. Para o fazer, usaremos o seguinte comando ```sudo apt install wget zip```.
 
-🧠 <b> Que es wget❓</b> Es una herramienta de línea de comandos que se utiliza para descargar archivos de la web.
+🧠 <b> O que é wget❓</b> É uma ferramenta de linha de comando utilizada para descarregar ficheiros a partir da web.
 
-🧠 <b> Que es zip❓</b> Es una utilidad de línea de comandos para comprimir y descomprimir archivos en formato ZIP.
+🧠 <b> O que é zip❓</b> Este é um utilitário de linha de comando para comprimir e descomprimir ficheiros em formato ZIP.
 
 <img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
 
