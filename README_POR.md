@@ -2,26 +2,26 @@
 
 # Índice
 
-1. [Descargar imagen de la maquina virtual 💿](#1--descargar-imagen-de-la-maquina-virtual-)
-2. [Instalación de la maquina 💻](#2--instalacion-de-la-maquina-)
-3. [Instalación Debian 🌀](#3--instalación-debian-)
-4. [Configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
+1. [Descarregar imagem da máquina virtual 💿](#1--descarregar-imagem-da-máquina-virtual-)
+2. [Instalação da máquina 🛠](#2--instalação-da-máquina-)
+3. [Instalação Debian 🌀](#3--instalação-debian-)
+4. [Configuração de máquina virtual ⚙️](#4-configuração-de-máquina-virtual-%EF%B8%8F)
 
-	4.1 [Instalación de sudo y configuración de usuarios y grupos 👤](#41---instalación-de-sudo-y-configuración-de-usuarios-y-grupos-)
+	4.1 [Instalação do sudo e configuração dos utilizadores e grupos 👤](#41---instalação-do-sudo-e-configuração-dos-utilizadores-e-grupos-)
 	
-	4.2 [Instalación y configuración de SSH 📶](#42---instalación-y-configuración-ssh-)
+	4.2 [Instalação e configuração do SSH 📶](#42---instalação-e-configuração-do-ssh-)
 	
-	4.3 [Instalación y configuración de UFW 🔥🧱](#4-3-instalació-y-configuración-de-ufw-)
+	4.3 [Instalação e configuração de UFW 🔥🧱](#4-3-instalação-e-configuração-de-ufw-)
 	
-	4.4 [Configurar contraseña fuerte para sudo 🔒](#4-4-configurar-contraseña-fuerte-para-sudo-)
+	4.4 [Configuração de senha forte para o sudo 🔒](#4-4-configuração-de-senha-forte-para-o-sudo-)
 	
-	4.5 [Configuración de política de contraseñas fuerte 🔑](#4-5-configuración-de-política-de-contraseñas-fuerte-)
+	4.5 [Configurações de política de senhas fortes 🔑](#4-5-configurações-de-política-de-senhas-fortes-)
 	
-	4.6 [Conectarse via SSH 🗣](#4-6-conectarse-via-ssh-)
+	4.6 [Conectar via SSH 🗣](#4-6-conectar-via-ssh-)
 	
 5. [Script 🚨](#5--script-)
 
-	5.1 [Resultado total del script 🆗](#5-13-resultado-total-del-script)
+	5.1 [Resultado total do guião 🆗](#5-13-resultado-total-del-script)
 	
 6. [Crontab ⏰](#6--crontab-)
 7. [Signature.txt 📝](#7--signaturetxt-)
@@ -591,7 +591,7 @@ aumentar o número de execuções de sudo.
 
 <img width="632" alt="Captura de pantalla 2022-08-02 a las 23 50 39" src="https://user-images.githubusercontent.com/66915274/182479668-949b8eee-81f6-4593-83f4-99053d199f1b.png">
 
-### 5-13 Resultado total do guião
+### 5-13 Resultado total do script
 
 ⚠️ Lembre-se de não copiar e colar se não souber como funciona cada comando. ⚠️
 
