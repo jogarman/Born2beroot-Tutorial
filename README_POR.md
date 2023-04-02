@@ -1,4 +1,4 @@
-# Born2beroot-Tutorial 🖥
+# Born2beroot-Tutorial 🖥🇵🇹
 
 # Índice
 
@@ -38,153 +38,154 @@
 	9.1 [Respuestas de la evaluación 💯](#9-1-respuestas-de-la-evaluación-)
 	
 	9.2 [Comandos de la evaluación ⌨️](#9-2-comandos-de-la-evaluación-%EF%B8%8F)
+10. [Tester 🆗](#10--tester-)
 	
-## 1- _Descargar imagen de la maquina virtual_ 💿
+## 1- Descarregar imagem da máquina virtual 💿
 
-[Click aqui](https://www.debian.org/distrib/index.es.html) para redireccionarte a la URL donde puedes descargar la ISO de manera segura.
+[Clique aqui](https://www.debian.org/distrib/index.es.html) para o redireccionar para o URL onde pode descarregar a ISO em segurança.
 
-## 2- Instalacion de la maquina 🛠
+## 2- Instalação da máquina 🛠
 
-Para realizar la instalación se requiere de un software de virtualización. En este tutorial haremos uso de [VirtualBox](https://www.virtualbox.org/). Si ya tienes VirtualBox instalado y dispones de la ISO Debian ya podemos empezar con el tutorial.
+Para realizar a instalação, é necessário um software de virtualização. Neste tutorial iremos utilizar [VirtualBox](https://www.virtualbox.org/). Se já tiver o VirtualBox instalado e tiver a ISO Debian, podemos começar com o tutorial.
 
-1 ◦ Debemos abrir VirtualBox y pinchar sobre ```Nueva```
+1 ◦ Abra a VirtualBox e clique em ```Nueva```.
 
 <img width="836" alt="Captura de pantalla 2022-07-13 a las 18 02 05" src="https://user-images.githubusercontent.com/66915274/178779265-38eade6e-2789-4597-89e9-5beca2d3921a.png">
 
-2 ◦ Escogemos el nombre de nuestra máquina y la carpeta donde estará ubicada. Importante introducir la maquina dentro de la carpeta sgoinfre ya que si no la ubicamos ahí nos quedaremos sin espacio y fallará la instalación (dependiendo del campus la ruta de sgoinfre puede cambiar). 
+2 ◦ Escolha o nome da sua máquina e a pasta onde ela estará localizada. É importante colocar a máquina dentro da pasta sgoinfre, porque se não a colocarmos lá ficaremos sem espaço e a instalação falhará (dependendo do campus, o caminho sgoinfre pode mudar). 
 
 <img width="694" alt="Screen Shot 2022-11-18 at 2 30 18 PM" src="https://user-images.githubusercontent.com/66915274/202716278-394d5ce7-1f61-4146-a1b5-1e15ed005778.png">
 
 
-3 ◦ Seleccionamos la cantidad de memoria RAM que reservaremos para la máquina. 
+3 ◦ Seleccione a quantidade de RAM a reservar para a máquina.
 
 <img width="685" alt="Captura de pantalla 2022-07-13 a las 13 06 05" src="https://user-images.githubusercontent.com/66915274/178781098-8aa07fbc-e1d2-4bee-8021-ddf052880364.png">
 
-4 ◦ Seleccionamos la segunda opción para asi crear un disco duro virtual ahora.
+4 ◦ Seleccione agora a segunda opção para criar um disco rígido virtual.
 
 <img width="826" alt="Captura de pantalla 2022-07-13 a las 18 13 24" src="https://user-images.githubusercontent.com/66915274/178781390-289236e0-1732-4dd8-8d3d-34eb0a229a18.png">
 
-5 ◦ Escogemos la primera opción ```VDI``` ya que nos hemos descargado una imagen de disco.
+5 ◦ Escolhemos a primeira opção ```VDI```, uma vez que descarregámos uma imagem de disco.
 
 <img width="829" alt="Captura de pantalla 2022-07-13 a las 18 16 35" src="https://user-images.githubusercontent.com/66915274/178781999-a42c3c6c-bc1e-4ad5-8bc5-b4b3f811c3f2.png">
 
-6 ◦ Seleccionamos la primera opción ```Reservado dinámicamente``` para que asi se vaya reservando memoria en la máquina real segun vayamos utilizandola en la virtual hasta llegado al límite máximo disponible en la virtual.
+6 ◦ Seleccionar a primeira opção ```Reservado dinámicamente``` para que a memória seja reservada na máquina real tal como é utilizada na máquina virtual até ser atingido o limite máximo disponível na máquina virtual.
 
 <img width="833" alt="Captura de pantalla 2022-07-13 a las 18 19 33" src="https://user-images.githubusercontent.com/66915274/178782529-fb309739-3169-4e20-b3e1-23d17a122a18.png">
 
-7 ◦ Una vez hayamos establecido la cantidad recomendada ```12 GB``` deberemos darle a ```Crear```. Si haremos el bonus seleccionaremos ```30 GB```.
+7 ◦ Depois de definirmos a quantidade recomendada ```12 GB```, devemos clicar em ```Crear```. Se fizermos o bónus seleccionaremos ```30 GB```.
 
 <img width="835" alt="Captura de pantalla 2022-07-13 a las 18 25 20" src="https://user-images.githubusercontent.com/66915274/178783666-4fa624a3-9c38-4c45-b6a8-d476c2864200.png">
 
-8 ◦ Puede parecer que ya hemos terminado la instalación , pero todavía faltan un par de pasos más. Debemos darle a configuración
+8 ◦ Pode parecer que terminámos a instalação, mas ainda há mais alguns passos a dar. Precisamos de clicar na configuração
 
 <img width="831" alt="Captura de pantalla 2022-07-13 a las 18 30 46" src="https://user-images.githubusercontent.com/66915274/178784822-38228e96-ca37-4cc0-b3ca-551829e4c8c8.png">
 
-9 ◦ Acto seguido pincharemos encima de ```Almacenamiento``` , volveremos a pinchar sobre el emoticono 💿 que se encuentra a la derecha y de nuevo pincharemos sobre ```Seleccionar un archivo de disco```.
+9 ◦ Depois clique em ```Storage```, clique novamente no emoticon 💿 à direita e novamente clique em ```Select a disk file```.
 
 <img width="962" alt="Captura de pantalla 2022-07-13 a las 18 33 28" src="https://user-images.githubusercontent.com/66915274/178785148-2904cf4f-93c0-4866-a5d6-778390bddeb7.png">
 
-10 ◦ Seleccionaremos la ISO que acabamos de descargar y le damos a ```Abrir``` y después le daremos a ```Aceptar```. 
+10 ◦ Seleccione a ISO que acabámos de descarregar e clique em ```Abrir``` e depois clique em ```Aceptar```. 
 
 <img width="790" alt="Captura de pantalla 2022-07-13 a las 18 38 39" src="https://user-images.githubusercontent.com/66915274/178786115-24f93fde-bc01-4e60-bf8d-20d7a5ae83be.png">
 
-11. ◦ Una vez completados todos los pasos anteriores ya podemos ```Iniciar``` nuestra máquina virtual.
+11. ◦ Uma vez concluídas todas as etapas acima mencionadas, podemos ```Iniciar``` a nossa máquina virtual.
 
 <img width="833" alt="Captura de pantalla 2022-07-13 a las 18 44 55" src="https://user-images.githubusercontent.com/66915274/178787317-aab80b53-8244-4ede-9c75-11fcf4efdd1c.png">
 
-## 3- Instalación Debian 🌀
+## 3- Instalação Debian 🌀
 
-➤ Espera❗️ Tu vista es muy importante 👀❗️ Para poder hacer la ventana más grande debes hacer lo siguiente: 
+➤ Espera❗️ A sua visão é muito importante 👀❗️ A fim de aumentar a janela deve fazer o seguinte 
 
 <img width="666" alt="Captura de pantalla 2022-07-13 a las 18 51 41" src="https://user-images.githubusercontent.com/66915274/178788620-61064b58-0c0c-4f48-815e-60b4a8eaecae.png">
 
-Utiliza la tecla ```command``` para que la captura del ratón pase de la maquina real a la virtual y al reves.
+Utilize a tecla ```command``` para mover a captura do rato da máquina real para a máquina virtual e vice-versa.
 
-### Sigamos con la instalación 🛠
+### Vamos continuar com a instalação 🛠
 
-1 ◦ Escogeremos la version sin interfaz gráfica ```Install``` ya que el subject indica que no se utilice ninguna Cada vez que queramos confirmar algo presionaremos ```Enter``` y para movernos por las opciones utilizaremos las flechas.
+1 ◦ Escolheremos a versão sem interface gráfica ```Install``` como o assunto indica para não utilizar nenhuma. Sempre que quisermos confirmar algo, carregaremos em ```Enter``` e para nos movermos através das opções utilizaremos as setas.
 
 <img width="632" alt="Captura de pantalla 2022-07-13 a las 18 58 48" src="https://user-images.githubusercontent.com/66915274/178789643-e987c6d0-5b6f-4b98-ad4a-5c092a352183.png">
 
-2 ◦ Escogeremos el idioma que usaremos para la instalación y el predeterminado que se le quedará al sistema ```English```.  
+2 ◦ Escolheremos o idioma a utilizar para a instalação e o idioma predefinido que o sistema será definido como ```Inglês```.  
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 19 00 41" src="https://user-images.githubusercontent.com/66915274/178789949-4fe83ac8-23b8-4f82-a034-a6d5e81d4f17.png">
 
-3 ◦ Introducimos nuestro País, territorio o zona. En mi caso pondre ```Other```.
+3 ◦ Entre no seu país, território ou zona. No meu caso colocarei ```Outro```.
 
 <img width="791" alt="Captura de pantalla 2022-07-13 a las 19 07 50" src="https://user-images.githubusercontent.com/66915274/178791067-44230a4c-e647-46cb-9d6f-bc441bf0227b.png">
 
-4 ◦ Como he seleccionado other debo indicar mi continente o region. En mi caso pongo ```Europe``` 🇪🇺. 
+4 ◦ Como seleccionei outros, tenho de indicar o meu continente ou região. No meu caso coloquei ```Europa``` 🇪🇺. 
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 19 09 58" src="https://user-images.githubusercontent.com/66915274/178791387-78171f90-2834-42ab-aedb-9cf900d0ecd5.png">
 
-5 ◦ Seleccionamos el país. En mi caso ```Spain``` 🇪🇸.
+5 ◦ Seleccionamos o país. No meu caso ```Espanha``` 🇪🇸.
 
 <img width="793" alt="Captura de pantalla 2022-07-13 a las 19 12 01" src="https://user-images.githubusercontent.com/66915274/178791824-7a34813c-eae9-4b5c-9873-cea158229e07.png">
 
-6 ◦ Seleccionamos ```United States```.
+6 ◦ Seleccione ```United States```.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 19 13 43" src="https://user-images.githubusercontent.com/66915274/178792054-4e72dfdd-8175-48f9-a06d-f2696fa752e3.png">
 
-7 ◦ Importante seleccionar ```American English``` como configuración de teclado ya que si no tendremos las teclas mal enlazadas.
+7 ◦ É importante seleccionar ```American English``` como a configuração do teclado, caso contrário, terá as teclas erradas a prender.
 
 <img width="793" alt="Captura de pantalla 2022-07-13 a las 19 02 21" src="https://user-images.githubusercontent.com/66915274/178790230-d2571d4f-a546-4b43-bd44-c6a591d92d72.png">
 
-8 ◦ En este paso debemos elegir el ```Host Name``` de la máquina, el cual debe ser tu login seguido de 42. 
+8 ◦ Neste passo devemos escolher o ```Host Name``` da máquina, que deve ser o seu login seguido de 42. 
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 19 17 23" src="https://user-images.githubusercontent.com/66915274/178792607-1cc585eb-ae32-4b2c-97fd-4fcf5bad4262.png">
 
-9 ◦ Este apartado lo dejaremos vacío ya que el subject no mencionada nada de ```Domain name```.
+9 ◦ Deixaremos esta secção vazia, pois o assunto não menciona nada sobre ```Domain Name```.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 19 20 29" src="https://user-images.githubusercontent.com/66915274/178793113-b0934aac-fac4-4844-8412-aca124038fd0.png">
 
-10 ◦ Debemos introducir una contraseña para la cuenta de administración del sistema. Importante apuntarla o hacer una foto ya que le daremos uso. Si quieres ver la contraseña para asegurarte de que la has escrito correctamente debes tabular hasta llegar a la opción ```Show Password in Clear``` debes darle a la barra espaciadora y se mostrara la clave.
+10 ◦ Temos de introduzir uma palavra-passe para a conta de administração do sistema. É importante escrevê-la ou tirar uma fotografia da mesma, pois iremos utilizá-la. Se quiser ver a palavra-passe para se certificar de que a digitou correctamente, introduza na tabulação a opção ```Show Password in Clear``` deve carregar na barra de espaço e a chave será afixada.
 
 <img width="760" alt="Screen Shot 2022-11-18 at 2 32 55 PM" src="https://user-images.githubusercontent.com/66915274/202716754-cf30a8b0-0f3b-4aca-803e-57416a1667fa.png">
 
-11 ◦ Repetimos el proceso de nuevo para comprobar que no la hayamos escrito mal.
+11 ◦ Repetimos o processo novamente para verificar que não o escrevemos mal.
 
 <img width="751" alt="Screen Shot 2022-11-18 at 2 33 15 PM" src="https://user-images.githubusercontent.com/66915274/202716814-df6aa34a-e118-47cd-ac7e-ff7d35a3ef90.png">
 
-12 ◦ Elegimos el nombre de nuestro nuevo usuario. Como indica el subject hay que crear un usuario adicional que no sea el root con nuestro login, por ese motivo llamaré ```gemartin``` a mi nuevo usuario.
+12 ◦ Escolhemos o nome do nosso novo utilizador. Como o assunto indica que temos de criar um utilizador adicional que não seja root com o nosso login, por este motivo chamarei ao meu novo utilizador ```gemartin```.
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 19 26 20" src="https://user-images.githubusercontent.com/66915274/178794178-901f7951-a978-458d-a925-4586026784f7.png">
 
-Volvemos a poner el nombre de usuario.
+Voltamos a colocar o nome do utilizador.
 
 ![image](https://user-images.githubusercontent.com/66915274/182679675-4d3805a9-34c9-4ba3-9488-1a7fe30f2519.png)
 
 
-13 ◦ Ahora debemos introducir la contraseña de nuestro nuevo usuario. Como la anterior , repetiremos el proceso para comprobar que no la hayas escrito mal y tambien es importante que la guardes porque le daremos uso más adelante.
+13 ◦ Agora temos de introduzir a palavra-passe do nosso novo utilizador. Tal como a anterior, repetiremos o processo para verificar que não a digitou mal e é também importante que a guarde porque a utilizaremos mais tarde.
 
 <img width="790" alt="Captura de pantalla 2022-07-13 a las 19 30 08" src="https://user-images.githubusercontent.com/66915274/178794862-94de8c7a-282e-4a83-9903-d3b8439122ea.png">
 
-14 ◦ Seleccionamos la hora de nuestra ubicación.
+14 ◦ Seleccionamos a hora da nossa localização.
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 19 31 41" src="https://user-images.githubusercontent.com/66915274/178795105-956854e1-deff-4851-8eba-26cdefb1e06f.png">
 
-15 ◦ Esocgeremos la tercera opción ```Guied - use entire disk and set up encrypted LVM``` ya que el subject nos dice que deben ser particiones cifradas. ⚠️❗️ Si quieres hacer el bonus deberás darle a ```Manual``` y [hacer click aquí](#8--bonus-%EF%B8%8F) ❗️⚠️
+15 ◦ Vamos escolher a terceira opção ```Guied - use entire disk and set up encrypted LVM``` uma vez que o subject nos diz que devem ser divisórias encriptadas. ⚠️❗️ Se quiser fazer o bónus, deve clicar em ```Manual``` e [clique aqui](#8--bonus-%EF%B8%8F) ❗️⚠️
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 19 33 13" src="https://user-images.githubusercontent.com/66915274/178795367-b82018de-edc8-47d3-8cd6-b90c5e3be2fa.png">
 
 
-16 ◦ Seleccionamos el disco en el que queremos hacer el particionado (Solo debe haber un disco). 
+16 ◦ Seleccione o disco em que pretende particionar (deve haver apenas um disco). 
 
 <img width="789" alt="Captura de pantalla 2022-07-13 a las 19 40 03" src="https://user-images.githubusercontent.com/66915274/178796481-29ef7ebc-0518-40f0-9429-3f43316b35d3.png">
 
-17 ◦ Una vez hayamos escogido el disco deberemos hacer el particionado tal y como nos piden. Para realizarlo adecuadamente debemos seleccionar la tercera opción ```Separate /home, /var, and /tmp partitions```.
+17 ◦ Uma vez escolhido o disco, devemos parti-lo conforme solicitado. Para o fazermos correctamente, temos de seleccionar a segunda opção ```Separate /home partition```.
 
-<img width="777" alt="Captura de pantalla 2022-07-13 a las 19 41 16" src="https://user-images.githubusercontent.com/66915274/178796683-13f3ce53-9032-40c4-9957-c715856ff448.png">
+<img width="787" alt="Screen Shot 2023-03-08 at 1 44 16 PM" src="https://user-images.githubusercontent.com/66915274/223716446-9ffb6f66-1ad3-4bfe-81ce-1f297bed0ede.png">
 
-18 ◦ Esocgemos la opción ```Yes``` para que asi se escriban los cambios en el disco y podamos configurar el gestor de volumenes lógicos (LVM).
+18 ◦ Vamos escolher a opção ```Yes``` para que as alterações sejam escritas em disco e o gestor de volume lógico (LVM) possa ser configurado.
 
 <img width="777" alt="Captura de pantalla 2022-07-13 a las 19 44 30" src="https://user-images.githubusercontent.com/66915274/178797258-8c34bc31-16a7-4aef-8406-cecc21fdf028.png">
 
-19 ◦ Le damos a Cancel ya que el borrado de datos en el disco no es necesario.
+19 ◦ Clicamos em Cancel, pois não é necessário apagar os dados no disco.
 
 <img width="782" alt="Captura de pantalla 2022-07-13 a las 19 46 45" src="https://user-images.githubusercontent.com/66915274/178797666-78cdf892-1a83-4c68-8f85-0d5440cd4854.png">
 
-20 ◦ De nuevo deberemos poner una contraseña, esta vez será la frase de encriptación. Como te he comentado previamente deberás repetir el proceso y la debes anotar ya que será importante en un futuro.
+20 ◦ Mais uma vez teremos de definir uma palavra-passe, desta vez será a frase de encriptação. Como mencionei anteriormente, terá de repetir o processo e deverá escrevê-la, pois será importante no futuro.
 
 <img width="777" alt="Captura de pantalla 2022-07-13 a las 19 51 17" src="https://user-images.githubusercontent.com/66915274/178798491-4c9b4a0c-d698-47c7-9579-10b16aa47275.png">
 
@@ -192,97 +193,97 @@ Volvemos a poner el nombre de usuario.
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 19 55 02" src="https://user-images.githubusercontent.com/66915274/178799165-c6b05fd2-86ad-45b7-a026-9ee169eda5d5.png">
 
-22 ◦ Para finalizar la partición y escribir los cambios en el disco le daremos a la opción ```Finish partitioning and write changes to disk```.
+22 ◦ Para finalizar a partição e escrever as alterações no disco, clicaremos na opção ```Finish partitioning and write changes to disk```.
 
-<img width="795" alt="Captura de pantalla 2022-07-13 a las 19 59 15" src="https://user-images.githubusercontent.com/66915274/178800001-a0762a14-3d55-47e6-98c2-1198c7ee7d87.png">
+<img width="789" alt="Screen Shot 2023-03-08 at 1 46 17 PM" src="https://user-images.githubusercontent.com/66915274/223716909-c20cea01-950f-49cd-9ce6-99ec0eab0ea4.png">
 
-23 ◦ Seleccionamos la opción ```Yes``` para continuar y confirmar que no queremos hacer más cambios en el disco.
+23 ◦ Seleccione a opção ```Yes``` para continuar e confirmar que não queremos fazer mais nenhuma alteração ao disco.
 
-<img width="795" alt="Captura de pantalla 2022-07-13 a las 20 00 58" src="https://user-images.githubusercontent.com/66915274/178800331-4e9daf83-fe4e-47c0-9737-d1a89a10b3a8.png">
+<img width="770" alt="Screen Shot 2023-03-08 at 1 46 52 PM" src="https://user-images.githubusercontent.com/66915274/223716940-b2e29ee7-3c98-434e-bccd-ac21d72eda2d.png">
 
-24 ◦ Seleccionamos la opción ```No``` ya que no necesitamos paquetes adicionales. 
+24 ◦ Escolhemos a opção ```No``` porque não precisamos de quaisquer pacotes adicionais. 
 
 <img width="770" alt="Captura de pantalla 2022-07-13 a las 20 05 42" src="https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png">
 
-25 ◦ Escogemos nuestro País.
+25 ◦ Escolhemos o nosso país.
 
 <img width="756" alt="Captura de pantalla 2022-07-13 a las 20 14 23" src="https://user-images.githubusercontent.com/66915274/178802653-d9e8504a-b60b-4441-8ee3-8d48ca4a6bf0.png">
 
-26 ◦ Escogemos ```deb.debian.org``` ya que es lo que recomienda debian.
+26 ◦ Escolhemos ```deb.debian.org``` pois é isto que a debian recomenda.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 15 00" src="https://user-images.githubusercontent.com/66915274/178802772-4f67cd99-60d5-4439-8502-317e81e07d70.png">
 
-27 ◦ Esta opción la dejaremos vacía y le daremos ```Continue```.
+27 ◦ Deixe esta opção vazia e clique em ```Continue```.
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 20 17 24" src="https://user-images.githubusercontent.com/66915274/178803208-2969acae-3fa7-423e-8a3c-bb7c76eff824.png">
 
-28 ◦ Seleccionamos la opcion ```No``` ya que no queremos que los developers vean nuestras estadísticas aunque sean anónimas.
+28 ◦ Escolhemos a opção ```No``` porque não queremos que os criadores vejam as nossas estatísticas, mesmo que estas sejam anónimas.
 
 <img width="796" alt="Captura de pantalla 2022-07-13 a las 20 21 54" src="https://user-images.githubusercontent.com/66915274/178803926-a4efbc70-f3e2-4e6c-9809-9152478d8237.png">
 
-29 ◦ Quitaremos todas las opciones de software (con la barra espaciadora) y le daremos a ```Continue```.
+29 ◦ Remover todas as opções de software (com a barra de espaço) e clicar em ```Continue```.
 
 <img width="797" alt="Captura de pantalla 2022-07-13 a las 20 24 17" src="https://user-images.githubusercontent.com/66915274/178804377-e775b89e-93d4-482f-a4d0-0ef126f47719.png">
 
-30 ◦ Seleccionaremos ```Yes``` para instalar [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) en el disco duro.
+30 ◦ Vamos seleccionar ```Yes``` para instalar [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) no disco rígido
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 26 24" src="https://user-images.githubusercontent.com/66915274/178804771-ba16e0b7-9f06-4c5b-9451-0bfd65efd2bb.png">
 
-31 ◦ Escogeremos el dispositivo para la instalación del cargador de arranque ```/dev/sda (ata_VBOX_HARDDISK)```.
+31 ◦ Escolha o dispositivo para a instalação do bootloader ```/dev/sda (ata_VBOX_HARDDISK)```.
 
 <img width="792" alt="Captura de pantalla 2022-07-13 a las 20 35 46" src="https://user-images.githubusercontent.com/66915274/178806441-f1bf3159-4e09-4c9a-9102-b3261c9000d8.png">
 
-32 ◦ Le daremos a ```Continue``` para finalizar la instalación. 
+32 ◦ Vamos dar ```Continue``` para terminar a instalação. 
 
 <img width="794" alt="Captura de pantalla 2022-07-13 a las 20 39 30" src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
 
-## 4 Configuración de la máquina virtual ⚙️
+## 4 Configuração de máquina virtual ⚙️
 
-➤ Lo primero que debemos hacer es seleccionar ```Debian GNU/Linux```.
+➤ A primeira coisa a fazer é seleccionar ```Debian GNU/Linux```.
 
-➤ Debemos introducir la contraseña de encriptación que utilizamos previamente. En mi caso es ```Hello42bcn```.
+➤ Temos de introduzir a palavra-passe de encriptação que utilizámos anteriormente. No meu caso, é ```Hello42bcn```.
 
 <img width="714" alt="Captura de pantalla 2022-07-13 a las 20 47 26" src="https://user-images.githubusercontent.com/66915274/178808699-f1024129-5f90-41d0-a9a8-4806f5bc114b.png">
 
-➤ Debemos introducir el usuario y contraseña que hemos creado. En mi caso el usuario es ```gemartin``` y la contraseña ```Hola42spain```.
+➤ Temos de introduzir o utilizador e a palavra-passe que criámos. No meu caso, o utilizador é ```gemartin``` e a palavra-chave ```Hola42spain```.
 
 <img width="798" alt="Captura de pantalla 2022-07-13 a las 20 48 38" src="https://user-images.githubusercontent.com/66915274/178808994-664025ac-36df-4332-8e44-505ecd2ca305.png">
 
-### Ya tenemos todo listo para empezar a configurar nuestra máquina virtual Debian❗️
+### Agora temos tudo pronto para começar a configurar a nossa máquina virtual Debian❗️
 
-### 4.1 - Instalación de sudo y configuración de usuarios y grupos 👤
+### 4.1 - Instalação do sudo e configuração dos utilizadores e grupos 👤
 
-1 ◦ Para la instalación de sudo primero debemos estar en el usuario root, para ello pondremos ```Su``` en el terminal y introduciremos la contraseña, en mi caso es ```Hola42bcn```. Una vez hemos accedido al usuario root debemos poner el comando ```apt install sudo``` para así instalar los paquetes necesarios.
+1 ◦ Para instalar o sudo primeiro temos de estar no utilizador raiz, para isso vamos colocar ```Su``` no terminal e introduzir a palavra-passe, no meu caso é ```Hola42bcn```. Uma vez que tenhamos acedido ao utilizador root, devemos colocar o comando ```apt install sudo``` para instalar os pacotes necessários.
 
 <img width="796" alt="Captura de pantalla 2022-07-14 a las 1 36 46" src="https://user-images.githubusercontent.com/66915274/178855273-fc76689c-224b-4368-b7b1-5d1954427aff.png">
 
-2 ◦ Debemos reiniciar la máquina para que se apliquen los cambios. Para ello haremos uso del comando ```sudo reboot``` y esperaremos a que se reinicie. 
+2 ◦ Precisamos de reiniciar a máquina para que as alterações produzam efeito. Para tal, utilizar o comando ```sudo reboot``` e esperar que a máquina reinicie. 
 
 <img width="514" alt="Captura de pantalla 2022-07-14 a las 2 02 24" src="https://user-images.githubusercontent.com/66915274/178857108-a51988e1-084c-498c-86c6-98ab5a3b1305.png">
 
-3 ◦ Una vez reiniciado debemos volver a introducir las contraseñas de cifrado y del usuario. Para verificar que hayamos instalado ```sudo``` correctamente entraremos de nuevo en el usuario root y pondremos el comando ```sudo -V```, este comando además de mostrarnos la versión de sudo también mostrará los argumentos pasados para configurar cuando se creó sudo y los plugins que  pueden mostrar información más detallada. (Opcional) ➤ Puesto que el output del comando es muy largo si deseamos verlo completamente debemos redireccionar la salida del mismo a un fichero ```sudo -V > file.txt``` y luego editar el fichero ```nano file.txt```. O poner ```| more``` despues del comando.
+3 ◦ Uma vez reiniciada, devemos reintroduzir a encriptação e as palavras-passe dos utilizadores. Para verificar se instalámos correctamente o ```sudo```, voltaremos a entrar no utilizador root e introduziremos o comando ```sudo -V```, este comando para além de nos mostrar a versão do sudo também nos mostrará os argumentos passados para configurar quando o sudo foi criado e os plugins que podem mostrar informações mais detalhadas. (Opcional) ➤ Uma vez que a saída do comando é muito longa, se o quisermos ver completamente, devemos redireccionar a saída do comando para um ficheiro ```sudo -V > file.txt``` e depois editar o ficheiro ```nano file.txt```. Ou colocar ```| more``` após o comando.
 
 <img width="799" alt="Captura de pantalla 2022-07-14 a las 2 09 59" src="https://user-images.githubusercontent.com/66915274/178857742-96356272-abd6-44c4-a3e6-5e8b9f471146.png">
 
-4 ◦ Siguiendo en el usuario root crearemos un usuario con nuestro login con el comando ```sudo adduser login``` como nostros ya hemos creado el usuario en la instalación nos debe aparecer que el usuario ya existe.
+4 ◦ Continuando no utilizador root criaremos um utilizador com o nosso login com o comando ```sudo adduser login```, pois já criámos o utilizador na instalação, devemos ver que o utilizador já existe.
 
 <img width="509" alt="Captura de pantalla 2022-07-14 a las 2 15 11" src="https://user-images.githubusercontent.com/66915274/178858240-95ce2a2b-004a-4bcb-981a-7990c1cc4fdd.png">
 
-5 ◦ Ahora deberemos crear un nuevo grupo llamado ```user42```. Para crearlo debemos hacer ```sudo addgroup user42```. 
+5 ◦ Agora precisamos de criar um novo grupo chamado ```user42```. Para o criar, faça ```sudo addgroup user42```. 
 
 <img width="367" alt="Screen Shot 2022-10-26 at 6 30 52 PM" src="https://user-images.githubusercontent.com/66915274/198082677-d393243e-363a-4d1f-95d8-a6695336a47a.png">
 
-🧠 <b>Que es GID❓</b> Es el identificador de grupo, es una abreviatura de Group 🆔.
+🧠 <b>O que é GID❓</b> É o Identificador do Grupo, abreviatura de Group Identifier 🆔.
 
-🤔 <b> Se ha creado correctamente el grupo? </b> Lo cierto es que si ya que no ha habido ningún mensaje de error, aún así podemos comprobar si se ha creado con el comando ```getent group nombre_grupo``` o también podemos hacer ```cat /etc/group``` y podremos ver todos los grupos y los usuarios que hay dentro de ellos.
+🤔 <b> O grupo foi criado correctamente? </b> A verdade é que se não tiver havido qualquer mensagem de erro, ainda podemos verificar se foi criada com o comando ```getent group nombre_grupo``` ou também podemos fazer  ```cat /etc/group``` e podemos ver todos os grupos e os utilizadores dentro deles.
 
-6 ◦ Con el comando ```sudo adduser user group``` incluiremos al usuario en el grupo. Debemos incluir al usuario en los grupos ```sudo``` y ```user42```.
+6 ◦ Com o comando ```sudo adduser group```, iremos incluir o utilizador no grupo. Devemos incluir o utilizador nos grupos ```sudo``` e ```user42```.
 
 <img width="422" alt="Screen Shot 2022-10-26 at 6 32 30 PM" src="https://user-images.githubusercontent.com/66915274/198083019-c5a442bb-c625-45ce-84e1-bcbca3a7dba5.png">
 
 <img width="404" alt="Screen Shot 2022-10-26 at 6 34 09 PM" src="https://user-images.githubusercontent.com/66915274/198083377-bd4162c6-317b-474f-8bc4-e542be4dcfde.png">
 
-7 ◦ Una vez los hayamos introducido para checkear que todo se haya hecho correctamente podemos ejecutar el comando ```getent group nombre_grupo``` o tambien podemos editar el fichero /etc/group ```nano /etc/group``` y en los grupos ```sudo``` y ```login42``` debera aparecer nuestro usuario.
+7 ◦ Depois de os termos introduzido para verificar se tudo foi feito correctamente, podemos executar o comando ```getent group group_name``` ou podemos também editar o ficheiro /etc/group ```nano /etc/group``` e nos grupos ```sudo``` e ```login42``` o nosso utilizador deve aparecer.
 
 <img width="328" alt="Screen Shot 2022-10-26 at 6 35 50 PM" src="https://user-images.githubusercontent.com/66915274/198083739-ad16e388-69c3-41d1-a061-e55dd66b0d14.png">
 
@@ -292,27 +293,27 @@ Volvemos a poner el nombre de usuario.
 
 <img width="183" alt="Screen Shot 2022-10-26 at 6 38 25 PM" src="https://user-images.githubusercontent.com/66915274/198084311-45a50162-ff89-4e7d-a3c5-45e7048520a4.png">
 
-### 4.2 - Instalación y configuración SSH 📶
+### 4.2 - Instalação e configuração do SSH 📶
 
-🧠 <b> Que es SSH❓</b> Es el nombre de un protocolo y del programa que lo implementa cuya principal función es el acceso remoto a un servidor por medio de un canal seguro en el que toda la información está cifrada.
+🧠 <b>O que é SSH❓</b> É o nome de um protocolo e do programa que o implementa, cuja função principal é o acesso remoto a um servidor através de um canal seguro no qual toda a informação é encriptada.
 
-1 ◦ Lo primero que haremos será hacer ```sudo apt update``` para actualizar los repositorios que definimos en el archivo /etc/apt/sources.list
+1 ◦ A primeira coisa que faremos é ```sudo apt update``` para actualizar os repositórios por nós definidos no ficheiro /etc/apt/sources.list
 
 <img width="774" alt="Captura de pantalla 2022-07-14 a las 3 09 44" src="https://user-images.githubusercontent.com/66915274/178864173-aa5a08cf-8562-4484-a60a-3e1c7a533a28.png">
 
-2 ◦ Acto seguido instalaremos la herramienta principal de conectividad para el inicio de sesión remoto con el protocolo SSH, esta herramienta es OpenSSH. Para instalarla debemos introducir el comando ```sudo apt install openssh-server```. En el mensaje de confirmación ponemos ```Y```, acto seguido esperaremos a que termine la instalación.
+2 ◦ A seguir instalaremos a principal ferramenta de conectividade para o login remoto com o protocolo SSH, esta ferramenta é OpenSSH. Para a instalar, introduza o comando ```sudo apt install openssh-server```. Na mensagem de confirmação coloque ```Y```, depois aguarde que a instalação termine.
 
 <img width="772" alt="Captura de pantalla 2022-07-14 a las 3 14 52" src="https://user-images.githubusercontent.com/66915274/178865991-cdb90f12-ebd8-4583-bcbb-70f47c86abe6.png">
 
-Para comprobar que se haya instalado correctamente haremos ```sudo service ssh status``` y nos debe aparecer active.
+Para verificar se foi instalado correctamente, faremos o ```sudo service ssh status``` e este deve mostrar-se activo.
 
 <img width="702" alt="Captura de pantalla 2022-07-14 a las 3 53 59" src="https://user-images.githubusercontent.com/66915274/178876938-7fd74214-15df-4759-bf8d-52b53a8f4251.png">
 
-3 ◦ Una vez terminada la instalación se han creado algunos ficheros que debemos configurar. Para ello utilizaremos [Nano](https://es.wikipedia.org/wiki/GNU_Nano) o si tu lo prefieres otro editor de texto. El primer fichero que editaremos será ```/etc/ssh/sshd_config```. Si no estas desde el usuario root no tendrás permisos de escritura, para ello haremos ```su``` y ponemos la contraseña para entrar al usuario root o si no quieres entrar en el usuario root ponemos sudo al principio del comando ```sudo nano /etc/ssh/sshd_config```.
+3 ◦ Uma vez terminada a instalação, foram criados alguns ficheiros que temos de configurar. Para tal, utilizaremos [Nano](https://es.wikipedia.org/wiki/GNU_Nano) ou se preferir outro editor de texto. O primeiro ficheiro a editar é ```/etc/ssh/sshd_config```. Se não estiver no utilizador root não terá permissões de escrita, para isso faremos ```su``` e colocaremos a palavra-passe para introduzir o utilizador root ou se não quiser introduzir o utilizador root colocar sudo no início do comando ```sudo nano /etc/ssh/sshd_config```.
 
 <img width="497" alt="Captura de pantalla 2022-07-14 a las 3 24 21" src="https://user-images.githubusercontent.com/66915274/178867150-273c75c1-c935-45f0-a551-1a115d3f6f6a.png">
 
-4 ◦ Los ```#``` al comienzo de una línea significan que esta comentada, las líneas que vayamos a modificar deberás quitarle el comentario. Una vez estemos editando el fichero deberemos modificar las siguientes líneas:
+4 ◦ O ```#``` no início de uma linha significa que é comentado, as linhas que vamos modificar devem remover o comentário. Uma vez editado o ficheiro, devemos modificar as seguintes linhas:
 
 ➤ #Port 22 -> Port 4242
 
@@ -322,60 +323,60 @@ Para comprobar que se haya instalado correctamente haremos ```sudo service ssh s
 
 <img width="798" alt="Captura de pantalla 2022-07-14 a las 3 34 13" src="https://user-images.githubusercontent.com/66915274/178868266-fc6d6684-8196-4021-b884-a047a443a3ec.png">
 
-Una vez hayamos modificado esas líneas debemos guardar los cambios realizados sobre el fichero y dejar de editarlo.
+Uma vez modificadas estas linhas, devemos guardar as alterações feitas no ficheiro e parar de o editar.
 
-5 ◦ Ahora debemos editar el fichero ```/etc/ssh/ssh_config```.
+5 ◦ Temos agora de editar o ficheiro ```/etc/ssh/ssh_config```.
 
 <img width="501" alt="Captura de pantalla 2022-07-14 a las 3 48 56" src="https://user-images.githubusercontent.com/66915274/178872582-8277e687-8ab7-4087-bd17-a71e5e86d5e6.png">
 
-Editaremos la siguiente línea: 
+Iremos editar a seguinte linha:
 
 ➤ #Port 22 -> Port 4242
 
 <img width="795" alt="Captura de pantalla 2022-07-14 a las 3 50 29" src="https://user-images.githubusercontent.com/66915274/178875013-1969c13f-9e43-4f2a-a037-f384a8e87a78.png">
 
-6 ◦ Por último debemos reiniciar el servicio ssh para que así se actualicen las modificaciones que acabamos de realizar. Para ello debemos escribir el comando ```sudo service ssh restart``` y una vez reseteado miraremos el estado actual con ```sudo service ssh status``` y para confirmar que se hayan realizado los cambios en la escucha del servidor debe aparecer el Puerto 4242.
+6 ◦ Finalmente, temos de reiniciar o serviço ssh para actualizar as modificações que acabámos de fazer. Para o fazer, devemos digitar o comando ```sudo service ssh restart``` e, uma vez reiniciado, vamos olhar para o estado actual com ```sudo service ssh status``` e para confirmar que as alterações foram feitas no ouvinte do servidor, a porta 4242 deve aparecer.
 
 <img width="713" alt="Captura de pantalla 2022-07-14 a las 3 56 56" src="https://user-images.githubusercontent.com/66915274/178880333-0e2ad7fd-674b-4b4f-b92a-25acbc36c8a5.png">
 
 
-### 4-3 Instalació y configuración de UFW 🔥🧱
+### 4-3 Instalação e configuração de UFW 🔥🧱
 
-🧠 <b>Que es [UFW](https://es.wikipedia.org/wiki/Uncomplicated_Firewall)❓</b> Es un [firewall](https://es.wikipedia.org/wiki/Cortafuegos_(inform%C3%A1tica)) el cual utiliza la línea de comandos para configurar las [iptables](https://es.wikipedia.org/wiki/Iptables) usando un pequeño número de comandos simples.
+🧠 <b>O que é [UFW](https://es.wikipedia.org/wiki/Uncomplicated_Firewall)❓</b> É um [firewall].(https://es.wikipedia.org/wiki/Cortafuegos_(inform%C3%A1tica)) que utiliza a linha de comando para configurar [iptables](https://es.wikipedia.org/wiki/Iptables) utilizando um pequeno número de comandos simples.
 
-1 ◦ Lo primero que debemos hacer el instalar UFW, para ello haremos uso del comando ```sudo apt install ufw``` acto seguido escribiremos una ```y``` para confirmar que deseamos instalarlo y esperaremos a que termine.
+1 ◦ A primeira coisa a fazer é instalar o UFW, para o fazer utilizaremos o comando ```sudo apt install ufw```, depois escreveremos um ```y``` para confirmar que o queremos instalar e esperar que termine.
 
 <img width="771" alt="Captura de pantalla 2022-07-14 a las 19 28 55" src="https://user-images.githubusercontent.com/66915274/179045920-4a9aec64-b1d7-4785-89a1-4a299aae21a3.png">
 
 <img width="802" alt="Captura de pantalla 2022-07-14 a las 19 29 25" src="https://user-images.githubusercontent.com/66915274/179045994-19cdf6e0-be61-454b-9adc-ba1f9c2dfd84.png">
 
-2 ◦ Una vez instalado debemos habilitarlo , para ello debemos poner el siguiente comando ```sudo ufw enable``` y acto seguido nos debe indicar que el firewall esta activo.
+2 ◦ Uma vez instalada, devemos activá-la, para o fazer devemos colocar o seguinte comando ```sudo ufw enable``` e depois devemos indicar que a firewall está activa.
 
 <img width="498" alt="Captura de pantalla 2022-07-14 a las 19 32 57" src="https://user-images.githubusercontent.com/66915274/179046565-307c042b-243e-4224-bcb2-d02859332352.png">
 
-3 ◦ Ahora lo que debemos hacer es que nuestro firewall permita las conexiones que se lleven a cabo mediante el puerto 4242. Lo haremos con el siguiente comando ```sudo ufw allow 4242```.
+3 ◦ Agora o que precisamos de fazer é permitir que a nossa firewall permita ligações através da porta 4242. Fá-lo-emos com o seguinte comando ```sudo ufw allow 4242```.
 
 <img width="514" alt="Captura de pantalla 2022-07-14 a las 19 34 12" src="https://user-images.githubusercontent.com/66915274/179046765-5277ec55-b8e4-4d4f-a617-a2a8758b80a8.png">
 
-4 ◦ Por último comprobaremos que esta todo correctamente configurado mirando el estado de nuestro cortafuegos , en donde ya debe aparecer como permitidas las conexiones mediante el puerto 4242. Para ver el estado daremos uso del comando ```sudo ufw status```.
+4 ◦ Finalmente, verificaremos se tudo está correctamente configurado, olhando para o estado da nossa firewall, onde as ligações através da porta 4242 já devem aparecer como permitidas. Para ver o estado, utilizaremos o comando ```sudo ufw status```.
 
 <img width="575" alt="Captura de pantalla 2022-07-14 a las 19 38 37" src="https://user-images.githubusercontent.com/66915274/179047574-8073045c-6e78-4b6f-8487-cb0f490a2cd0.png">
 
-### 4-4 Configurar contraseña fuerte para sudo 🔒
+### 4-4 Configuração de senha forte para o sudo 🔒
 
-1 ◦ Crearemos un fichero en la ruta /etc/sudoers.d/ a mi fichero yo le he decidido llamar sudo_config ya que en ese fichero se almacenará la configuración de la contraseña. El comando exacto para crear el fichero es ```touch /etc/sudoers.d/sudo_config```.
+1 ◦ Vamos criar um ficheiro no caminho /etc/sudoers.d/. Decidi chamar o meu ficheiro sudo_config, pois é aqui que a configuração da senha será armazenada. O comando exacto para criar o ficheiro é ```touch /etc/sudoers.d/sudo_config```.
 
 <img width="511" alt="Captura de pantalla 2022-07-14 a las 22 00 40" src="https://user-images.githubusercontent.com/66915274/179072822-2f86bd8b-216e-45e4-a15b-8fe3a49149ff.png">
 
-2 ◦ Debemos crear el directorio sudo en la ruta /var/log porque cada comando que ejecutemos con sudo , tanto el input como el output debe quedar almacenado en ese directorio. Para crearlo utilizaremos el comando ```mkdir /var/log/sudo```.
+2 ◦ Devemos criar o directório sudo no caminho /var/log porque cada comando que executamos com o sudo, tanto a entrada como a saída devem ser armazenadas nesse directório. Para o criar utilizaremos o comando ```mkdir /var/log/sudo```.
 
 <img width="502" alt="Captura de pantalla 2022-07-14 a las 21 56 53" src="https://user-images.githubusercontent.com/66915274/179072210-ad99e50d-fa57-494b-999d-3a80dd0f7849.png">
 
-3 ◦ Debemos editar el fichero creado en el paso 1. Como he comentado anteriormente puedes utilizar el editor que mas te guste , pero yo dare uso de nano. Comando para editar el fichero:  ```nano /etc/sudoers.d/sudo_config```.
+3 ◦ Devemos editar o ficheiro criado no passo 1. Como disse antes, pode usar qualquer editor que quiser, mas eu usarei nano. Comando para editar o ficheiro: ```nano /etc/sudoers.d/sudo_config```.
 
 <img width="502" alt="Captura de pantalla 2022-07-14 a las 22 04 10" src="https://user-images.githubusercontent.com/66915274/179073389-5b2a9c16-811c-4133-87c6-479e770c880b.png">
 
-4 ◦ Una vez estamos editando el fichero deberemos introducir los siguientes comandos para cumplir todos los requisitos que pide el subject.
+4 ◦ Uma vez editado o ficheiro, deve introduzir os seguintes comandos para cumprir todos os requisitos do subject.
 
 ```
 Defaults  passwd_tries=3
@@ -387,21 +388,21 @@ Defaults  requiretty
 Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
 
-➤ Como debería verse el fichero.
+➤ Como deve ser o ficheiro.
 
 <img width="1202" alt="Captura de pantalla 2022-07-16 a las 2 03 45" src="https://user-images.githubusercontent.com/66915274/179326003-1fd67295-4be2-47bd-98fc-d5821f5f1c4d.png">
 
-🤔 <b>Que hace cada comando❓ </b>
+🤔 <b>O que cada comando does❓ </b>
 
 <img width="802" alt="Captura de pantalla 2022-07-16 a las 2 04 56" src="https://user-images.githubusercontent.com/66915274/179326915-b374f679-fa2e-4e02-8b38-cdb53c6354a6.png">
 
-### 4-5 Configuración de política de contraseñas fuerte 🔑
+### 4-5 Configurações de política de senhas fortes 🔑
 
-1 ◦ El primer paso será editar el fichero login.defs.
+1 ◦ O primeiro passo é a edição do ficheiro login.defs.
 
 <img width="493" alt="Captura de pantalla 2022-07-16 a las 2 54 06" src="https://user-images.githubusercontent.com/66915274/179327943-67432d4a-7042-44ea-96f4-5975556ce4dc.png">
 
-2 ◦ Una vez estemos editando el fichero modificaremos los siguientes parametros: 
+2 ◦ Uma vez que estamos a editar o ficheiro, modificaremos os seguintes parâmetros:
 
 ➤ PASS_MAX_DAYS 99999 -> PASS_MAX_DAYS 30
 
@@ -410,21 +411,21 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 <img width="802" alt="Captura de pantalla 2022-07-16 a las 3 05 49" src="https://user-images.githubusercontent.com/66915274/179328449-32a40f67-a18d-4f29-993b-94d013cd7670.png">
 
-PASS_MAX_DAYS: Es el tiempo de expiración de la contraseña. El numero corresponde a días.
+PASS_MAX_DAYS: Este é o tempo de expiração da palavra-passe. O número corresponde a dias.
 
-PASS_MIN_DAYS: El número mínimo de días permitido antes de modificar una contraseña.
+PASS_MIN_DAYS: O número mínimo de dias permitido antes de alterar uma palavra-passe.
 
-PASS_WARN_AGE: El usuario recibira un mensaje de aviso indicando que faltan los dias especificados para que expire su contraseña.
+PASS_WARN_AGE: O utilizador receberá uma mensagem de aviso indicando que o número de dias especificado permanece até a sua senha expirar.
 
-3 ◦ Para poder seguir con la configuración debemos instalar los siguientes paquetes con este comando ```sudo apt install libpam-pwquality``` , acto seguido pondremos ```Y``` para confirmar la instalación y esperaremos a que termine. 
+3 ◦ Para continuar com a configuração temos de instalar os seguintes pacotes com este comando ```sudo apt install libpam-pwquality```, depois colocar ```Y``` para confirmar a instalação e esperar que termine. 
 
 <img width="770" alt="Captura de pantalla 2022-07-16 a las 3 13 52" src="https://user-images.githubusercontent.com/66915274/179328708-c5054703-bdb0-4cca-82a8-6ab25ce42b40.png">
 
-4 ◦ Lo siguiente que debemos hacer es volver a editar un fichero y modificar algunas líneas. Haremos ```nano /etc/pam.d/common-password```. 
+4 ◦ A próxima coisa a fazer é voltar atrás e editar um ficheiro e modificar algumas linhas. Faremos ```nano /etc/pam.d/com palavras-passe comuns```. 
 
 <img width="500" alt="Captura de pantalla 2022-07-16 a las 3 27 02" src="https://user-images.githubusercontent.com/66915274/179329260-0e18bd27-a522-4c7c-86bf-21823eee0f8b.png">
 
-5 ◦ Despues de retry=3 debemos añadir los siguientes comandos:
+5 ◦ Após nova tentativa=3, devemos acrescentar os seguintes comandos:
 
 ```
 minlen=10
@@ -436,51 +437,51 @@ reject_username
 difok=7
 enforce_for_root
 ```
-➤ Así debe ser la línea ↙️
+➤ É assim que a linha deve ser ↙️
 
 <img width="1047" alt="Screen Shot 2023-01-03 at 7 41 57 PM" src="https://user-images.githubusercontent.com/66915274/210420896-8274b75b-86e4-4fba-9a14-ca838b61c2e6.png">
 
-➤ Así se debe ver en el fichero ↙️
+➤ Esta é a aparência que deve ter no ficheiro ↙️
 
 <img width="800" alt="Captura de pantalla 2022-07-16 a las 3 38 08" src="https://user-images.githubusercontent.com/66915274/179329787-1b718843-9272-43e4-8d92-8d83933cc938.png">
 
-🤔 <b>Que hace cada comando❓</b>
+🤔 <b>O que cada comando does❓</b>
 
-minlen=10 ➤ La cantidad minima de caracteres que debe contener la contraseña.
+minlen=10 ➤ O número mínimo de caracteres que a senha deve conter.
 
-ucredit=-1 ➤ Como mínimo debe contener una letra mayúscula. Ponemos el - ya que debe contener como mínimo un caracter, si ponemos + nos referimos a como maximo esos caracteres.
+ucredit=-1 ➤ Deve conter pelo menos uma letra maiúscula. Colocamos o - como deve conter pelo menos um caracter, se colocarmos + queremos dizer no máximo esses caracteres.
 
-dcredit=-1 ➤ Como mínimo debe contener un digito.
+dcredit=-1 ➤ Deve conter pelo menos um dígito.
 
-lcredit=-1 ➤ Como mínimo debe contener una letra minúscula.
+lcredit=-1 ➤ Deve conter pelo menos uma letra minúscula.
 
-maxrepeat=3 ➤ No puede tener más de 3 veces seguidas el mismo caracter.
+maxrepeat=3 ➤ Não se pode ter o mesmo carácter mais de 3 vezes seguidas.
 
-reject_username ➤ No puede contener el nombre del usuario.
+reject_username ➤ Não pode conter o nome do utilizador.
 
-difok=7 ➤  Debe tener al menos 7 caracteres que no sean parte de la antigua contraseña. 
+difok=7 ➤  Deve ter pelo menos 7 caracteres que não façam parte da senha antiga. 
 
-enforce_for_root ➤ Implementaremos esta política para el usuario root.
+enforce_for_root ➤ Iremos implementar esta política para o utilizador de raiz.
 
-### 4-6 Conectarse via SSH 🗣
+### 4-6 Conectar via SSH 🗣
 
-1 ◦ Para conectarnos por SSH debemos cerrar la máquina, abrir VirtualBox y darle a configuración.
+1 ◦ Para ligar via SSH temos de fechar a máquina, abrir a VirtualBox e clicar na configuração.
 
 <img width="832" alt="Captura de pantalla 2022-07-18 a las 10 15 13" src="https://user-images.githubusercontent.com/66915274/179470948-d9a863ef-f1a3-41fb-a103-25378064e747.png">
 
-2 ◦ Una vez en configuración debemos pinchar sobre el apartado de ```Red``` , pincharemos sobre ```Avanzadas``` para que así nos muestre más opciones y le daremos a ```Reenvío de puertos```.
+2 ◦ Uma vez na configuração devemos clicar na secção ```Red``` , clicar em```Avanzadas``` para nos mostrar mais opções e clicar em```Reenvío de puertos```.
 
 <img width="684" alt="Captura de pantalla 2022-07-18 a las 10 18 32" src="https://user-images.githubusercontent.com/66915274/179471690-cfbdbf4b-ab93-4b12-9504-2482712652a3.png">
 
-3 ◦ Pincharemos sobre el siguiente emoticono para agregar una regla de reenvío.
+3 ◦ Clique no seguinte emoticon para adicionar uma regra de reencaminhamento.
 
 <img width="585" alt="Captura de pantalla 2022-07-18 a las 10 21 24" src="https://user-images.githubusercontent.com/66915274/179471855-913a684d-c7b0-43e2-9e01-d2c954fe75a4.png">
 
-4 ◦ Por último agregaremos el puerto ```4242``` al anfitrión y al invitado. Las IP's no son necesarias. Pincharemos sobre el botón de aceptar para que así se apliquen los cambios.
+4 ◦ Finalmente, acrescentaremos o porto ```4242``` ao anfitrião e convidado. Os IP's não são necessários. Clique no botão de aceitação para aplicar as alterações.
 
 <img width="588" alt="Captura de pantalla 2022-07-18 a las 10 22 29" src="https://user-images.githubusercontent.com/66915274/179472105-5942b3ec-5c29-4d49-a00e-67f9cde289e8.png">
 
-➤ Para poder conectarnos a la máquina virtual desde la real debemos abrir un terminal en la máquina real y escribir ```ssh gemartin@localhost -p 4242``` nos pedirá la clave del usuario y una vez la introduzcamos ya nos saldrá el login en verde y eso significa que estaremos conectados.
+➤ Para nos podermos ligar à máquina virtual a partir da máquina real, temos de abrir um terminal na máquina real e escrever ```ssh gemartin@localhost -p 4242```, pedir-nos-á a palavra-passe do utilizador e assim que a introduzirmos veremos o login a verde e isso significa que estaremos ligados.
 
 <img width="517" alt="Screen Shot 2022-10-27 at 12 40 23 AM" src="https://user-images.githubusercontent.com/66915274/198174777-28f7793b-273b-43ce-b1c2-4a890353cb8c.png">
 
@@ -488,59 +489,60 @@ enforce_for_root ➤ Implementaremos esta política para el usuario root.
 
 ## 5- Script 🚨
 
-Esta es una parte muy importante del proyecto. Debes prestar atención en todo, muy importante no copiar y pegar directamente el fichero sin saber que hace cada cosa. En la evaluación debes explicar cada comando si el evaluador lo pide.
+Esta é uma parte muito importante do projecto. Deve-se prestar atenção a tudo, muito importante não copiar e colar directamente o ficheiro sem saber o que faz o quê. Na avaliação, deve explicar cada comando se o avaliador o pedir.
 
-🧠 <b>Que es un script❓</b> Es una secuencia de comandos guardada en un fichero que cuando se ejecuta hara la funcion de cada comando.
+🧠 <b>O que é um script❓</b> É uma sequência de comandos armazenados num ficheiro que, quando executado, fará a função de cada comando.
 
-### 5-1 Architecture 
+### 5-1 Arquitectura 
 
-Para poder ver la arquitectura del SO y su versión de kernel utilizaremos el comando ```uname -a``` ( "-a" == "--all" ) que basicamente printara toda la información excepto si el tipo de procesador es desconocido o la plataforma de hardware. 
+Para ver a arquitectura do SO e a sua versão do kernel utilizaremos o comando ```uname -a``` ("-a" == "--all" ) que basicamente imprimirá toda a informação excepto se o tipo de processador for desconhecido ou a plataforma de hardware. 
 
 <img width="715" alt="Screen Shot 2022-10-27 at 4 50 06 PM" src="https://user-images.githubusercontent.com/66915274/198322524-8c2d305f-bfe8-4e4a-bf31-6a883af71ad3.png">
 
 ### 5-2 Núcleos físicos
 
-Para poder mostrar el numero de nucleos fisicos haremos uso del fichero /proc/cpuinfo el cual  proporciona información acerca del procesador: su tipo, marca, modelo, rendimiento, etc. Usaremos el comando ```grep "physical id" /proc/cpuinfo | wc -l``` con el comando grep buscaremos dentro del fichero "physical id" y con wc -l contaremos las lineas del resultado de grep. Esto lo hacemos ya que la manera de cuantificar los nucleos no es muy común. Si hay un procesador marcará 0 y si tiene más de un procesador, mostrará toda la información del procesador por separado contando los procesadores usando la notación cero. De esta manera simplemente contaremos las lineas que hay ya que es más cómodo cuantificarlo así.
+Para exibir o número de núcleos físicos, faremos uso do ficheiro /proc/cpuinfo que fornece informações sobre o processador: o seu tipo, marca, modelo, desempenho, etc. Utilizaremos o comando ```grep "physical id" /proc/cpuinfo | wc -l``` com o comando grep procuraremos dentro do ficheiro "physical id" e com wc -l contaremos as linhas do resultado do grep. Fazemo-lo porque a forma de quantificar os núcleos não é muito comum. Se houver um processador, marcará 0 e se houver mais do que um processador, mostrará toda a informação do processador separadamente contando os processadores usando notação zero. Desta forma, contamos simplesmente o número de linhas, pois é mais conveniente quantificá-lo desta forma.
 
 <img width="596" alt="Screen Shot 2022-10-27 at 4 50 49 PM" src="https://user-images.githubusercontent.com/66915274/198322799-4bf2131e-7fba-4c9e-8d1b-bb9cc1b89e76.png">
 
 
-### 5-3 Núcleos virtuales
+### 5-3 Núcleos virtuais
 
-Para poder mostrar el numero de nucleos virtuales es muy parecido al anterior. Haremos uso de nuevo del fichero /proc/cpuinfo , pero, en este caso utilizaremos el comando ```grep processor /proc/cpuinfo | wc -l```. El uso es practicamente el mismo al anterior solo que en vez de contar las lineas de "physical id" lo haremos de processor. Lo hacemos así por el mismo motivo de antes, la manera de cuantificar marca 0 si hay un procesador.
+Mostrar o número de núcleos virtuais é muito semelhante ao anterior. Utilizaremos novamente o ficheiro /proc/cpuinfo, mas, neste caso, utilizaremos o comando ```grep processor /proc/cpuinfo | wc -l```. A utilização é praticamente a mesma que a anterior, excepto que em vez de contarmos as linhas físicas de id, iremos contar as linhas do processador. Fazemo-lo desta forma pela mesma razão que anteriormente, a forma de quantificar marcas 0 se houver um processador.
 
 <img width="586" alt="Screen Shot 2022-10-27 at 4 55 48 PM" src="https://user-images.githubusercontent.com/66915274/198324254-3d0f247d-b767-4e02-9e69-11b4e0586280.png">
 
 
-### 5-4 Memoria RAM
+### 5-4 Memória RAM
 
-Para mostrar la memoria ram haremos uso del comando ```free``` para así ver al momento información sobre la ram, la parte usada, libre, reservada para otros recursos, etc. Para más info sobre el comando pondremos free --help. Nosotros daremos uso de free --mega ya que en el subject aparece esa unidad de medida.
+Para exibir a memória do carneiro utilizaremos o comando ```free``` para ver num relance informações sobre o carneiro, a peça usada, gratuita, reservada para outros recursos, etc. Para mais informações sobre o comando utilizaremos gratuitamente --help. Utilizaremos gratuitamente --mega porque no assunto existe essa unidade de medida (Megabyte). É importante usar --mega e não -m. Com -m referir-nos-emos à unidade de medida Mebibyte e esta não é a especificada no assunto.
 
 <img width="672" alt="Captura de pantalla 2022-08-02 a las 2 46 10" src="https://user-images.githubusercontent.com/66915274/182268241-86b743bb-653d-4fef-acda-e7bfa59e38d7.png">
 
-Una vez hemos ejecutado este comando debemos filtrar nuestra busqueda ya que no necesitamos toda la información que nos aporta , lo primero que debemos mostrar es la memoria usada, para ello haremos uso del comando ```awk``` que lo que hace este comando es para procesar datos basados en archivos de texto, es decir, podremos utilizar los datos que nos interesen de X fichero. Por último lo que haremos será comparar si la primera palabra de una fila es igual a "Mem:" printaremos la tercera palabra de esa fila que será la memoria usada. Todo el comando junto seria ```free --mega | awk '$1 == "Mem:" {print $3}'```. En el script el valor de retorno de este comando se lo asignaremos a una variable que concatenaremos con otras variables para que todo quede igual como especifica el subject.
+Uma vez executado este comando, devemos filtrar a nossa pesquisa uma vez que não precisamos de toda a informação que nos dá, a primeira coisa que devemos mostrar é a memória utilizada, para isso utilizaremos o comando ```awk```, o que este comando faz é processar dados com base em ficheiros de texto, ou seja, podemos utilizar os dados que nos interessam no ficheiro X. Finalmente o que faremos é comparar se a primeira palavra de uma linha for igual a "Mem:" imprimiremos a terceira palavra dessa linha que será a memória utilizada. O comando completo em conjunto seria ```free --mega | awk '$1 == "Mem:" {print $3}'```. No script, o valor de retorno deste comando será atribuído a uma variável que será concatenada com outras variáveis, para que tudo se mantenha igual ao especificado no assunto.
 
 <img width="621" alt="Captura de pantalla 2022-08-02 a las 2 55 21" src="https://user-images.githubusercontent.com/66915274/182269019-d5bb3107-f091-491f-a4ab-27edd357aec8.png">
 
-Para obtener la memoria total el comando es practicamente igual al anterior lo único que deberemos cambiar es que en vez de printar la tercera palabra de la fila queremos la segunda ```free --mega | awk '$1 == "Mem:" {print $2}'```.
+Para obter a memória total, o comando é praticamente o mesmo que o anterior, a única alteração é que em vez de imprimir a terceira palavra da linha, queremos a segunda palavra ```free --mega | awk '$1 == "Mem:" {print $2}'```.
 
 <img width="605" alt="Captura de pantalla 2022-08-02 a las 3 00 02" src="https://user-images.githubusercontent.com/66915274/182269450-318816e1-fc71-48b0-a860-278cc6050e05.png">
 
-Por última parte debemos calcular el % de memoria usada. El comando de nuevo es parecido a los anteriores la única modificación que haremos en la parte del printeo. Como la operación para conseguir el tanto porciento no es exacta nos puede dar muchos decimales y en el subject solo aparecen 2 asique nosotros haremos lo mismo, por eso utilizamos ```%.2f``` para que asi solo se muestren 2 decimales. Otra cosa que quizás no sepas es en printf para que se muestre un ```%``` hay que poner ```%%```. Todo el comando ```free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'```.
+Por último, precisamos de calcular a % de memória utilizada. O comando é novamente semelhante aos anteriores, a única modificação que faremos está na parte da impressão. Como a operação para obter a percentagem não é exacta, pode dar-nos muitas casas decimais e no assunto apenas 2 são mostradas, pelo que faremos o mesmo, por isso utilizamos ```%.2f``` para que apenas 2 casas decimais sejam mostradas. Outra coisa que talvez não saiba é que na impressão para mostrar um ```%``` tem de colocar ```%%```. O comando completo ```free --mega | awk '$1 == "Mem:" {printf("(%.2f%%%%)\n", $3/$2*100)}'```.
 
 <img width="798" alt="Captura de pantalla 2022-08-02 a las 3 51 01" src="https://user-images.githubusercontent.com/66915274/182274627-195476b2-1e17-4a4c-8d5c-2056e4e2bbb6.png">
 
-### 5-5 Memoria del disco
+### 5-5 Memória em disco
 
-Para poder ver la memoria del disco ocupada y disponible utilizaremos el comando ```df``` que significa "disk filesystem" , se utiliza para obtener un resumen completo del uso del espacio en disco. Como en el sibject indica la memoria utilizada se muestra en MB asi que entonces utilizaremos el flag -m. Acto seguido haremos un grep para que solo nos muestre las lineas que contengan "/dev/" y seguidamente volveremos a hacer otro grep con el flag -v para excluir las lineas que contengan "/boot". Por último utilizaremos el comando awk y sumaremos el valor de la tercera palabra de cada linea para una vez sumadas todas las lineas printar el resultado final de la suma. El comando entero es el siguiente: ```df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use}'```.
+A fim de ver a memória de disco ocupada e disponível, utilizaremos o comando ```df``` que significa "sistema de ficheiros de disco", que é utilizado para obter uma visão completa da utilização do espaço em disco. Como o assunto indica que a memória utilizada é mostrada em MB, utilizaremos a bandeira -m. Em seguida, iremos grep para mostrar apenas linhas contendo "/dev/" e depois grep novamente com a bandeira -v para excluir linhas contendo "/boot". Finalmente utilizaremos o comando awk e acrescentaremos o valor da terceira palavra de cada linha para imprimir o resultado final da soma. O comando completo é o seguinte: ```df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use}'```.
 
 <img width="805" alt="Captura de pantalla 2022-08-03 a las 2 26 15" src="https://user-images.githubusercontent.com/66915274/182498837-4f883b25-e316-4c74-8f6b-a5e8b5d13289.png">
 
-Para obtener el espacio total utilizaremos un comando muy parecido. Las unicas diferencias seran que los valores que sumaremos seran los $2 en vez de $3 y la otra diferencia es que en el subject aparece el tamaño total en Gb asique como el resultado de la suma nos da el numero en Mb debemos transformarlo a Gb , para ello debemos dividir el numero entre 1024 y quitar los decimales.
+Para obter o espaço total, utilizaremos um comando muito semelhante. As únicas diferenças serão que os valores que adicionaremos serão os $2 em vez de $3 e a outra diferença é que no assunto aparece o tamanho total em Gb, pelo que, como resultado da soma nos dá o número em Mb devemos transformá-lo em Gb, pois deve dividir-se o número entre 1024 e retirar as casas decimais.
 
-<img width="801" alt="Captura de pantalla 2022-08-03 a las 2 40 55" src="https://user-images.githubusercontent.com/66915274/182500104-0aaa1a6b-cf05-4a82-9c9a-8e163f1c1e98.png">
+<img width="1195" alt="Screen Shot 2023-03-14 at 8 54 34 PM" src="https://user-images.githubusercontent.com/66915274/225121482-93ae204e-54eb-4397-b25c-b3d99229bba5.png">
 
-Por último debemos mostrar un porcentaje de la memoria usada. Para ello , de nuevo, utilizaremos un comando muy parecido a los dos anteriores. Lo unico que cambiaremos es que combinaremos los dos comandos anteriores para tener dos variables , una que representa la memoria usada y la otra la total. Hecho esto haremos una operacion para conseguir el tanto por ciento ```use/total*100``` y el resultado de esta operacion lo printaremos como aparece en el subject , entre parentesis y con el simbolo % al final. El comando final es este: ```df -m | grep "/dev/" | grep -v "/boot" | awk '{use += $3} {total += $2} END {printf("(%d%%)\n"), use/total*100}'```.
+
+Finalmente, precisamos de mostrar uma percentagem da memória utilizada. Para tal, mais uma vez, utilizaremos um comando muito semelhante aos dois anteriores. A única coisa que vamos mudar é que vamos combinar os dois comandos anteriores para termos duas variáveis, uma representando a memória utilizada e a outra o total. Uma vez feito isto, faremos uma operação para obter a percentagem ```use/total*100``` e o resultado desta operação será impresso tal como aparece no assunto, entre parênteses e com o símbolo % no final. O comando final é: ```df -m | grep "/dev/" | grep -v "/boot" | awk '{use += $3} {total += $2} END {printf("(%d%%%%)}, use/total*100}'```.
 
 <img width="798" alt="Captura de pantalla 2022-08-03 a las 2 49 33" src="https://user-images.githubusercontent.com/66915274/182500836-dd4b068e-b6ce-4dc6-b832-f90acecfb71c.png">
 
@@ -1111,6 +1113,42 @@ Descripción breve de todos los tipos de particiones:
 
 <img width="877" alt="Screen Shot 2022-11-18 at 2 49 56 PM" src="https://user-images.githubusercontent.com/66915274/202720044-d7a51add-c5ee-4da4-9057-258e47cfd036.png">
 
+### WordPress 
+
+🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
+
+1 ◦ Para instalar la última versión de WordPress primero debemos instalar wget y zip. Para ello haremos uso del siguiente comando ```sudo apt install wget zip```.
+
+🧠 <b> Que es wget❓</b> Es una herramienta de línea de comandos que se utiliza para descargar archivos de la web.
+
+🧠 <b> Que es zip❓</b> Es una utilidad de línea de comandos para comprimir y descomprimir archivos en formato ZIP.
+
+<img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
+
+2 ◦ Una vez hayamos instalado los paquetes nos debemos ubicar en la carpeta /var/www/ con el comando cd accederemos a ella ```cd /var/wwww```.
+
+<img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
+
+3 ◦ Una vez estemos en la ruta /var/www/ deberemos descargar la última versión de WordPress. Como mi idioma nativo es el español yo seleccionaré la última versión en español. Utilizaremos el siguiente comando: ```sudo wget https://es.wordpress.org/latest-es_ES.zip```.
+
+<img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
+
+4 ◦ Descomprimimos el archivo que acabamos de descargar con el comando ```sudo unzip latest-es_ES.zip```.
+
+<img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
+
+5 ◦ Renombraremos la carpeta html y la llamaremos html_old. ```sudo mv html/ html_old/```.
+
+<img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
+
+6 ◦ Ahora renombraremos la carpeta wordpress y la llamaremos html. ```sudo mv wordpress/ html```.
+
+<img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
+
+7 ◦ Por último estableceremos estos permisos en la carpeta html. Daremos uso del comando ```sudo chmod -R 755 html```. El número 7 indica que el propietario tiene permisos de lectura, escritura y ejecución. El número 5 indica que el grupo y otros solo tienen permisos de lectura y ejecución.
+
+<img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
+
 ### Mariadb
 
 🧠 <b> Que es MariaDB❓</b> Es una base de datos. Se utiliza para diversos fines, como el almacenamiento de datos, el comercio electrónico, funciones a nivel empresarial y las aplicaciones de registro. 
@@ -1144,41 +1182,92 @@ Remove anonymous users? Escogemos ```Y```. Por defecto cuando instalas mariadb t
 
 Disallow root login remotely? Escogemos ```Y```. Al deshabilitar el inicio de sesion en root de forma remota evitaremos que alguien pueda adivinar la contraseña root. Solo podremos conectarnos al root desde localhost.
 
-Remove test database and acces to it? 
+Remove test database and acces to it? Escogemos ```Y```. De esta manera se eliminará la base de datos de prueba y cualquier usuario que tenga acceso a ella.
 
-### Phpmyadmin
+Reaload privilege tables now? Escogemos ```Y```. Asi se recargarán las tablas de permisos de MySQL para que los cambios en la configuración de seguridad entren en vigor de inmediato.
 
-🧠 <b> Que es Phpmyadmin❓</b> Es una aplicación web que sirve para administrar bases de datos de forma sencilla y con una interfaz amistosa.
+1 ◦ Una vez hayamos terminado con la instalación de mariadb debemos crear la base de datos y el usuario para el WordPress. Lo primero debemos acceder a mariadb.
 
-<img width="733" alt="Screen Shot 2022-10-27 at 4 22 33 AM" src="https://user-images.githubusercontent.com/66915274/198175891-74168b70-13e1-41a6-a46d-74fe03077a2e.png">
+<img width="492" alt="Screen Shot 2023-03-31 at 12 16 28 AM" src="https://user-images.githubusercontent.com/66915274/228976032-2a3bd66e-ce88-4bc1-9264-1d5d7f88f295.png">
 
-<img width="641" alt="Screen Shot 2022-10-27 at 1 13 56 AM" src="https://user-images.githubusercontent.com/66915274/198175978-8744b575-c23e-4563-80de-1f733df9341d.png">
+2 ◦ Creamos una base de datos para el WordPress. En mi caso le voy a llamar wp_database. Todo esto lo hare con el comando ```CREATE DATABASE wp_database;```.
 
-<img width="578" alt="Screen Shot 2022-10-27 at 4 26 55 AM" src="https://user-images.githubusercontent.com/66915274/198176405-f6bf2457-1174-4571-a495-d96ba80f5b83.png">
+<img width="384" alt="Screen Shot 2023-03-31 at 9 53 17 PM" src="https://user-images.githubusercontent.com/66915274/229216821-fba3d891-c477-4e68-9799-57bcb9efcde3.png">
 
-### Wordpress 
+3 ◦ Para asegurarnos que se ha creado la base de datos para el WordPress podemos ver todas las bases existentes con el comando ```SHOW DATABASES;```.
 
-🧠 <b> Que es Wordpress❓</b> Es un sistema de gestión de contenidos enfocado a la creación de cualquier tipo de página web.
+<img width="282" alt="Screen Shot 2023-03-31 at 9 54 04 PM" src="https://user-images.githubusercontent.com/66915274/229216973-fa35f5e1-04f1-4e56-8c44-55c4ad5a8745.png">
 
-<img width="584" alt="Screen Shot 2022-11-18 at 2 45 11 PM" src="https://user-images.githubusercontent.com/66915274/202719000-dfc10731-7d29-4976-9867-d2a38e0f6407.png">
+4 ◦ Acto seguido debemos crearemos un usuario dentro de la base de datos. Utilizaremos el comando ```CREATE USER 'gemartin'@'localhost' IDENTIFIED BY '12345';```.
 
-<img width="361" alt="Screen Shot 2022-11-18 at 2 45 53 PM" src="https://user-images.githubusercontent.com/66915274/202719112-c238f259-2a59-41ea-bbaa-8676742b2ef2.png">
+<img width="616" alt="Screen Shot 2023-03-31 at 9 56 59 PM" src="https://user-images.githubusercontent.com/66915274/229217478-6f7f5f3c-12cb-4d5a-981c-6fd53f884aa3.png">
 
-<img width="629" alt="Screen Shot 2022-11-18 at 2 46 44 PM" src="https://user-images.githubusercontent.com/66915274/202719300-08ff9e6e-fc28-47fb-a63e-706a3e72994a.png">
+5 ◦ Vinculamos el nuevo usuario a nuestra base de datos de manera que le otorguemos los permisos necesario para poder trabajar. Daremos uso del comando ```GRANT ALL PRIVILEGES ON wp_database.* TO 'gemartin'@'localhost';```.
 
-<img width="779" alt="Screen Shot 2022-11-18 at 2 47 00 PM" src="https://user-images.githubusercontent.com/66915274/202719349-442e9fd5-f96a-48af-8d7a-ea8a91a4d380.png">
+<img width="669" alt="Screen Shot 2023-03-31 at 10 01 32 PM" src="https://user-images.githubusercontent.com/66915274/229218529-e2cdcb3f-f8bc-4474-8e7b-c1cf9499aa57.png">
 
-<img width="444" alt="Screen Shot 2022-11-18 at 2 47 25 PM" src="https://user-images.githubusercontent.com/66915274/202719435-99d6af72-98f4-47b0-befb-0f3e45db4520.png">
+6 ◦ Actualizamos los permisos para que los cambios tengan efecto con el comando ```FLUSH PRIVILEGES;```.
 
-<img width="402" alt="Screen Shot 2022-11-18 at 2 48 21 PM" src="https://user-images.githubusercontent.com/66915274/202719636-8deea2b6-2953-43da-86a7-17f76c14440a.png">
+<img width="321" alt="Screen Shot 2023-03-31 at 10 02 01 PM" src="https://user-images.githubusercontent.com/66915274/229218623-bad5faf3-231e-4472-a617-2ead2e713313.png">
 
-<img width="398" alt="Screen Shot 2022-11-18 at 2 48 49 PM" src="https://user-images.githubusercontent.com/66915274/202719749-4c914197-3891-4bcc-afb8-54c94b5f77cb.png">
+7 ◦ Una vez hemos completado el paso anterior ya podemos salir de mariadb.
 
-<img width="396" alt="Screen Shot 2022-11-18 at 2 49 17 PM" src="https://user-images.githubusercontent.com/66915274/202719852-48b9ee14-3b15-49e2-bbd2-ca172a1f65ef.png">
+<img width="295" alt="Screen Shot 2023-04-01 at 10 43 40 PM" src="https://user-images.githubusercontent.com/66915274/229313206-36b09583-1930-4754-b70a-8d4caa38db9e.png">
 
-<img width="524" alt="Screen Shot 2022-11-18 at 2 55 26 PM" src="https://user-images.githubusercontent.com/66915274/202721061-5eb6c0cc-6ad5-4864-be08-12509e269832.png">
+### PHP
 
-<img width="1811" alt="Screen Shot 2022-11-18 at 2 55 52 PM" src="https://user-images.githubusercontent.com/66915274/202721157-0b246d43-09cf-4254-870b-d8897697f5ee.png">
+🧠 <b> Que es PHP❓</b> Es un lenguaje de programación. Se utiliza principalmente para desarrollar aplicaciones web dinámicas y sitios web interactivos. PHP se ejecuta en el lado del servidor.
+
+1 ◦ Instalamos los paquetes necesarios para poder ejecutar aplicaciones web escritas en lenguaje PHP y que necesiten conectarse a una base de datos MySQL. Ejecutaremos el siguiente comando ```sudo apt install php-cgi php-mysql```.
+
+<img width="541" alt="Screen Shot 2023-03-31 at 10 07 04 PM" src="https://user-images.githubusercontent.com/66915274/229308102-24ddd152-8687-410d-b207-953d36c9b591.png">
+
+### Configuración WordPress
+
+1 ◦ Accedemos al directorio /var/www/html con el comando: ```cd /var/www/html```
+
+<img width="326" alt="Screen Shot 2023-04-01 at 8 26 46 PM" src="https://user-images.githubusercontent.com/66915274/229308150-88ec9c15-4791-4541-baf2-5d2267b94eec.png">
+
+2 ◦ Copiamos el fichero wp-config-sample.php y lo renombraremos wp-config.php
+
+<img width="616" alt="Screen Shot 2023-04-01 at 8 28 42 PM" src="https://user-images.githubusercontent.com/66915274/229308231-a022e3b4-1606-4958-b530-5b2ada908997.png">
+
+3 ◦ Una vez lo hayamos renombrado editaremos el fichero wp-config.php ```nano wp-config.php``` y modificaremos los siguientes valores.
+
+<img width="841" alt="Screen Shot 2023-04-01 at 8 42 25 PM" src="https://user-images.githubusercontent.com/66915274/229308713-bbbb69f4-5f6c-4146-bc10-006cd968fb95.png">
+
+Hay que remplazarlos por los valores que hemos puesto anteriormente cuando creábamos la base de datos y el usuario para que WordPress pueda conectar y hacer uso de ella.
+
+<img width="842" alt="Screen Shot 2023-04-01 at 8 46 08 PM" src="https://user-images.githubusercontent.com/66915274/229308845-4eac418d-c03f-48d1-9b74-463ef56a2ee5.png">
+
+4 ◦ Una vez ya hemos completado los pasos anteriores podemos volver a dirigirnos a nuestro navegador y escribiremos ```localhost```. Nos deberá salir lo siguiente:
+
+<img width="674" alt="Screen Shot 2023-04-01 at 8 49 00 PM" src="https://user-images.githubusercontent.com/66915274/229308949-6224a7c8-2dda-414a-b313-c14e981aca01.png">
+
+<img width="1075" alt="Screen Shot 2023-04-01 at 8 00 38 PM" src="https://user-images.githubusercontent.com/66915274/229308962-d39b1b6b-62cc-49d1-ad13-a016d6e73683.png">
+
+5 ◦ Debemos rellenar todos los campos. En mi caso he puesto lo siguiente:
+
+<img width="793" alt="Screen Shot 2023-04-01 at 8 02 29 PM" src="https://user-images.githubusercontent.com/66915274/229309346-c712fff4-1530-42c8-ad9e-a59f85d4de51.png">
+
+6 ◦ Una vez hayamos rellenado todos los campos debemos darle a ```Instalar WordPress``` y ya habremos terminado la instalación. Nos saldrá la siguiente pestaña. Ahora WordPress puede crear las tablas y volcar todos los datos que necesita para funcionar en la base de datos que le hemos asignado.
+
+<img width="798" alt="Screen Shot 2023-04-01 at 8 02 52 PM" src="https://user-images.githubusercontent.com/66915274/229309399-719f525e-7859-468f-a9e6-6b6954102153.png">
+
+7 ◦ Si accedemos de nuevo a nuestro localhost desde el navegador ya podemos ver nuestra página funcional.
+
+<img width="2560" alt="Screen Shot 2023-04-01 at 9 02 51 PM" src="https://user-images.githubusercontent.com/66915274/229309529-96f3a1bb-d4a2-434f-bc01-2f2db0e0839d.png">
+
+8 ◦ Si queremos acceder al panel de administrador para hacer cambios en nuestra página deberemos poner en el navegador ```localhost/wp-admin``` y iniciaremos sesión con nuestra cuenta.
+
+<img width="368" alt="Screen Shot 2023-04-01 at 9 05 41 PM" src="https://user-images.githubusercontent.com/66915274/229309619-024d5dcc-ea8d-4895-88f3-bb65fcdca7e2.png">
+
+<img width="359" alt="Screen Shot 2023-04-01 at 9 06 44 PM" src="https://user-images.githubusercontent.com/66915274/229309653-02e398e9-0c28-470e-825d-1431f7ca2bc2.png">
+
+9 ◦ Una vez accedamos ya podemos modificar lo que queramos a gusto propio. Personalizar la página es algo opcional, como no está especificado en el subject en esta guia no se tratará nada al respecto. 
+
+<img width="1100" alt="Screen Shot 2023-04-01 at 9 07 38 PM" src="https://user-images.githubusercontent.com/66915274/229309676-b670be09-47dd-445f-969a-bb41131aa3f9.png">
+
 
 ### 8.3 - Servicio adicional ➕
 
@@ -1260,13 +1349,13 @@ Reglas en el reenvio de puertos.
 
 ## 9- Hoja de corrección ✅
 
-<img width="854" alt="Screen Shot 2022-10-15 at 10 29 57 PM (1)" src="https://user-images.githubusercontent.com/66915274/200190182-65e895a8-b612-49d0-b8d5-a2452a2ff8ba.png">
+<img width="773" alt="Screen Shot 2023-01-22 at 5 13 44 PM" src="https://user-images.githubusercontent.com/66915274/214894873-b92fcaeb-251b-46fb-8ab8-fb8f861976ab.png">
 
-<img width="854" alt="Screen Shot 2022-10-15 at 10 30 26 PM" src="https://user-images.githubusercontent.com/66915274/200190188-d0ac23cb-b66c-437a-b4c2-27390e07a2ed.png">
+<img width="772" alt="Screen Shot 2023-01-22 at 5 14 52 PM" src="https://user-images.githubusercontent.com/66915274/214894986-a0697331-8395-4f2b-9acd-50052b5b0f40.png">
 
-<img width="854" alt="Screen Shot 2022-10-15 at 10 30 57 PM" src="https://user-images.githubusercontent.com/66915274/200190198-c6f69628-dda3-4fc3-8c33-1de39f2e7ba8.png">
+<img width="772" alt="Screen Shot 2023-01-22 at 5 15 10 PM" src="https://user-images.githubusercontent.com/66915274/214895053-482efa21-b254-41ca-8239-c5f183a4ff41.png">
 
-<img width="854" alt="Screen Shot 2022-10-15 at 10 31 12 PM" src="https://user-images.githubusercontent.com/66915274/200190210-c7dda7e8-8776-461f-8fd9-1e59a5f024c6.png">
+<img width="772" alt="Screen Shot 2023-01-22 at 5 15 22 PM" src="https://user-images.githubusercontent.com/66915274/214895097-ec42a53a-b897-4af8-adec-eb99aa6554c8.png">
 
 ## 9-1 Respuestas de la evaluación 💯
 
@@ -1278,7 +1367,7 @@ Es un software que simula un sistema de computación y puede ejecutar programas 
 
 Esto es algo personal para cada uno, mi opinion: El propio subject explica que es mas sencillo hacerlo en Debian y si buscas documentacion/tutoriales hay muchos y todos se han hecho en debian.
 
-### ▪️ Diferencias basicas entre CentOS y Debian
+### ▪️ Diferencias basicas entre Rocky y Debian
 
 ![182516961-c3e4da77-2db8-4737-a68f-27b033908705 (1) (1)](https://user-images.githubusercontent.com/66915274/182517306-edb92eac-cba4-444a-83f8-9692bac69231.png)
 
@@ -1514,6 +1603,14 @@ Si queremos que vuelva a ejecutarse:
 ```sudo /etc/init.d/cron start```
 
 <img width="483" alt="Screen Shot 2022-11-24 at 3 27 38 PM" src="https://user-images.githubusercontent.com/66915274/203807970-8fc69a39-6d10-4e64-9be1-eb49c4bf95f8.png">
+
+## 10- Tester 🆗
+
+Comprueba que no te hayas dejado nada! Tester propio para checkear que la instalación y configuración se ha realizado exitosamente.
+
+[AQUÍ](https://github.com/gemartin99/Born2beroot-Tester)
+
+<img width="440" alt="Screen Shot 2023-03-09 at 3 40 54 AM" src="https://user-images.githubusercontent.com/66915274/223902066-f2f6a059-9df8-4e32-a92a-14c43ff8fb0f.png">
 
 # Contacto 📥
 
