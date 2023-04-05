@@ -33,7 +33,7 @@
 	
 	8.3 [Servicio adicional ➕](#83---serviço-adicional-)
 
-9. [Folha de correcção ✅](#9--folha-de-correcção-)
+9. [Guia de correcção ✅](#9--guia-de-correcção-)
 
 	9.1 [Respostas de avaliação 💯](#9-1-respostas-de-avaliação-)
 	
@@ -1348,7 +1348,7 @@ Regras de encaminhamento de portos.
 <br>
 
 
-## 9- Folha de correcção ✅
+## 9- Guia de correcção ✅
 
 <img width="773" alt="Screen Shot 2023-01-22 at 5 13 44 PM" src="https://user-images.githubusercontent.com/66915274/214894873-b92fcaeb-251b-46fb-8ab8-fb8f861976ab.png">
 
@@ -1376,7 +1376,7 @@ Isto é uma coisa pessoal para todos, a minha opinião: o próprio assunto expli
 
 Visa fornecer uma plataforma de hardware e um ambiente de execução independente do sistema operativo, que esconde os detalhes da plataforma subjacente e permite que um programa seja sempre executado da mesma forma em qualquer plataforma.
 
-### ▪️ Diferenças entre aptidão e aptidão ↙️
+### ▪️ Diferenças entre apt e aptitude ↙️
 
 Aptitude é uma versão melhorada do apt. APT é um gestor de pacotes de nível inferior e aptitude é um gestor de pacotes de nível superior. Outra grande diferença é a funcionalidade oferecida por ambas as ferramentas. O Aptitude oferece uma melhor funcionalidade em comparação com o apt-get. Ambos são capazes de fornecer os meios necessários para efectuar a gestão de pacotes. Contudo, se estiver à procura de uma abordagem mais rica em funcionalidades, o Aptitude deve ser ele.  
 
