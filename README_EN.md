@@ -1248,31 +1248,43 @@ You have to replace them with the values that we have previously set when we cre
 
 <img width="842" alt="Screen Shot 2023-04-01 at 8 46 08 PM" src="https://user-images.githubusercontent.com/66915274/229308845-4eac418d-c03f-48d1-9b74-463ef56a2ee5.png">
 
-4 ◦ Once we have completed the previous steps we can go back to our browser and type ```localhost```. You should see the following:
+4 ◦ We enabled the fastcgi-php module in Lighttpd to improve the performance and speed of web applications on the server. ```sudo lighty-enable-mod fastcgi```
+
+![image](https://user-images.githubusercontent.com/66915274/230748612-8253b2ee-15c6-42e0-8745-2148f48c6962.png)
+
+5 ◦ We enabled the fastcgi-php module in Lighttpd to improve the performance and speed of PHP-based web applications on the server. ```sudo lighty-enable-mod fastcgi-php```
+
+![image](https://user-images.githubusercontent.com/66915274/230748560-bd225efc-ea65-4a7d-bf08-eb72d61da58e.png)
+
+6 ◦ We update and apply the changes in the configuration with the command ```sudo service lighttpd force-reload```.
+
+![image](https://user-images.githubusercontent.com/66915274/230748835-9b44222d-e978-4a74-a501-e993c528a2a5.png)
+
+7 ◦ Once we have completed the previous steps we can go back to our browser and type ```localhost```. You should see the following:
 
 <img width="674" alt="Screen Shot 2023-04-01 at 8 49 00 PM" src="https://user-images.githubusercontent.com/66915274/229308949-6224a7c8-2dda-414a-b313-c14e981aca01.png">
 
 <img width="1075" alt="Screen Shot 2023-04-01 at 8 00 38 PM" src="https://user-images.githubusercontent.com/66915274/229308962-d39b1b6b-62cc-49d1-ad13-a016d6e73683.png">
 
-5 ◦ We must fill in all the fields. In my case I have put the following:
+8 ◦ We must fill in all the fields. In my case I have put the following:
 
 <img width="793" alt="Screen Shot 2023-04-01 at 8 02 29 PM" src="https://user-images.githubusercontent.com/66915274/229309346-c712fff4-1530-42c8-ad9e-a59f85d4de51.png">
 
-6 ◦ Once we have filled in all the fields we must click on ```Install WordPress``` and we will have finished the installation. You will see the next tab. Now WordPress can create the tables and dump all the data it needs to work in the database we have assigned to it.
+9 ◦ Once we have filled in all the fields we must click on ```Install WordPress``` and we will have finished the installation. You will see the next tab. Now WordPress can create the tables and dump all the data it needs to work in the database we have assigned to it.
 
 <img width="798" alt="Screen Shot 2023-04-01 at 8 02 52 PM" src="https://user-images.githubusercontent.com/66915274/229309399-719f525e-7859-468f-a9e6-6b6954102153.png">
 
-7 ◦ If we access again to our localhost from the browser we can see our functional page.
+10 ◦ If we access again to our localhost from the browser we can see our functional page.
 
 <img width="2560" alt="Screen Shot 2023-04-01 at 9 02 51 PM" src="https://user-images.githubusercontent.com/66915274/229309529-96f3a1bb-d4a2-434f-bc01-2f2db0e0839d.png">
 
-8 ◦ If we want to access the admin panel to make changes to our site we will have to put in the browser ```localhost/wp-admin``` and log in with our account.
+11 ◦ If we want to access the admin panel to make changes to our site we will have to put in the browser ```localhost/wp-admin``` and log in with our account.
 
 <img width="368" alt="Screen Shot 2023-04-01 at 9 05 41 PM" src="https://user-images.githubusercontent.com/66915274/229309619-024d5dcc-ea8d-4895-88f3-bb65fcdca7e2.png">
 
 <img width="359" alt="Screen Shot 2023-04-01 at 9 06 44 PM" src="https://user-images.githubusercontent.com/66915274/229309653-02e398e9-0c28-470e-825d-1431f7ca2bc2.png">
 
-9 ◦ Once you have logged in, you can modify whatever you like. Customizing the page is optional, as it is not specified in the subject of this guide, we will not deal with it. 
+12 ◦ Once you have logged in, you can modify whatever you like. Customizing the page is optional, as it is not specified in the subject of this guide, we will not deal with it. 
 
 <img width="1100" alt="Screen Shot 2023-04-01 at 9 07 38 PM" src="https://user-images.githubusercontent.com/66915274/229309676-b670be09-47dd-445f-969a-bb41131aa3f9.png">
 
