@@ -1301,7 +1301,7 @@ Reaload privilege tables now? Escolhemos ```Y```. Isto irá recarregar as tabela
 
 2 ◦ Por defeito, o OpenLiteSpeed está disponível no repositório base do Debian 11. Assim, deve executar o seguinte comando para adicionar o repositório OpenLiteSpeed ao seu sistema Debian:
 
-```wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash```
+```wget -O - https://repo.litespeed.sh | sudo bash```
 
 Como o comando é longo, liguei-me via ssh.
 
