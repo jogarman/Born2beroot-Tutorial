@@ -56,44 +56,9 @@ This guide has versions in different languages. Choose the one you prefer.
 
 ## 2- Instalacion de la maquina 🛠
 
-Si quieres hacer la instalación con Virtual Box haz [Click aqui](#2-2-instalacion-de-la-maquina-con-virtual-box-)
+Según el subject es OBLIGATORIO hacer este proyecto con Virtual Box. Pero si por algun problema técnico en tu campus no esta disponible Virtual Box. Este tutorial cuenta con una versión para VMware. Si quieres hacer la instalación con VMware haz [Click aqui](#2-2-instalacion-de-la-maquina-con-vmware-)
 
-### 2-1 Instalacion de la maquina con VMware ☁️
-
-1 ◦ Debemos abrir VMware y pinchar sobre ```New```.
-
-<img width="995" alt="Screen Shot 2023-12-05 at 8 56 46 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/7a3a1afb-7c8d-4b11-b1a5-8d2633061822">
-
-2 ◦ Se nos habrá abierto una pestaña. Ahora debemos arrastrar la ISO de Debian que hemos descargado en el paso 1.
-
-<img width="1129" alt="Screen Shot 2023-12-05 at 9 18 17 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/62d83435-566c-48e2-bee5-f281c9afcfbe">
-
-3 ◦ Le damos a ```continue``` y indicamos el sistema operativo que usaremos.
-
-<img width="636" alt="Screen Shot 2023-12-05 at 9 20 19 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/92dd9310-e189-4de6-8254-ef855400ca88">
-
-4 ◦ Seleccionamos ```Debian 10.x 64 bits```.
-
-<img width="636" alt="Screen Shot 2023-12-05 at 9 20 38 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/2cf3dbfe-5087-4b94-a11a-d383e9c1e85b">
-
-5 ◦ Seleccionaremos ```Legacy BIOS```. Este paso es importante ya que si escogemos UEFI o UEFI Secure Boot las particiones no quedarán como específica el subject ya que crea una partición nueva. Con la opción Legacy Bios no se creará ninguna partición específica.
-
-<img width="635" alt="Screen Shot 2023-12-05 at 9 20 50 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/f3c62336-e5a9-4a73-b121-f099d61db4af">
-
-6 ◦ Antes de finalizar la instalación debemos escoger la ruta donde almacenaremos nuestra maquina virtual. Le daremos a ```Customize Settings```.
-
-<img width="632" alt="Screen Shot 2023-12-05 at 9 21 07 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/d3a3931f-4820-4b7d-b27f-9a414ecca511">
-
-7 ◦ Para que no nos quite espacio de nuestro usuario la almacenaremos en el sgoinfre, es importante que crees una carpeta con tu login y que tenga los permisos necesarios. Una vez la tengas almacenaremos nuestra maquina virtual en esa ruta. En mi caso esta es la ruta, quizás en tu campus es diferente!
-
-<img width="640" alt="Screen Shot 2023-12-05 at 9 23 02 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/0890ad24-50bf-4730-8389-ac58b5653ae2">
-
-8 ◦ 
-
-<img width="1260" alt="Screen Shot 2023-12-05 at 9 23 44 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/7589f92e-cdc5-48e0-871b-194eaf3ea322">
-
-
-### 2-2 Instalacion de la maquina con Virtual Box 📦
+### 2-1 Instalacion de la maquina con Virtual Box 📦
 
 Para realizar la instalación se requiere de un software de virtualización. En este tutorial haremos uso de [VirtualBox](https://www.virtualbox.org/). Si ya tienes VirtualBox instalado y dispones de la ISO Debian ya podemos empezar con el tutorial.
 
@@ -141,6 +106,42 @@ Para realizar la instalación se requiere de un software de virtualización. En 
 11. ◦ Una vez completados todos los pasos anteriores ya podemos ```Iniciar``` nuestra máquina virtual.
 
 <img width="833" alt="Captura de pantalla 2022-07-13 a las 18 44 55" src="https://user-images.githubusercontent.com/66915274/178787317-aab80b53-8244-4ede-9c75-11fcf4efdd1c.png">
+
+### 2-2 Instalacion de la maquina con VMware ☁️
+
+1 ◦ Debemos abrir VMware y pinchar sobre ```New```.
+
+<img width="995" alt="Screen Shot 2023-12-05 at 8 56 46 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/7a3a1afb-7c8d-4b11-b1a5-8d2633061822">
+
+2 ◦ Se nos habrá abierto una pestaña. Ahora debemos arrastrar la ISO de Debian que hemos descargado en el paso 1.
+
+<img width="1129" alt="Screen Shot 2023-12-05 at 9 18 17 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/62d83435-566c-48e2-bee5-f281c9afcfbe">
+
+3 ◦ Le damos a ```continue``` y indicamos el sistema operativo que usaremos.
+
+<img width="636" alt="Screen Shot 2023-12-05 at 9 20 19 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/92dd9310-e189-4de6-8254-ef855400ca88">
+
+4 ◦ Seleccionamos ```Debian 10.x 64 bits```.
+
+<img width="636" alt="Screen Shot 2023-12-05 at 9 20 38 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/2cf3dbfe-5087-4b94-a11a-d383e9c1e85b">
+
+5 ◦ Seleccionaremos ```Legacy BIOS```. Este paso es importante ya que si escogemos UEFI o UEFI Secure Boot las particiones no quedarán como específica el subject ya que crea una partición nueva. Con la opción Legacy Bios no se creará ninguna partición específica.
+
+<img width="635" alt="Screen Shot 2023-12-05 at 9 20 50 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/f3c62336-e5a9-4a73-b121-f099d61db4af">
+
+6 ◦ Antes de finalizar la instalación debemos escoger la ruta donde almacenaremos nuestra maquina virtual. Le daremos a ```Customize Settings```.
+
+<img width="570" alt="Screen Shot 2023-12-05 at 9 57 59 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/73ce3856-d388-4624-9c28-6c425d98a624">
+
+
+7 ◦ Cambiamos el nombre de la maquina a Born2beroot y pincharemos sobre la flecha para poder escoger la ruta donde almacenaremos la maquina.
+
+<img width="577" alt="Screen Shot 2023-12-05 at 9 56 44 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/c623c942-8c87-4f5a-a6b3-b08562b9df40">
+
+8 ◦ Para que no nos quite espacio de nuestro usuario la almacenaremos en el sgoinfre, es importante que crees una carpeta con tu login y que tenga los permisos necesarios. Una vez la tengas almacenaremos nuestra maquina virtual en esa ruta. En mi caso esta es la ruta, quizás en tu campus es diferente!
+
+<img width="1260" alt="Screen Shot 2023-12-05 at 9 23 44 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/7589f92e-cdc5-48e0-871b-194eaf3ea322">
+
 
 ## 3- Instalación Debian 🌀
 
