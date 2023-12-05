@@ -56,6 +56,36 @@ This guide has versions in different languages. Choose the one you prefer.
 
 ## 2- Instalacion de la maquina 🛠
 
+Si quieres hacer la instalación con Virtual Box haz [Click aqui](#22--tac)
+
+### 2-1 Instalacion de la maquina con VMware ☁️
+
+1 ◦ Debemos abrir VMware y pinchar sobre ```New```.
+
+<img width="995" alt="Screen Shot 2023-12-05 at 8 56 46 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/7a3a1afb-7c8d-4b11-b1a5-8d2633061822">
+
+2 ◦ Se nos habrá abierto una pestaña. Ahora debemos arrastrar la ISO de Debian que hemos descargado en el paso 1.
+
+<img width="1129" alt="Screen Shot 2023-12-05 at 9 18 17 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/62d83435-566c-48e2-bee5-f281c9afcfbe">
+
+3 ◦ 
+<img width="636" alt="Screen Shot 2023-12-05 at 9 20 19 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/92dd9310-e189-4de6-8254-ef855400ca88">
+
+4 ◦ 
+
+<img width="636" alt="Screen Shot 2023-12-05 at 9 20 38 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/2cf3dbfe-5087-4b94-a11a-d383e9c1e85b">
+
+<img width="635" alt="Screen Shot 2023-12-05 at 9 20 50 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/f3c62336-e5a9-4a73-b121-f099d61db4af">
+
+<img width="632" alt="Screen Shot 2023-12-05 at 9 21 07 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/d3a3931f-4820-4b7d-b27f-9a414ecca511">
+
+<img width="640" alt="Screen Shot 2023-12-05 at 9 23 02 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/0890ad24-50bf-4730-8389-ac58b5653ae2">
+
+<img width="1260" alt="Screen Shot 2023-12-05 at 9 23 44 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/7589f92e-cdc5-48e0-871b-194eaf3ea322">
+
+
+### 2-2 Instalacion de la maquina con Virtual Box 📦
+
 Para realizar la instalación se requiere de un software de virtualización. En este tutorial haremos uso de [VirtualBox](https://www.virtualbox.org/). Si ya tienes VirtualBox instalado y dispones de la ISO Debian ya podemos empezar con el tutorial.
 
 1 ◦ Debemos abrir VirtualBox y pinchar sobre ```Nueva```
