@@ -14,8 +14,13 @@ This guide has versions in different languages. Choose the one you prefer.
 
 1. [Descargar imagen de la maquina virtual 💿](#1--descargar-imagen-de-la-maquina-virtual-)
 2. [Instalación de la maquina 💻](#2--instalacion-de-la-maquina-)
-3. [Instalación Debian 🌀](#3--instalación-debian-)
-4. [Configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
+   
+   	2.1 [Instalación de la maquina con Virtual Box 📦](#2-1-instalacion-de-la-maquina-con-virtual-box-)
+
+   	2.2 [Instalación de la maquina con VMware ☁️](#2-2-instalacion-de-la-maquina-con-vmware-%EF%B8%8F)
+   
+4. [Instalación Debian 🌀](#3--instalación-debian-)
+5. [Configuración de la máquina virtual ⚙️](#4-configuración-de-la-máquina-virtual-%EF%B8%8F)
 
 	4.1 [Instalación de sudo y configuración de usuarios y grupos 👤](#41---instalación-de-sudo-y-configuración-de-usuarios-y-grupos-)
 	
@@ -29,13 +34,13 @@ This guide has versions in different languages. Choose the one you prefer.
 	
 	4.6 [Conectarse via SSH 🗣](#4-6-conectarse-via-ssh-)
 	
-5. [Script 🚨](#5--script-)
+6. [Script 🚨](#5--script-)
 
 	5.1 [Resultado total del script 🆗](#5-13-resultado-total-del-script)
 	
-6. [Crontab ⏰](#6--crontab-)
-7. [Signature.txt 📝](#7--signaturetxt-)
-8. [Bonus ⭐](#8--bonus-%EF%B8%8F)
+7. [Crontab ⏰](#6--crontab-)
+8. [Signature.txt 📝](#7--signaturetxt-)
+9. [Bonus ⭐](#8--bonus-%EF%B8%8F)
 
 	8.1 [Particionado manual del disco 🛠](#81--particionado-manual-del-disco)
 	
@@ -43,12 +48,12 @@ This guide has versions in different languages. Choose the one you prefer.
 	
 	8.3 [Servicio adicional ➕](#83---servicio-adicional-)
 
-9. [Hoja de corrección ✅](#9--hoja-de-corrección-)
+10. [Hoja de corrección ✅](#9--hoja-de-corrección-)
 
 	9.1 [Respuestas de la evaluación 💯](#9-1-respuestas-de-la-evaluación-)
 	
 	9.2 [Comandos de la evaluación ⌨️](#9-2-comandos-de-la-evaluación-%EF%B8%8F)
-10. [Tester 🆗](#10--tester-)
+11. [Tester 🆗](#10--tester-)
 	
 ## 1- _Descargar imagen de la maquina virtual_ 💿
 
@@ -56,7 +61,9 @@ This guide has versions in different languages. Choose the one you prefer.
 
 ## 2- Instalacion de la maquina 🛠
 
-Según el subject es OBLIGATORIO hacer este proyecto con Virtual Box. Pero si por algun problema técnico en tu campus no esta disponible Virtual Box. Este tutorial cuenta con una versión para VMware. Si quieres hacer la instalación con VMware haz [Click aqui](#2-2-instalacion-de-la-maquina-con-vmware-)
+Según el subject es OBLIGATORIO hacer este proyecto con Virtual Box. Pero si por algun problema técnico en tu campus no esta disponible Virtual Box. Este tutorial cuenta con una versión para VMware.
+
+Si quieres hacer la instalación con VMware haz [Click aqui](#2-2-instalacion-de-la-maquina-con-vmware-%EF%B8%8F)
 
 ### 2-1 Instalacion de la maquina con Virtual Box 📦
 
@@ -69,7 +76,6 @@ Para realizar la instalación se requiere de un software de virtualización. En 
 2 ◦ Escogemos el nombre de nuestra máquina y la carpeta donde estará ubicada. Importante introducir la maquina dentro de la carpeta sgoinfre ya que si no la ubicamos ahí nos quedaremos sin espacio y fallará la instalación (dependiendo del campus la ruta de sgoinfre puede cambiar). 
 
 <img width="694" alt="Screen Shot 2022-11-18 at 2 30 18 PM" src="https://user-images.githubusercontent.com/66915274/202716278-394d5ce7-1f61-4146-a1b5-1e15ed005778.png">
-
 
 3 ◦ Seleccionamos la cantidad de memoria RAM que reservaremos para la máquina. 
 
