@@ -113,6 +113,11 @@ Para realizar la instalación se requiere de un software de virtualización. En 
 
 <img width="833" alt="Captura de pantalla 2022-07-13 a las 18 44 55" src="https://user-images.githubusercontent.com/66915274/178787317-aab80b53-8244-4ede-9c75-11fcf4efdd1c.png">
 
+<br>
+<br>
+<br>
+<br>
+
 ### 2-2 Instalacion de la maquina con VMware ☁️
 
 1 ◦ Debemos abrir VMware y pinchar sobre ```New```.
