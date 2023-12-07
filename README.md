@@ -548,6 +548,18 @@ enforce_for_root ➤ Implementaremos esta política para el usuario root.
 
 <img width="566" alt="Screen Shot 2022-10-27 at 12 40 04 AM" src="https://user-images.githubusercontent.com/66915274/198174814-c1873c62-41dd-4c1d-ad2d-f268b2da0e4c.png">
 
+⚠️ Si quieres conectarte por SSH con VMware ⚠️
+
+1 ◦ Daremos click derecho sobre nuestra máquina y escogeremos la opción ```Connect to SSH```.
+
+<img width="621" alt="Screen Shot 2023-12-07 at 6 54 01 AM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/5bab8bc8-d2c2-4e35-bb84-e2491ffc7767">
+
+2 ◦ Una vez se nos abra la siguiente pestaña debemos rellenar todos los campos. En port debemos poner ```4242``` para indicar que queremos conectarnos por ese puerto. Los siguientes campos son el username de tu maquina, en mi caso ```gemartin``` y la contraseña del usuario , en mi caso ```Hola42spain```. 
+
+<img width="949" alt="Screen Shot 2023-12-07 at 6 56 44 AM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/c17dad12-2c12-4c64-8653-8be765560501">
+
+También podemos conectarnos mediante el terminal pero debemos sustituir localhost por la IP de la máquina virtual quedaría algo asi: ```ssh gemartin@10.11.250.100 -p 4242```. Revisa la IP de tu máquina virtual y sustituyela por la que pongo de ejemplo.
+
 ## 5- Script 🚨
 
 Esta es una parte muy importante del proyecto. Debes prestar atención en todo, muy importante no copiar y pegar directamente el fichero sin saber que hace cada cosa. En la evaluación debes explicar cada comando si el evaluador lo pide.
