@@ -1373,7 +1373,7 @@ Hay que remplazarlos por los valores que hemos puesto anteriormente cuando creá
 
 2 ◦ De forma predeterminada, OpenLiteSpeed está disponible en el repositorio base de Debian 11. Entonces, debes ejecutar el siguiente comando para agregar el repositorio OpenLiteSpeed a su sistema Debian:
 
-```wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash```
+```wget -O - https://repo.litespeed.sh | sudo bash```
 
 Como el comando es largo me he conectado via ssh.
 
