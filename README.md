@@ -8,7 +8,7 @@ This guide has versions in different languages. Choose the one you prefer.
 
 ### Versão portuguesa 🇵🇹
 
-![CLIQUE ](https://github.com/gemartin99/Born2beroot-Tutorial/blob/main/README_POR.md)
+![CLIQUE AQUI](https://github.com/gemartin99/Born2beroot-Tutorial/blob/main/README_POR.md)
 
 # Índice
 
@@ -1711,6 +1711,6 @@ Comprueba que no te hayas dejado nada! Tester propio para checkear que la instal
 [AQUÍ](https://github.com/gemartin99/42cursus)
 
 ### - Mi perfil en la intranet de 42 ↙️
-[](https://profile.intra.42.fr/users/gemartin)
+[AQUÍ](https://profile.intra.42.fr/users/gemartin)
 
 
