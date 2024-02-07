@@ -61,9 +61,9 @@ This guide has versions in different languages. Choose the one you prefer.
 
 ## 2- Instalación de la máquina 🛠
 
-Según el subject es OBLIGATORIO hacer este proyecto con Virtual Box. Si por algún problema técnico en tu campus no está disponible Virtual Box, este tutorial cuenta con una versión para VMware.
+Según el subject es OBLIGATORIO hacer este proyecto con Virtual Box. Si por algún problema técnico en tu campus no está disponible Virtual Box, este tutorial cuenta con una versión para re.
 
-Si quieres hacer la instalación con VMware haz [Click aquí](#2-2-instalación-de-la-máquina-con-vmware-%EF%B8%8F)
+Si quieres hacer la instalación con re haz [Click aquí](#2-2-instalación-de-la-máquina-con-re-%EF%B8%8F)
 
 ### 2-1 Instalación de la máquina con Virtual Box 📦
 
@@ -118,9 +118,9 @@ Para dirigirte a la Instalación de Debian directamente [Click aquí](#3--instal
 <br>
 <br>
 
-### 2-2 Instalación de la máquina con VMware ☁️
+### 2-2 Instalación de la máquina con re ☁️
 
-1 ◦ Debemos abrir VMware y pinchar sobre ```New```.
+1 ◦ Debemos abrir re y pinchar sobre ```New```.
 
 <img width="995" alt="Screen Shot 2023-12-05 at 8 56 46 PM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/7a3a1afb-7c8d-4b11-b1a5-8d2633061822">
 
@@ -556,7 +556,8 @@ enforce_for_root ➤ Implementaremos esta política para el usuario root.
 
 2 ◦ Una vez se nos abra la siguiente pestaña debemos rellenar todos los campos. En port debemos poner ```4242``` para indicar que queremos conectarnos por ese puerto. Los siguientes campos son el username de tu máquina, en mi caso ```gemartin```, y la contraseña del usuario, en mi caso ```Hola42spain```. 
 
-<img width="949" alt="Screen Shot 2023-12-07 at 6 56 44 AM" src="https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/c17dad12-2c12-4c64-8653-8be765560501">
+![image](https://github.com/gemartin99/Born2beroot-Tutorial/assets/66915274/70645e71-e19f-4161-a077-cc239fb10b52)
+
 
 También podemos conectarnos mediante el terminal, pero debemos sustituir localhost por la IP de la máquina virtual. Quedaría algo así: ```ssh gemartin@10.11.250.100 -p 4242```. Revisa la IP de tu máquina virtual y sustitúyela por la que pongo de ejemplo.
 
