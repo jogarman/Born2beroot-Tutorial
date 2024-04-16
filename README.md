@@ -1,10 +1,11 @@
-## Antención a los fallos en el tutorial! 
+## Atención a los fallos en el tutorial! 
 1.- Si haces el bonus, NO des 30Gb a tu máquina virtual en la carpeta sgoinfree. Si es superior a 15Gb se borrará a las 00.00 del dia siguiente.
 
 2.- OJO con el número de procesadores. El tutorial te indica que debes hacer:
 
-	```grep "physical id" /proc/cpuinfo | wc -l``` *y está mal* Esto escribirá '1' por cada procesador que tengas.
- 	Por defecto la máquina tiene un solo procesador y no nos damos cuenta. Para la correción se pueden habilitar más procesadores desde la pestaña de configuración en VirtualBox
+	```grep "physical id" /proc/cpuinfo | wc -l``` 
+ *y está mal* Esto escribirá '1' por cada procesador que tengas.
+ Por defecto la máquina tiene un solo procesador y no nos damos cuenta. Para la correción se pueden habilitar más procesadores desde la pestaña de configuración en VirtualBox
   
 3.- En el script, en el apartado de memoria el tutorial indica que debes introducir esto:
 
@@ -14,11 +15,13 @@
  
 	```free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'```
  
- 	No obstante, el enunciado indica que debes mostrar la memoría DISPONIBLE, no la ocupada. 
+ No obstante, el enunciado indica que debes mostrar la memoría DISPONIBLE, no la ocupada. 
   
   Te dejo para practicar modificar el script =)
- 
-||||||||||||||||||||||||||||||
+El resto es la guia de gemartin99
+
+Que la disfrutes
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||11
 # Born2beroot-Tutorial 🖥🇪🇸
 
 This guide has versions in different languages. Choose the one you prefer.
