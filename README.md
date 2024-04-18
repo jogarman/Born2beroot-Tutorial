@@ -17,11 +17,14 @@ Es posible que no falle, pero no dejes tanto
 	```free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'```
  
  No obstante, el enunciado indica que debes mostrar la memoría DISPONIBLE, no la ocupada. 
+
+ 4.- Al elegir tu contraseña, asegurate que cumples con la politica de cntraseñas (aunque no este implementada todavía)
   
   Te dejo para practicar modificar el script =)
 El resto es la guia de gemartin99
 
 Que la disfrutes
+
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||11
 # Born2beroot-Tutorial 🖥🇪🇸
 
