@@ -1,5 +1,6 @@
 ## Atención a los fallos en el tutorial! 
 1.- Si haces el bonus, NO des 30Gb a tu máquina virtual en la carpeta sgoinfree. Si es superior a 15Gb se borrará a las 00.00 del dia siguiente.
+Es posible que no falle, pero no dejes tanto
 
 2.- OJO con el número de procesadores. El tutorial te indica que debes hacer:
 
