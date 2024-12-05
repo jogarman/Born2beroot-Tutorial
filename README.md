@@ -1,3 +1,6 @@
+# Another <img src="https://github.com/user-attachments/assets/e9fdb71d-383d-456c-9b84-97c92de0cd6d" width="80"> project
+Crea tu primer servidor =D
+
 ## Atención a los fallos en el tutorial! 
 1.- Si haces el bonus, NO des 30Gb a tu máquina virtual en la carpeta sgoinfree. Si es superior a 15Gb se borrará a las 00.00 del dia siguiente.
 Es posible que no falle, pero no dejes tanto
